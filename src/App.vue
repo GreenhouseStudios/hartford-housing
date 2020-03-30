@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <FullPageTest></FullPageTest>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import FullPageTest from './components/FullPageTest.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    FullPageTest,
   }
 }
 </script>
