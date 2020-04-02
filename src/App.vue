@@ -1,25 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header></Header>
     <FullPageTest></FullPageTest>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import FullPageTest from './components/FullPageTest.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     FullPageTest,
+    Header,
+    Footer
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
