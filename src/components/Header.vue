@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Making Hartford Home</h1>
-    <ul class="nav">
+    <!-- <ul class="nav">
       <li>
         <a href="#home">Home</a>
       </li>
@@ -23,7 +23,8 @@
       <li>
         <a href="about">Profiles</a>
       </li>
-    </ul>
+    </ul> -->
+    
   </div>
 </template>
 
