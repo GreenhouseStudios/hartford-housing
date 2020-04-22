@@ -12,6 +12,12 @@ export default new Vuetify({
             secondary: '#b0bec5',
             accent: '#8c9eff',
             error: '#b71c1c',
+            darkBlack: "#1a1919",
+            lightBlack: '#414240',
+            green: '#d1d35e',
+            teal: '#72b591',
+            blue: '#519ec8',
+            white: '#FFFFFF'
           },
         },
       },
