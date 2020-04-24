@@ -37,16 +37,18 @@
       </v-toolbar-items>
     </v-app-bar>
 
-
-
     <v-content>
       <full-page ref="fullpage" :options="options" id="fullpage">
         <v-container fluid>
           <v-row>
-            <v-col :cols="undefined"></v-col>
-            <v-col :cols="10">
+            <!-- <v-col :cols="undefined"></v-col> -->
+            <v-col>
               <About></About>
               <Introduction></Introduction>
+              <Maps></Maps>
+              <Settlement></Settlement>
+              <Housing></Housing>
+              <Profiles></Profiles>
               <!-- <div v-for="(section,index) in sections" v-bind:key="index" class="section">
                 <h3 class="display-3">{{section.title}}</h3>
                 <div v-for="(slide,j) in section.slides" v-bind:key="j" class="slide">
@@ -55,16 +57,16 @@
                 </div>
               </div>-->
             </v-col>
-            <v-col :cols="undefined">
-              
-            </v-col>
+            <!-- <v-col :cols="undefined"></v-col> -->
           </v-row>
         </v-container>
       </full-page>
     </v-content>
-    <v-footer app>
-      <a href>Funders</a>
-      <a href>Contact</a>
+    <v-footer app color="darkBlack" class="font-weight-bold">
+      <v-col>
+        <a href class="pr-4">Funders</a>
+        <a href class="pr-4">Contact</a>
+      </v-col>
       <v-spacer></v-spacer>
       &copy; {{new Date().getFullYear()}}
     </v-footer>
@@ -75,6 +77,10 @@
 // import FullPageTest from "./components/FullPageTest";
 import About from "./components/About";
 import Introduction from "./components/Introduction";
+import Maps from "./components/Maps";
+import Settlement from "./components/Settlement";
+import Housing from "./components/Housing";
+import Profiles from "./components/Profiles";
 
 export default {
   name: "App",
@@ -83,6 +89,10 @@ export default {
     // FullPageTest
     About,
     Introduction,
+    Maps,
+    Settlement,
+    Housing,
+    Profiles
   },
 
   data: () => ({
@@ -96,7 +106,12 @@ export default {
       },
       {
         title: "Introduction",
-        slides: ["Introduction: “And the Migrants Kept Coming”","African American Settlement","Puerto Rican Settlement","West Indian Settlement",]
+        slides: [
+          "Introduction: “And the Migrants Kept Coming”",
+          "African American Settlement",
+          "Puerto Rican Settlement",
+          "West Indian Settlement"
+        ]
       },
       {
         title: "Maps",
@@ -200,6 +215,9 @@ body {
 }
 .v-applicaton {
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+v-footer{
+  z-index: -1;
 }
 v-footer a {
   margin: 100px 100px;

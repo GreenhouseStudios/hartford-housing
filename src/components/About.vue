@@ -1,18 +1,13 @@
 <template>
   <div class="section">
-    <!-- <h1>About</h1>
-    <div class="bod">
-      <p>{{body}}</p>
-    </div>-->
-    <!-- <div class="outline">
-      <v-card flat tile color="darkBlack" width="520" height="520">
-        <v-card flat tile color="lightBlack" width="500" height="500" class="pa-5 innercard">
-          <v-card-title class="white--text display-3 font-weight-bold">About</v-card-title>
-          <v-card-text class="white--text body-1">{{body}}</v-card-text>
-        </v-card>
-      </v-card>
-    </div>-->
-    <Card v-bind:heading="heading" v-bind:body="body"></Card>
+    <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)">
+      <div id="subtitle">
+        <h1 class="display-2 font-weight-bold">{{subtitle | allCaps}}</h1>
+        <h1 class="display-2 font-weight-bold">HOUSING STRUGGLES</h1>
+        <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
+      </div>
+      <Card v-bind:heading="heading" v-bind:body="body"></Card>
+    </v-img>
   </div>
 </template>
 
@@ -26,10 +21,21 @@ export default {
   },
   data() {
     return {
+      subtitle: "African Amerian, Puerto Rican and West Indian",
       heading: "About",
       body:
         "Hartford, Connecticut attracted three waves of internal and transnational migrations of African American, Puerto Rican, and West Indian communities that transformed the city’s racial and ethnic landscape. These monumental shifts in mobilities unfolded in many other metropolitan areas in the United States like Chicago and Philadelphia, Harlem and San Francisco in the twentieth century. This project explores the history of migration, housing, settlement, community formation, and succession through the lens of Hartford, one of America’s wealthiest cities at the end of the Civil War.  "
     };
+  },
+  filters: {
+    capitalize: function(value) {
+      if (!value) return "";
+      value = value.toString();
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    },
+    allCaps: function(value) {
+      return value.toUpperCase();
+    }
   }
 };
 </script>
@@ -38,15 +44,31 @@ export default {
 .bod {
   max-width: 500px;
 }
-.innercard {
-  top: 25px;
-  left: 25px;
+#subtitle {
+  text-align: center;
 }
-.outline {
-  outline-style: solid;
-  outline-color: #72b591;
-  outline-width: 5px;
-  width: 530px;
-  height: 550px;
+h1 {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    180deg,
+    rgba(81, 159, 200, 0) 30%,
+    rgb(81, 159, 200) 30%
+  );
+}
+h1::after {
+  content: "";
+  background-color: rgb(81, 159, 200);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+v-parallax{
+  /* height: 2000px; */
+}
+.section{
+  height: 4000px;
 }
 </style>

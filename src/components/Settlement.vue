@@ -1,21 +1,8 @@
 <template>
   <div class="section">
     <h1>Settlement</h1>
-    <div class="slide">
-      <h3>Slide1</h3>
-      <v-img
-          :src="require('../assets/logo.svg')"
-          class="my-3"
-          contain
-          height="200"
-        />
-    </div>
-    <div class="slide">
-      <h3>Slide1</h3>
-    </div>
-
-    <div class="slide">
-      <h3>Slide1</h3>
+    <div v-for="slide in slides" v-bind:key="slide" class="slide">
+      <h1>{{slide}}</h1>
     </div>
   </div>
 </template>
@@ -24,7 +11,22 @@
 export default {
   name: "Settlement",
   data() {
-    return {};
+    return {
+      slides: [
+        "Journeys",
+        "Georgia,Puerto Rico, Jamaica",
+        "African American Settlement",
+        "West Indian Settlement",
+        "Puerto Rican Settlement",
+        "Headlines"
+      ]
+    };
   }
 };
 </script>
+
+<style scoped>
+.slide{
+  background-color: rgb(81, 159, 200);
+}
+</style>

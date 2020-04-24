@@ -28,7 +28,7 @@ export default {
 .outline {
   outline-style: solid;
   outline-color: #72b591;
-  outline-width: 5px;
+  outline-width: 3px;
   width: 530px;
   height: 550px;
 }
