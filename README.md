@@ -1,5 +1,7 @@
 # hhp
 
+Gh-pages link: https://greenhousestudios.github.io/hartford-housing/
+
 ## Project setup
 ```
 npm install
