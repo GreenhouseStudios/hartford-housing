@@ -7,6 +7,7 @@ Vue.use(
 )
 
 export default new Router({
+  base: '/hartford-housing/',
   routes: [
     {
       path: '/Home',
