@@ -1,12 +1,12 @@
 <template>
-  <div class="outline">
-    <v-card flat tile color="darkBlack" width="520" height="520">
-      <v-card flat tile color="lightBlack" width="700" height="500" class="pa-5 innercard">
-        <v-card-title class="white--text display-3 font-weight-bold">{{heading}}</v-card-title>
+  <v-card flat tile max-width="800" v-bind:color="myColor">
+    <div class="outline">
+      <v-card flat tile color="lightBlack" class="pa-5 innercard">
+        <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
         <v-card-text class="white--text body-1">{{body}}</v-card-text>
       </v-card>
-    </v-card>
-  </div>
+    </div>
+  </v-card>
 </template>
 
 
@@ -14,9 +14,16 @@
 export default {
   name: "Card",
   data() {
-    return {};
+    return {
+      cardColors: ['green','teal','blue'],
+      myColor: null,
+    };
   },
-  props: ["heading", "body"]
+  props: ["heading", "body", "bgColor"],
+  created(){
+    var randomIndex = Math.floor(Math.random()* this.cardColors.length);
+    this.myColor = this.cardColors[randomIndex];
+  }
 };
 </script>
 
@@ -29,7 +36,9 @@ export default {
   outline-style: solid;
   outline-color: #72b591;
   outline-width: 3px;
-  width: 530px;
-  height: 550px;
+}
+.bcard{
+  background-color: rgb(81, 159, 200);
+  color:rgb(81, 159, 200);
 }
 </style>
