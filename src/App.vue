@@ -162,6 +162,7 @@ export default {
       navigationPosition: "right",
       // sectionSelector: '.section',
       // slideSelector: '.fp-slide',
+      fitToSection: false,
       autoScrolling: false,
       slidesNavigation: true,
       slidesNavPosition: "bottom",
@@ -228,8 +229,8 @@ h3 {
   top: 100px;
 }
 .fp-slidesNav.fp-bottom {
-  bottom: 100px;
-  left: 500px;
+  bottom: 125px;
+  margin: 0 auto;
 }
 /* .myFont{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
