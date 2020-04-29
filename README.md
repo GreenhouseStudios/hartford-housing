@@ -1,6 +1,7 @@
 # hhp
 
-Gh-pages link: https://greenhousestudios.github.io/hartford-housing/
+Live demo
+https://adoring-almeida-c0c4b7.netlify.app/#/
 
 ## Project setup
 ```
