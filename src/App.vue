@@ -43,6 +43,7 @@
           <v-row>
             <!-- <v-col :cols="undefined"></v-col> -->
             <v-col>
+              <Home></Home>
               <About></About>
               <Introduction></Introduction>
               <Maps></Maps>
@@ -75,6 +76,7 @@
 
 <script>
 // import FullPageTest from "./components/FullPageTest";
+import Home from "./components/Home";
 import About from "./components/About";
 import Introduction from "./components/Introduction";
 import Maps from "./components/Maps";
@@ -87,6 +89,7 @@ export default {
 
   components: {
     // FullPageTest
+    Home,
     About,
     Introduction,
     Maps,
@@ -100,6 +103,10 @@ export default {
       "Challenges and opportunities; collective impact incubator energize natural resources. Shared value; circular innovate social entrepreneur impact investing change-makers challenges and opportunities B-corp outcomes. Disrupt fairness empower, blended value framework. Boots on the ground; move the needle global, leverage improve the world milestones benefit corporation greenwashing ideate. But; save the world, her body her rights LGBTQ+ a efficient storytelling empower external partners. Framework society circular thought leadership expose the truth strategy strategy big data save the world. Replicable shared value mass incarceration, thought partnership, big data paradigm engaging granular. Grit change-makers triple bottom line energize LGBTQ+ low-hanging fruit thought leadership. Replicable overcome injustice thought partnership empathetic rubric when blended value synergy uplift. Thought provoking innovation thought provoking academic, effective altruism collaborative consumption indicators movements replicable. Shared unit of analysis empower communities innovate youth social enterprise expose the truth. Communities technology; compelling; communities inspiring transparent; social entrepreneurship. Inspirational framework collective impact efficient.",
     tagPrefix: "#",
     sections: [
+      {
+        title: "Home",
+        slides: []
+      },
       {
         title: "About",
         slides: []
@@ -168,6 +175,7 @@ export default {
       slidesNavPosition: "bottom",
       controlArrows: false,
       anchors: [
+        "Home",
         "About",
         "Introduction",
         "Maps",

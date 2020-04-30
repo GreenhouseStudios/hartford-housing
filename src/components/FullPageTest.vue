@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import Home from "./Home";
 import About from "./About";
 import Introduction from "./Introduction"
 import Maps from "./Maps";
