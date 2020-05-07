@@ -3,18 +3,34 @@
     <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)">
       <div id="subtitle">
         <h1 class="display-2 font-weight-bold">{{subtitle.toUpperCase()}}</h1>
+        <CardImage v-bind:image="slides[0].image" v-bind:offsetH="slides[0].offsetH" 
+        v-bind:offsetV="slides[0].offsetV" v-bind:rotation="slides[0].rotation"
+        v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}">
+        </CardImage>
       </div>
     </v-img>
   </div>
 </template>
 
 <script>
+import CardImage from '@/components/CardImage'
 export default {
   name: "Home",
+  components:{
+    CardImage
+  },
   data() {
     return {
-      subtitle: "Hartford Bound: Making Hartford Home"
-    };
+      subtitle: "Hartford Bound: Making Hartford Home",
+      slides: [
+        {
+          image: require('../assets/pubhousingmap.jpg'),
+          offsetH: "25",
+          offsetV: "25",
+          rotation: "0"
+        }
+      ]
+    }
   }
 }
 </script>
