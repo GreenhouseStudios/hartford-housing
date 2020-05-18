@@ -1,12 +1,12 @@
 <template>
   <v-card flat tile max-width="800" v-bind:color="myColor">
-    <div class="outline">
+    <!-- <div class="outline"> -->
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
         <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
         <v-card-text class="white--text body-1">{{body}}</v-card-text>
         <v-img v-bind:src="image"></v-img>
       </v-card>
-    </div>
+    <!-- </div> -->
   </v-card>
 </template>
 

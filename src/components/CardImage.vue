@@ -1,8 +1,8 @@
 <template>
   <v-card flat tile max-width="800" v-bind:color="myColor">
-    <div class="outline">
+    <!-- <div class="outline"> -->
       <v-card flat tile color="lightBlack" class="pa-5 innercard relative">
-        <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
+        <!-- <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title> -->
         <v-col cols="auto">
           <v-img
           class="align-image"
@@ -11,7 +11,7 @@
           </v-img>
         </v-col>
       </v-card>
-    </div>
+    <!-- </div> -->
   </v-card>
 </template>
 

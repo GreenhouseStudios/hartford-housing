@@ -4,27 +4,32 @@
       <div id="subtitle">
         <h1 class="display-4 font-weight-bold ma-2">{{title.toUpperCase()}}</h1>
         <h1 class="display-4 font-weight-bold ma-2">{{subtitle.toUpperCase()}}</h1>
+         <!-- <CardImage v-bind:image="slides[0].image" v-bind:offsetH="slides[0].offsetH" 
+        v-bind:offsetV="slides[0].offsetV" v-bind:rotation="slides[0].rotation"
+        v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}">
+        </CardImage> -->
       </div>
     </v-img>
   </div>
 </template>
 
 <script>
-import CardImage from '@/components/CardImage'
+// import CardImage from '@/components/CardImage'
 export default {
   name: "Home",
   components:{
-    CardImage
+    // CardImage
   },
   data() {
     return {
-      subtitle: "Hartford Bound: Making Hartford Home",
+      title: "Hartford Bound: ",
+      subtitle: "Making Hartford Home",
       slides: [
         {
           image: require('../assets/pubhousingmap.jpg'),
-          offsetH: "25",
+          offsetH: "300",
           offsetV: "25",
-          rotation: "0"
+          rotation: "-45"
         }
       ]
     }
