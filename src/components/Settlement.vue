@@ -3,9 +3,8 @@
     <!-- <h1>Settlement</h1> -->
     <div v-for="item in slides" v-bind:key="item.heading" class="slide">
       <!-- <h1>{{item.heading}}</h1> -->
-     <Card v-bind:heading="item.heading" v-bind:body="item.body">
-
-     </Card>
+        <Card v-bind:heading="item.heading" v-bind:body="item.body" v-bind:image="item.image">
+        </Card>
     </div>
   </div>
 </template>
@@ -31,7 +30,8 @@ and
 Hartford became a Puerto Rican majority city.
  West Indians developed high homeownership rates
  African Americans made significant political strides in making housing
-a major arena for civil rights and human rights advocacy.`
+a major arena for civil rights and human rights advocacy.`,
+        image: require('../assets/pubhousingmap.jpg')
         },
         {
         heading: "Georgia, Puerto Rico, Jamaica",

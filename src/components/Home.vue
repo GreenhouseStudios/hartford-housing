@@ -10,13 +10,24 @@
 </template>
 
 <script>
+import CardImage from '@/components/CardImage'
 export default {
   name: "Home",
+  components:{
+    CardImage
+  },
   data() {
     return {
-      title: "Hartford Bound:",
-      subtitle: "Making Hartford Home"
-    };
+      subtitle: "Hartford Bound: Making Hartford Home",
+      slides: [
+        {
+          image: require('../assets/pubhousingmap.jpg'),
+          offsetH: "25",
+          offsetV: "25",
+          rotation: "0"
+        }
+      ]
+    }
   }
 }
 </script>
