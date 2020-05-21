@@ -3,18 +3,20 @@
     <!-- <h1>Settlement</h1> -->
     <div v-for="item in slides" v-bind:key="item.heading" class="slide">
       <!-- <h1>{{item.heading}}</h1> -->
-        <Card v-bind:heading="item.heading" v-bind:body="item.body" v-bind:image="item.image">
-        </Card>
+        <Card v-bind:heading="item.heading" v-bind:body="item.body" v-bind:image="item.image"></Card>
+        <CardImage v-bind:image="item.image" v-bind:offsetH="800"  v-bind:offsetV="100" v-bind:rotation="-80"></CardImage>
     </div>
   </div>
 </template>
 
 <script>
 import Card from '@/components/Card'
+import CardImage from '@/components/CardImage'
 export default {
   name: "Settlement",
   components:{
-    Card
+    Card,
+    CardImage
   },
   data() {
     return {

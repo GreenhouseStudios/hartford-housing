@@ -1,20 +1,12 @@
 <template>
   <v-app class="myFont">
     <v-app-bar app color="darkBlack" dark>
-      <v-toolbar-title>Making Hartford Home</v-toolbar-title>
-
+      <router-link to="/" id="site-title">
+        <v-toolbar-title>Making Hartford Home</v-toolbar-title>
+      </router-link>
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <!-- <li v-for="(section,index) in sections" v-bind:key="index" data-menuanchor="section.title">
-          <a v-bind:href="tagPrefix + section.title">{{section.title}}</a>
-        </li>-->
-        <!-- <v-btn
-          text
-          @click="$refs.fullpage.api.moveTo(index + 1)"
-          v-for="(section, index) in sections"
-          :key="section.title"
-        >{{section.title}}</v-btn>-->
         <v-menu
           v-for="(section,i) in sections"
           :open-on-hover="true"
@@ -22,12 +14,12 @@
           :key="section.title"
         >
           <template v-slot:activator="{ on }">
-            <v-btn text @click="$refs.fullpage.api.moveTo(i + 1)" dark v-on="on">{{section.title}}</v-btn>
+            <v-btn text @click="navigateToSection(i)" dark v-on="on">{{section.title}}</v-btn>
           </template>
           <v-list v-if="sections[i].slides.length">
             <v-list-item
               v-for="(item, index) in section.slides"
-              @click="$refs.fullpage.api.moveTo(i + 1,index)"
+              @click="navigateToSlide(i,index)"
               :key="index"
             >
               <v-list-item-title>{{ item }}</v-list-item-title>
@@ -38,66 +30,30 @@
     </v-app-bar>
 
     <v-content>
-      <full-page ref="fullpage" :options="options" id="fullpage">
-        <v-container fluid>
-          <v-row>
-            <!-- <v-col :cols="undefined"></v-col> -->
-            <v-col>
-              <Home></Home>
-              <About></About>
-              <Introduction></Introduction>
-              <Maps></Maps>
-              <Settlement></Settlement>
-              <Housing></Housing>
-              <Profiles></Profiles>
-              <!-- <div v-for="(section,index) in sections" v-bind:key="index" class="section">
-                <h3 class="display-3">{{section.title}}</h3>
-                <div v-for="(slide,j) in section.slides" v-bind:key="j" class="slide">
-                  <h3>{{slide}}</h3>
-                  <p>{{fillerText}}</p>
-                </div>
-              </div>-->
-            </v-col>
-            <!-- <v-col :cols="undefined"></v-col> -->
-          </v-row>
-        </v-container>
+      <full-page ref="fullpage" :options="options" id="fullpage" v-if="$route.name == 'Main'">
+        <router-view></router-view>
       </full-page>
+      <!-- I mean, I guess this works... -->
+      <router-view v-else></router-view>
     </v-content>
+
     <v-footer app color="darkBlack" class="font-weight-bold">
       <v-col>
-        <a href class="pr-4">Funders</a>
-        <a href class="pr-4">Contact</a>
+        <router-link to="/People" class="pr-4">People</router-link>
+        <router-link to="/Funders" class="pr-4">Funders</router-link>
+        <router-link to="/Contact" class="pr-4">Contact</router-link>
+        
       </v-col>
       <v-spacer></v-spacer>
-      &copy; {{new Date().getFullYear()}}
+      <span class="white--text pr-4">&copy; {{new Date().getFullYear()}}</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
-// import FullPageTest from "./components/FullPageTest";
-import Home from "./components/Home";
-import About from "./components/About";
-import Introduction from "./components/Introduction";
-import Maps from "./components/Maps";
-import Settlement from "./components/Settlement";
-import Housing from "./components/Housing";
-import Profiles from "./components/Profiles";
-
+import EventBus from './event-bus'
 export default {
   name: "App",
-
-  components: {
-    // FullPageTest
-    Home,
-    About,
-    Introduction,
-    Maps,
-    Settlement,
-    Housing,
-    Profiles
-  },
-
   data: () => ({
     fillerText:
       "Challenges and opportunities; collective impact incubator energize natural resources. Shared value; circular innovate social entrepreneur impact investing change-makers challenges and opportunities B-corp outcomes. Disrupt fairness empower, blended value framework. Boots on the ground; move the needle global, leverage improve the world milestones benefit corporation greenwashing ideate. But; save the world, her body her rights LGBTQ+ a efficient storytelling empower external partners. Framework society circular thought leadership expose the truth strategy strategy big data save the world. Replicable shared value mass incarceration, thought partnership, big data paradigm engaging granular. Grit change-makers triple bottom line energize LGBTQ+ low-hanging fruit thought leadership. Replicable overcome injustice thought partnership empathetic rubric when blended value synergy uplift. Thought provoking innovation thought provoking academic, effective altruism collaborative consumption indicators movements replicable. Shared unit of analysis empower communities innovate youth social enterprise expose the truth. Communities technology; compelling; communities inspiring transparent; social entrepreneurship. Inspirational framework collective impact efficient.",
@@ -183,35 +139,57 @@ export default {
         "Housing",
         "Profiles"
       ],
-
-      // sectionsColor: [
-      //   "#D6D93B",
-      //   "#2EA1CC",
-      //   "#5EBF99",
-      //   "#D6D93B",
-      //   "#2EA1CC",
-      //   "#5EBF99",
-      //   "#D6D93B",
-      //   "#2EA1CC",
-      //   "#5EBF99"
-      // ],
-
-      sectionsColor: [
-        "#FFFFFF"
-        // "#DEDEDE",
-        // "#DEDEDE",
-        // "#DEDEDE",
-        // "#DEDEDE",
-        // "#DEDEDE",
-        // "#DEDEDE",
-        // "#DEDEDE"
-      ]
+      sectionsColor: ["#FFFFFF"]
     }
   }),
   methods: {
     moveDown: function() {
       this.$refs.fullpage.api.moveSectionDown();
+    },
+
+    navigateToSection: function(i) {
+      if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
+      else
+        this.$router.push("/").then(() => {
+          this.$refs.fullpage.api.moveTo(i + 1);
+        });
+    },
+    navigateToSlide: function(i, index) {
+      if (this.$route.name == "Main")
+        this.$refs.fullpage.api.moveTo(i + 1, index);
+      else
+        this.$router.push("/").then(() => {
+          this.$refs.fullpage.api.moveTo(i + 1, index);
+        });
     }
+  },
+  mounted() {
+    this.$root.refs
+    EventBus.$on('PROFILE_NAV_CLICK', function (payLoad) {
+      console.log("Received profile click event from " + payLoad)
+      // this.navigateToSection(7 + payLoad)
+      // this.options.sectionsColor = ["#004499"];
+    });
+    // const scene2 = this.$scrollmagic
+    //   .scene({
+    //     // ID of element where animation starts
+    //     triggerElement: "#trigger2",
+    //     // {0,0.5,1} - animations starts from {top,center,end} of window
+    //     triggerHook: 0.5,
+    //     // Duration of animation
+    //     duration: 300
+    //   }) // Declaration of animation and attaching to element
+    //   .setTween("#animate2", {
+    //     css: {
+    //       borderTop: "30px solid white",
+    //       backgroundColor: "blue",
+    //       scale: 0.7 // the tween durtion can be omitted and defaults to 1
+    //     }
+    //   })
+    //   // Helpful tags for orientation on the screen
+    //   .addIndicators({ name: "2 (duration: 300)" });
+    // // Add Scene to controller
+    // this.$scrollmagic.addScene(scene2);
   }
 };
 </script>
@@ -225,7 +203,7 @@ body {
 .v-applicaton {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
-v-footer{
+v-footer {
   z-index: -1;
 }
 v-footer a {
@@ -239,6 +217,13 @@ h3 {
 .fp-slidesNav.fp-bottom {
   bottom: 125px;
   margin: 0 auto;
+}
+v-btn {
+  color: tomato;
+}
+#site-title {
+  text-decoration: none;
+  color: white;
 }
 /* .myFont{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;

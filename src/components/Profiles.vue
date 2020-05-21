@@ -7,8 +7,8 @@
           <v-container fluid>
             <!-- <h3>{{slide}}</h3> -->
             <v-row>
-              <v-col v-for="n in 6" :key="n" class="d-flex child-flex" cols="4">
-                <ProfileCard></ProfileCard>
+              <v-col v-for="(n,index) in profiles" :key="n" class="d-flex child-flex" cols="4">
+                <ProfileCard v-bind:name="n" v-bind:index="index" v-on:to-profile="toProfile"></ProfileCard>
               </v-col>
             </v-row>
           </v-container>
@@ -40,9 +40,18 @@ export default {
         "Milagros Ortiz",
         "Teri Morrison",
         "Joshua Serrano",
-        "Ashley Johnson"
+        "Ashley Johnson",
+        "Tim Robbins",
+        "Mark Smith"
       ]
     };
   }
+  ,
+  methods: {
+    toProfile() {
+      console.log("bubble1")
+      this.$emit('bubble-profile')
+    }
+  },
 };
 </script>

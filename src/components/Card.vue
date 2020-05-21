@@ -4,7 +4,7 @@
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
         <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
         <v-card-text class="white--text body-1">{{body}}</v-card-text>
-        <v-img v-bind:src="image"></v-img>
+        <!-- <v-img v-bind:src="image"></v-img> -->
       </v-card>
     <!-- </div> -->
   </v-card>
@@ -16,8 +16,8 @@ export default {
   name: "Card",
   data() {
     return {
-      cardColors: ['green','teal','blue'],
-      myColor: null,
+      cardColors: ["green", "teal", "blue"],
+      myColor: null
     };
   },
   props: ["heading", "body", "bgColor","image"],
@@ -38,8 +38,8 @@ export default {
   outline-color: #72b591;
   outline-width: 3px;
 }
-.bcard{
+.bcard {
   background-color: rgb(81, 159, 200);
-  color:rgb(81, 159, 200);
+  color: rgb(81, 159, 200);
 }
 </style>

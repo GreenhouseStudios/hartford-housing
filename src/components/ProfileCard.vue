@@ -14,21 +14,44 @@
           </v-row>
         </template>
       </v-img>
-      <v-card-text v-show="hover" class="font-weight-bold" v-on:click="moveDown">Maria Colon Sanchez</v-card-text>
+      <v-card-text v-show="hover" class="font-weight-bold">{{name}}</v-card-text>
     </v-card>
   </v-hover>
 </template>
 
 <script>
-
+import EventBus from '../event-bus';
 export default {
+  mounted () {
+    // console.log(this.$root)
+  },
   methods: {
     moveDown: function() {
-      this.$emit('profileCardClicked')
+      EventBus.$emit('PROFILE_NAV_CLICK',this.index)
+      // this.$root.navigateToSection(0)
+      console.log(this.$root.$children[0])
+      this.$root.$children[0].navigateToSection(7 + this.index) //this is not what anyone would recommend doing, but couldn't figure out an alternative
+      // this.$emit('to-profile')
+      // console.log('profile click')
+      // this.$root.$refs.fullpage.api.moveTo(1);  
     // console.log(this.$parent.$parent.$parent.$options.name)
     // console.log(this.$root.$refs);
     }
-  }
+  },
+  data() {
+    return {
+    }
+  },
+  props: {
+    index: {
+      type: Number,
+      default: -1
+    },
+    name:{
+      type: String,
+      default: "Profile Name"
+    }
+  },
 };
 </script>
 

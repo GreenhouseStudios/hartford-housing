@@ -1,5 +1,6 @@
 <template>
   <div class="section">
+    <h1>Introduction</h1>
     <div v-for="(item,index) in sections" class="slide" v-bind:key="index">
       <!-- <h1>{{item.heading}}</h1>
       <p>{{item.body}}</p>-->
