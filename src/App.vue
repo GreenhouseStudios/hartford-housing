@@ -196,12 +196,8 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-html,
-body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
 .v-applicaton {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
 }
 v-footer {
   z-index: -1;
