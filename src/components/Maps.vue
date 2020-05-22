@@ -14,13 +14,21 @@
         <h2 class="ma-5">Places of Origin</h2>
         <v-img :src="require('../assets/PlacesofOriginUpdate.jpg')" contain max-height="80vh"></v-img>
       </div>
-        <div class="slide">
+      <div class="slide">
         <h2 class="ma-5">Race and Ethnicity</h2>
         <v-img :src="require('../assets/Race_Ethnicity2.jpg')" contain max-height="80vh"></v-img>
       </div>
-        <div class="slide">
+      <div class="slide">
         <h2 class="ma-5">Landmarks</h2>
         <v-img :src="require('../assets/landmarks.jpg')" contain max-height="80vh"></v-img>
+      </div>
+      <div class="slide">
+        <h2 class="ma-5">Geographic Mobility of African Americans</h2>
+        <v-img :src="require('../assets/GeographicMobility.jpg')" contain max-height="80vh"></v-img>
+      </div>
+       <div class="slide">
+        <h2 class="ma-5">Ship Manifest</h2>
+        <v-img :src="require('../assets/ShipManifest.jpg')" contain max-height="80vh"></v-img>
       </div>
     </div>
   </div>
