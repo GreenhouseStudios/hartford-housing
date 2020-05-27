@@ -20,7 +20,10 @@ L.Icon.Default.mergeOptions({
   shadowUrl: require("leaflet/dist/images/marker-shadow.png")
 });
 import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
-//
+import pop1940 from "../geojson/Pop1940.json";
+import pop1960 from "../geojson/Pop1960.json";
+import pop1980 from "../geojson/Pop1980.json";
+import keneyPark from "../geojson/KeneyPark.json";
 
 export default {
   name: "Map",
@@ -33,13 +36,21 @@ export default {
       type: Number,
       default: 14
     },
-    id:{
+    id: {
       type: String,
       default: "mapid"
+    },
+    jsonFile: {
+      type: String,
+      default: "pop1940"
     }
   },
   data() {
     return {
+      keneyPoly: keneyPark,
+      jsonSources: [pop1940, pop1960, pop1980],
+      jsonFileNames: ["pop1940", "pop1960", "pop1980"],
+      jsonData: null,
       map: null,
       tileLayer: null,
       mapid: this.id,
@@ -61,6 +72,7 @@ export default {
     };
   },
   mounted() {
+    this.jsonData = this.jsonSources[this.jsonFileNames.indexOf(this.jsonFile)];
     this.initMap();
     this.initLayers();
   },
@@ -103,9 +115,37 @@ export default {
         //     .bindPopup(feature.name);
         // });
       });
+      if (this.jsonData) {
+        L.geoJSON(this.jsonData, {
+          style: function(feature) {
+            return { color: mapColor(feature.properties.PercentAA) };
+          }
+        })
+          .bindPopup(function(layer) {
+            return layer.feature.properties.description;
+          })
+          .addTo(this.map);
+      }
+      L.geoJSON(this.keneyPoly, {
+        style: function() {
+          return { color: 'green' };
+        }
+      })
+        .bindPopup(function(layer) {
+          return layer.feature.properties.description;
+        })
+        .addTo(this.map);
     }
   }
 };
+
+function mapColor(percent) {
+  // console.log(percent);
+  if (percent < 0.25) return "#DEDEDE";
+  else if (percent < 0.5) return "#d1d35e";
+  else if (percent < 0.75) return "#519ec8";
+  else return "#72b591";
+}
 </script>
 
 <style scoped>
