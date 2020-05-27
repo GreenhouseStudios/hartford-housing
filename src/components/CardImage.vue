@@ -1,8 +1,9 @@
 <template>
-  <!-- <v-card flat tile max-width="800" v-bind:color="myColor"> -->
-    <!-- <div class="outline"> -->
-      <!-- <v-card flat tile color="lightBlack" class="pa-5 innercard relative"> -->
-        <!-- <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title> -->
+  <v-card flat tile :style="{width:cardWidth + 'px'}" v-bind:color="myColor">
+    <div class="outline">
+      <v-card flat tile color="lightBlack" class="pa-5 innercard relative"
+      :style="{height:cardHeight + 'px'}">
+        <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
         <v-col cols="auto">
           <v-img
           class="align-image"
@@ -10,9 +11,9 @@
           v-bind:src="image">
           </v-img>
         </v-col>
-      <!-- </v-card> -->
-    <!-- </div> -->
-  <!-- </v-card> -->
+      </v-card>
+    </div>
+  </v-card>
 </template>
 
 
@@ -25,7 +26,7 @@ export default {
       myColor: null,
     };
   },
-  props: ["image", "bgColor", "offsetV", "offsetH", "rotation"],
+  props: ["image", "bgColor", "offsetV", "offsetH", "rotation", "cardWidth", "cardHeight"],
   created(){
     var randomIndex = Math.floor(Math.random()* this.cardColors.length);
     this.myColor = this.cardColors[randomIndex];
