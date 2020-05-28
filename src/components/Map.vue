@@ -141,9 +141,9 @@ export default {
 
 function mapColor(percent) {
   // console.log(percent);
-  if (percent < 0.25) return "#DEDEDE";
-  else if (percent < 0.5) return "#d1d35e";
-  else if (percent < 0.75) return "#519ec8";
+  if (percent < 25) return "#DEDEDE";
+  else if (percent < 50) return "#d1d35e";
+  else if (percent < 75) return "#519ec8";
   else return "#72b591";
 }
 </script>
