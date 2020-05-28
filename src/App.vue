@@ -218,6 +218,7 @@ v-btn {
 #site-title {
   text-decoration: none;
   color: white;
+  font-weight: 800;
 }
 /* .myFont{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
