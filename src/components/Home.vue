@@ -2,6 +2,7 @@
   <div class="section">
     <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)">
       <div id="subtitle">
+        <h1 class="display-4 ma-2" id="site-title">HARTFORD BOUND:</h1>
         <h1 class="display-4 ma-2" id="site-title">{{subtitle.toUpperCase()}}</h1>
         <CardImage v-bind:image="slides[0].image" v-bind:offsetH="slides[0].offsetH" 
         v-bind:offsetV="slides[0].offsetV" v-bind:rotation="slides[0].rotation"
@@ -22,7 +23,7 @@ export default {
   },
   data() {
     return {
-      subtitle: "Hartford Bound: Making Hartford Home",
+      subtitle: "Making Hartford Home",
       slides: [
         {
           image: require('../assets/pubhousingmap.jpg'),
@@ -51,11 +52,6 @@ export default {
 h1 {
   position: relative;
   display: inline-block;
-  background: linear-gradient(
-    180deg,
-    rgba(81, 159, 200, 0) 30%,
-    rgb(81, 159, 200) 30%
-  );
   font-weight: 900;
 }
 h1::after {
