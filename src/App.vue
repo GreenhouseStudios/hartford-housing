@@ -196,7 +196,12 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
+v-application{
+  font-family: "Gilroy Extrabold" !important;
+}
+.v-btn{
+  font-weight: 800 !important;
+}
 v-footer {
   z-index: -1;
 }
@@ -211,9 +216,6 @@ h3 {
 .fp-slidesNav.fp-bottom {
   bottom: 125px;
   margin: 0 auto;
-}
-v-btn {
-  color: tomato;
 }
 #site-title {
   text-decoration: none;
