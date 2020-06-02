@@ -2,10 +2,10 @@
   <v-hover v-slot:default="{ hover }">
     <v-card tile class="d-flex" :class="{ 'on-hover': hover }" v-on:click="moveDown">
       <v-img
-        :src="require('../assets/mariacolonsanchez.jpg')"
+        :src="img"
         contain
         aspect-ratio="1"
-        height="200"
+        height="350"
         class="align-end"
       >
         <template v-slot:placeholder>
@@ -50,6 +50,10 @@ export default {
     name:{
       type: String,
       default: "Profile Name"
+    },
+    img:{
+      type: String,
+      default: require('../assets/mariacolonsanchez.jpg')
     }
   },
 };
