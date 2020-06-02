@@ -2,7 +2,7 @@
   <div class="section">
     <!-- <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)"> -->
       <div id="subtitle">
-        <h1 class="display-2 font-weight-bold">{{subtitle | allCaps}}</h1>
+        <h1 class="display-2 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h1>
         <h1 class="display-2 font-weight-bold">HOUSING STRUGGLES</h1>
         <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
       </div>

@@ -225,4 +225,12 @@ h3 {
 /* .myFont{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
 } */
+.text-outline{
+  -webkit-text-stroke: 1px #72b591; 
+}
+.text-outline-offset{
+  text-shadow: -3px -3px black;
+  -webkit-text-fill-color: rgb(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #72b591; 
+}
 </style>
