@@ -118,7 +118,7 @@ export default {
       if (this.jsonData) {
         L.geoJSON(this.jsonData, {
           style: function(feature) {
-            return { color: mapColor(feature.properties.PercentAA) };
+            return { color: mapColor(feature.properties.PercAA) };
           }
         })
           .bindPopup(function(layer) {

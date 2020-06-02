@@ -11,7 +11,7 @@
         "Town": "Hartford",
         "SqMile": 0.149455,
         "PDen80": 267.64,
-        "PercentAA": 21.8579,
+        "PercAA": 21.8579,
         "Shape_Leng": 0.0332804908761,
         "Shape_Area": 0.0000419130903103
       },
@@ -169,7 +169,7 @@
         "Town": "Hartford",
         "SqMile": 0.664675,
         "PDen80": 6318.88,
-        "PercentAA": 95.3678,
+        "PercAA": 95.3678,
         "Shape_Leng": 0.0577288139097,
         "Shape_Area": 0.000186470985754
       },
@@ -331,7 +331,7 @@
         "Town": "Hartford",
         "SqMile": 0.150974,
         "PDen80": 11280.1,
-        "PercentAA": 71.2254,
+        "PercAA": 71.2254,
         "Shape_Leng": 0.0281502857787,
         "Shape_Area": 0.0000423514926317
       },
@@ -465,7 +465,7 @@
         "Town": "Hartford",
         "SqMile": 0.116044,
         "PDen80": 1077.17,
-        "PercentAA": 4.23585,
+        "PercAA": 4.23585,
         "Shape_Leng": 0.0271589353235,
         "Shape_Area": 0.0000325408240429
       },
@@ -587,7 +587,7 @@
         "Town": "Hartford",
         "SqMile": 0.391421,
         "PDen80": 378.109,
-        "PercentAA": 5.97738,
+        "PercAA": 5.97738,
         "Shape_Leng": 0.0449373791236,
         "Shape_Area": 0.000109708575598
       },
@@ -753,7 +753,7 @@
         "Town": "Hartford",
         "SqMile": 2.15334,
         "PDen80": 114.241,
-        "PercentAA": 46.5909,
+        "PercAA": 46.5909,
         "Shape_Leng": 0.109649850546,
         "Shape_Area": 0.000604071025772
       },
@@ -927,7 +927,7 @@
         "Town": "Hartford",
         "SqMile": 0.145637,
         "PDen80": 9681.61,
-        "PercentAA": 71.6463,
+        "PercAA": 71.6463,
         "Shape_Leng": 0.0282469131916,
         "Shape_Area": 0.0000408524398591
       },
@@ -1049,7 +1049,7 @@
         "Town": "Hartford",
         "SqMile": 0.201326,
         "PDen80": 8116.18,
-        "PercentAA": 52.0051,
+        "PercAA": 52.0051,
         "Shape_Leng": 0.0317454673199,
         "Shape_Area": 0.0000564706859206
       },
@@ -1171,7 +1171,7 @@
         "Town": "Hartford",
         "SqMile": 0.0472697,
         "PDen80": 10302.6,
-        "PercentAA": 70.0719,
+        "PercAA": 70.0719,
         "Shape_Leng": 0.015672505626,
         "Shape_Area": 0.0000132582795597
       },
@@ -1253,7 +1253,7 @@
         "Town": "Hartford",
         "SqMile": 0.116018,
         "PDen80": 4447.6,
-        "PercentAA": 28.8268,
+        "PercAA": 28.8268,
         "Shape_Leng": 0.0271961109348,
         "Shape_Area": 0.000032540122101
       },
@@ -1363,7 +1363,7 @@
         "Town": "Hartford",
         "SqMile": 0.120097,
         "PDen80": 507.922,
-        "PercentAA": 5.74388,
+        "PercAA": 5.74388,
         "Shape_Leng": 0.0295500240355,
         "Shape_Area": 0.0000336800193006
       },
@@ -1533,7 +1533,7 @@
         "Town": "Hartford",
         "SqMile": 0.205129,
         "PDen80": 424.124,
-        "PercentAA": 19.9541,
+        "PercAA": 19.9541,
         "Shape_Leng": 0.0408329498299,
         "Shape_Area": 0.0000575230991831
       },
@@ -1715,7 +1715,7 @@
         "Town": "Hartford",
         "SqMile": 0.0626048,
         "PDen80": 0,
-        "PercentAA": 0,
+        "PercAA": 0,
         "Shape_Leng": 0.0168512001714,
         "Shape_Area": 0.0000175551523018
       },
@@ -1797,7 +1797,7 @@
         "Town": "Hartford",
         "SqMile": 0.162953,
         "PDen80": 9524.23,
-        "PercentAA": 60.5304,
+        "PercAA": 60.5304,
         "Shape_Leng": 0.0311427148207,
         "Shape_Area": 0.0000457043079439
       },
@@ -1935,7 +1935,7 @@
         "Town": "Hartford",
         "SqMile": 0.102092,
         "PDen80": 10520,
-        "PercentAA": 44.0525,
+        "PercAA": 44.0525,
         "Shape_Leng": 0.0260148271275,
         "Shape_Area": 0.0000286327866657
       },
@@ -2025,7 +2025,7 @@
         "Town": "Hartford",
         "SqMile": 0.151152,
         "PDen80": 1171.01,
-        "PercentAA": 23.3818,
+        "PercAA": 23.3818,
         "Shape_Leng": 0.0285132227203,
         "Shape_Area": 0.0000423917986977
       },
@@ -2171,7 +2171,7 @@
         "Town": "Hartford",
         "SqMile": 0.227777,
         "PDen80": 11441,
-        "PercentAA": 78.8025,
+        "PercAA": 78.8025,
         "Shape_Leng": 0.036779088641,
         "Shape_Area": 0.00006389343007
       },
@@ -2273,7 +2273,7 @@
         "Town": "Hartford",
         "SqMile": 0.496371,
         "PDen80": 1124.16,
-        "PercentAA": 43.3566,
+        "PercAA": 43.3566,
         "Shape_Leng": 0.0525502472377,
         "Shape_Area": 0.000139229657359
       },
@@ -2419,7 +2419,7 @@
         "Town": "Hartford",
         "SqMile": 0.137698,
         "PDen80": 20348.8,
-        "PercentAA": 81.6196,
+        "PercAA": 81.6196,
         "Shape_Leng": 0.0283110885598,
         "Shape_Area": 0.0000386249518503
       },
@@ -2533,7 +2533,7 @@
         "Town": "Hartford",
         "SqMile": 0.0790941,
         "PDen80": 22643.9,
-        "PercentAA": 75.2837,
+        "PercAA": 75.2837,
         "Shape_Leng": 0.0209097659468,
         "Shape_Area": 0.0000221849149499
       },
@@ -2623,7 +2623,7 @@
         "Town": "Hartford",
         "SqMile": 0.128985,
         "PDen80": 224.832,
-        "PercentAA": 1.78352,
+        "PercAA": 1.78352,
         "Shape_Leng": 0.0323220611732,
         "Shape_Area": 0.0000361683101869
       },
@@ -2761,7 +2761,7 @@
         "Town": "Hartford",
         "SqMile": 0.629793,
         "PDen80": 1360.76,
-        "PercentAA": 15.8031,
+        "PercAA": 15.8031,
         "Shape_Leng": 0.0706642544513,
         "Shape_Area": 0.000176570657573
       },
@@ -2991,7 +2991,7 @@
         "Town": "Hartford",
         "SqMile": 0.190393,
         "PDen80": 703.806,
-        "PercentAA": 4.67551,
+        "PercAA": 4.67551,
         "Shape_Leng": 0.0358913421081,
         "Shape_Area": 0.0000533862069798
       },
@@ -3197,7 +3197,7 @@
         "Town": "Hartford",
         "SqMile": 0.404465,
         "PDen80": 2566.35,
-        "PercentAA": 23.6878,
+        "PercAA": 23.6878,
         "Shape_Leng": 0.0478161850808,
         "Shape_Area": 0.000113426792203
       },
@@ -3423,7 +3423,7 @@
         "Town": "Hartford",
         "SqMile": 0.447392,
         "PDen80": 0,
-        "PercentAA": 0,
+        "PercAA": 0,
         "Shape_Leng": 0.045641689079,
         "Shape_Area": 0.000125396303603
       },
@@ -3593,7 +3593,7 @@
         "Town": "Hartford",
         "SqMile": 0.495076,
         "PDen80": 1092.76,
-        "PercentAA": 12.3235,
+        "PercAA": 12.3235,
         "Shape_Leng": 0.0664538067961,
         "Shape_Area": 0.000138782957088
       },
@@ -3855,7 +3855,7 @@
         "Town": "Hartford",
         "SqMile": 0.580458,
         "PDen80": 17.2278,
-        "PercentAA": 0.244918,
+        "PercAA": 0.244918,
         "Shape_Leng": 0.0627399369603,
         "Shape_Area": 0.000162697634194
       },
@@ -4081,7 +4081,7 @@
         "Town": "Hartford",
         "SqMile": 0.295103,
         "PDen80": 37.2751,
-        "PercentAA": 0.270869,
+        "PercAA": 0.270869,
         "Shape_Leng": 0.0450290140186,
         "Shape_Area": 0.0000827219816243
       },
@@ -4235,7 +4235,7 @@
         "Town": "Hartford",
         "SqMile": 0.281068,
         "PDen80": 5105.54,
-        "PercentAA": 36.4583,
+        "PercAA": 36.4583,
         "Shape_Leng": 0.0429140412089,
         "Shape_Area": 0.00007878957905
       },
@@ -4429,7 +4429,7 @@
         "Town": "Hartford",
         "SqMile": 0.308673,
         "PDen80": 8500.9,
-        "PercentAA": 68.7451,
+        "PercAA": 68.7451,
         "Shape_Leng": 0.0479360448945,
         "Shape_Area": 0.0000865976081425
       },
@@ -4571,7 +4571,7 @@
         "Town": "Hartford",
         "SqMile": 0.241257,
         "PDen80": 11838,
-        "PercentAA": 90.6379,
+        "PercAA": 90.6379,
         "Shape_Leng": 0.0430560249521,
         "Shape_Area": 0.0000676835998483
       },
@@ -4713,7 +4713,7 @@
         "Town": "Hartford",
         "SqMile": 0.691492,
         "PDen80": 7775.94,
-        "PercentAA": 86.88,
+        "PercAA": 86.88,
         "Shape_Leng": 0.0779351783039,
         "Shape_Area": 0.000194019896027
       },
@@ -4939,7 +4939,7 @@
         "Town": "Hartford",
         "SqMile": 0.731223,
         "PDen80": 3018.23,
-        "PercentAA": 55.2856,
+        "PercAA": 55.2856,
         "Shape_Leng": 0.06762499771,
         "Shape_Area": 0.000205155595037
       },
@@ -5101,7 +5101,7 @@
         "Town": "Hartford",
         "SqMile": 0.765841,
         "PDen80": 1543.4,
-        "PercentAA": 89.6133,
+        "PercAA": 89.6133,
         "Shape_Leng": 0.0904721755125,
         "Shape_Area": 0.000214878784414
       },
@@ -5275,7 +5275,7 @@
         "Town": "Hartford",
         "SqMile": 0.359717,
         "PDen80": 9807.7,
-        "PercentAA": 78.9969,
+        "PercAA": 78.9969,
         "Shape_Leng": 0.0494700386128,
         "Shape_Area": 0.000100920986094
       },
@@ -5437,7 +5437,7 @@
         "Town": "Hartford",
         "SqMile": 0.426925,
         "PDen80": 1602.15,
-        "PercentAA": 22.5074,
+        "PercAA": 22.5074,
         "Shape_Leng": 0.0477624578766,
         "Shape_Area": 0.000119703427653
       },
@@ -5619,7 +5619,7 @@
         "Town": "Hartford",
         "SqMile": 0.208084,
         "PDen80": 1441.73,
-        "PercentAA": 8.89944,
+        "PercAA": 8.89944,
         "Shape_Leng": 0.0341444631915,
         "Shape_Area": 0.0000583450199005
       },
@@ -5753,7 +5753,7 @@
         "Town": "Hartford",
         "SqMile": 0.297648,
         "PDen80": 426.678,
-        "PercentAA": 4.00757,
+        "PercAA": 4.00757,
         "Shape_Leng": 0.0549689966097,
         "Shape_Area": 0.0000834557298269
       },
@@ -5927,7 +5927,7 @@
         "Town": "Hartford",
         "SqMile": 0.175087,
         "PDen80": 639.682,
-        "PercentAA": 3.01318,
+        "PercAA": 3.01318,
         "Shape_Leng": 0.0312249531853,
         "Shape_Area": 0.0000490928909648
       },
@@ -6049,7 +6049,7 @@
         "Town": "Hartford",
         "SqMile": 2.24947,
         "PDen80": 25.3393,
-        "PercentAA": 3.59168,
+        "PercAA": 3.59168,
         "Shape_Leng": 0.105477266449,
         "Shape_Area": 0.000630583238913
       },
@@ -6339,7 +6339,7 @@
         "Town": "Hartford",
         "SqMile": 0.335449,
         "PDen80": 608.139,
-        "PercentAA": 3.92988,
+        "PercAA": 3.92988,
         "Shape_Leng": 0.0456765153073,
         "Shape_Area": 0.0000940464576253
       },
@@ -6489,7 +6489,7 @@
         "Town": "Hartford",
         "SqMile": 0.0980192,
         "PDen80": 1010.01,
-        "PercentAA": 19.8795,
+        "PercAA": 19.8795,
         "Shape_Leng": 0.0239864998488,
         "Shape_Area": 0.0000274901259507
       },
@@ -6603,7 +6603,7 @@
         "Town": "Hartford",
         "SqMile": 0.393902,
         "PDen80": 1820.25,
-        "PercentAA": 16.4563,
+        "PercAA": 16.4563,
         "Shape_Leng": 0.0506575132619,
         "Shape_Area": 0.000110468105779
       },
@@ -6781,7 +6781,7 @@
         "Town": "Hartford",
         "SqMile": 0.324043,
         "PDen80": 0,
-        "PercentAA": 0,
+        "PercAA": 0,
         "Shape_Leng": 0.0429694164715,
         "Shape_Area": 0.0000908701652588
       },
@@ -6947,7 +6947,7 @@
         "Town": "Hartford",
         "SqMile": 0.33728,
         "PDen80": 619.662,
-        "PercentAA": 5.5778,
+        "PercAA": 5.5778,
         "Shape_Leng": 0.0528530721442,
         "Shape_Area": 0.0000945861219886
       },
@@ -7113,7 +7113,7 @@
         "Town": "Hartford",
         "SqMile": 0.14389,
         "PDen80": 924.318,
-        "PercentAA": 5.45305,
+        "PercAA": 5.45305,
         "Shape_Leng": 0.030310433355,
         "Shape_Area": 0.00004034204586
       },
@@ -7235,7 +7235,7 @@
         "Town": "Hartford",
         "SqMile": 0.1542,
         "PDen80": 1316.47,
-        "PercentAA": 5.90288,
+        "PercAA": 5.90288,
         "Shape_Leng": 0.0330228140562,
         "Shape_Area": 0.0000432298649999
       },
@@ -7341,7 +7341,7 @@
         "Town": "Hartford",
         "SqMile": 0.279999,
         "PDen80": 235.715,
-        "PercentAA": 1.29159,
+        "PercAA": 1.29159,
         "Shape_Leng": 0.0414177304341,
         "Shape_Area": 0.0000784900952516
       },
@@ -7495,7 +7495,7 @@
         "Town": "Hartford",
         "SqMile": 0.111529,
         "PDen80": 1560.14,
-        "PercentAA": 15.4942,
+        "PercAA": 15.4942,
         "Shape_Leng": 0.0261296743026,
         "Shape_Area": 0.0000312733029039
       },
