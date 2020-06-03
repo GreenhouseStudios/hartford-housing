@@ -1,17 +1,22 @@
 <template>
   <div class="section">
     <!-- <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)"> -->
-      <div id="subtitle">
-        <h1 class="display-2 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h1>
-        <h1 class="display-2 font-weight-bold">HOUSING STRUGGLES</h1>
-        <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
-      </div>
-      <Card v-bind:heading="heading" v-bind:body="body"></Card>
-      <CardImage v-bind:image="slides[0].image" v-bind:offsetH="slides[0].offsetH" 
-        v-bind:offsetV="slides[0].offsetV" v-bind:rotation="slides[0].rotation"
-        v-bind:cardWidth="slides[0].cardWidth" v-bind:cardHeight="slides[0].cardHeight"
-        v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}">
-        </CardImage>
+    <div id="subtitle">
+      <h1 class="display-2 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h1>
+      <h1 class="display-2 font-weight-bold">HOUSING STRUGGLES</h1>
+      <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
+    </div>
+    <Card v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
+    <CardImage
+      v-bind:image="slides[0].image"
+      v-bind:offsetH="slides[0].offsetH"
+      v-bind:offsetV="slides[0].offsetV"
+      v-bind:rotation="slides[0].rotation"
+      v-bind:cardWidth="slides[0].cardWidth"
+      v-bind:cardHeight="slides[0].cardHeight"
+      v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}"
+      id="reveal"
+    ></CardImage>
     <!-- </v-img> -->
   </div>
 </template>
@@ -32,9 +37,9 @@ export default {
       heading: "About",
       body:
         "Hartford, Connecticut attracted three waves of internal and transnational migrations of African American, Puerto Rican, and West Indian communities that transformed the city’s racial and ethnic landscape. These monumental shifts in mobilities unfolded in many other metropolitan areas in the United States like Chicago and Philadelphia, Harlem and San Francisco in the twentieth century. This project explores the history of migration, housing, settlement, community formation, and succession through the lens of Hartford, one of America’s wealthiest cities at the end of the Civil War.  ",
-      slides:[
+      slides: [
         {
-          image: require('../assets/eastside_men.png'),
+          image: require("../assets/eastside_men.png"),
           offsetH: "25",
           offsetV: "25",
           rotation: "0",
@@ -53,6 +58,22 @@ export default {
     allCaps: function(value) {
       return value.toUpperCase();
     }
+  },
+  mounted() {
+    const scene2 = this.$scrollmagic
+      .scene({
+        // ID of element where animation starts
+        triggerElement: "#trigger2",
+        // {0,0.5,1} - animations starts from {top,center,end} of window
+        triggerHook: 0.5,
+        // Duration of animation
+        duration: 300
+      }) // Declaration of animation and attaching to element
+      .setClassToggle("#reveal","visible")
+      // Helpful tags for orientation on the screen
+      .addIndicators({ name: "2 (duration: 300)" });
+    // Add Scene to controller
+    this.$scrollmagic.addScene(scene2);
   }
 };
 </script>
@@ -82,10 +103,31 @@ h1::after {
   z-index: -1;
   width: 100%;
 }
-v-parallax{
+v-parallax {
   /* height: 2000px; */
 }
-.section{
+.section {
   height: 4000px;
+}
+#reveal {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#reveal.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
 </style>

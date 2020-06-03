@@ -51,7 +51,6 @@
 </template>
 
 <script>
-import EventBus from './event-bus'
 export default {
   name: "App",
   data: () => ({
@@ -162,34 +161,6 @@ export default {
           this.$refs.fullpage.api.moveTo(i + 1, index);
         });
     }
-  },
-  mounted() {
-    this.$root.refs
-    EventBus.$on('PROFILE_NAV_CLICK', function (payLoad) {
-      console.log("Received profile click event from " + payLoad)
-      // this.navigateToSection(7 + payLoad)
-      // this.options.sectionsColor = ["#004499"];
-    });
-    // const scene2 = this.$scrollmagic
-    //   .scene({
-    //     // ID of element where animation starts
-    //     triggerElement: "#trigger2",
-    //     // {0,0.5,1} - animations starts from {top,center,end} of window
-    //     triggerHook: 0.5,
-    //     // Duration of animation
-    //     duration: 300
-    //   }) // Declaration of animation and attaching to element
-    //   .setTween("#animate2", {
-    //     css: {
-    //       borderTop: "30px solid white",
-    //       backgroundColor: "blue",
-    //       scale: 0.7 // the tween durtion can be omitted and defaults to 1
-    //     }
-    //   })
-    //   // Helpful tags for orientation on the screen
-    //   .addIndicators({ name: "2 (duration: 300)" });
-    // // Add Scene to controller
-    // this.$scrollmagic.addScene(scene2);
   }
 };
 </script>
