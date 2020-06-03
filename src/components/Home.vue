@@ -2,11 +2,15 @@
   <div class="section">
     <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)">
       <div id="subtitle">
-        <h1 class="display-4 ma-2" id="site-title">HARTFORD BOUND:</h1>
-        <h1 class="display-4 ma-2" id="site-title">{{subtitle.toUpperCase()}}</h1>
-        <CardImage v-bind:image="slides[0].image" v-bind:offsetH="slides[0].offsetH" 
-        v-bind:offsetV="slides[0].offsetV" v-bind:rotation="slides[0].rotation"
-        v-bind:cardWidth="slides[0].cardWidth" v-bind:cardHeight="slides[0].cardHeight"
+        <h1 class="display-2 font-weight-bold text-outline-offset">HARTFORD BOUND: </h1>
+        <h1 class="display-2 font-weight-bold">{{subtitle.toUpperCase()}}</h1>
+        <CardImage class= "align-right"
+        v-bind:image="slides[0].image" 
+        v-bind:offsetH="slides[0].offsetH" 
+        v-bind:offsetV="slides[0].offsetV" 
+        v-bind:rotation="slides[0].rotation"
+        v-bind:cardWidth="slides[0].cardWidth" 
+        v-bind:cardHeight="slides[0].cardHeight"
         v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}">
         </CardImage>
       </div>
@@ -40,6 +44,20 @@ export default {
 </script>
 
 <style scoped>
+.align-right {
+  position: relative;
+  float: right;
+  margin: 20px;
+  margin-right: 40px;
+}
+.align-center {
+  margin: auto;
+}
+.align-left {
+  position: relative;
+  float: left;
+  margin: 20px;
+}
 .bod {
   max-width: 500px;
 }
@@ -52,7 +70,11 @@ export default {
 h1 {
   position: relative;
   display: inline-block;
-  font-weight: 900;
+  background: linear-gradient(
+    180deg,
+    rgba(81, 159, 200, 0) 30%,
+    rgb(81, 159, 200) 30%
+  );
 }
 h1::after {
   content: "";
@@ -63,6 +85,10 @@ h1::after {
   z-index: -1;
   width: 100%;
 }
+/* .right-align{
+  position: relative;
+  right: 0;
+} */
 .section{
   height: 500;
 }

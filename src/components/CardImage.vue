@@ -1,6 +1,6 @@
 <template>
   <v-card flat tile :style="{width:cardWidth + 'px'}" v-bind:color="myColor">
-    <div class="outline">
+    <div class="card-image">
       <v-card flat tile color="lightBlack" class="pa-5 innercard relative"
       :style="{height:cardHeight + 'px'}">
         <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
@@ -35,15 +35,12 @@ export default {
 </script>
 
 <style  scoped>
+.card-image {
+  margin-top: 30px;
+}
 .innercard {
   top: 25px;
   left: 25px;
-}
-.outline {
-  margin-top: 50px;
-  outline-style: solid;
-  outline-color: #72b591;
-  outline-width: 3px;
 }
 .bcard{
   background-color: rgb(81, 159, 200);

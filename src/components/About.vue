@@ -6,8 +6,9 @@
       <h1 class="display-2 font-weight-bold">HOUSING STRUGGLES</h1>
       <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
     </div>
-    <Card v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
-    <CardImage
+    <Card class= "align-center"
+      v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
+    <CardImage class= "align-center"
       v-bind:image="slides[0].image"
       v-bind:offsetH="slides[0].offsetH"
       v-bind:offsetV="slides[0].offsetV"
@@ -67,7 +68,7 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.5,
         // Duration of animation
-        duration: 300
+        duration: 450
       }) // Declaration of animation and attaching to element
       .setClassToggle("#reveal","visible")
       // Helpful tags for orientation on the screen
@@ -79,6 +80,19 @@ export default {
 </script>
 
 <style scoped>
+.align-right {
+  position: relative;
+  float: right;
+  margin: 20px;
+}
+.align-center {
+  margin: auto;
+}
+.align-left {
+  position: relative;
+  float: left;
+  margin: 20px;
+}
 .bod {
   max-width: 500px;
 }
