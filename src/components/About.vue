@@ -72,7 +72,7 @@ export default {
       }) // Declaration of animation and attaching to element
       .setClassToggle("#reveal","visible")
       // Helpful tags for orientation on the screen
-      .addIndicators({ name: "2 (duration: 300)" });
+      // .addIndicators({ name: "2 (duration: 300)" });
     // Add Scene to controller
     this.$scrollmagic.addScene(scene2);
   }

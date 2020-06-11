@@ -3,7 +3,7 @@
     <div class="card-image">
       <v-card flat tile color="lightBlack" class="pa-5 innercard relative"
       :style="{height:cardHeight + 'px'}">
-        <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
+        <!-- <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title> -->
         <v-col cols="auto">
           <v-img
           class="align-image"

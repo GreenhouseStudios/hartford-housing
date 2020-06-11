@@ -25,7 +25,7 @@
         </v-col>
       </v-row>
     </div>
-    <div class="section" v-for="prof in profiles" :key="prof">
+    <div class="section" v-for="(prof,j) in profiles" :key="j">
       <v-container fluid>
         <v-row>
           <v-col cols="6">
@@ -91,14 +91,6 @@ Neither their degrees nor their status in the community shielded them from discr
 of black people was an inspiration and he tried to identify where his passion and future lay. Would he get involved in politics? Would he be called to the ministry? He ran unsuccessfully for a seat on Hartford’s Court of Common Council and emerged from that experience with a keen understanding of politics as a tool. Since then, AJ Johnson has found his calling in both of his roles as Lead Community Organizer for the Christian Activities Council (now
 the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Refuge Church in Hartford. In these dual roles, Johnson sustains the legacy of civil rights and human rights pioneers like the Rev. Richard Battles of the Mt. Olive Baptist Church, William Brown, Executive Director of the Urban League of Greater Hartford and of his father Bishop Johnson. The passion he brings to the No More Slumlords movement is duplicated in his support of entrepreneurship in the local community and his backing of a $15 minimum wage.`
         }
-        // {
-        //   name: "Tim Robbins",
-        //   img: require("../assets/AJJohnson/PastorAJJohnson.jpg")
-        // },
-        // {
-        //   name: "Mark Smith",
-        //   img: require("../assets/AJJohnson/PastorAJJohnson.jpg")
-        // }
       ]
     };
   },

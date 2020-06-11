@@ -1,12 +1,25 @@
 <template>
-  <v-app class="myFont">
+  <v-app>
+    <!-- <v-navigation-drawer v-model="sideNav">
+      <v-list-item-content>
+        <v-list dense>
+          <v-list-item
+            v-for="section in sections"
+            :key="section.title"  
+          >
+          <v-list-item-title>{{ section.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-list-item-content>
+    </v-navigation-drawer>-->
+
     <v-app-bar app color="darkBlack" dark>
       <router-link to="/" id="site-title">
         <v-toolbar-title>Making Hartford Home</v-toolbar-title>
       </router-link>
       <v-spacer></v-spacer>
 
-      <v-toolbar-items>
+      <v-toolbar-items class="d-none d-lg-block">
         <v-menu
           v-for="(section,i) in sections"
           :open-on-hover="true"
@@ -27,6 +40,21 @@
           </v-list>
         </v-menu>
       </v-toolbar-items>
+
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-app-bar-nav-icon class="d-md-none ma-2" color="white" @click="drawer" v-bind="attrs" v-on="on"></v-app-bar-nav-icon>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="section in sections"
+            :key="section.title"
+            @click="alert('thi')"
+          >
+            <v-list-item-title>{{ section.title }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
 
     <v-content>
@@ -37,12 +65,11 @@
       <router-view v-else></router-view>
     </v-content>
 
-    <v-footer app color="darkBlack" class="font-weight-bold">
+    <v-footer app color="darkBlack" class="font-weight-bold d-none d-lg-flex">
       <v-col>
         <router-link to="/People" class="pr-4">People</router-link>
         <router-link to="/Funders" class="pr-4">Funders</router-link>
         <router-link to="/Contact" class="pr-4">Contact</router-link>
-        
       </v-col>
       <v-spacer></v-spacer>
       <span class="white--text pr-4">&copy; {{new Date().getFullYear()}}</span>
@@ -57,6 +84,8 @@ export default {
     fillerText:
       "Challenges and opportunities; collective impact incubator energize natural resources. Shared value; circular innovate social entrepreneur impact investing change-makers challenges and opportunities B-corp outcomes. Disrupt fairness empower, blended value framework. Boots on the ground; move the needle global, leverage improve the world milestones benefit corporation greenwashing ideate. But; save the world, her body her rights LGBTQ+ a efficient storytelling empower external partners. Framework society circular thought leadership expose the truth strategy strategy big data save the world. Replicable shared value mass incarceration, thought partnership, big data paradigm engaging granular. Grit change-makers triple bottom line energize LGBTQ+ low-hanging fruit thought leadership. Replicable overcome injustice thought partnership empathetic rubric when blended value synergy uplift. Thought provoking innovation thought provoking academic, effective altruism collaborative consumption indicators movements replicable. Shared unit of analysis empower communities innovate youth social enterprise expose the truth. Communities technology; compelling; communities inspiring transparent; social entrepreneurship. Inspirational framework collective impact efficient.",
     tagPrefix: "#",
+    sideNav: true,
+    drawer: false,
     sections: [
       {
         title: "Home",
@@ -167,10 +196,10 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-v-application{
+v-application {
   font-family: "Gilroy Extrabold" !important;
 }
-.v-btn{
+.v-btn {
   font-weight: 800 !important;
 }
 v-footer {
@@ -193,15 +222,15 @@ h3 {
   color: white;
   font-weight: 800;
 }
-/* .myFont{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-} */
-.text-outline{
-  -webkit-text-stroke: 1px #72b591; 
+
+.text-outline {
+  -webkit-text-stroke: 1px #72b591;
 }
-.text-outline-offset{
+.text-outline-offset {
   text-shadow: -3px -3px black;
   -webkit-text-fill-color: rgb(0, 0, 0, 0);
-  -webkit-text-stroke: 1px #72b591; 
+  -webkit-text-stroke: 1px #72b591;
+}
+.hidden-sm-and-down {
 }
 </style>
