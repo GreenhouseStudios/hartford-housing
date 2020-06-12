@@ -5,6 +5,9 @@
       <!-- <h1>{{item.heading}}</h1> -->
         <Card v-bind:heading="item.heading" v-bind:body="item.body" v-bind:image="item.image"></Card>
     </div>
+    <div class="slide">
+      <iframe frameborder="0" class="juxtapose" width="100%" height="360" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2eb5e768-acec-11ea-a30b-0edaf8f81e27"></iframe>
+    </div>
   </div>
 </template>
 

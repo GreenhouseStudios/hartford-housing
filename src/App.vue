@@ -116,7 +116,8 @@ export default {
           "African American Settlement",
           "West Indian Settlement",
           "Puerto Rican Settlement",
-          "Headlines"
+          "Headlines",
+          "Juxtapose test"
         ]
       },
       {
