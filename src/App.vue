@@ -70,6 +70,7 @@
         <router-link to="/People" class="pr-4">People</router-link>
         <router-link to="/Funders" class="pr-4">Funders</router-link>
         <router-link to="/Contact" class="pr-4">Contact</router-link>
+        <router-link to="/Permissions" class="pr-4">Permissions</router-link>
       </v-col>
       <v-spacer></v-spacer>
       <span class="white--text pr-4">&copy; {{new Date().getFullYear()}}</span>

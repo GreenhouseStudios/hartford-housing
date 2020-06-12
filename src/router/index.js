@@ -6,6 +6,7 @@ import Main from '@/components/Main'
 import Contact from '@/components/Contact'
 import Funders from '@/components/Funders'
 import People from '@/components/People'
+import Permissions from '@/components/Permissions'
 Vue.use(
   Router
 )
@@ -37,6 +38,11 @@ export default new Router({
       path: '/People',
       name: 'People',
       component: People
+    },
+    {
+      path: '/Permissions',
+      name: 'Permissions',
+      component: Permissions
     }
   ]
 })
