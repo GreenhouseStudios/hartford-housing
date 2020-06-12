@@ -1,13 +1,17 @@
 <template>
-  <div>
-    <div v-bind:id="mapid" style="height:800px;"></div>
+<div class="map-container">
+  <div class="map">
+    <div v-bind:id="mapid"  style="height:800px;"></div>
   </div>
+  <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
+</div>
 </template>
 
 <script>
 import L from "leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet.css";
+import Card from '@/components/Card'
 
 //Solution to some BS probem with leaflet not loading it's own damn marker icon properly
 //Found as the last post in this issue thread:
@@ -26,6 +30,9 @@ import pop1980 from "../geojson/Pop1980.json";
 import keneyPark from "../geojson/KeneyPark.json";
 
 export default {
+  components:{
+  Card
+  },
   name: "Map",
   props: {
     coordinates: {
@@ -43,6 +50,14 @@ export default {
     jsonFile: {
       type: String,
       default: "pop1940"
+    },
+    title: {
+      type: String,
+      default: "Map"
+    },
+    body: {
+      type: String,
+      default: `Issue outcomes boots on the ground activate fairness grit. Impact investing gender rights, B-corp, synergy game-changer radical invest. Circular, a global our work inclusive best practices greenwashing accessibility uplift. Mass incarceration relief, co-create social entrepreneur collaborative cities shared value thought leadership replicable replicable. Catalyze, contextualize; empower blended value relief LGBTQ+ youth living a fully ethical life energize. Ecosystem; silo thought leader game-changer external partners scale and impact. Milestones social return on investment circular outcomes co-creation. Social innovation social entrepreneurship targeted move the needle scalable effective peaceful then. Parse compelling we must stand up families human-centered do-gooder theory of change resilient impact investing. Low-hanging fruit scale and impact; transparent, strategy synergy innovate best practices. The resistance, invest; milestones indicators milestones. Humanitarian paradigm because commitment, blended value families rubric. Replicable social innovation commitment challenges and opportunities a thought leadership overcome injustice capacity building co-creation. Thought leadership technology outcomes social intrapreneurship accessibility leverage.`
     }
   },
   data() {
@@ -149,7 +164,15 @@ function mapColor(percent) {
 </script>
 
 <style scoped>
-#mapid {
+.map-container{
+  display: flex;
+}
+.map {
   height: 800px;
+  width: 50%;
+  display: inline;
+}
+.map-card{
+  display: inline;
 }
 </style>

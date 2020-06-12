@@ -3,20 +3,20 @@
     <!-- <h1>Maps</h1> -->
     <div class="ma-5">
       <div class="slide">
-        <h2 class="ma-5">African American Population Percentage - 1940</h2>
-        <Map jsonFile="pop1940" id="pop1940" v-bind:zoomLevel="13"></Map>
+        <!-- <h2 class="ma-5">African American Population Percentage - 1940</h2> -->
+        <Map jsonFile="pop1940" id="pop1940" v-bind:zoomLevel="13" title="African American Population Percentage - 1940"></Map>
       </div>
       <div class="slide">
-        <h2 class="ma-5">African American Population Percentage - 1960</h2>
-        <Map jsonFile="pop1960" id="pop1960" v-bind:zoomLevel="13"></Map>
+        <!-- <h2 class="ma-5">African American Population Percentage - 1960</h2> -->
+        <Map jsonFile="pop1960" id="pop1960" v-bind:zoomLevel="13" title="African American Population Percentage - 1960"></Map>
       </div>
       <div class="slide">
-        <h2 class="ma-5">African American Population Percentage - 1980</h2>
-        <Map jsonFile="pop1980" id="pop1980" v-bind:zoomLevel="13"></Map>
+        <!-- <h2 class="ma-5">African American Population Percentage - 1980</h2> -->
+        <Map jsonFile="pop1980" id="pop1980" v-bind:zoomLevel="13" title="African American Population Percentage - 1980"></Map>
       </div>
       <div class="slide">
-        <h2 class="ma-5">Bloomfield</h2>
-        <Map v-bind:coordinates="[41.8,-72.73]" id="Bloomfield"></Map>
+        <!-- <h2 class="ma-5">Bloomfield</h2> -->
+        <Map v-bind:coordinates="[41.8,-72.73]" id="Bloomfield" title="Bloomfield"></Map>
       </div>
       <div class="slide">
         <h2 class="ma-5">Places of Origin</h2>
