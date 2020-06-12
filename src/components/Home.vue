@@ -2,9 +2,9 @@
   <div class="section">
     <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)">
       <div id="subtitle">
-        <h1 class="display-2 font-weight-bold text-outline-offset">HARTFORD BOUND: </h1>
-        <h1 class="display-2 font-weight-bold">{{subtitle.toUpperCase()}}</h1>
-        <CardImage class= "align-right"
+        <h1 class="display-4 font-weight-bold">HARTFORD BOUND: </h1>
+        <h1 class="display-1">{{subtitle.toUpperCase()}}</h1>
+        <!-- <CardImage class= "align-right"
         v-bind:image="slides[0].image" 
         v-bind:offsetH="slides[0].offsetH" 
         v-bind:offsetV="slides[0].offsetV" 
@@ -12,22 +12,21 @@
         v-bind:cardWidth="slides[0].cardWidth" 
         v-bind:cardHeight="slides[0].cardHeight"
         v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}">
-        </CardImage>
+        </CardImage> -->
       </div>
     </v-img>
   </div>
 </template>
 
 <script>
-import CardImage from '@/components/CardImage'
+// import CardImage from '@/components/CardImage'
 export default {
   name: "Home",
   components:{
-    CardImage
   },
   data() {
     return {
-      subtitle: "Making Hartford Home",
+      subtitle: "How African Americans, Puerto Ricans and West Indians Made Hartford Home",
       slides: [
         {
           image: require('../assets/pubhousingmap.jpg'),
@@ -62,12 +61,13 @@ export default {
   max-width: 500px;
 }
 #subtitle {
-  height: 100%;
+  position: relative;
+  top: 300px;
   text-align: center;
   margin: auto;
   padding: 20px  0;
 }
-h1 {
+/* h1 {
   position: relative;
   display: inline-block;
   background: linear-gradient(
@@ -75,8 +75,8 @@ h1 {
     rgba(81, 159, 200, 0) 30%,
     rgb(81, 159, 200) 30%
   );
-}
-h1::after {
+} */
+/* h1::after {
   content: "";
   background-color: rgb(81, 159, 200);
   position: relative;
@@ -84,16 +84,12 @@ h1::after {
   left: 0;
   z-index: -1;
   width: 100%;
-}
+} */
 /* .right-align{
   position: relative;
   right: 0;
 } */
 .section{
   height: 500;
-}
-#site-title{
-  font-weight: 900;
-  color: black;
 }
 </style>
