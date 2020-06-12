@@ -133,17 +133,24 @@ export default {
           "The No More Slumlords Campaign"
         ]
       },
+       {
+        title: "Timeline",
+        slides: []
+      },
       {
         title: "Profiles",
         slides: ["Tenant Activists Profiles", "Historic Firsts"]
-      }
+      },
+     
     ],
     menuItems: [
       { title: "Home", path: "/Home" },
       { title: "About", path: "/About" },
+      { title: "Introduction", path: "/Introduction"},  
       { title: "Maps", path: "/Maps" },
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
+      { title: "Timeline", path: "/Timeline"},
       { title: "Profiles", path: "/Profiles" }
     ],
     options: {
@@ -230,7 +237,5 @@ h3 {
   text-shadow: -3px -3px black;
   -webkit-text-fill-color: rgb(0, 0, 0, 0);
   -webkit-text-stroke: 1px #72b591;
-}
-.hidden-sm-and-down {
 }
 </style>

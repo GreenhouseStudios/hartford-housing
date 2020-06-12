@@ -9,7 +9,9 @@
         <Maps></Maps>
         <Settlement></Settlement>
         <Housing></Housing>
+        <Timeline></Timeline>
         <Profiles></Profiles>
+        
       </v-col>
     </v-row>
   </v-container>
@@ -24,6 +26,7 @@ import Maps from "@/components/Maps";
 import Settlement from "@/components/Settlement";
 import Housing from "@/components/Housing";
 import Profiles from "@/components/Profiles";
+import Timeline from "@/components/Timeline"
 
 export default {
   name: "Main",
@@ -34,7 +37,8 @@ export default {
     Maps,
     Settlement,
     Housing,
-    Profiles
+    Profiles,
+    Timeline
   }
 };
 </script>
