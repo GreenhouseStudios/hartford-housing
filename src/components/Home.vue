@@ -1,20 +1,13 @@
 <template>
   <div class="section">
-    <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)">
-      <div id="subtitle">
-        <h1 class="display-4 font-weight-bold">HARTFORD BOUND: </h1>
-        <h1 class="display-1">{{subtitle.toUpperCase()}}</h1>
-        <!-- <CardImage class= "align-right"
-        v-bind:image="slides[0].image" 
-        v-bind:offsetH="slides[0].offsetH" 
-        v-bind:offsetV="slides[0].offsetV" 
-        v-bind:rotation="slides[0].rotation"
-        v-bind:cardWidth="slides[0].cardWidth" 
-        v-bind:cardHeight="slides[0].cardHeight"
-        v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}">
-        </CardImage> -->
-      </div>
-    </v-img>
+    <div id="title" style="z-index: 4">
+      <h1 class="display-4 font-weight-bold">HARTFORD BOUND:</h1>
+    </div>
+    <v-img :src="require('../assets/longArtboard 1.png')" contain max-height="600" id="logo"></v-img>
+    <div id="subtitle" style="z-index: 2">
+      <h1 class="display-1">{{subtitle.toUpperCase()}}</h1>
+    </div>
+    
   </div>
 </template>
 
@@ -22,14 +15,14 @@
 // import CardImage from '@/components/CardImage'
 export default {
   name: "Home",
-  components:{
-  },
+  components: {},
   data() {
     return {
-      subtitle: "How African Americans, Puerto Ricans and West Indians Made Hartford Home",
+      subtitle:
+        "How African Americans, Puerto Ricans and West Indians Made Hartford Home",
       slides: [
         {
-          image: require('../assets/pubhousingmap.jpg'),
+          image: require("../assets/pubhousingmap.jpg"),
           offsetH: "0",
           offsetV: "100",
           rotation: "-90",
@@ -37,9 +30,9 @@ export default {
           cardHeight: "500"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
@@ -62,10 +55,21 @@ export default {
 }
 #subtitle {
   position: relative;
-  top: 300px;
   text-align: center;
+  top: -130px;
   margin: auto;
-  padding: 20px  0;
+  padding: 20px 0;
+}
+#title {
+  position: relative;
+  text-align: center;
+  top: -100px;
+  margin: auto;
+  padding: 20px 0;
+  font-size: 100rem;
+}
+#logo{
+  top: -130px;
 }
 /* h1 {
   position: relative;
@@ -89,7 +93,7 @@ export default {
   position: relative;
   right: 0;
 } */
-.section{
+.section {
   height: 500;
 }
 </style>
