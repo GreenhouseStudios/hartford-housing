@@ -1,13 +1,7 @@
 <template>
   <v-hover v-slot:default="{ hover }">
-    <v-card tile class="d-flex" :class="{ 'on-hover': hover }" v-on:click="moveDown">
-      <v-img
-        :src="img"
-        contain
-        aspect-ratio="1"
-        height="350"
-        class="align-end"
-      >
+    <v-card tile class="d-flex card" :class="{ 'on-hover': hover }" v-on:click="moveDown">
+      <v-img :src="img" aspect-ratio="1" class="align-end">
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="space-between">
             <!-- <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular> -->
@@ -20,41 +14,42 @@
 </template>
 
 <script>
-import EventBus from '../event-bus';
+import EventBus from "../event-bus";
 export default {
-  mounted () {
+  mounted() {
     // console.log(this.$root)
   },
   methods: {
     moveDown: function() {
-      EventBus.$emit('PROFILE_NAV_CLICK',this.index)
-      console.log(this.$root.$children[0])
-      this.$root.$children[0].navigateToSection(7 + this.index) //this is not what anyone would recommend doing, but couldn't figure out an alternative
+      EventBus.$emit("PROFILE_NAV_CLICK", this.index);
+      console.log(this.$root.$children[0]);
+      this.$root.$children[0].navigateToSection(7 + this.index); //this is not what anyone would recommend doing, but couldn't figure out an alternative
     }
   },
   data() {
-    return {
-    }
+    return {};
   },
   props: {
     index: {
       type: Number,
       default: -1
     },
-    name:{
+    name: {
       type: String,
       default: "Profile Name"
     },
-    img:{
+    img: {
       type: String,
-      default: require('../assets/mariacolonsanchez.jpg')
+      default: require("../assets/mariacolonsanchez.jpg")
     }
-  },
+  }
 };
 </script>
 
 <style scoped>
-.v-card:not(.on-hover) {
-
+.card:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 </style>

@@ -240,4 +240,7 @@ h3 {
   -webkit-text-fill-color: rgb(0, 0, 0, 0);
   -webkit-text-stroke: 1px #72b591;
 }
+.section-header{
+  text-align: center;
+}
 </style>
