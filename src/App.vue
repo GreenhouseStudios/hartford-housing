@@ -207,6 +207,7 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 v-application {
   font-family: "Gilroy Extrabold" !important;
+  overflow-x: hidden;
 }
 .v-btn {
   font-weight: 800 !important;
