@@ -28,14 +28,8 @@ export default {
   methods: {
     moveDown: function() {
       EventBus.$emit('PROFILE_NAV_CLICK',this.index)
-      // this.$root.navigateToSection(0)
       console.log(this.$root.$children[0])
       this.$root.$children[0].navigateToSection(7 + this.index) //this is not what anyone would recommend doing, but couldn't figure out an alternative
-      // this.$emit('to-profile')
-      // console.log('profile click')
-      // this.$root.$refs.fullpage.api.moveTo(1);  
-    // console.log(this.$parent.$parent.$parent.$options.name)
-    // console.log(this.$root.$refs);
     }
   },
   data() {
@@ -61,6 +55,6 @@ export default {
 
 <style scoped>
 .v-card:not(.on-hover) {
-  opacity: 0.6;
+
 }
 </style>

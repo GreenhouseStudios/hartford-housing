@@ -15,7 +15,7 @@
 
     <v-app-bar app color="darkBlack" dark>
       <router-link to="/" id="site-title">
-        <v-toolbar-title>Making Hartford Home</v-toolbar-title>
+        <v-toolbar-title>Hartford Bound</v-toolbar-title>
       </router-link>
       <v-spacer></v-spacer>
 
@@ -47,9 +47,9 @@
         </template>
         <v-list>
           <v-list-item
-            v-for="section in sections"
+            v-for="(section,j) in sections"
             :key="section.title"
-            @click="alert('thi')"
+            @click="navigateToSection(j)"
           >
             <v-list-item-title>{{ section.title }}</v-list-item-title>
           </v-list-item>
