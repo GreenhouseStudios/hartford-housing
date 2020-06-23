@@ -236,11 +236,13 @@ h3 {
 .text-outline {
   -webkit-text-stroke: 1px #72b591;
 }
+
 .text-outline-offset {
   text-shadow: -3px -3px black;
   -webkit-text-fill-color: rgb(0, 0, 0, 0);
   -webkit-text-stroke: 1px #72b591;
 }
+
 .section-header{
   text-align: center;
 }
@@ -249,5 +251,25 @@ html,body{
 }
 body {
   position: relative
+}
+</style>
+
+<style lang="scss">
+@mixin text-outline-mixin($offsetx, $offsety) {
+  text-shadow: $offsetx $offsety black;
+  -webkit-text-fill-color: rgb(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #72b591;
+}
+.text-outline-bottomright {
+  @include text-outline-mixin(-3px, -3px);
+}
+.text-outline-topright {
+  @include text-outline-mixin(-3px, 3px);
+}
+.text-outline-topleft {
+  @include text-outline-mixin(3px, 3px);
+}
+.text-outline-bottomleft {
+  @include text-outline-mixin(3px, -3px);
 }
 </style>
