@@ -1,16 +1,16 @@
 <template>
   <div class="section">
-    <h1>Introduction</h1>
-    <div v-for="(item,index) in sections" class="slide" v-bind:key="index">
-      <!-- <h1>{{item.heading}}</h1>
-      <p>{{item.body}}</p>-->
-      <v-container>
-        <v-row>
-          <Card v-bind:heading="item.heading" v-bind:body="item.body"></Card>
-          <!-- <Card v-bind:heading="item.heading" v-bind:body="item.body"></Card> -->
-        </v-row>
-      </v-container>
-    </div>
+    <v-container fluid>
+      <v-row align="center">
+        <v-col>
+          <h1 class="d-none d-md-block section-header display-3 font-weight-bold">Introduction</h1>
+          <h1 class="d-md-none section-header display-1 font-weight-bold">Introduction</h1>
+          <div v-for="(item,index) in sections" class="slide" v-bind:key="index">
+            <Card v-bind:heading="item.heading" v-bind:body="item.body"></Card>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     return {
       sections: [
         {
-          heading: "Introduction: “And the Migrants Kept Coming”",
+          heading: "“And the Migrants Kept Coming”",
           body:
             "Jacob Lawrence concluded his magisterial 60-panel mosaic, The Migration Series, with a defiant and hopeful scene of African American men, women, and children on a railway platform. Bound for destinations like Harlem, San Francisco, Philadelphia, Chicago, and Hartford, migrants voted with their feet to pursue a better life.  “And the migrants kept coming,” panel 60, was the 1941 coda to Lawrence’s profound visual statement about the Great Migration of African Americans from the South. Yet panel 60 can conjure any epoch in American history. Lawrence’s visual panorama resonates with the generation of West Indians and Puerto Ricans who would undertake their own journeys—both epic and mundane—to find employment and make a new home in American cities. Hartford was one terminus for several generations of these migrants."
         },

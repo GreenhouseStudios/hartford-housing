@@ -1,13 +1,30 @@
 <template>
   <div class="section">
-    <div id="title" style="z-index: 4">
-      <h1 class="display-4 font-weight-bold">HARTFORD BOUND:</h1>
-    </div>
-    <v-img :src="require('../assets/longArtboard 1.png')" contain max-height="600" id="logo"></v-img>
-    <div id="subtitle" style="z-index: 2">
-      <h1 class="display-1">{{subtitle.toUpperCase()}}</h1>
-    </div>
-    
+    <v-container>
+      <v-row>
+        <div id="title" style="z-index: 4">
+          <h1
+            class="d-none d-md-block display-4 font-weight-bold text-outline-offset"
+          >HARTFORD BOUND:</h1>
+          <h1 class="d-md-none display-3 font-weight-bold text-outline-offset">HARTFORD BOUND:</h1>
+        </div>
+        <v-img :src="require('../assets/longArtboard 1.png')" contain max-height="600" id="logo"></v-img>
+        <div id="subtitle" style="z-index: 2">
+          <h1 class="d-none d-md-block display-2 font-weight-bold">
+            How
+            <span class="highlight">African Americans</span>,
+            <span class="highlight-teal">Puerto Ricans</span> and
+            <span class="highlight-green">West Indians</span> Made Hartford Home
+          </h1>
+          <h2 class="d-md-none font-weight-bold">
+            How
+            <span class="highlight">African Americans</span>,
+            <span class="highlight-teal">Puerto Ricans</span> and
+            <span class="highlight-green">West Indians</span> Made Hartford Home
+          </h2>
+        </div>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -63,12 +80,11 @@ export default {
 #title {
   position: relative;
   text-align: center;
-  top: -100px;
   margin: auto;
   padding: 20px 0;
   font-size: 100rem;
 }
-#logo{
+#logo {
   top: -130px;
 }
 /* h1 {
@@ -93,7 +109,4 @@ export default {
   position: relative;
   right: 0;
 } */
-.section {
-  height: 500;
-}
 </style>

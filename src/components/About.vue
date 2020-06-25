@@ -1,14 +1,19 @@
 <template>
   <div class="section">
     <!-- <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)"> -->
-    <div id="subtitle">
-      <h1 class="display-2 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h1>
-      <h1 class="display-2 font-weight-bold">HOUSING STRUGGLES</h1>
-      <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
-    </div>
-    <Card class= "align-center"
-      v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
-    <CardImage class= "align-center"
+    <v-container>
+      <v-row>
+        <div id="subtitle">
+          <h1 class="d-none d-md-block display-2 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h1>
+          <h3 class="d-md-none text-h1 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h3>
+          <h1 class="d-none d-md-block display-2 font-weight-bold">HOUSING STRUGGLES</h1>
+          <h3 class="d-md-none font-weight-bold">HOUSING STRUGGLES</h3>
+          <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
+        </div>
+        <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
+      </v-row>
+    </v-container>
+    <!-- <CardImage class= "align-center"
       v-bind:image="slides[0].image"
       v-bind:offsetH="slides[0].offsetH"
       v-bind:offsetV="slides[0].offsetV"
@@ -17,20 +22,20 @@
       v-bind:cardHeight="slides[0].cardHeight"
       v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}"
       id="reveal"
-    ></CardImage>
+    ></CardImage>-->
     <!-- </v-img> -->
   </div>
 </template>
 
 <script>
 import Card from "@/components/Card";
-import CardImage from "@/components/CardImage";
+// import CardImage from "@/components/CardImage";
 
 export default {
   name: "About",
   components: {
-    Card,
-    CardImage
+    Card
+    // CardImage
   },
   data() {
     return {
@@ -70,9 +75,9 @@ export default {
         // Duration of animation
         duration: 450
       }) // Declaration of animation and attaching to element
-      .setClassToggle("#reveal","visible")
-      // Helpful tags for orientation on the screen
-      // .addIndicators({ name: "2 (duration: 300)" });
+      .setClassToggle("#reveal", "visible");
+    // Helpful tags for orientation on the screen
+    // .addIndicators({ name: "2 (duration: 300)" });
     // Add Scene to controller
     this.$scrollmagic.addScene(scene2);
   }
@@ -99,27 +104,7 @@ export default {
 #subtitle {
   text-align: center;
 }
-h1 {
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    180deg,
-    rgba(81, 159, 200, 0) 30%,
-    rgb(81, 159, 200) 30%
-  );
-}
-h1::after {
-  content: "";
-  background-color: rgb(81, 159, 200);
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-}
-v-parallax {
-  /* height: 2000px; */
-}
+
 .section {
   height: 4000px;
 }
