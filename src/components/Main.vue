@@ -40,7 +40,7 @@
                 </v-dialog>
               </v-col>
               <v-col cols="12" md="6">
-                <Card v-bind:body="prof.body" v-bind:heading="prof.name"></Card>
+                <ReadMoreCard v-bind:body="prof.body" v-bind:heading="prof.name"></ReadMoreCard>
               </v-col>
             </v-row>
           </v-container>
@@ -60,6 +60,7 @@ import Housing from "@/components/Housing";
 import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
+import ReadMoreCard from "@/components/ReadMoreCard"
 
 export default {
   name: "Main",
@@ -72,7 +73,8 @@ export default {
     Housing,
     ProfileMenu,
     Timeline,
-    Card
+    Card,
+    ReadMoreCard
   },
   data() {
     return {

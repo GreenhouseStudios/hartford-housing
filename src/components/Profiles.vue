@@ -1,29 +1,38 @@
 <template>  
-  <div class="section" v-for="(prof,j) in profiles" :key="j">
+  <div class="section">
     <v-container fluid>
       <v-row>
         <v-col cols="6">
           <Card v-bind:body="prof.body" v-bind:heading="prof.name"></Card>
         </v-col>
-        <v-col cols="6">
-          <v-img :src="prof.img" max-height="500" contain></v-img>
-          <v-hover v-slot:default="{ hover }">
-            <v-card
-              :elevation="hover ? 16 : 2"
-              height="200"
-              width="147"
-              class="profile-map"
-              @click.stop="dialog = true"
-            >
-              <v-img src="@/assets/joshmap.jpg" max-height="200" contain></v-img>
-            </v-card>
-          </v-hover>
-          <v-dialog v-model="dialog">
-            <v-card>
-              <v-card-title
-                class="headline grey lighten-2"
-                primary-title
-              >Profile Map - {{prof.name}}</v-card-title>
+      </v-row>
+    </div>
+
+    <!-- <div class="section" v-for="(prof,j) in profiles" :key="j">
+      <v-container fluid>
+        <v-row>
+          <v-col cols="6">
+            <ReadMoreCard v-bind:body="prof.body" v-bind:heading="prof.name"></ReadMoreCard>
+          </v-col>
+          <v-col cols="6">
+            <v-img :src="prof.img" max-height="500" contain></v-img>
+            <v-hover v-slot:default="{ hover }">
+              <v-card
+                :elevation="hover ? 16 : 2"
+                height="200"
+                width="147"
+                class="profile-map"
+                @click.stop="dialog = true"
+              >
+                <v-img src="@/assets/joshmap.jpg" max-height="200" contain></v-img>
+              </v-card>
+            </v-hover>
+            <v-dialog v-model="dialog">
+              <v-card>
+                <v-card-title
+                  class="headline grey lighten-2"
+                  primary-title
+                >Profile Map - {{prof.name}}</v-card-title>
 
               <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
 
@@ -33,15 +42,15 @@
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </div> -->
 </template>
 
 <script>
-import Card from "@/components/Card";
+
 export default {
   name: "Profiles",
   components: {
-    Card
+ 
   },
   data() {
     return {
@@ -106,6 +115,21 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
     },
     test() {
       console.log("testing");
+    },
+    readMore() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more";
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less";
+        moreText.style.display = "inline";
+      }
     }
   }
 };
