@@ -12,6 +12,7 @@
     "leaflet": "^1.6.0",
     "leaflet-gesture-handling": "^1.1.8",
     "scrollmagic": "^2.0.7",
+    "svg-pan-zoom": "^3.6.1",
     "vue": "^2.6.11",
     "vue-fullpage.js": "^0.1.5",
     "vue-router": "^3.1.6",
@@ -29,6 +30,7 @@
     "sass": "^1.19.0",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-vuetify": "~2.0.5",
+    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.3.0"
   },

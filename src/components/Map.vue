@@ -1,17 +1,22 @@
 <template>
-<div class="map-container">
-  <div class="map">
-    <div v-bind:id="mapid"  style="height:800px;"></div>
+  <div class="map-container">
+    <v-col cols="12" md="6">
+      <div class="map">
+        <div v-bind:id="mapid" style="height: 65vh"></div>
+      </div>
+    </v-col>
+
+    <v-col cols="12" md="6">
+      <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
+    </v-col>
   </div>
-  <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
-</div>
 </template>
 
 <script>
 import L from "leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet.css";
-import Card from '@/components/Card'
+import Card from "@/components/Card";
 
 //Solution to some BS probem with leaflet not loading it's own damn marker icon properly
 //Found as the last post in this issue thread:
@@ -30,8 +35,8 @@ import pop1980 from "../geojson/Pop1980.json";
 import keneyPark from "../geojson/KeneyPark.json";
 
 export default {
-  components:{
-  Card
+  components: {
+    Card
   },
   name: "Map",
   props: {
@@ -86,6 +91,7 @@ export default {
       ]
     };
   },
+  computed: {},
   mounted() {
     this.jsonData = this.jsonSources[this.jsonFileNames.indexOf(this.jsonFile)];
     this.initMap();
@@ -143,7 +149,7 @@ export default {
       }
       L.geoJSON(this.keneyPoly, {
         style: function() {
-          return { color: 'green' };
+          return { color: "green" };
         }
       })
         .bindPopup(function(layer) {
@@ -164,7 +170,7 @@ function mapColor(percent) {
 </script>
 
 <style scoped>
-.map-container{
+.map-container {
   display: flex;
 }
 .map {
@@ -172,7 +178,7 @@ function mapColor(percent) {
   width: 50%;
   display: inline;
 }
-.map-card{
+.map-card {
   display: inline;
 }
 </style>
