@@ -1,13 +1,16 @@
 <template>
-  <v-card flat tile max-width="500" v-bind:color="myColor">
-    <!-- <div class="outline"> -->
+  <v-responsive :max-width="cardMaxWidth" max-height="80vh">
+    <v-card flat tile v-bind:color="myColor">
+      <!-- <div class="outline"> -->
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
-        <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
+        <v-card-title class="d-none d-md-block white--text display-1 font-weight-bold">{{heading}}</v-card-title>
+        <v-card-title class="d-md-none white--text font-weight-bold">{{heading}}</v-card-title>
         <v-card-text class="white--text font-weight-bold">{{body}}</v-card-text>
         <!-- <v-img v-bind:src="image"></v-img> -->
       </v-card>
-    <!-- </div> -->
-  </v-card>
+      <!-- </div> -->
+    </v-card>
+  </v-responsive>
 </template>
 
 
@@ -20,18 +23,59 @@ export default {
       myColor: null
     };
   },
-  props: ["heading", "body", "bgColor","image"],
-  created(){
-    var randomIndex = Math.floor(Math.random()* this.cardColors.length);
+  props: ["heading", "body", "bgColor", "image"],
+  created() {
+    var randomIndex = Math.floor(Math.random() * this.cardColors.length);
     this.myColor = this.cardColors[randomIndex];
+  },
+  computed: {
+    cardMaxWidth() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "90vw";
+        case "sm":
+          return "60vw";
+        case "md":
+          return "34vw";
+        case "lg":
+          return "25vw";
+        case "xl":
+          return "25vw";
+      }
+      return "25vw";
+    },
+    cardFontSize() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "90vw";
+        case "sm":
+          return "60vw";
+        case "md":
+          return "34vw";
+        case "lg":
+          return "25vw";
+        case "xl":
+          return "25vw";
+      }
+      return "25vw";
+    }
   }
-  };
+};
 </script>
 
 <style  scoped>
+v-card {
+  max-width: 20vw;
+  max-height: 80vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+v-card-text {
+  text-overflow: ellipsis;
+}
 .innercard {
-  top: 25px;
-  left: 25px;
+  top: 2vh;
+  left: 1vw;
 }
 .outline {
   outline-style: solid;
@@ -39,10 +83,13 @@ export default {
   outline-width: 3px;
 }
 .bcard {
+  max-width: 80vw;
+  max-height: 100vh;
+  overflow: hidden;
   background-color: rgb(81, 159, 200);
   color: rgb(81, 159, 200);
 }
-v-card-text{
-  font-size: 27pt;
+v-card-text {
+  font-size: 16pt;
 }
 </style>
