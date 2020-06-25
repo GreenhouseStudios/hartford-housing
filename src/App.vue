@@ -1,25 +1,12 @@
 <template>
   <v-app>
-    <!-- <v-navigation-drawer v-model="sideNav">
-      <v-list-item-content>
-        <v-list dense>
-          <v-list-item
-            v-for="section in sections"
-            :key="section.title"  
-          >
-          <v-list-item-title>{{ section.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-list-item-content>
-    </v-navigation-drawer>-->
-
-    <v-app-bar app color="darkBlack" dark>
+    <v-app-bar app fixed color="darkBlack" dark hide-on-scroll>
       <router-link to="/" id="site-title">
         <v-toolbar-title>Hartford Bound</v-toolbar-title>
       </router-link>
       <v-spacer></v-spacer>
 
-      <v-toolbar-items class="d-none d-lg-block">
+      <v-toolbar-items class="d-none d-md-block">
         <v-menu
           v-for="(section,i) in sections"
           :open-on-hover="true"
@@ -43,7 +30,13 @@
 
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
-          <v-app-bar-nav-icon class="d-md-none ma-2" color="white" @click="drawer" v-bind="attrs" v-on="on"></v-app-bar-nav-icon>
+          <v-app-bar-nav-icon
+            class="d-md-none ma-2"
+            color="white"
+            @click="drawer"
+            v-bind="attrs"
+            v-on="on"
+          ></v-app-bar-nav-icon>
         </template>
         <v-list>
           <v-list-item
@@ -65,12 +58,12 @@
       <router-view v-else></router-view>
     </v-content>
 
-    <v-footer app color="darkBlack" class="font-weight-bold d-none d-lg-flex">
+    <v-footer app color="darkBlack" class="font-weight-bold d-none d-lg-flex" id="footer">
       <v-col>
-        <router-link to="/People" class="pr-4">People</router-link>
-        <router-link to="/Funders" class="pr-4">Funders</router-link>
-        <router-link to="/Contact" class="pr-4">Contact</router-link>
-        <router-link to="/Permissions" class="pr-4">Permissions</router-link>
+        <router-link to="/People" class="pr-4 footer-link">People</router-link>
+        <router-link to="/Funders" class="pr-4 footer-link">Funders</router-link>
+        <router-link to="/Contact" class="pr-4 footer-link">Contact</router-link>
+        <router-link to="/Permissions" class="pr-4 footer-link">Permissions</router-link>
       </v-col>
       <v-spacer></v-spacer>
       <span class="white--text pr-4">&copy; {{new Date().getFullYear()}}</span>
@@ -135,24 +128,23 @@ export default {
           "The No More Slumlords Campaign"
         ]
       },
-       {
+      {
         title: "Timeline",
         slides: []
       },
       {
         title: "Profiles",
         slides: ["Tenant Activists Profiles", "Historic Firsts"]
-      },
-     
+      }
     ],
     menuItems: [
       { title: "Home", path: "/Home" },
       { title: "About", path: "/About" },
-      { title: "Introduction", path: "/Introduction"},  
+      { title: "Introduction", path: "/Introduction" },
       { title: "Maps", path: "/Maps" },
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
-      { title: "Timeline", path: "/Timeline"},
+      { title: "Timeline", path: "/Timeline" },
       { title: "Profiles", path: "/Profiles" }
     ],
     options: {
@@ -163,10 +155,11 @@ export default {
       // sectionSelector: '.section',
       // slideSelector: '.fp-slide',
       fitToSection: false,
-      autoScrolling: false,
+      autoScrolling: false, //this breaks app bar hiding
       slidesNavigation: true,
       slidesNavPosition: "bottom",
       controlArrows: false,
+      verticalCentered: true,
       anchors: [
         "Home",
         "About",
@@ -183,7 +176,6 @@ export default {
     moveDown: function() {
       this.$refs.fullpage.api.moveSectionDown();
     },
-
     navigateToSection: function(i) {
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
@@ -199,33 +191,45 @@ export default {
           this.$refs.fullpage.api.moveTo(i + 1, index);
         });
     }
-  }
+  },
 };
 </script>
 
-<style>
+<style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 v-application {
   font-family: "Gilroy Extrabold" !important;
-
+  overflow-x: hidden;
 }
 .v-btn {
   font-weight: 800 !important;
 }
 v-footer {
-  z-index: -1;
+  z-index: 20;
 }
 v-footer a {
   margin: 100px 100px;
   padding: 100px;
+}
+.footer-link {
+  text-decoration: none;
 }
 h3 {
   margin: 0 auto;
   top: 100px;
 }
 .fp-slidesNav.fp-bottom {
-  bottom: 125px;
+  bottom: 120px;
   margin: 0 auto;
+  width: 400px;
+  z-index: 1;
+  ul {
+    text-align: center;
+    width: 100%;
+  }
+}
+.fp-tableCell {
+  vertical-align: top;
 }
 #site-title {
   text-decoration: none;
@@ -241,13 +245,46 @@ h3 {
   -webkit-text-fill-color: rgb(0, 0, 0, 0);
   -webkit-text-stroke: 1px #72b591;
 }
-.section-header{
+.section-header {
   text-align: center;
+  top: -50px;
 }
-html,body{
+html,
+body {
+  max-width: 100vw;
   overflow-x: hidden;
 }
 body {
-  position: relative
+  position: relative;
+}
+.highlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    180deg,
+    rgba(81, 159, 200, 0) 30%,
+    rgb(81, 159, 200) 30%
+  );
+}
+.highlight::after {
+  content: "";
+  background-color: rgb(81, 159, 200);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+.highlight-teal {
+  @extend .highlight;
+  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+}
+.highlight-teal {
+  @extend .highlight;
+  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+}
+.highlight-green {
+  @extend .highlight;
+  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
 }
 </style>
