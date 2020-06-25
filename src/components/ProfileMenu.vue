@@ -1,47 +1,51 @@
-<template>  
-  <div class="section" v-for="(prof,j) in profiles" :key="j">
-    <v-container fluid>
-      <v-row>
-        <v-col cols="6">
-          <Card v-bind:body="prof.body" v-bind:heading="prof.name"></Card>
-        </v-col>
-        <v-col cols="6">
-          <v-img :src="prof.img" max-height="500" contain></v-img>
-          <v-hover v-slot:default="{ hover }">
-            <v-card
-              :elevation="hover ? 16 : 2"
-              height="200"
-              width="147"
-              class="profile-map"
-              @click.stop="dialog = true"
+<template>
+  <div class="section">
+    <h1 class="d-none d-md-block section-header display-3 font-weight-bold">Profiles</h1>
+    <h1 class="d-md-none section-header display-1 font-weight-bold">Profiles</h1>
+    <v-row>
+      <v-col cols="12" sm="10" offset-sm="1">
+        <v-container fluid>
+          <v-row>
+            <v-col
+              v-for="(profile,index) in profiles.slice(0,profiles.length)"
+              :key="index"
+              class="d-flex child-flex"
+              cols="2"
             >
-              <v-img src="@/assets/joshmap.jpg" max-height="200" contain></v-img>
-            </v-card>
-          </v-hover>
-          <v-dialog v-model="dialog">
-            <v-card>
-              <v-card-title
-                class="headline grey lighten-2"
-                primary-title
-              >Profile Map - {{prof.name}}</v-card-title>
-
-              <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
-
-              <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</v-card-text>
-            </v-card>
-          </v-dialog>
-        </v-col>
-      </v-row>
-    </v-container>
+              <ProfileCard
+                v-bind:name="profile.name"
+                v-bind:index="index"
+                v-bind:img="profile.img"
+                v-on:to-profile="toProfile"
+              ></ProfileCard>
+            </v-col>
+          </v-row>
+          <!-- <v-row>
+              <v-col
+                v-for="(profile,index) in profiles.slice(profiles.length/2)"
+                :key="index"
+                class="d-flex child-flex"
+                cols="3"
+              >
+                <ProfileCard
+                  v-bind:name="profile.name"
+                  v-bind:index="index"
+                  v-bind:img="profile.img"
+                  v-on:to-profile="toProfile"
+                ></ProfileCard>
+              </v-col>
+          </v-row>-->
+        </v-container>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-import Card from "@/components/Card";
+import ProfileCard from "@/components/ProfileCard";
 export default {
-  name: "Profiles",
   components: {
-    Card
+    ProfileCard
   },
   data() {
     return {
@@ -111,14 +115,5 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 };
 </script>
 
-<style scoped>
-.profile-map {
-  position: relative;
-  top: -100px;
-  left: 100px;
-}
-.wrapper {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
+<style lang="scss" scoped>
 </style>
