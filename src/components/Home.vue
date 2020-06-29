@@ -3,12 +3,11 @@
     <v-container>
       <v-row>
         <div id="title" style="z-index: 4">
-          <h1
-            class="d-none d-md-block display-4 font-weight-bold text-outline-offset"
-          >HARTFORD BOUND:</h1>
-          <h1 class="d-md-none display-3 font-weight-bold text-outline-offset">HARTFORD BOUND:</h1>
+          <!-- <h1 class="d-none d-md-block display-4 font-weight-bold text-outline-offset">HARTFORD BOUND:</h1> -->
+          <!-- <h1 class="d-md-none display-3 font-weight-bold text-outline-offset">HARTFORD BOUND:</h1> -->
         </div>
-        <v-img :src="require('../assets/longArtboard 1.png')" contain max-height="600" id="logo"></v-img>
+
+        <v-img :src="require('../assets/homelogo.png')" contain max-height="600" id="logo"></v-img>
         <div id="subtitle" style="z-index: 2">
           <h1 class="d-none d-md-block display-2 font-weight-bold">
             How
@@ -82,6 +81,8 @@ export default {
   text-align: center;
   margin: auto;
   padding: 20px 0;
+  height: 10vh;
+  width: 100vw;
   font-size: 100rem;
 }
 #logo {
