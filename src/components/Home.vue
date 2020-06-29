@@ -81,7 +81,7 @@ export default {
   text-align: center;
   margin: auto;
   padding: 20px 0;
-  height: 10vh;
+  height: 15vh;
   width: 100vw;
   font-size: 100rem;
 }
