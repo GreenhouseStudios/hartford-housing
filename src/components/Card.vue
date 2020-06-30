@@ -3,8 +3,8 @@
     <v-card flat tile v-bind:color="myColor">
       <!-- <div class="outline"> -->
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
-        <v-card-title class="d-none d-md-block white--text display-1 font-weight-bold">{{heading}}</v-card-title>
-        <v-card-title class="d-md-none white--text font-weight-bold">{{heading}}</v-card-title>
+        <v-card-title class="d-none d-md-block white--text display-1 font-weight-bold break-fix">{{heading}}</v-card-title>
+        <v-card-title class="d-md-none white--text font-weight-bold break-fix">{{heading}}</v-card-title>
         <v-card-text class="white--text font-weight-bold">{{body}}</v-card-text>
         <!-- <v-img v-bind:src="image"></v-img> -->
       </v-card>
@@ -70,8 +70,15 @@ v-card {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+v-card-title {
+  word-break: keep-all;
+}
 v-card-text {
   text-overflow: ellipsis;
+  word-break: keep-all;
+}
+.break-fix{
+  word-break: keep-all;
 }
 .innercard {
   top: 2vh;
