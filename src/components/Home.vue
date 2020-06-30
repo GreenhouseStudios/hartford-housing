@@ -6,19 +6,22 @@
         <v-col>
           <div id="title" style="z-index: 4"></div>
           <v-img :src="require('../assets/homelogo.png')" contain max-height="600" id="logo"></v-img>
+
           <div id="subtitle" style="z-index: 2">
-            <h1 class="d-none d-md-block display-2 font-weight-bold">
-              How
-              <span class="highlight">African Americans</span>,
-              <span class="highlight-teal">Puerto Ricans</span> and
-              <span class="highlight-green">West Indians</span> Made Hartford Home
-            </h1>
-            <h2 class="d-md-none font-weight-bold">
-              How
-              <span class="highlight">African Americans</span>,
-              <span class="highlight-teal">Puerto Ricans</span> and
-              <span class="highlight-green">West Indians</span> Made Hartford Home
-            </h2>
+            <v-card color="white" class="pa-4">
+              <h1 class="d-none d-md-block display-2 font-weight-bold">
+                How
+                <span class="highlight">African Americans</span>,
+                <span class="highlight-teal">Puerto Ricans</span> and
+                <span class="highlight-green">West Indians</span> Made Hartford Home
+              </h1>
+              <h2 class="d-md-none font-weight-bold">
+                How
+                <span class="highlight">African Americans</span>,
+                <span class="highlight-teal">Puerto Ricans</span> and
+                <span class="highlight-green">West Indians</span> Made Hartford Home
+              </h2>
+            </v-card>
           </div>
         </v-col>
       </v-row>
