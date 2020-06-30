@@ -1,29 +1,29 @@
 <template>
-  <div class="section">
+  <div class="section" id="home-section">
+    <!-- <v-parallax :src="require('../assets/housegridtint.png')" height="110vh" id="home-background"> -->
     <v-container>
       <v-row>
-        <div id="title" style="z-index: 4">
-          <!-- <h1 class="d-none d-md-block display-4 font-weight-bold text-outline-offset">HARTFORD BOUND:</h1> -->
-          <!-- <h1 class="d-md-none display-3 font-weight-bold text-outline-offset">HARTFORD BOUND:</h1> -->
-        </div>
-
-        <v-img :src="require('../assets/homelogo.png')" contain max-height="600" id="logo"></v-img>
-        <div id="subtitle" style="z-index: 2">
-          <h1 class="d-none d-md-block display-2 font-weight-bold">
-            How
-            <span class="highlight">African Americans</span>,
-            <span class="highlight-teal">Puerto Ricans</span> and
-            <span class="highlight-green">West Indians</span> Made Hartford Home
-          </h1>
-          <h2 class="d-md-none font-weight-bold">
-            How
-            <span class="highlight">African Americans</span>,
-            <span class="highlight-teal">Puerto Ricans</span> and
-            <span class="highlight-green">West Indians</span> Made Hartford Home
-          </h2>
-        </div>
+        <v-col>
+          <div id="title" style="z-index: 4"></div>
+          <v-img :src="require('../assets/homelogo.png')" contain max-height="600" id="logo"></v-img>
+          <div id="subtitle" style="z-index: 2">
+            <h1 class="d-none d-md-block display-2 font-weight-bold">
+              How
+              <span class="highlight">African Americans</span>,
+              <span class="highlight-teal">Puerto Ricans</span> and
+              <span class="highlight-green">West Indians</span> Made Hartford Home
+            </h1>
+            <h2 class="d-md-none font-weight-bold">
+              How
+              <span class="highlight">African Americans</span>,
+              <span class="highlight-teal">Puerto Ricans</span> and
+              <span class="highlight-green">West Indians</span> Made Hartford Home
+            </h2>
+          </div>
+        </v-col>
       </v-row>
     </v-container>
+    <!-- </v-parallax> -->
   </div>
 </template>
 
@@ -87,6 +87,9 @@ export default {
 }
 #logo {
   top: -130px;
+}
+#home-section {
+  background-image: url("~@/assets/housegridtint.png");
 }
 /* h1 {
   position: relative;
