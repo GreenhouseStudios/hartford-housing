@@ -1,14 +1,15 @@
 <template>
   <div class="map-container">
-    <v-col cols="12" md="6">
-      <div class="map">
-        <div v-bind:id="mapid" style="height: 65vh"></div>
-      </div>
-    </v-col>
-
-    <v-col cols="12" md="6">
-      <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
-    </v-col>
+    <v-row>
+      <v-col cols="12" md="6">
+        <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
+      </v-col>
+      <v-col cols="12" md="6">
+        <div class="map">
+          <div v-bind:id="mapid" style="height: 65vh"></div>
+        </div>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
