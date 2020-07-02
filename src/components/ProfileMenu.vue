@@ -10,7 +10,9 @@
               v-for="(profile,index) in profiles.slice(0,profiles.length)"
               :key="index"
               class="d-flex child-flex"
-              cols="2"
+              cols="4"
+              sm="3"
+              md="2"
             >
               <ProfileCard
                 v-bind:name="profile.name"

@@ -1,14 +1,20 @@
 <template>
   <v-card flat tile max-width="500" v-bind:color="myColor">
     <!-- <div class="outline"> -->
-      <v-card flat tile color="lightBlack" class="pa-5 innercard">
-        <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title>
-        <v-card-text v-if="!readMoreActivated" class="white--text font-weight-bold">{{body.split(" ").slice(0,75).join(' ') + "..."}}</v-card-text>
-        <a class="" v-if="!readMoreActivated" @click="readMore" href = "javascript:void(0)"> Read more </a>
-        <v-card-text v-if="readMoreActivated" class="white--text font-weight-bold">{{body}}</v-card-text>
-        <a class="" v-if="readMoreActivated" @click="showLess" href = "javascript:void(0)"> Show less </a>
-        <!-- <v-img v-bind:src="image"></v-img> -->
-      </v-card>
+    <v-card flat tile color="lightBlack" class="pa-5 innercard">
+      <v-card-title class="white--text display-1 font-weight-bold break-fix">{{heading}}</v-card-title>
+      <v-row align-content="center">
+        <v-img :src="image" height="200" width="200" contain class="d-md-none"></v-img>
+      </v-row>
+      <v-card-text
+        v-if="!readMoreActivated"
+        class="white--text font-weight-bold"
+      >{{body.split(" ").slice(0,75).join(' ') + "..."}}</v-card-text>
+      <a class v-if="!readMoreActivated" @click="readMore" href="javascript:void(0)">Read more</a>
+      <v-card-text v-if="readMoreActivated" class="white--text font-weight-bold">{{body}}</v-card-text>
+      <a class v-if="readMoreActivated" @click="showLess" href="javascript:void(0)">Show less</a>
+      <!-- <v-img v-bind:src="image"></v-img> -->
+    </v-card>
     <!-- </div> -->
   </v-card>
 </template>
@@ -24,26 +30,26 @@ export default {
       readMoreActivated: false
     };
   },
-  props: ["heading", "body", "bgColor","image"],
-  created(){
-    var randomIndex = Math.floor(Math.random()* this.cardColors.length);
+  props: ["heading", "body", "bgColor", "image"],
+  created() {
+    var randomIndex = Math.floor(Math.random() * this.cardColors.length);
     this.myColor = this.cardColors[randomIndex];
   },
   methods: {
-    readMore(){
-        this.readMoreActivated = true;
+    readMore() {
+      this.readMoreActivated = true;
     },
-    showLess(){
-        this.readMoreActivated = false;
-    },
+    showLess() {
+      this.readMoreActivated = false;
+    }
   }
-  };
+};
 </script>
 
 <style  scoped>
 .innercard {
-  top: 25px;
-  left: 25px;
+  top: 2vh;
+  left: 2vw;
 }
 .outline {
   outline-style: solid;
@@ -54,7 +60,10 @@ export default {
   background-color: rgb(81, 159, 200);
   color: rgb(81, 159, 200);
 }
-v-card-text{
+.break-fix {
+  word-break: keep-all;
+}
+v-card-text {
   font-size: 27pt;
 }
 </style>

@@ -31,7 +31,7 @@
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
           <v-app-bar-nav-icon
-            class="d-md-none ma-2"
+            class="d-md-none ma-1"
             color="white"
             @click="drawer"
             v-bind="attrs"
@@ -191,7 +191,7 @@ export default {
           this.$refs.fullpage.api.moveTo(i + 1, index);
         });
     }
-  },
+  }
 };
 </script>
 
@@ -218,16 +218,34 @@ h3 {
   margin: 0 auto;
   top: 100px;
 }
-.fp-slidesNav.fp-bottom {
-  bottom: 120px;
-  margin: 0 auto;
-  width: 400px;
-  z-index: 1;
-  ul {
-    text-align: center;
-    width: 100%;
+@media only screen and (max-width: 400px) {
+  .fp-slidesNav.fp-bottom {
+    bottom: 10px;
+    margin: auto;
+    width: 600px;
+    z-index: 1;
   }
 }
+@media only screen and (max-width: 600px) {
+  .fp-slidesNav.fp-bottom {
+    bottom: 30px;
+    margin: auto;
+    width: 600px;
+    z-index: 1;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .fp-slidesNav.fp-bottom {
+    bottom: 120px;
+    margin: 0 auto;
+    width: 400px;
+    z-index: 1;
+    ul {
+      text-align: center;
+      width: 100%;
+    }
+  }
+} 
 .fp-tableCell {
   vertical-align: top;
 }
@@ -247,7 +265,7 @@ h3 {
   -webkit-text-stroke: 1px #72b591;
 }
 
-.section-header{
+.section-header {
   text-align: center;
   top: -50px;
 }

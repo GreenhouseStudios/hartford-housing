@@ -14,8 +14,8 @@
           <v-container fluid>
             <v-row>
               <v-col cols="12" md="6">
-                <v-img :src="prof.img" height="600" width="400"></v-img>
-                <v-hover v-slot:default="{ hover }">
+                <v-img :src="prof.img" height="600" width="400" class="d-none d-md-block"></v-img>
+                <v-hover v-slot:default="{ hover }" class="d-none d-md-block">
                   <v-card
                     :elevation="hover ? 16 : 2"
                     height="200"
@@ -40,7 +40,7 @@
                 </v-dialog>
               </v-col>
               <v-col cols="12" md="6">
-                <ReadMoreCard v-bind:body="prof.body" v-bind:heading="prof.name"></ReadMoreCard>
+                <ReadMoreCard v-bind:body="prof.body" v-bind:heading="prof.name" v-bind:image="prof.img"></ReadMoreCard>
               </v-col>
             </v-row>
           </v-container>
