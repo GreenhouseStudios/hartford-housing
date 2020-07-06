@@ -1,16 +1,22 @@
 <template>
-  <div class="section">
+  <div class="section" id="about-section">
     <!-- <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)"> -->
     <v-container>
       <v-row>
-        <div id="subtitle">
-          <h1 class="d-none d-md-block display-2 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h1>
-          <h3 class="d-md-none text-h1 font-weight-bold text-outline-offset">{{subtitle | allCaps}}</h3>
-          <h1 class="d-none d-md-block display-2 font-weight-bold">HOUSING STRUGGLES</h1>
-          <h3 class="d-md-none font-weight-bold">HOUSING STRUGGLES</h3>
-          <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
-        </div>
-        <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
+        <v-col>
+          <div id="subtitle">
+            <h1
+              class="d-none d-md-block display-2 font-weight-bold text-outline-offset"
+            >{{subtitle | allCaps}}</h1>
+            <h3
+              class="d-md-none text-h1 font-weight-bold text-outline-offset"
+            >{{subtitle | allCaps}}</h3>
+            <h1 class="d-none d-md-block display-2 font-weight-bold">HOUSING STRUGGLES</h1>
+            <h3 class="d-md-none font-weight-bold">HOUSING STRUGGLES</h3>
+            <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
+          </div>
+          <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
+        </v-col>
       </v-row>
     </v-container>
     <!-- <CardImage class= "align-center"
@@ -128,5 +134,8 @@ export default {
   -ms-transform: none;
   -o-transform: none;
   transform: none;
+}
+#about-section {
+  /* background-image: url("~@/assets/Puerto Ricans on steps of City Hall Hall 1970.jpg"); */
 }
 </style>

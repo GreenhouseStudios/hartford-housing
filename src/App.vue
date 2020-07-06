@@ -6,6 +6,7 @@
       </router-link>
       <v-spacer></v-spacer>
 
+      <!-- Desktop nav -->
       <v-toolbar-items class="d-none d-md-block">
         <v-menu
           v-for="(section,i) in sections"
@@ -28,6 +29,7 @@
         </v-menu>
       </v-toolbar-items>
 
+      <!-- Mobile Nav -->
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
           <v-app-bar-nav-icon
@@ -160,13 +162,16 @@ export default {
       slidesNavPosition: "bottom",
       controlArrows: false,
       verticalCentered: true,
+      parallax: true,
       anchors: [
         "Home",
         "About",
         "Introduction",
         "Maps",
+        "Maps","Maps","Maps","Maps","Maps","Maps","Maps","Maps","Maps",
         "Settlement",
         "Housing",
+        "Timeline",
         "Profiles"
       ],
       sectionsColor: ["#FFFFFF"]
@@ -177,6 +182,7 @@ export default {
       this.$refs.fullpage.api.moveSectionDown();
     },
     navigateToSection: function(i) {
+      if(i > 3) i+= 9 
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
         this.$router.push("/").then(() => {
@@ -184,8 +190,10 @@ export default {
         });
     },
     navigateToSlide: function(i, index) {
-      if (this.$route.name == "Main")
+      if(i > 3) i+= 9 
+      if (this.$route.name == "Main"){
         this.$refs.fullpage.api.moveTo(i + 1, index);
+      }
       else
         this.$router.push("/").then(() => {
           this.$refs.fullpage.api.moveTo(i + 1, index);
@@ -200,6 +208,9 @@ export default {
 v-application {
   font-family: "Gilroy Extrabold" !important;
   overflow-x: hidden !important;
+}
+v-app-bar{
+  z-index: 10;
 }
 .v-btn {
   font-weight: 800 !important;
