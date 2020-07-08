@@ -172,7 +172,7 @@ export default {
         "Settlement",
         "Housing",
         "Timeline",
-        "Profiles"
+        "Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles"
       ],
       sectionsColor: ["#FFFFFF"]
     }

@@ -2,7 +2,7 @@
   <div class="section" id="home-section">
     <!-- <v-parallax :src="require('../assets/housegridtint.png')" height="110vh" id="home-background"> -->
     <v-container>
-      <v-row>
+      <v-row no-gutters>
         <v-col>
           <div id="title" style="z-index: 4"></div>
           <v-img :src="require('../assets/homelogo.png')" contain max-height="600" id="logo"></v-img>
@@ -93,6 +93,9 @@ export default {
 }
 #home-section {
   background-image: url("~@/assets/housegridtint.png");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
 }
 /* h1 {
   position: relative;

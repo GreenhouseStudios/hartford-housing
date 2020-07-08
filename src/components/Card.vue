@@ -1,9 +1,11 @@
 <template>
-  <v-responsive :max-width="cardMaxWidth" max-height="80vh">
-    <v-card flat tile v-bind:color="myColor" class="ma-1">
+  <v-responsive :max-width="cardMaxWidth" max-height="90vh">
+    <v-card flat tile v-bind:color="myColor" class="ma-5">
       <!-- <div class="outline"> -->
-      <v-card flat tile color="lightBlack" class="pa-3 innercard">
-        <v-card-title class="d-none d-md-block white--text display-1 font-weight-bold break-fix">{{heading}}</v-card-title>
+      <v-card flat tile color="lightBlack" class="pa-5 innercard">
+        <v-card-title
+          class="d-none d-md-block white--text display-1 font-weight-bold break-fix"
+        >{{heading}}</v-card-title>
         <v-card-title class="d-md-none white--text font-weight-bold break-fix">{{heading}}</v-card-title>
         <v-card-text class="white--text font-weight-bold">{{body}}</v-card-text>
         <!-- <v-img v-bind:src="image"></v-img> -->
@@ -36,11 +38,11 @@ export default {
         case "sm":
           return "60vw";
         case "md":
-          return "34vw";
+          return "35vw";
         case "lg":
-          return "25vw";
+          return "35vw";
         case "xl":
-          return "25vw";
+          return "35vw";
       }
       return "25vw";
     },
@@ -67,7 +69,6 @@ export default {
 v-card {
   max-width: 20vw;
   max-height: 80vh;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 v-card-title {
@@ -77,12 +78,13 @@ v-card-text {
   text-overflow: ellipsis;
   word-break: keep-all;
 }
-.break-fix{
+.break-fix {
   word-break: keep-all;
 }
 .innercard {
   top: 2vh;
   left: 2vw;
+  overflow: visible;
 }
 .outline {
   outline-style: solid;
@@ -92,7 +94,6 @@ v-card-text {
 .bcard {
   max-width: 80vw;
   max-height: 100vh;
-  overflow: hidden;
   background-color: rgb(81, 159, 200);
   color: rgb(81, 159, 200);
 }
