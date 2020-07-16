@@ -13,6 +13,9 @@
             </v-img>
         </v-col>
         </div>
+      </v-card>
+      <v-card v-if="caption" flat tile color="lightBlack" class="pa-5 innercard relative">
+        <!-- <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title> -->
         <v-card-text class="white--text font-weight-bold">{{caption}}</v-card-text>
       </v-card>
     </div>

@@ -57,8 +57,7 @@ export default {
           offsetV: "25",
           rotation: "0",
           cardWidth: "550",
-          cardHeight: "410",
-          caption: "Test",
+          cardHeight: "410"
         }
       ]
     };
