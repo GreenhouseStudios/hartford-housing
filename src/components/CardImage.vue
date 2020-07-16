@@ -4,13 +4,16 @@
       <v-card flat tile color="lightBlack" class="pa-5 innercard relative"
       :style="{height:cardHeight + 'px'}">
         <!-- <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title> -->
+        <div class="item">
         <v-col cols="auto">
-          <v-img
-          class="align-image"
-          :style="{top:offsetV + 'px',left:offsetH +'px', transform: 'rotate('+ rotation + 'deg)'}"
-          v-bind:src="image">
-          </v-img>
+            <v-img
+            class="align-image"
+            :style="{top:offsetV + 'px',left:offsetH +'px', transform: 'rotate('+ rotation + 'deg)'}"
+            v-bind:src="image">
+            </v-img>
         </v-col>
+        </div>
+        <v-card-text class="white--text font-weight-bold">{{caption}}</v-card-text>
       </v-card>
     </div>
   </v-card>
@@ -26,7 +29,7 @@ export default {
       myColor: null,
     };
   },
-  props: ["image", "bgColor", "offsetV", "offsetH", "rotation", "cardWidth", "cardHeight"],
+  props: ["image", "bgColor", "offsetV", "offsetH", "rotation", "cardWidth", "cardHeight", "caption"],
   created(){
     var randomIndex = Math.floor(Math.random()* this.cardColors.length);
     this.myColor = this.cardColors[randomIndex];
@@ -52,5 +55,11 @@ export default {
 }
 .relative{
   position: relative;
+}
+div.item {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
 }
 </style>

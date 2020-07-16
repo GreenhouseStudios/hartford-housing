@@ -27,21 +27,22 @@
       v-bind:cardWidth="slides[0].cardWidth"
       v-bind:cardHeight="slides[0].cardHeight"
       v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}"
+      v-bind:caption="slides[0].caption"
       id="reveal"
-    ></CardImage>-->
+    ></CardImage> -->
     <!-- </v-img> -->
   </div>
 </template>
 
 <script>
 import Card from "@/components/Card";
-// import CardImage from "@/components/CardImage";
+import CardImage from "@/components/CardImage";
 
 export default {
   name: "About",
   components: {
-    Card
-    // CardImage
+    Card,
+    CardImage
   },
   data() {
     return {
@@ -56,7 +57,8 @@ export default {
           offsetV: "25",
           rotation: "0",
           cardWidth: "550",
-          cardHeight: "410"
+          cardHeight: "410",
+          caption: "Test",
         }
       ]
     };
@@ -79,7 +81,7 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.5,
         // Duration of animation
-        duration: 450
+        duration: 1000
       }) // Declaration of animation and attaching to element
       .setClassToggle("#reveal", "visible");
     // Helpful tags for orientation on the screen
