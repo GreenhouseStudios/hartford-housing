@@ -11,15 +11,15 @@
             <v-card color="white" class="pa-4">
               <h1 class="d-none d-md-block display-2 font-weight-bold">
                 How
-                <span class="highlight">African Americans</span>,
-                <span class="highlight-teal">Puerto Ricans</span> and
+                <span class="r-slant">African Americans</span>,
+                <span class="l-slant-teal">Puerto Ricans</span> and
                 <span class="highlight-green">West Indians</span> Made Hartford Home
               </h1>
               <h2 class="d-md-none font-weight-bold">
                 How
-                <span class="highlight">African Americans</span>,
+                <span class="r-slant">African Americans</span>,
                 <span class="highlight-teal">Puerto Ricans</span> and
-                <span class="highlight-green">West Indians</span> Made Hartford Home
+                <span class="l-slant-green">West Indians</span> Made Hartford Home
               </h2>
             </v-card>
           </div>
