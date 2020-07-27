@@ -3,14 +3,15 @@
     <v-row align="center" justify="center">
       <h1 class="d-none d-md-block section-header display-2 font-weight-bold">Maps</h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
-      <div class="section">
+      <div>
         <!-- <h2 class="ma-5">African American Population Percentage - 1940</h2> -->
+        <div class="section">
         <Map
           jsonFile="pop1940"
           id="pop1940"
           v-bind:zoomLevel="13"
           title="African American Population Percentage - 1940"
-        ></Map>
+        ></Map></div>
 
         <div class="section">
           <!-- <h2 class="ma-5">African American Population Percentage - 1960</h2> -->

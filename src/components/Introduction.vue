@@ -1,12 +1,13 @@
 <template>
-  <div class="section">
-    <v-container fluid>
+  <div class="section" id="intro-section">
+    <v-container fluid >
       <v-row align="center">
         <v-col>
           <h1 class="d-none d-md-block section-header display-3 font-weight-bold">Introduction</h1>
           <h1 class="d-md-none section-header display-1 font-weight-bold">Introduction</h1>
           <div v-for="(item,index) in sections" class="slide" v-bind:key="index">
             <Card v-bind:heading="item.heading" v-bind:body="item.body"></Card>
+            <!-- <v-img :src="item.img"></v-img> -->
           </div>
         </v-col>
       </v-row>
@@ -16,10 +17,12 @@
 
 <script>
 import Card from "@/components/Card";
+import CardImage from "@/components/CardImage";
 export default {
   name: "Introduction",
   components: {
-    Card
+    Card,
+    CardImage,
   },
   data() {
     return {
@@ -27,7 +30,8 @@ export default {
         {
           heading: "“And the Migrants Kept Coming”",
           body:
-            "Jacob Lawrence concluded his magisterial 60-panel mosaic, The Migration Series, with a defiant and hopeful scene of African American men, women, and children on a railway platform. Bound for destinations like Harlem, San Francisco, Philadelphia, Chicago, and Hartford, migrants voted with their feet to pursue a better life.  “And the migrants kept coming,” panel 60, was the 1941 coda to Lawrence’s profound visual statement about the Great Migration of African Americans from the South. Yet panel 60 can conjure any epoch in American history. Lawrence’s visual panorama resonates with the generation of West Indians and Puerto Ricans who would undertake their own journeys—both epic and mundane—to find employment and make a new home in American cities. Hartford was one terminus for several generations of these migrants."
+            "Jacob Lawrence concluded his magisterial 60-panel mosaic, The Migration Series, with a defiant and hopeful scene of African American men, women, and children on a railway platform. Bound for destinations like Harlem, San Francisco, Philadelphia, Chicago, and Hartford, migrants voted with their feet to pursue a better life.  “And the migrants kept coming,” panel 60, was the 1941 coda to Lawrence’s profound visual statement about the Great Migration of African Americans from the South. Yet panel 60 can conjure any epoch in American history. Lawrence’s visual panorama resonates with the generation of West Indians and Puerto Ricans who would undertake their own journeys—both epic and mundane—to find employment and make a new home in American cities. Hartford was one terminus for several generations of these migrants.",
+            img: "~@/assets/Lawrence/MOMA_PANEL60_900.jpg"
         },
         {
           heading: "African American Settlement",
@@ -49,3 +53,11 @@ export default {
   }
 };
 </script>
+<style>
+#intro-section{
+  background-image: url("~@/assets/Lawrence/MOMA_PANEL60_900.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+}
+</style>

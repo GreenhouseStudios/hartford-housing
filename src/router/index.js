@@ -1,28 +1,23 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 import 'vuetify/dist/vuetify.min.css'
-import Home from '@/components/Home'
 import Main from '@/components/Main'
 import Contact from '@/components/Contact'
 import Funders from '@/components/Funders'
 import People from '@/components/People'
 import Permissions from '@/components/Permissions'
 Vue.use(
-  Router
+  VueRouter
 )
 
-export default new Router({
+const router = new VueRouter({
   base: '/hartford-housing/',
   routes: [
     {
       path:'/',
       name: 'Main',
-      component: Main
-    },
-    {
-      path: '/Home',
-      name: 'Home',
-      component: Home
+      component: Main,
+      alias: ['/About','Introduction/:id','/Housing/:id','/Home', '/Settlement/:id','/Timeline','/Profiles','/Maps']
     },
     {
       path: '/Contact',
@@ -46,3 +41,9 @@ export default new Router({
     }
   ]
 })
+
+// router.afterEach((to,from) =>{
+
+// })
+
+export default router;

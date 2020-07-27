@@ -136,6 +136,6 @@ export default {
   transform: none;
 }
 #about-section {
-  /* background-image: url("~@/assets/Puerto Ricans on steps of City Hall Hall 1970.jpg"); */
+  background-image: url("~@/assets/PlacesofOriginUpdate.jpg");
 }
 </style>

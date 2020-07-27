@@ -1,15 +1,19 @@
 <template>
   <v-card flat tile :style="{width:cardWidth + 'px'}" v-bind:color="myColor">
     <div class="card-image">
-      <v-card flat tile color="lightBlack" class="pa-5 innercard relative"
-      :style="{height:cardHeight + 'px'}">
-        <!-- <v-card-title class="white--text display-1 font-weight-bold">{{heading}}</v-card-title> -->
+      <v-card
+        flat
+        tile
+        color="lightBlack"
+        class="pa-5 innercard relative"
+        :style="{height:cardHeight + 'px'}"
+      >
         <v-col cols="auto">
           <v-img
-          class="align-image"
-          :style="{top:offsetV + 'px',left:offsetH +'px', transform: 'rotate('+ rotation + 'deg)'}"
-          v-bind:src="image">
-          </v-img>
+            class="align-image"
+            :style="{top:offsetV + 'px',left:offsetH +'px', transform: 'rotate('+ rotation + 'deg)'}"
+            v-bind:src="image"
+          ></v-img>
         </v-col>
       </v-card>
     </div>
@@ -22,13 +26,42 @@ export default {
   name: "CardImage",
   data() {
     return {
-      cardColors: ['green','teal','blue'],
-      myColor: null,
+      cardColors: ["green", "teal", "blue"],
+      myColor: null
     };
   },
-  props: ["image", "bgColor", "offsetV", "offsetH", "rotation", "cardWidth", "cardHeight"],
-  created(){
-    var randomIndex = Math.floor(Math.random()* this.cardColors.length);
+  props: {
+    image: {
+      type: String,
+      default: "@/assets/logo.png"
+    },
+    bgColor: {
+      type: String,
+      default: "green"
+    },
+    offsetV: {
+      type: Number,
+      default: 0
+    },
+    offsetH: {
+      type: Number,
+      default: 0
+    },
+    rotation: {
+      type: Number,
+      default: 0
+    },
+    cardWidth: {
+      type: Number,
+      default: 500
+    },
+    cardHeight: {
+      type: Number,
+      default: 500
+    }
+  },
+  created() {
+    var randomIndex = Math.floor(Math.random() * this.cardColors.length);
     this.myColor = this.cardColors[randomIndex];
   }
 };
@@ -42,15 +75,15 @@ export default {
   top: 25px;
   left: 25px;
 }
-.bcard{
+.bcard {
   background-color: rgb(81, 159, 200);
-  color:rgb(81, 159, 200);
+  color: rgb(81, 159, 200);
 }
-.align-image{
+.align-image {
   position: absolute;
   width: 500px;
 }
-.relative{
+.relative {
   position: relative;
 }
 </style>
