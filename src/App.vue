@@ -305,6 +305,7 @@ body {
   left: 0;
   z-index: -1;
   width: 100%;
+
 }
 .highlight-teal {
   @extend .highlight;
@@ -318,6 +319,65 @@ body {
   @extend .highlight;
   background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
 }
+.r-slant {
+  @extend .highlight;
+  background:rgba(81, 159, 200, 0);
+  z-index: 1;
+  &::before, ::after {
+    content: " ";
+    background-color: rgb(81, 159, 200);
+    display: inline-block;
+    height: 80%;
+    width: 100%;
+    margin-top: 3%;
+    position: absolute;
+    transform: skew(-1deg)
+              rotate(-1deg);
+  }
+  &::before{
+    z-index:-100;
+  }
+}
+.r-slant-teal{
+  @extend .r-slant;
+  &::before, ::after {
+    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+    height: 100%;
+    margin-top: -3%;
+  }
+}
+.r-slant-green{
+  @extend .r-slant;
+  &::before, ::after {
+    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
+    height: 100%;
+    margin-top: -3%;
+  }
+}
+.l-slant {
+  @extend .r-slant;
+  &::before, ::after {
+    transform: skew(1deg)
+              rotate(1deg);
+  }
+}
+.l-slant-teal{
+  @extend .l-slant;
+  &::before, ::after {
+    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+    height: 100%;
+    margin-top: -3%;
+  }
+}
+.l-slant-green{
+  @extend .l-slant;
+  &::before, ::after {
+    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
+    height: 100%;
+    margin-top: -3%;
+  }
+}
+
 </style>
 
 <style lang="scss">
