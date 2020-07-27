@@ -48,6 +48,19 @@
           >
             <v-list-item-title>{{ section.title }}</v-list-item-title>
           </v-list-item>
+          <v-divider></v-divider>
+          <v-list-item>
+            <router-link to="/People" class="pr-4 footer-link">People</router-link>
+          </v-list-item>
+          <v-list-item>
+            <router-link to="/Funders" class="pr-4 footer-link">Funders</router-link>
+          </v-list-item>
+          <v-list-item>
+            <router-link to="/Contact" class="pr-4 footer-link">Contact</router-link>
+          </v-list-item>
+          <v-list-item>
+            <router-link to="/Permissions" class="pr-4 footer-link">Permissions</router-link>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -168,11 +181,39 @@ export default {
         "About",
         "Introduction",
         "Maps",
-        "Maps","Maps","Maps","Maps","Maps","Maps","Maps","Maps","Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
         "Settlement",
         "Housing",
         "Timeline",
-        "Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles","Profiles"
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles",
+        "Profiles"
       ],
       sectionsColor: ["#FFFFFF"]
     }
@@ -182,7 +223,7 @@ export default {
       this.$refs.fullpage.api.moveSectionDown();
     },
     navigateToSection: function(i) {
-      if(i > 3) i+= 9 
+      if (i > 3) i += 9;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
         this.$router.push("/").then(() => {
@@ -190,11 +231,10 @@ export default {
         });
     },
     navigateToSlide: function(i, index) {
-      if(i > 3) i+= 9 
-      if (this.$route.name == "Main"){
+      if (i > 3) i += 9;
+      if (this.$route.name == "Main") {
         this.$refs.fullpage.api.moveTo(i + 1, index);
-      }
-      else
+      } else
         this.$router.push("/").then(() => {
           this.$refs.fullpage.api.moveTo(i + 1, index);
         });
@@ -209,7 +249,7 @@ v-application {
   font-family: "Gilroy Extrabold" !important;
   overflow-x: hidden !important;
 }
-v-app-bar{
+v-app-bar {
   z-index: 10;
 }
 .v-btn {
@@ -256,7 +296,7 @@ h3 {
       width: 100%;
     }
   }
-} 
+}
 .fp-tableCell {
   vertical-align: top;
 }
@@ -305,7 +345,6 @@ body {
   left: 0;
   z-index: -1;
   width: 100%;
-
 }
 .highlight-teal {
   @extend .highlight;
@@ -321,9 +360,10 @@ body {
 }
 .r-slant {
   @extend .highlight;
-  background:rgba(81, 159, 200, 0);
+  background: rgba(81, 159, 200, 0);
   z-index: 1;
-  &::before, ::after {
+  &::before,
+  ::after {
     content: " ";
     background-color: rgb(81, 159, 200);
     display: inline-block;
@@ -331,24 +371,25 @@ body {
     width: 100%;
     margin-top: 3%;
     position: absolute;
-    transform: skew(-1deg)
-              rotate(-1deg);
+    transform: skew(-1deg) rotate(-1deg);
   }
-  &::before{
-    z-index:-100;
+  &::before {
+    z-index: -100;
   }
 }
-.r-slant-teal{
+.r-slant-teal {
   @extend .r-slant;
-  &::before, ::after {
+  &::before,
+  ::after {
     background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
     height: 100%;
     margin-top: -3%;
   }
 }
-.r-slant-green{
+.r-slant-green {
   @extend .r-slant;
-  &::before, ::after {
+  &::before,
+  ::after {
     background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
     height: 100%;
     margin-top: -3%;
@@ -356,28 +397,29 @@ body {
 }
 .l-slant {
   @extend .r-slant;
-  &::before, ::after {
-    transform: skew(1deg)
-              rotate(1deg);
+  &::before,
+  ::after {
+    transform: skew(1deg) rotate(1deg);
   }
 }
-.l-slant-teal{
+.l-slant-teal {
   @extend .l-slant;
-  &::before, ::after {
+  &::before,
+  ::after {
     background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
     height: 100%;
     margin-top: -3%;
   }
 }
-.l-slant-green{
+.l-slant-green {
   @extend .l-slant;
-  &::before, ::after {
+  &::before,
+  ::after {
     background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
     height: 100%;
     margin-top: -3%;
   }
 }
-
 </style>
 
 <style lang="scss">
