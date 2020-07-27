@@ -95,6 +95,7 @@ export default {
   background-image: url("~@/assets/housegridtint.png");
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   margin: 0 auto;
 }
 /* h1 {
