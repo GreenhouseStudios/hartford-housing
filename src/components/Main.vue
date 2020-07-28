@@ -1,7 +1,7 @@
 <template>
 <v-container fluid pa-0>
   <Home></Home>
-  <v-container fluid>
+  <v-container fluid pa-0>
     <v-row>
       <v-col>
         <!-- <Home></Home> -->
