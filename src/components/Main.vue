@@ -1,8 +1,10 @@
 <template>
+<v-container fluid pa-0>
+  <Home></Home>
   <v-container fluid>
     <v-row>
       <v-col>
-        <Home></Home>
+        <!-- <Home></Home> -->
         <About></About>
         <Introduction></Introduction>
         <Maps></Maps>
@@ -48,6 +50,7 @@
       </v-col>
     </v-row>
   </v-container>
+</v-container>
 </template>
 
 <script>
