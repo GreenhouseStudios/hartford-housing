@@ -92,7 +92,7 @@ export default {
   top: -130px;
 }
 #home-section {
-  background-image: url("~@/assets/housegridtint.png");
+  background-image: url("~@/assets/HomeBG.png");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
