@@ -420,6 +420,91 @@ body {
     margin-top: -3%;
   }
 }
+//* Scrollmagic classes -------------------------------------//
+#revealscale {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+			 -moz-transform: scale(0.9);
+				-ms-transform: scale(0.9);
+				 -o-transform: scale(0.9);
+						transform: scale(0.9);
+		-webkit-transition: all 1s ease-in-out;
+			 -moz-transition: all 1s ease-in-out;
+				-ms-transition: all 1s ease-in-out;
+				 -o-transition: all 1s ease-in-out;
+						transition: all 1s ease-in-out;
+}
+#revealscale.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+#revealrise {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+			 -moz-transform: translateY(40px);
+				-ms-transform: translateY(40px);
+				 -o-transform: translateY(40px);
+						transform: translateY(40px);
+  -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+}
+#revealrise.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+#revealslide {
+  opacity: 0;
+  -webkit-transform: translateX(-60px);
+			 -moz-transform: translateX(-60px);
+				-ms-transform: translateX(-60px);
+				 -o-transform: translateX(-60px);
+						transform: translateX(-60px);
+  -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+}
+#revealslide.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+#revealslide2 {
+  opacity: 0;
+  -webkit-transform: translateX(60px);
+			 -moz-transform: translateX(60px);
+				-ms-transform: translateX(60px);
+				 -o-transform: translateX(60px);
+						transform: translateX(60px);
+  -webkit-transition: all 1s ease-in-out;
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+}
+#revealslide2.visible {
+  opacity: 1;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
 </style>
 
 <style lang="scss">

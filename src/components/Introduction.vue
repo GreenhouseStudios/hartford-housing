@@ -5,8 +5,9 @@
         <v-col>
           <h1 class="d-none d-md-block section-header display-3 font-weight-bold">Introduction</h1>
           <h1 class="d-md-none section-header display-1 font-weight-bold">Introduction</h1>
+          <div id="trigger3"></div>
           <div v-for="(item,index) in sections" class="slide" v-bind:key="index">
-            <Card v-bind:heading="item.heading" v-bind:body="item.body"></Card>
+            <Card v-bind:heading="item.heading" v-bind:body="item.body" id= "revealscale"></Card>
             <!-- <v-img :src="item.img"></v-img> -->
           </div>
         </v-col>
@@ -50,6 +51,22 @@ export default {
         }
       ]
     };
+  },
+  mounted() {
+    const scene3 = this.$scrollmagic
+      .scene({
+        // ID of element where animation starts
+        triggerElement: "#trigger3",
+        // {0,0.5,1} - animations starts from {top,center,end} of window
+        triggerHook: 0.7,
+        // Duration of animation
+        duration: "110%"
+      }) // Declaration of animation and attaching to element
+      .setClassToggle("#revealscale", "visible");
+    // Helpful tags for orientation on the screen
+    // .addIndicators({ name: "2 (duration: 300)" });
+    // Add Scene to controller
+    this.$scrollmagic.addScene(scene3);
   }
 };
 </script>

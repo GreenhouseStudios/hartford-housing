@@ -5,7 +5,8 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
         <!-- <h2 class="ma-5">African American Population Percentage - 1940</h2> -->
-        <div class="section">
+        <div id="trigger4"></div>
+        <div class="section" id="revealslide">  
         <Map
           jsonFile="pop1940"
           id="pop1940"
@@ -13,7 +14,8 @@
           title="African American Population Percentage - 1940"
         ></Map></div>
 
-        <div class="section">
+        <div id="trigger5"></div>
+        <div class="section" id="revealslide2">  
           <!-- <h2 class="ma-5">African American Population Percentage - 1960</h2> -->
           <Map
             jsonFile="pop1960"
@@ -22,7 +24,9 @@
             title="African American Population Percentage - 1960"
           ></Map>
         </div>
-        <div class="section">
+
+        <div id="trigger6"></div>
+        <div class="section" id="revealslide">  
           <!-- <h2 class="ma-5">African American Population Percentage - 1980</h2> -->
           <Map
             jsonFile="pop1980"
@@ -31,32 +35,41 @@
             title="African American Population Percentage - 1980"
           ></Map>
         </div>
-        <div class="section">
+
+        <div id="trigger7"></div>
+        <div class="section" id="revealslide2">  
           <!-- <h2 class="ma-5">Bloomfield</h2> -->
-          <Map v-bind:coordinates="[41.8,-72.73]" id="Bloomfield" title="Bloomfield"></Map>
+          <Map v-bind:coordinates="[41.8,-72.73]" 
+            id="Bloomfield" 
+          title="Bloomfield"></Map>
         </div>
-        <div class="section">
+
+        <div class="section">  
           <h2 class="ma-5">Places of Origin</h2>
           <v-img :src="require('../assets/PlacesofOriginUpdate.jpg')" contain max-height="65vh"></v-img>
         </div>
-        <div class="section">
+
+        <div class="section">  
           <h2 class="ma-5">Race and Ethnicity</h2>
           <v-img :src="require('../assets/Race_Ethnicity2.jpg')" contain max-height="65vh"></v-img>
         </div>
-        <div class="section">
+
+        <div class="section">  
           <h2 class="ma-5">Landmarks</h2>
           <v-img :src="require('../assets/landmarks.jpg')" contain max-height="65vh"></v-img>
         </div>
-        <div class="section">
+
+        <div class="section">  
           <h2 class="ma-5">Geographic Mobility of African Americans</h2>
           <v-img :src="require('../assets/GeographicMobility.jpg')" contain max-height="65vh"></v-img>
         </div>
-        <div class="section">
+
+        <div class="section"> 
           <h2 class="ma-5">Ship Manifest</h2>
           <v-img :src="require('../assets/ShipManifest.jpg')" contain max-height="65vh"></v-img>
         </div>
 
-        <div class="section">
+        <div class="section"> 
           <v-row justify="center">
             <h2 class="ma-5">SVG Test</h2>
             <!-- <v-img :src="require('../assets/Map_of_Connecticut.svg')" id="demo-tiger" contain max-height="80vh"></v-img> -->
@@ -85,6 +98,45 @@ export default {
   mounted() {
     var panZoomTiger = svgPanZoom("#demo-tiger");
     console.log(panZoomTiger);
+    const scene4 = this.$scrollmagic
+      .scene({
+        triggerElement: "#trigger4",
+        triggerHook: 0.7,
+        duration: 0,
+        reverse: false
+      })
+      .setClassToggle("#revealslide", "visible");
+    this.$scrollmagic.addScene(scene4);
+
+    const scene5 = this.$scrollmagic
+      .scene({
+        triggerElement: "#trigger5",
+        triggerHook: 0.7,
+        duration: 0,
+        reverse: false
+      })
+      .setClassToggle("#revealslide2", "visible");
+    this.$scrollmagic.addScene(scene5);
+
+    const scene6 = this.$scrollmagic
+      .scene({
+        triggerElement: "#trigger6",
+        triggerHook: 0.7,
+        duration: 0,
+        reverse: false
+      })
+      .setClassToggle("#revealslide", "visible");
+    this.$scrollmagic.addScene(scene6);
+
+    const scene7 = this.$scrollmagic
+      .scene({
+        triggerElement: "#trigger7",
+        triggerHook: 0.7,
+        duration: 0,
+        reverse: false
+      })
+      .setClassToggle("#revealslide2", "visible");
+    this.$scrollmagic.addScene(scene7);
   }
 };
 </script>

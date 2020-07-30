@@ -4,6 +4,7 @@
     <v-container>
       <v-row>
         <v-col>
+          <div id="trigger2"></div>
           <div id="subtitle">
             <h1
               class="d-none d-md-block display-2 font-weight-bold text-outline-offset"
@@ -15,7 +16,8 @@
             <h3 class="d-md-none font-weight-bold">HOUSING STRUGGLES</h3>
             <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
           </div>
-          <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="trigger2"></Card>
+          
+          <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="revealrise"></Card>
         </v-col>
       </v-row>
     </v-container>
@@ -28,8 +30,8 @@
       v-bind:cardHeight="slides[0].cardHeight"
       v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}"
       v-bind:caption="slides[0].caption"
-      id="reveal"
-    ></CardImage> -->
+      id="reveal">
+    </CardImage> -->
     <!-- </v-img> -->
   </div>
 </template>
@@ -78,11 +80,11 @@ export default {
         // ID of element where animation starts
         triggerElement: "#trigger2",
         // {0,0.5,1} - animations starts from {top,center,end} of window
-        triggerHook: 0.5,
+        triggerHook: 0.7,
         // Duration of animation
-        duration: 1000
+        duration: "99%"
       }) // Declaration of animation and attaching to element
-      .setClassToggle("#reveal", "visible");
+      .setClassToggle("#revealrise", "visible");
     // Helpful tags for orientation on the screen
     // .addIndicators({ name: "2 (duration: 300)" });
     // Add Scene to controller
@@ -115,27 +117,7 @@ export default {
 .section {
   height: 4000px;
 }
-#reveal {
-  opacity: 0;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  transform: scale(0.9);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-#reveal.visible {
-  opacity: 1;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-}
+
 #about-section {
   background-image: url("~@/assets/PlacesofOriginUpdate.jpg");
 }
