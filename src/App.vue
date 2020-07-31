@@ -30,7 +30,8 @@
       </v-toolbar-items>
 
       <!-- Mobile Nav -->
-      <v-menu>
+      <v-menu min-width="100%"
+        :offset-y="true" tile>
         <template v-slot:activator="{ on, attrs }">
           <v-app-bar-nav-icon
             class="d-md-none ma-1"
@@ -40,7 +41,7 @@
             v-on="on"
           ></v-app-bar-nav-icon>
         </template>
-        <v-list>
+        <v-list class="centertext">
           <v-list-item
             v-for="(section,j) in sections"
             :key="section.title"
@@ -50,16 +51,16 @@
           </v-list-item>
           <v-divider></v-divider>
           <v-list-item>
-            <router-link to="/People" class="pr-4 footer-link">People</router-link>
+            <router-link to="/People" class="pr-4 footer-link centertext">People</router-link>
           </v-list-item>
           <v-list-item>
-            <router-link to="/Funders" class="pr-4 footer-link">Funders</router-link>
+            <router-link to="/Funders" class="pr-4 footer-link centertext">Funders</router-link>
           </v-list-item>
           <v-list-item>
-            <router-link to="/Contact" class="pr-4 footer-link">Contact</router-link>
+            <router-link to="/Contact" class="pr-4 footer-link centertext">Contact</router-link>
           </v-list-item>
           <v-list-item>
-            <router-link to="/Permissions" class="pr-4 footer-link">Permissions</router-link>
+            <router-link to="/Permissions" class="pr-4 footer-link centertext">Permissions</router-link>
           </v-list-item>
         </v-list>
       </v-menu>
@@ -319,6 +320,10 @@ h3 {
 .section-header {
   text-align: center;
   top: -50px;
+}
+.centertext {
+  width: 100%;
+  text-align: center;
 }
 html,
 body {
