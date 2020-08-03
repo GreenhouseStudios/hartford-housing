@@ -4,7 +4,7 @@
   <v-container fluid pa-0>
     <v-row>
       <v-col>
-        <!-- <Home></Home> -->
+        
         <About></About>
         <Introduction></Introduction>
         <Maps></Maps>

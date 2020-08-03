@@ -4,6 +4,13 @@
       <h1 class="d-none d-md-block section-header display-2 font-weight-bold">Maps</h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
+
+        <div id="fadewrapper">
+          <div id="gallery">
+            <img src="https://picsum.photos/600/250" style="width: 100%; opacity: 0;"/>
+          </div>
+        </div>
+
         <!-- <h2 class="ma-5">African American Population Percentage - 1940</h2> -->
         <div id="trigger4"></div>
         <div class="section" id="revealslide">  
@@ -147,4 +154,27 @@ export default {
   margin: 0 auto;
   width: 500px;
 }
+/* Crossfade gallery */
+@keyframes fader {
+  0% {background-image: url("~@/assets/GeographicMobility1.jpg")}
+  10% {background-image: url("~@/assets/GeographicMobility1.jpg")}
+  33% {background-image: url("h~@/assets/GeographicMobility2.jpg")}
+  43% {background-image: url("~@/assets/GeographicMobility2.jpg")}
+  66% {background-image: url("h~@/assets/GeographicMobility3.jpg")}
+  76% {background-image: url("~@/assets/GeographicMobility3.jpg")}
+  100% {background-image: url("~@/assets/GeographicMobility1.jpg")}
+}
+#wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#gallery {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fader 15s linear infinite;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
 </style>
