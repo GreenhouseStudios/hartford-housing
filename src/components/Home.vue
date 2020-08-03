@@ -1,32 +1,30 @@
 <template>
   <div class="section" id="home-section">
-    <!-- <v-parallax :src="require('../assets/housegridtint.png')" height="110vh" id="home-background"> -->
     <v-container>
-      <v-row no-gutters>
-        <v-col>
-          <div id="title" style="z-index: 4"></div>
-          <v-img :src="require('../assets/homelogo.png')" contain max-height="600" id="logo"></v-img>
-
-          <div id="subtitle" style="z-index: 2">
-            <v-card color="white" class="pa-4">
-              <h1 class="d-none d-md-block display-2 font-weight-bold">
-                How
-                <span class="r-slant">African Americans</span>,
-                <span class="l-slant-teal">Puerto Ricans</span> and
-                <span class="highlight-green">West Indians</span> Made Hartford Home
-              </h1>
-              <h2 class="d-md-none font-weight-bold">
-                How
-                <span class="r-slant">African Americans</span>,
-                <span class="highlight-teal">Puerto Ricans</span> and
-                <span class="l-slant-green">West Indians</span> Made Hartford Home
-              </h2>
-            </v-card>
-          </div>
+      <v-row align="center">
+        <v-col cols="12">
+          <v-img :src="require('../assets/homelogo.png')" contain max-height="70vh" id="logo"></v-img>
         </v-col>
       </v-row>
     </v-container>
-    <!-- </v-parallax> -->
+    <v-container>
+      <v-row align="center">
+        <v-col align-self="center">
+          <v-card tile color="white" id="subtitle" class="d-none d-md-block font-weight-bold pa-3" max-width="40%">
+              How
+              <span class="r-slant">African Americans</span>,
+              <span class="l-slant-teal">Puerto Ricans</span> and
+              <span class="highlight-green">West Indians</span> Made Hartford Home
+          </v-card>
+          <v-card tile color="white" id="subtitle" class="d-md-none font-weight-bold">
+              How
+              <span class="r-slant">African Americans</span>,
+              <span class="highlight-teal">Puerto Ricans</span> and
+              <span class="l-slant-green">West Indians</span> Made Hartford Home
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 
@@ -73,23 +71,11 @@ export default {
   max-width: 500px;
 }
 #subtitle {
-  position: relative;
-  text-align: center;
-  top: -130px;
-  margin: auto;
-  padding: 20px 0;
-}
-#title {
-  position: relative;
   text-align: center;
   margin: auto;
-  padding: 20px 0;
-  height: 15vh;
-  width: 100vw;
-  font-size: 100rem;
 }
 #logo {
-  top: -130px;
+  margin: 0 auto;
 }
 #home-section {
   background-image: url("~@/assets/HomeBG.png");
@@ -97,6 +83,8 @@ export default {
   background-size: cover;
   background-attachment: fixed;
   margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
 }
 /* h1 {
   position: relative;
