@@ -5,10 +5,28 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
 
-        <div id="fadewrapper">
-          <div id="gallery">
-            <img src="https://picsum.photos/600/250" style="width: 100%; opacity: 0;"/>
-          </div>
+        <div>
+          <b-carousel
+            id="carousel-fade"
+            style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto;"
+            fade
+            controls
+            img-width="1024"
+            img-height="480"
+          >
+            <b-carousel-slide
+              caption="1940"
+              img-src="https://picsum.photos/1024/480/?image=10"
+            ></b-carousel-slide>
+            <b-carousel-slide
+              caption="1960"
+              img-src="https://picsum.photos/1024/480/?image=12"
+            ></b-carousel-slide>
+            <b-carousel-slide
+              caption="1980"
+              img-src="https://picsum.photos/1024/480/?image=22"
+            ></b-carousel-slide>
+          </b-carousel>
         </div>
 
         <!-- <h2 class="ma-5">African American Population Percentage - 1940</h2> -->
@@ -100,8 +118,19 @@ export default {
     PublicHousingLocations
   },
   data() {
-    return {};
+    return {
+      slide: 0,
+      sliding: null
+    };
   },
+  methods: {
+      prev() {
+        this.$refs.myCarousel.prev()
+      },
+      next() {
+        this.$refs.myCarousel.next()
+      }
+    },
   mounted() {
     var panZoomTiger = svgPanZoom("#demo-tiger");
     console.log(panZoomTiger);
@@ -175,6 +204,14 @@ export default {
   animation: fader 15s linear infinite;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+#manualgallery {
+  max-width: 600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: fader 15s linear infinite;
+  animation-play-state: paused;
 }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
-<v-container fluid pa-0>
+<v-container fluid pa-0 style="margin: 0; float: unset; display: contents;">
   <Home></Home>
-  <v-container fluid pa-0>
+  <v-container fluid pa-0 style="margin: 0; float: unset; display: contents;">
     <v-row>
       <v-col>
         
