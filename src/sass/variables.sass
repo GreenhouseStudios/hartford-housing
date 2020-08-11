@@ -12,8 +12,8 @@
 
 // @include font('Gilroy-ExtraBold', '/assets/webfonts/Gilroy-ExtraBold.woff')
 
-$body-font-family: 'Open Sans' !important
-$heading-font-family: 'Gilroy' !important
+$body-font-family: 'Open Sans', Helvetica, Arial, sans-serif !important
+$heading-font-family: 'Gilroy', Helvetica, Arial, sans-serif !important
 //specificity needs to be taken into consideration for some components
 //because !important has been assigned to their css
 //https://dev.to/emmabostian/css-specificity-1kca
@@ -21,6 +21,7 @@ html,
 body,
 .v-application
   font-family: $body-font-family
+  font-display: fallback
 //added all typography helper classes because of css specificity override
 //https://vuetifyjs.com/en/styles/typography#typography 
   
@@ -34,6 +35,7 @@ body,
   .subtitle-1,
   .subtitle-2
     font-family: $heading-font-family
+    font-display: fallback
     
 .v-application
   .body-1,
@@ -41,4 +43,5 @@ body,
   .caption,
   .overline
     font-family: $body-font-family
+    font-display: fallback
 @import "~vuetify/src/styles/styles.sass"

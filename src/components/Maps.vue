@@ -16,15 +16,15 @@
           >
             <b-carousel-slide
               caption="1940"
-              img-src="https://picsum.photos/1024/480/?image=10"
+              img-src="require('../assets/GeographicMobility1.jpg')"
             ></b-carousel-slide>
             <b-carousel-slide
               caption="1960"
-              img-src="https://picsum.photos/1024/480/?image=12"
+              img-src="require('../assets/GeographicMobility2.jpg')"
             ></b-carousel-slide>
             <b-carousel-slide
               caption="1980"
-              img-src="https://picsum.photos/1024/480/?image=22"
+              img-src="require('../assets/GeographicMobility3.jpg')"
             ></b-carousel-slide>
           </b-carousel>
         </div>

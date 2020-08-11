@@ -116,8 +116,9 @@ v-card-text {
 }
 .backgroundimg {
   background-image: url("~@/assets/plaindotted.png");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 .cardspace {
   margin-bottom: 40px;

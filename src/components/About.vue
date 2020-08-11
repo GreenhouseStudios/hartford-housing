@@ -120,5 +120,8 @@ export default {
 
 #about-section {
   background-image: url("~@/assets/PlacesofOriginUpdate.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 </style>

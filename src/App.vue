@@ -247,7 +247,10 @@ export default {
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 v-application {
-  font-family: "Gilroy Extrabold" !important;
+  font-display: fallback;
+  font-family: "Gilroy Extrabold" !important, // first choice font
+                "Helvetica", // fallback font if gilroy is not downloaded yet
+                "sans-serif"; // last resort, bottom of the barrel
   overflow-x: hidden !important;
 }
 v-app-bar {

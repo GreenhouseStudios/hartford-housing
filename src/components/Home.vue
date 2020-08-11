@@ -79,7 +79,7 @@ export default {
 }
 #home-section {
   background-image: url("~@/assets/HomeBG.png");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   background-attachment: fixed;
   margin: 0 auto;
