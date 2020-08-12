@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section tall">
     <v-container fluid>
       <v-row justify="center">
         <h1 class="d-none d-md-block section-header display-2 font-weight-bold">Settlement</h1>
@@ -60,10 +60,14 @@ a major arena for civil rights and human rights advocacy.`,
           body1: `Correlation technology; scalable we must stand up collective impact granular. We must stand up and; movements gender 
         rights state of play think tank mobilize. Social entrepreneur do-gooder optimism data natural resources humanitarian. 
         Paradigm society empower justice sustainable, capacity building program areas. Co-create society strategy inspire human-centered. 
-        To radical data human-centered leverage inspire. Parse empathetic state of play her body her rights effective social entrepreneur 
+        To radical data human-centered leverage inspire.`, 
+          body2: `Parse empathetic state of play her body her rights effective social entrepreneur 
         effective relief. Optimism, ideate to impact then grit. Program area optimism radical shine inclusion, her body her rights scale 
         and impact commitment social entrepreneur. To energize to expose the truth then revolutionary her body her rights. Because shared 
-        unit of analysis green space invest entrepreneur do-gooder accessibility. A, game-changer segmentation parse improve the world 
+        unit of analysis green space invest entrepreneur do-gooder accessibility. Correlation technology; scalable we must stand up collective impact granular. We must stand up and; movements gender 
+        rights state of play think tank mobilize. Social entrepreneur do-gooder optimism data natural resources humanitarian. 
+        Paradigm society empower justice sustainable, capacity building program areas. Co-create society strategy inspire human-centered. 
+        To radical data human-centered leverage inspire. A, game-changer segmentation parse improve the world 
         blended value NGO ideate optimism. Challenges and opportunities strategize empower uplift, strategize impact investing change-makers. 
         Relief; emerging or, movements, youth academic thought leader. Blended value relief; support; black lives matter technology empathetic.`
         },
@@ -138,5 +142,8 @@ to spend emotional and financial capital addressing horrendous living conditions
 }
 .align-center {
   margin: auto;
+}
+.tall {
+  height: 1350px !important;
 }
 </style>

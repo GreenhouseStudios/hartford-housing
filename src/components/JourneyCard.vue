@@ -12,13 +12,13 @@
       </v-card>
       <!-- </div> -->
     </v-card>
-    <v-img v-if="body2" src="~@/assets/suitcasedotted.png"></v-img>
+    <v-img v-if="body2" src="~@/assets/suitcasedotted.png" class="dotted-image"></v-img>
     <v-card v-if="body2" flat tile v-bind:color="myColor" class="ma-5">
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
         <v-card-text class="white--text font-weight-bold">{{body2}}</v-card-text>
       </v-card>
     </v-card>
-    <v-img v-if="body3" src="~@/assets/traindotted.png"></v-img>
+    <v-img v-if="body3" src="~@/assets/traindotted.png" class="dotted-image"></v-img>
     <v-card v-if="body3" flat tile v-bind:color="myColor" class="ma-5">
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
         <v-card-text class="white--text font-weight-bold">{{body3}}</v-card-text>
@@ -50,30 +50,30 @@ export default {
         case "xs":
           return "90vw";
         case "sm":
-          return "60vw";
+          return "80vw";
         case "md":
-          return "35vw";
+          return "70vw";
         case "lg":
-          return "35vw";
+          return "50vw";
         case "xl":
-          return "35vw";
+          return "50vw";
       }
-      return "25vw";
+      return "50vw";
     },
     cardFontSize() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           return "90vw";
         case "sm":
-          return "60vw";
+          return "80vw";
         case "md":
-          return "34vw";
+          return "70vw";
         case "lg":
-          return "25vw";
+          return "50vw";
         case "xl":
-          return "25vw";
+          return "50vw";
       }
-      return "25vw";
+      return "50vw";
     }
   }
 };
@@ -81,7 +81,7 @@ export default {
 
 <style  scoped>
 v-card {
-  max-width: 20vw;
+  max-width: 50vw;
   max-height: 80vh;
   text-overflow: ellipsis;
 }
@@ -116,12 +116,16 @@ v-card-text {
 }
 .backgroundimg {
   background-image: url("~@/assets/plaindotted.png");
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 }
 .cardspace {
   margin-bottom: 40px;
   display: inline-block;
+}
+.dotted-image {
+  max-width: 75%;
+  height: auto;
+  margin: auto;
 }
 </style>
