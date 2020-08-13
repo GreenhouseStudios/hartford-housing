@@ -18,7 +18,6 @@
                 v-bind:name="profile.name"
                 v-bind:index="index"
                 v-bind:img="profile.img"
-                v-on:to-profile="toProfile"
               ></ProfileCard>
             </v-col>
           </v-row>
@@ -104,15 +103,6 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
         ])
         .flat()
     };
-  },
-  methods: {
-    toProfile() {
-      console.log("bubble1");
-      this.$emit("bubble-profile");
-    },
-    test() {
-      console.log("testing");
-    }
   }
 };
 </script>

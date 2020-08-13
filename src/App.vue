@@ -239,6 +239,10 @@ export default {
         this.$router.push("/").then(() => {
           this.$refs.fullpage.api.moveTo(i + 1, index);
         });
+    },
+    navigateToProfile: function(i){
+      var menu = this.$refs.fullpage.api.getActiveSection()
+      this.$refs.fullpage.api.moveTo(menu.index + i + 2)
     }
   }
 };

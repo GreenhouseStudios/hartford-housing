@@ -1,6 +1,6 @@
 <template>
   <v-hover v-slot:default="{ hover }">
-    <v-card tile class="d-flex card" :class="{ 'on-hover': hover }" v-on:click="moveDown" style="background-image: url(img)">
+    <v-card tile class="d-flex card" :class="{ 'on-hover': hover }" v-on:click="moveToProfile" style="background-image: url(img)">
       <v-img v-if="!hover" :src="img" aspect-ratio="1" class="align end">
         <template v-slot:placeholder>
           <v-row class="fill-height ma-0" align="center" justify="space-between">
@@ -16,16 +16,13 @@
 </template>
 
 <script>
-import EventBus from "../event-bus";
 export default {
   mounted() {
     // console.log(this.$root)
   },
   methods: {
-    moveDown: function() {
-      EventBus.$emit("PROFILE_NAV_CLICK", this.index);
-      console.log(this.$root.$children[0]);
-      this.$root.$children[0].navigateToSection(7 + this.index); //this is not what anyone would recommend doing, but couldn't figure out an alternative
+    moveToProfile: function() {
+      this.$root.$children[0].navigateToProfile(this.index); //this is not what anyone would recommend doing, but couldn't figure out an alternative
     }
   },
   data() {
