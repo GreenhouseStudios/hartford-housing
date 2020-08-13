@@ -1,56 +1,56 @@
 <template>
-<v-container fluid pa-0 style="margin: 0; float: unset; display: contents;">
-  
   <v-container fluid pa-0 style="margin: 0; float: unset; display: contents;">
-    <v-row>
-      <v-col>
-        <Home></Home>      
-        <About></About>
-        <Introduction></Introduction>
-        <Maps></Maps>
-        <Settlement></Settlement>
-        <Housing></Housing>
-        <Timeline></Timeline>
-        <ProfileMenu></ProfileMenu>
-        <div class="section" v-for="(prof,j) in profiles" :key="j">
-          <v-container fluid>
-            <v-row>
-              <v-col cols="12" md="6">
-                <v-img :src="prof.img" height="600" width="400" class="d-none d-md-block"></v-img>
-                <v-hover v-slot:default="{ hover }" class="d-none d-md-block">
-                  <v-card
-                    :elevation="hover ? 16 : 2"
-                    height="200"
-                    width="147"
-                    class="profile-map"
-                    @click.stop="dialog = true"
-                  >
-                    <v-img src="@/assets/joshmap.jpg" max-height="200" contain></v-img>
-                  </v-card>
-                </v-hover>
-                <v-dialog v-model="dialog">
-                  <v-card>
-                    <v-card-title
-                      class="headline grey lighten-2"
-                      primary-title
-                    >Profile Map - {{prof.name}}</v-card-title>
+    <v-container fluid pa-0 style="margin: 0; float: unset; display: contents;">
+      <v-row>
+        <v-col>
+          <Home></Home>
+          <About></About>
+          <Introduction></Introduction>
+          <Maps></Maps>
+          <Settlement></Settlement>
+          <Housing></Housing>
+          <Timeline></Timeline>
+          <ProfileMenu></ProfileMenu>
+          <div class="section" v-for="(prof,j) in profiles" :key="j">
+            <v-container fluid>
+              <v-row>
+                <v-col cols="12" md="6">
+                  <v-img :src="prof.img" height="600" width="400" class="d-none d-md-block"></v-img>
+                  <v-hover v-slot:default="{ hover }" class="d-none d-md-block">
+                    <v-card
+                      :elevation="hover ? 16 : 2"
+                      height="200"
+                      width="147"
+                      class="profile-map"
+                      @click.stop="handleProfileMapClick(j)"
+                    >
+                      <v-img src="@/assets/joshmap.jpg" max-height="200" contain></v-img>
+                    </v-card>
+                  </v-hover>
+                </v-col>
+                <v-col cols="12" md="6">
+                  <ReadMoreCard
+                    v-bind:body="prof.body"
+                    v-bind:heading="prof.name"
+                    v-bind:image="prof.img"
+                  ></ReadMoreCard>
+                </v-col>
+              </v-row>
+            </v-container>
+          </div>
+          <v-dialog v-model="dialog">
+            <v-card v-if="activeProfile">
+              <v-card-title class="headline grey lighten-2" primary-title>{{activeProfile.name}}'s Hartford</v-card-title>
 
-                    <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
+              <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
 
-                    <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</v-card-text>
-                  </v-card>
-                </v-dialog>
-              </v-col>
-              <v-col cols="12" md="6">
-                <ReadMoreCard v-bind:body="prof.body" v-bind:heading="prof.name" v-bind:image="prof.img"></ReadMoreCard>
-              </v-col>
-            </v-row>
-          </v-container>
-        </div>
-      </v-col>
-    </v-row>
+              <v-card-text>activeProfile.body</v-card-text>
+            </v-card>
+          </v-dialog>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-container>
-</v-container>
 </template>
 
 <script>
@@ -63,8 +63,8 @@ import Housing from "@/components/Housing";
 import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
-import ReadMoreCard from "@/components/ReadMoreCard"
-
+import ReadMoreCard from "@/components/ReadMoreCard";
+import ProfileMapDialog from "@/components/ProfileMapDialog";
 export default {
   name: "Main",
   components: {
@@ -77,10 +77,18 @@ export default {
     ProfileMenu,
     Timeline,
     Card,
-    ReadMoreCard
+    ReadMoreCard,
+    ProfileMapDialog
+  },
+  methods: {
+    handleProfileMapClick(index) {
+      this.dialog = true;
+      this.activeProfile = this.profiles[index]
+    }
   },
   data() {
     return {
+      activeProfile: null,
       dialog: false,
       slides: ["Tenant Activists Profiles", "Historic Firsts"],
       placeholderProfile: {
