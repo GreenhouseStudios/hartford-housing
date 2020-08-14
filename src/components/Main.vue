@@ -64,7 +64,6 @@ import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
 import ReadMoreCard from "@/components/ReadMoreCard";
-import ProfileMapDialog from "@/components/ProfileMapDialog";
 export default {
   name: "Main",
   components: {
@@ -78,7 +77,6 @@ export default {
     Timeline,
     Card,
     ReadMoreCard,
-    ProfileMapDialog
   },
   methods: {
     handleProfileMapClick(index) {
