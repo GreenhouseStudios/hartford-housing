@@ -44,7 +44,7 @@
 
               <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
 
-              <v-card-text>activeProfile.body</v-card-text>
+              <v-card-text>{{activeProfile.body}}</v-card-text>
             </v-card>
           </v-dialog>
         </v-col>
