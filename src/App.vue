@@ -62,6 +62,9 @@
           <v-list-item>
             <router-link to="/Permissions" class="pr-4 footer-link centertext">Permissions</router-link>
           </v-list-item>
+          <v-list-item>
+            <router-link to="/Booklet" class="pr-4 footer-link centertext">Booklet</router-link>
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -80,6 +83,7 @@
         <router-link to="/Funders" class="pr-4 footer-link">Funders</router-link>
         <router-link to="/Contact" class="pr-4 footer-link">Contact</router-link>
         <router-link to="/Permissions" class="pr-4 footer-link">Permissions</router-link>
+        <router-link to="/Booklet" class="pr-4 footer-link">Booklet</router-link>
       </v-col>
       <v-spacer></v-spacer>
       <span class="white--text pr-4">&copy; {{new Date().getFullYear()}}</span>

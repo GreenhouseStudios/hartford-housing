@@ -6,6 +6,7 @@ import Contact from '@/components/Contact'
 import Funders from '@/components/Funders'
 import People from '@/components/People'
 import Permissions from '@/components/Permissions'
+import Booklet from '@/components/Booklet'
 Vue.use(
   VueRouter
 )
@@ -38,6 +39,11 @@ const router = new VueRouter({
       path: '/Permissions',
       name: 'Permissions',
       component: Permissions
+    },
+    {
+      path: '/Booklet',
+      name: 'Booklet',
+      component: Booklet
     }
   ]
 })
