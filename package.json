@@ -12,6 +12,7 @@
     "bootstrap": "^4.5.1",
     "bootstrap-vue": "^2.16.0",
     "core-js": "^3.6.4",
+    "jquery": "^1.9.1",
     "leaflet": "^1.6.0",
     "leaflet-gesture-handling": "^1.1.8",
     "scrollmagic": "^2.0.7",
