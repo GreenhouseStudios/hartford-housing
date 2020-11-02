@@ -6,6 +6,15 @@
       </h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
+
+        <div>
+            <v-img
+            :src="require('../assets/Maps/ethnicracialdist_1940.png')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
         <div>
           <b-carousel
             id="carousel-fade"
