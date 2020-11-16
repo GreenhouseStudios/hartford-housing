@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
     <v-row align="center" justify="center">
+      <!-- Map section header -->
       <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
         Maps
       </h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
-
         <div class="section">
-            <v-img
+          <v-img
             :src="require('../assets/Maps/ethnicracialdist_1940.png')"
             contain
             max-height="85vh"
@@ -16,15 +16,15 @@
         </div>
 
         <div class="section">
-            <v-img
+          <v-img
             :src="require('../assets/Maps/NorthEnd.jpg')"
             contain
             max-height="85vh"
           ></v-img>
         </div>
 
-         <div class="section">
-            <v-img
+        <div class="section">
+          <v-img
             :src="require('../assets/Maps/BellevueSquare.jpg')"
             contain
             max-height="85vh"
@@ -32,7 +32,7 @@
         </div>
 
         <div class="section">
-            <v-img
+          <v-img
             :src="require('../assets/Maps/PlacesofOrigin.jpg')"
             contain
             max-height="85vh"
@@ -40,7 +40,7 @@
         </div>
 
         <div class="section">
-            <v-img
+          <v-img
             :src="require('../assets/Maps/Agricultural_Workers.jpg')"
             contain
             max-height="85vh"
@@ -48,15 +48,15 @@
         </div>
 
         <div class="section">
-            <v-img
+          <v-img
             :src="require('../assets/Maps/Colleges.jpg')"
             contain
             max-height="85vh"
           ></v-img>
         </div>
 
-         <div class="section">
-            <v-img
+        <div class="section">
+          <v-img
             :src="require('../assets/Maps/HousingConditions.jpg')"
             contain
             max-height="85vh"
@@ -95,50 +95,6 @@
           </b-carousel>
         </div>
 
-        <!-- <h2 class="ma-5">African American Population Percentage - 1940</h2> -->
-        <div id="trigger4"></div>
-        <div class="section" id="revealslide">
-          <Map
-            jsonFile="pop1940"
-            id="pop1940"
-            v-bind:zoomLevel="13"
-            title="African American Population Percentage - 1940"
-          ></Map>
-        </div>
-
-        <div id="trigger5"></div>
-        <div class="section" id="revealslide2">
-          <!-- <h2 class="ma-5">African American Population Percentage - 1960</h2> -->
-          <Map
-            jsonFile="pop1960"
-            id="pop1960"
-            v-bind:zoomLevel="13"
-            title="African American Population Percentage - 1960"
-          ></Map>
-        </div>
-
-        <div id="trigger6"></div>
-        <div class="section" id="revealslide">
-          <!-- <h2 class="ma-5">African American Population Percentage - 1980</h2> -->
-          <Map
-            jsonFile="pop1980"
-            id="pop1980"
-            v-bind:zoomLevel="13"
-            title="African American Population Percentage - 1980"
-          ></Map>
-        </div>
-
-        <div id="trigger7"></div>
-        <div class="section" id="revealslide2">
-          <!-- <h2 class="ma-5">Bloomfield</h2> -->
-          <!-- <Map
-            v-bind:coordinates="[41.8, -72.73]"
-            id="Bloomfield"
-            title="Bloomfield"
-            v-bind:imageOverlaySet="this.cityPlanOverlays"
-          ></Map> -->
-        </div>
-
         <div class="section">
           <h2 class="ma-5">Race and Ethnicity</h2>
           <v-img
@@ -174,7 +130,7 @@
           ></v-img>
         </div>
 
-         <div class="section">
+        <div class="section">
           <v-img
             :src="require('../assets/Maps/Racial_Imbalance.jpg')"
             contain
@@ -200,23 +156,23 @@ export default {
     return {
       slide: 0,
       sliding: null,
-    //   cityPlanOverlays: [
-    //     {
-    //       bounds: [
-    //         ["41.7507553", "-72.7134986"],
-    //         ["41.7777551", "-72.6673655"],
-    //       ],
-    //       img:
-    //         require("../assets/mapassets/cityplan/CityPlanExpressway.tif"),
-    //     },
-    //      {
-    //       bounds: [
-    //         ["41.7547319", "-72.6930396"],
-    //         ["41.7774340", "-72.6668311"],
-    //       ],
-    //       img: require("../assets/map_assets/city_plan/PlanOverview.tif"),
-    //     },
-    //   ],
+      //   cityPlanOverlays: [
+      //     {
+      //       bounds: [
+      //         ["41.7507553", "-72.7134986"],
+      //         ["41.7777551", "-72.6673655"],
+      //       ],
+      //       img:
+      //         require("../assets/mapassets/cityplan/CityPlanExpressway.tif"),
+      //     },
+      //      {
+      //       bounds: [
+      //         ["41.7547319", "-72.6930396"],
+      //         ["41.7774340", "-72.6668311"],
+      //       ],
+      //       img: require("../assets/map_assets/city_plan/PlanOverview.tif"),
+      //     },
+      //   ],
     };
   },
   methods: {

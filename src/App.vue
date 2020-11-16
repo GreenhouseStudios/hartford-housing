@@ -229,7 +229,7 @@ export default {
       this.$refs.fullpage.api.moveSectionDown();
     },
     navigateToSection: function(i) {
-      if (i > 3) i += 17;
+      if (i > 3) i += 13;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
         this.$router.push("/").then(() => {
@@ -237,7 +237,7 @@ export default {
         });
     },
     navigateToSlide: function(i, index) {
-      if (i > 3) i += 17;
+      if (i > 3) i += 13;
       if (this.$route.name == "Main") {
         this.$refs.fullpage.api.moveTo(i + 1, index);
       } else
@@ -247,7 +247,7 @@ export default {
     },
     navigateToProfile: function(i){
       var menu = this.$refs.fullpage.api.getActiveSection()
-      this.$refs.fullpage.api.moveTo(menu.index + i + 2)
+      this.$refs.fullpage.api.moveTo(22 + i)
     }
   }
 };
