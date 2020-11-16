@@ -7,7 +7,7 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
 
-        <div>
+        <div class="section">
             <v-img
             :src="require('../assets/Maps/ethnicracialdist_1940.png')"
             contain
@@ -15,7 +15,63 @@
           ></v-img>
         </div>
 
-        <div>
+        <div class="section">
+            <v-img
+            :src="require('../assets/Maps/NorthEnd.jpg')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
+         <div class="section">
+            <v-img
+            :src="require('../assets/Maps/BellevueSquare.jpg')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+            <v-img
+            :src="require('../assets/Maps/PlacesofOrigin.jpg')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+            <v-img
+            :src="require('../assets/Maps/Agricultural_Workers.jpg')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+            <v-img
+            :src="require('../assets/Maps/Colleges.jpg')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
+         <div class="section">
+            <v-img
+            :src="require('../assets/Maps/HousingConditions.jpg')"
+            contain
+            max-height="85vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Surveys.jpg')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
           <b-carousel
             id="carousel-fade"
             style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
@@ -84,15 +140,6 @@
         </div>
 
         <div class="section">
-          <h2 class="ma-5">Places of Origin</h2>
-          <v-img
-            :src="require('../assets/PlacesofOriginUpdate.jpg')"
-            contain
-            max-height="65vh"
-          ></v-img>
-        </div>
-
-        <div class="section">
           <h2 class="ma-5">Race and Ethnicity</h2>
           <v-img
             :src="require('../assets/Race_Ethnicity2.jpg')"
@@ -111,15 +158,6 @@
         </div>
 
         <div class="section">
-          <h2 class="ma-5">Geographic Mobility of African Americans</h2>
-          <v-img
-            :src="require('../assets/GeographicMobility.jpg')"
-            contain
-            max-height="65vh"
-          ></v-img>
-        </div>
-
-        <div class="section">
           <h2 class="ma-5">Ship Manifest</h2>
           <v-img
             :src="require('../assets/ShipManifest.jpg')"
@@ -129,12 +167,19 @@
         </div>
 
         <div class="section">
-          <v-row justify="center">
-            <h2 class="ma-5">SVG Test</h2>
-            <!-- <v-img :src="require('../assets/Map_of_Connecticut.svg')" id="demo-tiger" contain max-height="80vh"></v-img> -->
-            <!-- <img src="../assets/PublicHousingLocations.svg" id="demo-tiger" /> -->
-            <PublicHousingLocations id="demo-tiger" />
-          </v-row>
+          <v-img
+            :src="require('../assets/Maps/Projects.jpg')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+         <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Racial_Imbalance.jpg')"
+            contain
+            max-height="65vh"
+          ></v-img>
         </div>
       </div>
     </v-row>

@@ -195,6 +195,7 @@ export default {
         "Maps",
         "Maps",
         "Maps",
+        "Maps","Maps","Maps","Maps","Maps","Maps","Maps","Maps",
         "Settlement",
         "Housing",
         "Timeline",
@@ -228,7 +229,7 @@ export default {
       this.$refs.fullpage.api.moveSectionDown();
     },
     navigateToSection: function(i) {
-      if (i > 3) i += 9;
+      if (i > 3) i += 17;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
         this.$router.push("/").then(() => {
@@ -236,7 +237,7 @@ export default {
         });
     },
     navigateToSlide: function(i, index) {
-      if (i > 3) i += 9;
+      if (i > 3) i += 17;
       if (this.$route.name == "Main") {
         this.$refs.fullpage.api.moveTo(i + 1, index);
       } else

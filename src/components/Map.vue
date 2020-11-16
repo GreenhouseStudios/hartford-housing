@@ -4,7 +4,7 @@
       <v-col cols="12" md="6">
         <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
       </v-col>
-      <v-col cols="12" md="6" style="z-index: 0"> 
+      <v-col cols="12" md="6" style="z-index: 0">
         <div class="map">
           <div v-bind:id="mapid" style="height: 65vh"></div>
         </div>
@@ -14,7 +14,8 @@
 </template>
 
 <script>
-import L from "leaflet";
+import * as L from "leaflet";
+import { imageOverlay, latLng, tileLayer } from "leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet.css";
 import Card from "@/components/Card";
@@ -27,7 +28,7 @@ delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
   iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png")
+  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
 });
 import "leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
 import pop1940 from "../geojson/Pop1940.json";
@@ -37,33 +38,39 @@ import keneyPark from "../geojson/KeneyPark.json";
 
 export default {
   components: {
-    Card
+    Card,
   },
   name: "Map",
   props: {
     coordinates: {
       type: Array,
-      default: () => [41.78, -72.67]
+      default: () => [41.78, -72.67],
     },
     zoomLevel: {
       type: Number,
-      default: 14
+      default: 14,
     },
     id: {
       type: String,
-      default: "mapid"
+      default: "mapid",
     },
     jsonFile: {
       type: String,
-      default: "pop1940"
+      default: "pop1940",
     },
     title: {
       type: String,
-      default: "Map"
+      default: "Map",
     },
     body: {
       type: String,
-      default: `Issue outcomes boots on the ground activate fairness grit. Impact investing gender rights, B-corp, synergy game-changer radical invest. Circular, a global our work inclusive best practices greenwashing accessibility uplift. Mass incarceration relief, co-create social entrepreneur collaborative cities shared value thought leadership replicable replicable. Catalyze, contextualize; empower blended value relief LGBTQ+ youth living a fully ethical life energize. Ecosystem; silo thought leader game-changer external partners scale and impact. Milestones social return on investment circular outcomes co-creation. Social innovation social entrepreneurship targeted move the needle scalable effective peaceful then. Parse compelling we must stand up families human-centered do-gooder theory of change resilient impact investing. Low-hanging fruit scale and impact; transparent, strategy synergy innovate best practices. The resistance, invest; milestones indicators milestones. Humanitarian paradigm because commitment, blended value families rubric. Replicable social innovation commitment challenges and opportunities a thought leadership overcome injustice capacity building co-creation. Thought leadership technology outcomes social intrapreneurship accessibility leverage.`
+      default: `Issue outcomes boots on the ground activate fairness grit. Impact investing gender rights, B-corp, synergy game-changer radical invest. Circular, a global our work inclusive best practices greenwashing accessibility uplift. Mass incarceration relief, co-create social entrepreneur collaborative cities shared value thought leadership replicable replicable. Catalyze, contextualize; empower blended value relief LGBTQ+ youth living a fully ethical life energize. Ecosystem; silo thought leader game-changer external partners scale and impact. Milestones social return on investment circular outcomes co-creation. Social innovation social entrepreneurship targeted move the needle scalable effective peaceful then. Parse compelling we must stand up families human-centered do-gooder theory of change resilient impact investing. Low-hanging fruit scale and impact; transparent, strategy synergy innovate best practices. The resistance, invest; milestones indicators milestones. Humanitarian paradigm because commitment, blended value families rubric. Replicable social innovation commitment challenges and opportunities a thought leadership overcome injustice capacity building co-creation. Thought leadership technology outcomes social intrapreneurship accessibility leverage.`,
+    },
+    imageOverlaySet: {
+      type: Array,
+      default: () => [
+        {bounds:[[41.78, -72.67,], [41.81, -72.70]], img: "https://legacy.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"},
+          ]
     }
   },
   data() {
@@ -75,6 +82,8 @@ export default {
       map: null,
       tileLayer: null,
       mapid: this.id,
+      overlayURL:
+        "https://legacy.lib.utexas.edu/maps/historical/newark_nj_1922.jpg",
       layers: [
         {
           id: 0,
@@ -85,11 +94,11 @@ export default {
               id: 0,
               name: "Hartford",
               type: "marker",
-              coords: this.coordinates
-            }
-          ]
-        }
-      ]
+              coords: this.coordinates,
+            },
+          ],
+        },
+      ],
     };
   },
   computed: {},
@@ -99,12 +108,12 @@ export default {
     this.initLayers();
   },
   methods: {
-    initMap: function() {
+    initMap: function () {
       L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
       this.map = L.map(this.mapid, {
         center: this.coordinates,
         zoom: this.zoomLevel,
-        gestureHandling: true
+        gestureHandling: true,
       });
 
       // this.map = L.map("mapid").setView([41.78, -72.67], 14);
@@ -113,19 +122,19 @@ export default {
         {
           maxZoom: 18,
           attribution:
-            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
         }
       );
       this.tileLayer.addTo(this.map);
     },
-    initLayers: function() {
-      this.layers.forEach(layer => {
+    initLayers: function () {
+      this.layers.forEach((layer) => {
         const markerFeatures = layer.features.filter(
-          feature => feature.type === "marker"
+          (feature) => feature.type === "marker"
         );
         // const polygonFeatures = layer.features.filter(feature => feature.type === 'polygon');
 
-        markerFeatures.forEach(feature => {
+        markerFeatures.forEach((feature) => {
           feature.leafletObject = L.marker(feature.coords).bindPopup(
             feature.name
           );
@@ -139,26 +148,48 @@ export default {
       });
       if (this.jsonData) {
         L.geoJSON(this.jsonData, {
-          style: function(feature) {
+          style: function (feature) {
             return { color: mapColor(feature.properties.PercAA) };
-          }
+          },
         })
-          .bindPopup(function(layer) {
+          .bindPopup(function (layer) {
             return layer.feature.properties.description;
           })
           .addTo(this.map);
       }
+
       L.geoJSON(this.keneyPoly, {
-        style: function() {
+        style: function () {
           return { color: "green" };
-        }
+        },
       })
-        .bindPopup(function(layer) {
+        .bindPopup(function (layer) {
           return layer.feature.properties.description;
         })
         .addTo(this.map);
-    }
-  }
+
+      if (this.map) {
+        var result = [];
+        var overlaysGroup = L.layerGroup();
+        this.imageOverlaySet.forEach((image) =>{
+          var overlay = L.imageOverlay(image.img,image.bounds);
+          overlay.addTo(overlaysGroup)
+          result.push(overlay)
+        })
+        // var test = L.imageOverlay(this.overlayURL, [
+        //   [41.78, -72.67],
+        //   [41.81, -72.70],
+        // ])
+        //Note: this is how to setup a single image overlay
+        //For multiple image overlays in a layer see this example https://codesandbox.io/s/vy5zww6r0y?file=/src/app/app.component.ts
+        var controlTest = {
+          "Overlays": overlaysGroup
+        }
+
+        L.control.layers(null,controlTest).addTo(this.map);
+      }
+    },
+  },
 };
 
 function mapColor(percent) {
