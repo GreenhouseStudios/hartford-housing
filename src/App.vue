@@ -246,8 +246,11 @@ export default {
         });
     },
     navigateToProfile: function(i){
-      var menu = this.$refs.fullpage.api.getActiveSection()
       this.$refs.fullpage.api.moveTo(22 + i)
+    },
+    navigateToMap: function(i){
+      console.log(this.$refs.fullpage.api.getActiveSection())
+      this.$refs.fullpage.api.moveTo(3 + i)
     }
   }
 };
