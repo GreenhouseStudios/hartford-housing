@@ -10,7 +10,7 @@
         <div class="section">
           <v-col>
             <v-img
-              :src="require('../assets/Maps/ethnicracialdist_1940.png')"
+              :src="require('../assets/Maps/Maps images reduced size/1.png')"
               contain
               max-height="85vh"
             ></v-img>
@@ -20,7 +20,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/NorthEnd.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/2.png')"
             contain
             max-height="85vh"
           ></v-img>
@@ -28,7 +28,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/BellevueSquare.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/3.png')"
             contain
             max-height="85vh"
           ></v-img>
@@ -36,7 +36,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/PlacesofOrigin.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/4.png')"
             contain
             max-height="85vh"
           ></v-img>
@@ -44,7 +44,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/Agricultural_Workers.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/5.png')"
             contain
             max-height="85vh"
           ></v-img>
@@ -52,7 +52,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/Colleges.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/6.png')"
             contain
             max-height="85vh"
           ></v-img>
@@ -60,7 +60,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/HousingConditions.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/7.png')"
             contain
             max-height="85vh"
           ></v-img>
@@ -68,7 +68,15 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/Surveys.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/8.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+         <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/9.png')"
             contain
             max-height="65vh"
           ></v-img>
@@ -99,7 +107,6 @@
         </div>
 
         <div class="section">
-          <h2 class="ma-5">Race and Ethnicity</h2>
           <v-img
             :src="require('../assets/Race_Ethnicity2.jpg')"
             contain
@@ -108,16 +115,22 @@
         </div>
 
         <div class="section">
-          <h2 class="ma-5">Landmarks</h2>
           <v-img
-            :src="require('../assets/landmarks.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/10.png')"
             contain
             max-height="65vh"
           ></v-img>
         </div>
 
         <div class="section">
-          <h2 class="ma-5">Ship Manifest</h2>
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/11.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
           <v-img
             :src="require('../assets/ShipManifest.jpg')"
             contain
@@ -127,7 +140,7 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/Projects.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/12.png')"
             contain
             max-height="65vh"
           ></v-img>
@@ -135,7 +148,47 @@
 
         <div class="section">
           <v-img
-            :src="require('../assets/Maps/Racial_Imbalance.jpg')"
+            :src="require('../assets/Maps/Maps images reduced size/13.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/14.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/15.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/16.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/17.png')"
+            contain
+            max-height="65vh"
+          ></v-img>
+        </div>
+
+        <div class="section">
+          <v-img
+            :src="require('../assets/Maps/Maps images reduced size/18.png')"
             contain
             max-height="65vh"
           ></v-img>
@@ -185,9 +238,9 @@ export default {
     next() {
       this.$refs.myCarousel.next();
     },
-    navigateToProfile(i){
-       this.$root.$children[0].navigateToProfile(i)
-    }
+    navigateToProfile(i) {
+      this.$root.$children[0].navigateToProfile(i);
+    },
   },
   mounted() {
     var panZoomTiger = svgPanZoom("#demo-tiger");
