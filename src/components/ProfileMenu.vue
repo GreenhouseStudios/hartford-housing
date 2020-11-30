@@ -1,13 +1,18 @@
 <template>
   <div class="section">
-    <h1 class="d-none d-md-block section-header display-3 font-weight-bold">Profiles</h1>
-    <h1 class="d-md-none section-header display-1 font-weight-bold">Profiles</h1>
+    <!-- Profile Section Header -->
+    <h1 class="d-none d-md-block section-header display-3 font-weight-bold">
+      Profiles
+    </h1>
+    <h1 class="d-md-none section-header display-1 font-weight-bold">
+      Profiles
+    </h1>
     <v-row>
       <v-col cols="12" sm="10" offset-sm="1">
         <v-container fluid>
           <v-row>
             <v-col
-              v-for="(profile,index) in profiles.slice(0,profiles.length)"
+              v-for="(profile, index) in profiles"
               :key="index"
               class="d-flex child-flex"
               cols="4"
@@ -21,21 +26,6 @@
               ></ProfileCard>
             </v-col>
           </v-row>
-          <!-- <v-row>
-              <v-col
-                v-for="(profile,index) in profiles.slice(profiles.length/2)"
-                :key="index"
-                class="d-flex child-flex"
-                cols="3"
-              >
-                <ProfileCard
-                  v-bind:name="profile.name"
-                  v-bind:index="index"
-                  v-bind:img="profile.img"
-                  v-on:to-profile="toProfile"
-                ></ProfileCard>
-              </v-col>
-          </v-row>-->
         </v-container>
       </v-col>
     </v-row>
@@ -46,7 +36,7 @@
 import ProfileCard from "@/components/ProfileCard";
 export default {
   components: {
-    ProfileCard
+    ProfileCard,
   },
   data() {
     return {
@@ -58,7 +48,7 @@ export default {
         body: `When he was a young boy, Ashley “AJ” Johnson saw a diagram in his father’s office that molded his views of the role of the church. In this diagram, the church was central, a hub from which social, economic, and political activities emanated. It was a model of community engagement his father adopted with the Urban Hope Refuge Church and a legacy AJ implements in his own ministry. The history of the Johnson family is deeply intertwined with patterns of the Great Migration of African Americans to the north as well as the evolution of the African American community in the North End of Hartford. Bishop Dr. William M. Johnson and Dr. Celeste Johnson, both originally from North Carolina, resettled in New York like 6 million other Africans Americans who made a similar exodus from the South. They worked in the ministry between The Bronx, Harlem, and Hartford. AJ teases that he was a “95 North baby” because his parents split so much of their time between New York and Connecticut. The Johnson family, William and Celeste and their sons, Mylious and Ashley, split their time between New York and Hartford. Dr. William Johnson had a background in urban planning while Dr. Celeste Johnson has a background in education.
 Neither their degrees nor their status in the community shielded them from discrimination. The refuge they sought in Rocky Hill proved to be a journey into eviction before the family would settle down in Manchester. AJ’s path took him to South Carolina, in some ways a refuge from some of the challenges of home. There, the community
 of black people was an inspiration and he tried to identify where his passion and future lay. Would he get involved in politics? Would he be called to the ministry? He ran unsuccessfully for a seat on Hartford’s Court of Common Council and emerged from that experience with a keen understanding of politics as a tool. Since then, AJ Johnson has found his calling in both of his roles as Lead Community Organizer for the Christian Activities Council (now
-the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Refuge Church in Hartford. In these dual roles, Johnson sustains the legacy of civil rights and human rights pioneers like the Rev. Richard Battles of the Mt. Olive Baptist Church, William Brown, Executive Director of the Urban League of Greater Hartford and of his father Bishop Johnson. The passion he brings to the No More Slumlords movement is duplicated in his support of entrepreneurship in the local community and his backing of a $15 minimum wage.`
+the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Refuge Church in Hartford. In these dual roles, Johnson sustains the legacy of civil rights and human rights pioneers like the Rev. Richard Battles of the Mt. Olive Baptist Church, William Brown, Executive Director of the Urban League of Greater Hartford and of his father Bishop Johnson. The passion he brings to the No More Slumlords movement is duplicated in his support of entrepreneurship in the local community and his backing of a $15 minimum wage.`,
       },
       profiles: new Array(5)
         .fill([
@@ -72,7 +62,7 @@ a difficult relationship. At one time she had several dogs, three snakes, two ge
 After a period of good maintenance and property upkeep when she first moved to Hartford, the arrival of a new owner brought disorganization and chaos. Many tenants experienced issues with the management losing important paperwork, receipts,
 and work orders. Milagros personally experienced issues with rats. She met Pastor Johnson during a meeting between tenants and the project manager, where
 the landlord was a no-show. Tenants agreed to meet at a later time to discuss actionable steps moving forward, which sparked what became known as the No More Slumlords Movement.
-It may take a while for Ortiz to tell you that her housing struggles were deadly for her pets, that the comfort Jensy took in these animals was one of the sacrifices she was forced to make. She continues to rebuilt that support network.`
+It may take a while for Ortiz to tell you that her housing struggles were deadly for her pets, that the comfort Jensy took in these animals was one of the sacrifices she was forced to make. She continues to rebuilt that support network.`,
           },
           {
             name: "Teri Morrison",
@@ -84,13 +74,13 @@ similar problems. She teamed up with Pastor AJ Johnson and became an active memb
 their apartments. Education has also featured prominently, as Teri and other leaders uncovered the murky and subtle ways that the municipal housing code and the inspection system encouraged negligence rather than compliance.
 Teri will be the first one to tell you that organizing people is difficult work, that sometimes its only five or six people who do the work that impacts thousands of residents. She will also be the first one to remind us that both tenants and landlords need to uphold their responsibilities to the
 property and be accountable. She is a model to so many people in her stalwart commitment to making the North End livable, safe, and community-oriented.
- `
+ `,
           },
           {
             name: "Joshua Serrano",
             img: require("../assets/JoshuaSerrano/JoshuaSerrano.jpg"),
             body: `The roots of Josh Serrano’s journey into community activism can be traced to his family’s history in Hartford. His mother, at around age 16, Luz Belinda Estremera moved to Hartford from Ponce, Puerto Rico along with his maternal Aunt Edith. It was a journey undertaken by several generations of Puerto Ricans before them. Luz would settle and move around in the north and south end while Edith settled permanently at Bellevue Square. She would marry Jesus Serrano and Josh was born on Enfield St, Hartford. Spurred by the opportunity to pursue a better life for her children, Luz worked in Head Start and Community Renewal Team (CRT); her husband worked as a window washer and eventually became the building superintendent where he lived. The family moved between the north and south end of Hartford, sometimes driven by hardship, in other instances moving to better accommodations. These journeys would take them to Zion, Magnolia, Garden, and Bedford Streets. Along the way, they adopted a cat, Kitty who accompanied them
-on their journeys. The family moved finally to the Clay Arsenal Renaissance Apartments (CARA) when Josh was about 13 years old. Ms. Estremera eventually passed down the residency to Joshua who then became the head of household and she moved to the Blue Hills area.`
+on their journeys. The family moved finally to the Clay Arsenal Renaissance Apartments (CARA) when Josh was about 13 years old. Ms. Estremera eventually passed down the residency to Joshua who then became the head of household and she moved to the Blue Hills area.`,
           },
           {
             name: 'Ashley "AJ" Johnson',
@@ -98,12 +88,12 @@ on their journeys. The family moved finally to the Clay Arsenal Renaissance Apar
             body: `When he was a young boy, Ashley “AJ” Johnson saw a diagram in his father’s office that molded his views of the role of the church. In this diagram, the church was central, a hub from which social, economic, and political activities emanated. It was a model of community engagement his father adopted with the Urban Hope Refuge Church and a legacy AJ implements in his own ministry. The history of the Johnson family is deeply intertwined with patterns of the Great Migration of African Americans to the north as well as the evolution of the African American community in the North End of Hartford. Bishop Dr. William M. Johnson and Dr. Celeste Johnson, both originally from North Carolina, resettled in New York like 6 million other Africans Americans who made a similar exodus from the South. They worked in the ministry between The Bronx, Harlem, and Hartford. AJ teases that he was a “95 North baby” because his parents split so much of their time between New York and Connecticut. The Johnson family, William and Celeste and their sons, Mylious and Ashley, split their time between New York and Hartford. Dr. William Johnson had a background in urban planning while Dr. Celeste Johnson has a background in education.
 Neither their degrees nor their status in the community shielded them from discrimination. The refuge they sought in Rocky Hill proved to be a journey into eviction before the family would settle down in Manchester. AJ’s path took him to South Carolina, in some ways a refuge from some of the challenges of home. There, the community
 of black people was an inspiration and he tried to identify where his passion and future lay. Would he get involved in politics? Would he be called to the ministry? He ran unsuccessfully for a seat on Hartford’s Court of Common Council and emerged from that experience with a keen understanding of politics as a tool. Since then, AJ Johnson has found his calling in both of his roles as Lead Community Organizer for the Christian Activities Council (now
-the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Refuge Church in Hartford. In these dual roles, Johnson sustains the legacy of civil rights and human rights pioneers like the Rev. Richard Battles of the Mt. Olive Baptist Church, William Brown, Executive Director of the Urban League of Greater Hartford and of his father Bishop Johnson. The passion he brings to the No More Slumlords movement is duplicated in his support of entrepreneurship in the local community and his backing of a $15 minimum wage.`
-          }
+the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Refuge Church in Hartford. In these dual roles, Johnson sustains the legacy of civil rights and human rights pioneers like the Rev. Richard Battles of the Mt. Olive Baptist Church, William Brown, Executive Director of the Urban League of Greater Hartford and of his father Bishop Johnson. The passion he brings to the No More Slumlords movement is duplicated in his support of entrepreneurship in the local community and his backing of a $15 minimum wage.`,
+          },
         ])
-        .flat()
+        .flat(),
     };
-  }
+  },
 };
 </script>
 
