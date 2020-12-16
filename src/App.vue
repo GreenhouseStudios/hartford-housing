@@ -195,7 +195,7 @@ export default {
         "Maps",
         "Maps",
         "Maps",
-        "Maps","Maps","Maps","Maps","Maps","Maps","Maps","Maps",
+        "Maps","Maps","Maps","Maps",
         "Settlement",
         "Housing",
         "Timeline",
@@ -229,6 +229,7 @@ export default {
       this.$refs.fullpage.api.moveSectionDown();
     },
     navigateToSection: function(i) {
+      console.log(i)
       if (i > 3) i += 13;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
@@ -250,7 +251,7 @@ export default {
     },
     navigateToMap: function(i){
       console.log(this.$refs.fullpage.api.getActiveSection())
-      this.$refs.fullpage.api.moveTo(3 + i)
+      this.$refs.fullpage.api.silentMoveTo(3 + i)
     }
   }
 };

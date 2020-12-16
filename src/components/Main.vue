@@ -6,7 +6,153 @@
           <Home></Home>
           <About></About>
           <Introduction></Introduction>
-          <Maps></Maps>
+          <!-- <Maps></Maps> -->
+          <!-- Map section header -->
+          <h1
+            class="d-none d-md-block section-header display-2 font-weight-bold"
+          >
+            Maps
+          </h1>
+          <h1 class="d-md-none section-header display-1 font-weight-bold">
+            Maps
+          </h1>
+
+          <div class="section">
+            <v-row>
+              <v-img
+                :src="require('../assets/Maps/ethnicracialdist_1940.png')"
+                contain
+                max-height="85vh"
+              ></v-img>
+            </v-row>
+            <Card heading="Milagros Ortiz">
+              <a @click="navigateToProfile(0)">Milagros Ortiz</a>
+            </Card>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/NorthEnd.jpg')"
+              contain
+              max-height="85vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/BellevueSquare.jpg')"
+              contain
+              max-height="85vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/PlacesofOrigin.jpg')"
+              contain
+              max-height="85vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/Agricultural_Workers.jpg')"
+              contain
+              max-height="85vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/Colleges.jpg')"
+              contain
+              max-height="85vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/HousingConditions.jpg')"
+              contain
+              max-height="85vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/Surveys.jpg')"
+              contain
+              max-height="65vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <b-carousel
+              id="carousel-fade"
+              style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
+              fade
+              controls
+              img-width="1024"
+              img-height="480"
+            >
+              <b-carousel-slide
+                caption="1940"
+                :img-src="require('@/assets/GeographicMobility1.jpg')"
+              ></b-carousel-slide>
+              <b-carousel-slide
+                caption="1960"
+                :img-src="require('../assets/GeographicMobility2.jpg')"
+              ></b-carousel-slide>
+              <b-carousel-slide
+                caption="1980"
+                :img-src="require('../assets/GeographicMobility3.jpg')"
+              ></b-carousel-slide>
+            </b-carousel>
+          </div>
+
+          <div class="section">
+            <h2 class="ma-5">Race and Ethnicity</h2>
+            <v-img
+              :src="require('../assets/Race_Ethnicity2.jpg')"
+              contain
+              max-height="65vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <h2 class="ma-5">Landmarks</h2>
+            <v-img
+              :src="require('../assets/landmarks.jpg')"
+              contain
+              max-height="65vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <h2 class="ma-5">Ship Manifest</h2>
+            <v-img
+              :src="require('../assets/ShipManifest.jpg')"
+              contain
+              max-height="65vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/Projects.jpg')"
+              contain
+              max-height="65vh"
+            ></v-img>
+          </div>
+
+          <div class="section">
+            <v-img
+              :src="require('../assets/Maps/Racial_Imbalance.jpg')"
+              contain
+              max-height="65vh"
+            ></v-img>
+          </div>
+
           <Settlement></Settlement>
           <Housing></Housing>
           <Timeline></Timeline>
@@ -99,10 +245,10 @@ export default {
       this.activeProfile = this.profiles[index];
     },
     toMap(index) {
-      if(this.profileToMapMapping.length > index)
-      this.$root.$children[0].navigateToMap(this.profileToMapMapping[index]);
-      else{
-        alert("no matching map")
+      if (this.profileToMapMapping.length > index)
+        this.$root.$children[0].navigateToMap(this.profileToMapMapping[index]);
+      else {
+        alert("no matching map");
       }
     },
   },

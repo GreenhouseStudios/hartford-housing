@@ -8,14 +8,16 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
       <div>
         <div class="section">
-          <v-col>
+          <v-row>
             <v-img
               :src="require('../assets/Maps/ethnicracialdist_1940.png')"
               contain
               max-height="85vh"
             ></v-img>
-          </v-col>
-          <a @click="navigateToProfile(0)">Milagros Ortiz</a>
+          </v-row>
+          <Card heading="Milagros Ortiz">
+            <a @click="navigateToProfile(0)">Milagros Ortiz</a>
+          </Card>
         </div>
 
         <div class="section">
@@ -149,11 +151,12 @@
 import Map from "@/components/Map";
 import svgPanZoom from "svg-pan-zoom";
 import PublicHousingLocations from "@/assets/PublicHousingLocations.svg";
+import Card from "./Card.vue";
 export default {
   name: "Maps",
   components: {
     Map,
-    PublicHousingLocations,
+    Card,
   },
   data() {
     return {
@@ -185,9 +188,9 @@ export default {
     next() {
       this.$refs.myCarousel.next();
     },
-    navigateToProfile(i){
-       this.$root.$children[0].navigateToProfile(i)
-    }
+    navigateToProfile(i) {
+      this.$root.$children[0].navigateToProfile(i);
+    },
   },
   mounted() {
     var panZoomTiger = svgPanZoom("#demo-tiger");
