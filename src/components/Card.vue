@@ -9,6 +9,7 @@
         <v-card-title class="d-md-none white--text font-weight-bold break-fix">{{heading}}</v-card-title>
         <v-card-text class="white--text font-weight-bold mr-5">{{body}}</v-card-text>
         <!-- <v-img v-bind:src="image"></v-img> -->
+        <slot></slot>
       </v-card>
       <!-- </div> -->
     </v-card>

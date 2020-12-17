@@ -25,9 +25,11 @@
                 max-height="85vh"
               ></v-img>
             </v-row>
-            <Card heading="Milagros Ortiz">
-              <a @click="navigateToProfile(0)">Milagros Ortiz</a>
-            </Card>
+            <v-row justify="center">
+              <Card heading="Milagros Ortiz">
+                <a @click="navigateToProfile(0)">Milagros Ortiz</a>
+              </Card>
+            </v-row>
           </div>
 
           <div class="section">
@@ -251,6 +253,9 @@ export default {
         alert("no matching map");
       }
     },
+    navigateToProfile(i) {
+      this.$root.$children[0].navigateToProfile(i);
+    },
   },
   data() {
     return {
@@ -322,5 +327,49 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 .wrapper {
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+/* Crossfade gallery */
+@keyframes fader {
+  0% {
+    background-image: url("~@/assets/GeographicMobility1.jpg");
+  }
+  10% {
+    background-image: url("~@/assets/GeographicMobility1.jpg");
+  }
+  33% {
+    background-image: url("h~@/assets/GeographicMobility2.jpg");
+  }
+  43% {
+    background-image: url("~@/assets/GeographicMobility2.jpg");
+  }
+  66% {
+    background-image: url("h~@/assets/GeographicMobility3.jpg");
+  }
+  76% {
+    background-image: url("~@/assets/GeographicMobility3.jpg");
+  }
+  100% {
+    background-image: url("~@/assets/GeographicMobility1.jpg");
+  }
+}
+#wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#gallery {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fader 15s linear infinite;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#manualgallery {
+  max-width: 600px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: fader 15s linear infinite;
+  animation-play-state: paused;
 }
 </style>

@@ -215,23 +215,6 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      //   cityPlanOverlays: [
-      //     {
-      //       bounds: [
-      //         ["41.7507553", "-72.7134986"],
-      //         ["41.7777551", "-72.6673655"],
-      //       ],
-      //       img:
-      //         require("../assets/mapassets/cityplan/CityPlanExpressway.tif"),
-      //     },
-      //      {
-      //       bounds: [
-      //         ["41.7547319", "-72.6930396"],
-      //         ["41.7774340", "-72.6668311"],
-      //       ],
-      //       img: require("../assets/map_assets/city_plan/PlanOverview.tif"),
-      //     },
-      //   ],
     };
   },
   methods: {
