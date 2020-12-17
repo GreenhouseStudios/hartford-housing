@@ -72,7 +72,6 @@ export default {
 </script>
 <style>
 #intro-section{
-  background-image: url("~@/assets/Lawrence/MOMA_PANEL60_900.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
