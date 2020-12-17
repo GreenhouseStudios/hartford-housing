@@ -5,7 +5,7 @@
       <v-col></v-col>
       <v-col>
         <v-row v-for="(person, index) in people" v-bind:key="index" class="pa-5">
-          <a class="font-weight-bold">{{person.name}}</a>
+          <a class="font-weight-bold" :href="person.link">{{person.name}}</a>
         </v-row>
       </v-col>
       <v-col></v-col>
@@ -19,15 +19,15 @@ export default {
   data() {
     return {
       people: [
-        { name: "DR. FIONA VERNAL" },
+        { name: "DR. FIONA VERNAL", link: "https://greenhousestudios.uconn.edu/person/fiona-vernal//"},
         { name: "LAURA BEDOYA" },
         { name: "MALACHI BRIDGES" },
         { name: "GEORGIA BROWN" },
         { name: "AALIYAH CAMPBELL" },
-        { name: "JAMES KOLB"},
-        { name: "STEPHANIE ORTS"},
-        { name: "TOM LEE" },
-        { name: "MACKENZIE FOX"}
+        { name: "JAMES KOLB", link: "https://greenhousestudios.uconn.edu/person/james-kolb/"},
+        { name: "STEPHANIE ORTS", link: "https://www.stephanieorts.com/"},
+        { name: "TOM LEE", link: "https://greenhousestudios.uconn.edu/person/tom-lee/" },
+        { name: "MACKENZIE FOX", link: "https://greenhousestudios.uconn.edu/person/mackenzie-fox/"}
       ]
     };
   }
