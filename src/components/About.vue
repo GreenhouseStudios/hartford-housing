@@ -5,7 +5,7 @@
       <v-row>
         <v-col>
           <div id="trigger2"></div>
-          <div id="subtitle">
+          <!-- <div id="subtitle">
             <h1
               class="d-none d-md-block display-2 font-weight-bold text-outline-offset"
             >{{subtitle | allCaps}}</h1>
@@ -15,7 +15,7 @@
             <h1 class="d-none d-md-block display-2 font-weight-bold">HOUSING STRUGGLES</h1>
             <h3 class="d-md-none font-weight-bold">HOUSING STRUGGLES</h3>
             <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
-          </div>
+          </div> -->
           
           <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="revealrise"></Card>
         </v-col>
