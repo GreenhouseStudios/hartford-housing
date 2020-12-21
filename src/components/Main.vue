@@ -36,12 +36,6 @@
           </v-row>
         </v-col>
       </v-row>
-      <!-- <v-img :src="require('../assets/PublicHousingLocations.svg')" contain max-height="80vh"></v-img> -->
-      <!-- <v-img :src="require('@/assets/Maps/SVG/Layout.svg')"></v-img> -->
-      <!-- <PublicHousingLocations id="demo-tiger"/> -->
-      <!-- <Layout/> -->
-      <!-- <Layout7/> -->
-      <!-- <Towns></Towns> -->
     </div>
 
     <div class="section">
@@ -248,11 +242,6 @@ import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
 import ReadMoreCard from "@/components/ReadMoreCard";
-// import MapOnly from "@/assets/Maps/SVGZs/MapOnly.svgz";
-import PublicHousingLocations from "@/assets/PublicHousingLocations.svg";
-import Layout from "@/assets/Maps/SVG/Layout.svg";
-import Layout7 from "@/assets/Maps/SVG/Layout7.svg";
-import Towns from "@/assets/Maps/SVG/Towns.svg";
 import svgPanZoom from "svg-pan-zoom";
 export default {
   name: "Main",
@@ -268,10 +257,6 @@ export default {
     Timeline,
     Card,
     ReadMoreCard,
-    PublicHousingLocations,
-    Layout,
-    Layout7,
-    Towns,
   },
   methods: {
     handleProfileMapClick(index) {
