@@ -1,10 +1,10 @@
 <template>
   <div class="map-container">
     <v-row>
-      <v-col cols="12" md="6">
+      <!-- <v-col cols="12" md="6">
         <Card class="map-card" v-bind:heading="title" v-bind:body="body"></Card>
-      </v-col>
-      <v-col cols="12" md="6" style="z-index: 0">
+      </v-col> -->
+      <v-col cols="12" style="z-index: 0">
         <div class="map">
           <div v-bind:id="mapid" style="height: 65vh"></div>
         </div>
@@ -18,6 +18,7 @@ import * as L from "leaflet";
 import { imageOverlay, latLng, tileLayer } from "leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet.css";
+import "leaflet-imageoverlay-rotated"
 import Card from "@/components/Card";
 
 //Solution to some BS probem with leaflet not loading it's own damn marker icon properly
@@ -69,9 +70,16 @@ export default {
     imageOverlaySet: {
       type: Array,
       default: () => [
-        {bounds:[[41.78, -72.67,], [41.81, -72.70]], img: "https://legacy.lib.utexas.edu/maps/historical/newark_nj_1922.jpg"},
-          ]
-    }
+        {
+          bounds: [
+            [41.78, -72.67],
+            [41.81, -72.7],
+          ],
+          img: require("@/assets/Maps/CityPlanExpressway.jpg")
+            // "https://legacy.lib.utexas.edu/maps/historical/newark_nj_1922.jpg",
+        },
+      ],
+    },
   },
   data() {
     return {
@@ -171,11 +179,18 @@ export default {
       if (this.map) {
         var result = [];
         var overlaysGroup = L.layerGroup();
-        this.imageOverlaySet.forEach((image) =>{
-          var overlay = L.imageOverlay(image.img,image.bounds);
-          overlay.addTo(overlaysGroup)
-          result.push(overlay)
-        })
+        var topleft = L.latLng(41.76509154725853, -72.66769191097842),
+          topright = L.latLng(41.77758991756642, -72.66769191097842),
+          bottomleft = L.latLng(41.76509154725853, -72.71976884857769);
+        this.imageOverlaySet.forEach((image) => {
+          var overlay = L.imageOverlay.rotated(image.img, topleft,topright,bottomleft, {
+			opacity: 1,
+			interactive: true,
+			attribution: "Historical building plan &copy; <a href='http://www.ign.es'>Instituto Geográfico Nacional de España</a>"
+		});
+          overlay.addTo(overlaysGroup);
+          result.push(overlay);
+        });
         // var test = L.imageOverlay(this.overlayURL, [
         //   [41.78, -72.67],
         //   [41.81, -72.70],
@@ -183,10 +198,10 @@ export default {
         //Note: this is how to setup a single image overlay
         //For multiple image overlays in a layer see this example https://codesandbox.io/s/vy5zww6r0y?file=/src/app/app.component.ts
         var controlTest = {
-          "Overlays": overlaysGroup
-        }
+          Overlays: overlaysGroup,
+        };
 
-        L.control.layers(null,controlTest).addTo(this.map);
+        L.control.layers(null, controlTest).addTo(this.map);
       }
     },
   },
