@@ -1,38 +1,16 @@
 <template>
   <div class="section" id="about-section">
-    <!-- <v-img :src="require('../assets/pubhousingmap.jpg')" gradient="rgba(255,255,255,1),rgba(255,255,255,0.05)"> -->
-    <v-container>
+    <v-container fluid fill-height>
       <v-row>
-        <v-col>
           <div id="trigger2"></div>
-          <!-- <div id="subtitle">
-            <h1
-              class="d-none d-md-block display-2 font-weight-bold text-outline-offset"
-            >{{subtitle | allCaps}}</h1>
-            <h3
-              class="d-md-none text-h1 font-weight-bold text-outline-offset"
-            >{{subtitle | allCaps}}</h3>
-            <h1 class="d-none d-md-block display-2 font-weight-bold">HOUSING STRUGGLES</h1>
-            <h3 class="d-md-none font-weight-bold">HOUSING STRUGGLES</h3>
-            <h3>IN HARTFORD COUNTY, CONNECTICUT</h3>
-          </div> -->
-          
-          <Card class="align-center" v-bind:heading="heading" v-bind:body="body" id="revealrise"></Card>
-        </v-col>
+          <Card
+            class="align-center"
+            v-bind:heading="heading"
+            v-bind:body="body"
+            id="revealrise"
+          ></Card>
       </v-row>
     </v-container>
-    <!-- <CardImage class= "align-center"
-      v-bind:image="slides[0].image"
-      v-bind:offsetH="slides[0].offsetH"
-      v-bind:offsetV="slides[0].offsetV"
-      v-bind:rotation="slides[0].rotation"
-      v-bind:cardWidth="slides[0].cardWidth"
-      v-bind:cardHeight="slides[0].cardHeight"
-      v-bind:style="{top:slides[0].offsetV + 'px', left:slides[0].offsetH +'px'}"
-      v-bind:caption="slides[0].caption"
-      id="reveal">
-    </CardImage> -->
-    <!-- </v-img> -->
   </div>
 </template>
 
@@ -44,7 +22,7 @@ export default {
   name: "About",
   components: {
     Card,
-    CardImage
+    CardImage,
   },
   data() {
     return {
@@ -59,20 +37,20 @@ export default {
           offsetV: "25",
           rotation: "0",
           cardWidth: "550",
-          cardHeight: "410"
-        }
-      ]
+          cardHeight: "410",
+        },
+      ],
     };
   },
   filters: {
-    capitalize: function(value) {
+    capitalize: function (value) {
       if (!value) return "";
       value = value.toString();
       return value.charAt(0).toUpperCase() + value.slice(1);
     },
-    allCaps: function(value) {
+    allCaps: function (value) {
       return value.toUpperCase();
-    }
+    },
   },
   mounted() {
     const scene2 = this.$scrollmagic
@@ -82,14 +60,14 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.7,
         // Duration of animation
-        duration: "99%"
+        duration: "99%",
       }) // Declaration of animation and attaching to element
       .setClassToggle("#revealrise", "visible");
     // Helpful tags for orientation on the screen
     // .addIndicators({ name: "2 (duration: 300)" });
     // Add Scene to controller
     this.$scrollmagic.addScene(scene2);
-  }
+  },
 };
 </script>
 
@@ -113,7 +91,6 @@ export default {
 #subtitle {
   text-align: center;
 }
-
 .section {
   height: 4000px;
 }

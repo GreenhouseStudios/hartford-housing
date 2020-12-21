@@ -1,218 +1,238 @@
 <template>
   <v-container fluid pa-0 style="margin: 0; float: unset; display: contents">
-    <v-container fluid pa-0 style="margin: 0; float: unset; display: contents">
+    <Home></Home>
+    <About></About>
+    <Introduction></Introduction>
+    <!-- <Maps></Maps> -->
+    <!-- Map section header -->
+    <v-row justify="center">
+      <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
+        Maps
+      </h1>
+      <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
+    </v-row>
+    <div class="section">
+      <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
+        City Boundaries Through Time
+      </h1>
+      <h1 class="d-md-none section-header display-1 font-weight-bold">City Boundaries Through Time</h1>
       <v-row>
-        <v-col>
-          <Home></Home>
-          <About></About>
-          <Introduction></Introduction>
-          <!-- <Maps></Maps> -->
-          <!-- Map section header -->
-          <h1
-            class="d-none d-md-block section-header display-2 font-weight-bold"
-          >
-            Maps
-          </h1>
-          <h1 class="d-md-none section-header display-1 font-weight-bold">
-            Maps
-          </h1>
+        <v-col md="3" class="pa-0"> </v-col>
+        <v-col md="6" class="pa-0">
+          <v-img
+            :src="require('../assets/Maps/Final/Layout7.png')"
+            contain
+            max-height="80vh"
+          ></v-img>
+        </v-col>
 
-          <div class="section">
-            <v-row>
-              <v-img
-                :src="require('../assets/Maps/ethnicracialdist_1940.png')"
-                contain
-                max-height="85vh"
-              ></v-img>
-            </v-row>
-            <v-row justify="center">
-              <Card heading="Milagros Ortiz">
-                <a @click="navigateToProfile(0)">Milagros Ortiz</a>
-              </Card>
-            </v-row>
-          </div>
-
-          <div class="section">
+        <v-col md="1" align-self="center">
+          <v-row>
             <v-img
-              :src="require('../assets/Maps/NorthEnd.jpg')"
+              :src="require('../assets/Maps/Final/Legend.png')"
               contain
-              max-height="85vh"
+              max-height="25vh"
             ></v-img>
-          </div>
+          </v-row>
+        </v-col>
+      </v-row>
+      <!-- <v-img :src="require('../assets/PublicHousingLocations.svg')" contain max-height="80vh"></v-img> -->
+      <!-- <v-img :src="require('@/assets/Maps/SVG/Layout.svg')"></v-img> -->
+      <!-- <PublicHousingLocations id="demo-tiger"/> -->
+      <!-- <Layout/> -->
+      <!-- <Layout7/> -->
+      <!-- <Towns></Towns> -->
+    </div>
 
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/BellevueSquare.jpg')"
-              contain
-              max-height="85vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-row>
+        <v-img
+          :src="require('../assets/Maps/ethnicracialdist_1940.png')"
+          contain
+          max-height="85vh"
+        ></v-img>
+      </v-row>
+      <v-row justify="center">
+        <Card heading="Milagros Ortiz">
+          <a @click="navigateToProfile(0)">Milagros Ortiz</a>
+        </Card>
+      </v-row>
+    </div>
 
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/PlacesofOrigin.jpg')"
-              contain
-              max-height="85vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/NorthEnd.jpg')"
+        contain
+        max-height="85vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/Agricultural_Workers.jpg')"
-              contain
-              max-height="85vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/BellevueSquare.jpg')"
+        contain
+        max-height="85vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/Colleges.jpg')"
-              contain
-              max-height="85vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/PlacesofOrigin.jpg')"
+        contain
+        max-height="85vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/HousingConditions.jpg')"
-              contain
-              max-height="85vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/Agricultural_Workers.jpg')"
+        contain
+        max-height="85vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/Surveys.jpg')"
-              contain
-              max-height="65vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/Colleges.jpg')"
+        contain
+        max-height="85vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <b-carousel
-              id="carousel-fade"
-              style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
-              fade
-              controls
-              img-width="1024"
-              img-height="480"
-            >
-              <b-carousel-slide
-                caption="1940"
-                :img-src="require('@/assets/GeographicMobility1.jpg')"
-              ></b-carousel-slide>
-              <b-carousel-slide
-                caption="1960"
-                :img-src="require('../assets/GeographicMobility2.jpg')"
-              ></b-carousel-slide>
-              <b-carousel-slide
-                caption="1980"
-                :img-src="require('../assets/GeographicMobility3.jpg')"
-              ></b-carousel-slide>
-            </b-carousel>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/HousingConditions.jpg')"
+        contain
+        max-height="85vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <h2 class="ma-5">Race and Ethnicity</h2>
-            <v-img
-              :src="require('../assets/Race_Ethnicity2.jpg')"
-              contain
-              max-height="65vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/Surveys.jpg')"
+        contain
+        max-height="65vh"
+      ></v-img>
+    </div>
 
-          <div class="section">
-            <h2 class="ma-5">Landmarks</h2>
-            <v-img
-              :src="require('../assets/landmarks.jpg')"
-              contain
-              max-height="65vh"
-            ></v-img>
-          </div>
+    <div class="section">
+      <b-carousel
+        id="carousel-fade"
+        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
+        fade
+        controls
+        img-width="1024"
+        img-height="480"
+      >
+        <b-carousel-slide
+          caption="1940"
+          :img-src="require('@/assets/GeographicMobility1.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1960"
+          :img-src="require('../assets/GeographicMobility2.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1980"
+          :img-src="require('../assets/GeographicMobility3.jpg')"
+        ></b-carousel-slide>
+      </b-carousel>
+    </div>
 
-          <div class="section">
+    <div class="section">
+      <h2 class="ma-5">Race and Ethnicity</h2>
+      <v-img
+        :src="require('../assets/Race_Ethnicity2.jpg')"
+        contain
+        max-height="65vh"
+      ></v-img>
+    </div>
+
+    <div class="section">
+      <h2 class="ma-5">Landmarks</h2>
+      <v-img
+        :src="require('../assets/landmarks.jpg')"
+        contain
+        max-height="65vh"
+      ></v-img>
+    </div>
+
+    <!-- <div class="section">
             <h2 class="ma-5">Ship Manifest</h2>
             <v-img
               :src="require('../assets/ShipManifest.jpg')"
               contain
               max-height="65vh"
             ></v-img>
-          </div>
+          </div> -->
 
-          <div class="section">
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/Projects.jpg')"
+        contain
+        max-height="65vh"
+      ></v-img>
+    </div>
+
+    <div class="section">
+      <v-img
+        :src="require('../assets/Maps/Racial_Imbalance.jpg')"
+        contain
+        max-height="65vh"
+      ></v-img>
+    </div>
+    <div class="section">
+      <Map></Map>
+    </div>
+    <Settlement></Settlement>
+    <Housing></Housing>
+    <Timeline></Timeline>
+    <ProfileMenu></ProfileMenu>
+    <div class="section" v-for="(prof, j) in profiles" :key="j">
+      <v-container fluid>
+        <v-row>
+          <v-col cols="12" md="6">
             <v-img
-              :src="require('../assets/Maps/Projects.jpg')"
-              contain
-              max-height="65vh"
+              :src="prof.img"
+              height="600"
+              width="400"
+              class="d-none d-md-block"
             ></v-img>
-          </div>
-
-          <div class="section">
-            <v-img
-              :src="require('../assets/Maps/Racial_Imbalance.jpg')"
-              contain
-              max-height="65vh"
-            ></v-img>
-          </div>
-
-          <Settlement></Settlement>
-          <Housing></Housing>
-          <Timeline></Timeline>
-          <ProfileMenu></ProfileMenu>
-          <div class="section" v-for="(prof, j) in profiles" :key="j">
-            <v-container fluid>
-              <v-row>
-                <v-col cols="12" md="6">
-                  <v-img
-                    :src="prof.img"
-                    height="600"
-                    width="400"
-                    class="d-none d-md-block"
-                  ></v-img>
-                  <v-hover v-slot:default="{ hover }" class="d-none d-md-block">
-                    <v-card
-                      :elevation="hover ? 16 : 2"
-                      height="200"
-                      width="147"
-                      class="profile-map"
-                      @click.stop="toMap(j)"
-                    >
-                      <v-img
-                        src="@/assets/joshmap.jpg"
-                        max-height="200"
-                        contain
-                      ></v-img>
-                    </v-card>
-                  </v-hover>
-                </v-col>
-                <v-col cols="12" md="6">
-                  <ReadMoreCard
-                    v-bind:body="prof.body"
-                    v-bind:heading="prof.name"
-                    v-bind:image="prof.img"
-                  ></ReadMoreCard>
-                </v-col>
-              </v-row>
-            </v-container>
-          </div>
-          <v-dialog v-model="dialog">
-            <v-card v-if="activeProfile">
-              <v-card-title class="headline grey lighten-2" primary-title
-                >{{ activeProfile.name }}'s Hartford</v-card-title
+            <v-hover v-slot:default="{ hover }" class="d-none d-md-block">
+              <v-card
+                :elevation="hover ? 16 : 2"
+                height="200"
+                width="147"
+                class="profile-map"
+                @click.stop="toMap(j)"
               >
-
-              <v-img
-                src="@/assets/joshmap.jpg"
-                max-height="600"
-                contain
-              ></v-img>
-
-              <v-card-text>{{ activeProfile.body }}</v-card-text>
-            </v-card>
-          </v-dialog>
-        </v-col>
-      </v-row>
-    </v-container>
+                <v-img
+                  src="@/assets/joshmap.jpg"
+                  max-height="200"
+                  contain
+                ></v-img>
+              </v-card>
+            </v-hover>
+          </v-col>
+          <v-col cols="12" md="6">
+            <ReadMoreCard
+              v-bind:body="prof.body"
+              v-bind:heading="prof.name"
+              v-bind:image="prof.img"
+            ></ReadMoreCard>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+    <v-dialog v-model="dialog">
+      <v-card v-if="activeProfile">
+        <v-card-title class="headline grey lighten-2" primary-title
+          >{{ activeProfile.name }}'s Hartford</v-card-title
+        >
+        <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
+        <v-card-text>{{ activeProfile.body }}</v-card-text>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -221,18 +241,26 @@ import Home from "@/components/Home";
 import About from "@/components/About";
 import Introduction from "@/components/Introduction";
 import Maps from "@/components/Maps";
+import Map from "@/components/Map";
 import Settlement from "@/components/Settlement";
 import Housing from "@/components/Housing";
 import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
 import ReadMoreCard from "@/components/ReadMoreCard";
+// import MapOnly from "@/assets/Maps/SVGZs/MapOnly.svgz";
+import PublicHousingLocations from "@/assets/PublicHousingLocations.svg";
+import Layout from "@/assets/Maps/SVG/Layout.svg";
+import Layout7 from "@/assets/Maps/SVG/Layout7.svg";
+import Towns from "@/assets/Maps/SVG/Towns.svg";
+import svgPanZoom from "svg-pan-zoom";
 export default {
   name: "Main",
   components: {
     Home,
     About,
     Introduction,
+    Map,
     Maps,
     Settlement,
     Housing,
@@ -240,6 +268,10 @@ export default {
     Timeline,
     Card,
     ReadMoreCard,
+    PublicHousingLocations,
+    Layout,
+    Layout7,
+    Towns,
   },
   methods: {
     handleProfileMapClick(index) {
@@ -256,6 +288,10 @@ export default {
     navigateToProfile(i) {
       this.$root.$children[0].navigateToProfile(i);
     },
+  },
+  mounted() {
+    var panZoomTiger = svgPanZoom("#demo-tiger");
+    console.log(panZoomTiger);
   },
   data() {
     return {
