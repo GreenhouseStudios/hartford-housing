@@ -1,24 +1,13 @@
 <template>
   <v-hover v-slot:default="{ hover }">
     <v-img :src="img" aspect-ratio="1" v-on:click="moveToProfile">
-      <v-spacer></v-spacer>
-      <v-card class="d-flex" tile v-if="hover" style="background-color: #FEFEFE">
-        <v-card-text class="align-end">{{ name }}</v-card-text>
-      </v-card>
-
+      <!-- <span style="background-color: #fefefe" class="h6 pa-1" justify="center">{{name}}</span> -->
+      <v-row v-if="hover">
+        <v-card tile style="background-color: #fefefe" min-width="100%" align-end>
+          <v-card-title class="pa-2 h6 justify-center">{{ name }}</v-card-title>
+        </v-card>
+      </v-row>
     </v-img>
-    <!-- <v-card tile :img="img" class="d-flex card" :class="{ 'on-hover': hover }" v-on:click="moveToProfile" style="background-image: url(img)"> -->
-    <!-- <v-img :src="img" aspect-ratio="1"></v-img> -->
-    <!-- <v-img v-if="!hover" :src="img" aspect-ratio="1" align="end">
-        <template v-slot:placeholder>
-          <v-row class="fill-height ma-0" align="center" justify="space-between">
-          </v-row>
-        </template>
-      </v-img>
-      <v-img v-else :src="img" v-show="hover" aspect-ratio="1" class="picop">
-        <span v-show="hover" class="imagetext">{{name}}</span>
-      </v-img> -->
-    <!-- </v-card> -->
   </v-hover>
 </template>
 
@@ -53,11 +42,11 @@ export default {
 </script>
 
 <style scoped>
-.card:after {
+/* .card:after {
   content: "";
   display: block;
   padding-bottom: 100%;
-}
+} */
 .imagetext {
   color: black;
   font-weight: bold;
