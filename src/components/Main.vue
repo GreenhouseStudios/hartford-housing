@@ -5,7 +5,7 @@
     <Introduction></Introduction>
     <!-- <Maps></Maps> -->
     <!-- Map section header -->
-    <v-row justify="center">
+    <v-row justify="center" class="mb-10 mt-5">
       <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
         Maps
       </h1>
@@ -15,14 +15,16 @@
       <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
         City Boundaries Through Time
       </h1>
-      <h1 class="d-md-none section-header display-1 font-weight-bold">City Boundaries Through Time</h1>
+      <h1 class="d-md-none section-header h3 font-weight-bold">
+        City Boundaries Through Time
+      </h1>
       <v-row>
         <v-col md="3" class="pa-0"> </v-col>
         <v-col md="6" class="pa-0">
           <v-img
             :src="require('../assets/Maps/Final/Layout7.png')"
             contain
-            max-height="80vh"
+            max-height="85vh"
           ></v-img>
         </v-col>
 
@@ -275,8 +277,6 @@ export default {
     },
   },
   mounted() {
-    var panZoomTiger = svgPanZoom("#demo-tiger");
-    console.log(panZoomTiger);
   },
   data() {
     return {

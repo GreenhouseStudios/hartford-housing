@@ -229,8 +229,8 @@ export default {
       this.$refs.fullpage.api.moveSectionDown();
     },
     navigateToSection: function(i) {
-      console.log(i)
-      if (i > 3) i += 13;
+      // console.log(i)
+      if (i > 3) i += 14;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
         this.$router.push("/").then(() => {
@@ -238,7 +238,7 @@ export default {
         });
     },
     navigateToSlide: function(i, index) {
-      if (i > 3) i += 13;
+      if (i > 3) i += 14;
       if (this.$route.name == "Main") {
         this.$refs.fullpage.api.moveTo(i + 1, index);
       } else
@@ -247,7 +247,7 @@ export default {
         });
     },
     navigateToProfile: function(i){
-      this.$refs.fullpage.api.moveTo(22 + i)
+      this.$refs.fullpage.api.moveTo(23 + i)
     },
     navigateToMap: function(i){
       console.log(this.$refs.fullpage.api.getActiveSection())
