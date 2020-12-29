@@ -80,11 +80,23 @@
     </div>
 
     <div class="section">
-      <v-img
-        :src="require('../assets/Maps/Agricultural_Workers.jpg')"
-        contain
-        max-height="85vh"
-      ></v-img>
+      <b-carousel
+        id="carousel-fade"
+        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
+        no-animation
+        controls
+        img-width="1024"
+        img-height="480"
+      >
+        <b-carousel-slide
+          caption="1940"
+          :img-src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1960"
+          :img-src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')"
+        ></b-carousel-slide>
+      </b-carousel>
     </div>
 
     <div class="section">
