@@ -7,7 +7,7 @@
       <v-spacer></v-spacer>
 
       <!-- Desktop nav -->
-      <v-toolbar-items class="d-none d-md-block">
+      <v-toolbar-items class="d-none d-lg-block">
         <v-menu
           v-for="(section,i) in sections"
           :open-on-hover="true"
@@ -34,7 +34,7 @@
         :offset-y="true" tile>
         <template v-slot:activator="{ on, attrs }">
           <v-app-bar-nav-icon
-            class="d-md-none ma-1"
+            class="d-flex d-lg-none ma-1"
             color="white"
             @click="drawer"
             v-bind="attrs"

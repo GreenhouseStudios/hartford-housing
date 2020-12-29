@@ -3,11 +3,11 @@
     <v-container fluid fill-height>
       <v-row justify="center"
         ><h1
-          class="d-none d-md-block section-header display-3 font-weight-bold"
+          class="d-none d-lg-block section-header display-3 font-weight-bold"
         >
           Introduction
         </h1>
-        <h1 class="d-md-none section-header display-1 font-weight-bold">
+        <h1 class="d-lg-none section-header display-1 font-weight-bold">
           Introduction
         </h1></v-row
       >
