@@ -79,24 +79,51 @@
       ></v-img>
     </div>
 
-    <div class="section">
+    <!-- <div class="section">
       <b-carousel
         id="carousel-fade"
         style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
         no-animation
         controls
+        indicators
+        background="#FEFEFE"
         img-width="1024"
         img-height="480"
       >
         <b-carousel-slide
-          caption="1940"
-          :img-src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')"
+          :img-src="
+            require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1960"
-          :img-src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')"
+          :img-src="
+            require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')
+          "
         ></b-carousel-slide>
       </b-carousel>
+    </div> -->
+
+    <div class="section">
+      <v-carousel height="100vh">
+        <v-carousel-item>
+          <v-row class="fill-height">
+            <v-img
+              :src="
+                require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')
+              "
+            ></v-img>
+          </v-row>
+        </v-carousel-item>
+        <v-carousel-item>
+          <v-row class="fill-height">
+            <v-img
+              :src="
+                require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')
+              "
+            ></v-img>
+          </v-row>
+        </v-carousel-item>
+      </v-carousel>
     </div>
 
     <div class="section">
@@ -288,8 +315,7 @@ export default {
       this.$root.$children[0].navigateToProfile(i);
     },
   },
-  mounted() {
-  },
+  mounted() {},
   data() {
     return {
       profileToMapMapping: [1],
@@ -404,5 +430,9 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
   background-size: 100% 100%;
   animation: fader 15s linear infinite;
   animation-play-state: paused;
+}
+.carousel-control-prev-icon {
+  color: black;
+  background: cadetblue;
 }
 </style>
