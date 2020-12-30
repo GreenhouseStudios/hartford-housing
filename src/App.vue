@@ -9,18 +9,20 @@
       <!-- Desktop nav -->
       <v-toolbar-items class="d-none d-lg-block">
         <v-menu
-          v-for="(section,i) in sections"
+          v-for="(section, i) in sections"
           :open-on-hover="true"
           :offset-y="true"
           :key="section.title"
         >
           <template v-slot:activator="{ on }">
-            <v-btn text @click="navigateToSection(i)" dark v-on="on">{{section.title}}</v-btn>
+            <v-btn text @click="navigateToSection(i)" dark v-on="on">{{
+              section.title
+            }}</v-btn>
           </template>
           <v-list v-if="sections[i].slides.length">
             <v-list-item
               v-for="(item, index) in section.slides"
-              @click="navigateToSlide(i,index)"
+              @click="navigateToSlide(i, index)"
               :key="index"
             >
               <v-list-item-title>{{ item }}</v-list-item-title>
@@ -30,8 +32,7 @@
       </v-toolbar-items>
 
       <!-- Mobile Nav -->
-      <v-menu min-width="100%"
-        :offset-y="true" tile>
+      <v-menu min-width="100%" :offset-y="true" tile>
         <template v-slot:activator="{ on, attrs }">
           <v-app-bar-nav-icon
             class="d-flex d-lg-none ma-1"
@@ -43,7 +44,7 @@
         </template>
         <v-list class="centertext">
           <v-list-item
-            v-for="(section,j) in sections"
+            v-for="(section, j) in sections"
             :key="section.title"
             @click="navigateToSection(j)"
           >
@@ -51,42 +52,82 @@
           </v-list-item>
           <v-divider></v-divider>
           <v-list-item>
-            <router-link to="/People" class="pr-4 footer-link centertext">People</router-link>
+            <router-link to="/People" class="pr-4 footer-link centertext"
+              >People</router-link
+            >
           </v-list-item>
           <v-list-item>
-            <router-link to="/Funders" class="pr-4 footer-link centertext">Funders</router-link>
+            <router-link to="/Funders" class="pr-4 footer-link centertext"
+              >Funders</router-link
+            >
           </v-list-item>
           <v-list-item>
-            <router-link to="/Contact" class="pr-4 footer-link centertext">Contact</router-link>
+            <router-link to="/Contact" class="pr-4 footer-link centertext"
+              >Contact</router-link
+            >
           </v-list-item>
           <v-list-item>
-            <router-link to="/Permissions" class="pr-4 footer-link centertext">Permissions</router-link>
+            <router-link to="/Permissions" class="pr-4 footer-link centertext"
+              >Permissions</router-link
+            >
           </v-list-item>
           <v-list-item>
-            <router-link to="/Booklet" class="pr-4 footer-link centertext">Booklet</router-link>
+            <router-link to="/Booklet" class="pr-4 footer-link centertext"
+              >Booklet</router-link
+            >
           </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
 
     <v-content>
-      <full-page ref="fullpage" :options="options" id="fullpage" v-if="$route.name == 'Main'">
+      <full-page
+        ref="fullpage"
+        :options="options"
+        id="fullpage"
+        v-if="$route.name == 'Main'"
+      >
         <router-view></router-view>
       </full-page>
       <!-- I mean, I guess this works... -->
       <router-view v-else></router-view>
     </v-content>
 
-    <v-footer app color="darkBlack" class="font-weight-bold d-none d-lg-flex" id="footer">
-      <v-col>
-        <router-link to="/People" class="pr-4 footer-link">People</router-link>
-        <router-link to="/Funders" class="pr-4 footer-link">Funders</router-link>
-        <router-link to="/Contact" class="pr-4 footer-link">Contact</router-link>
-        <router-link to="/Permissions" class="pr-4 footer-link">Permissions</router-link>
-        <router-link to="/Booklet" class="pr-4 footer-link">Booklet</router-link>
-      </v-col>
-      <v-spacer></v-spacer>
-      <span class="white--text pr-4">&copy; {{new Date().getFullYear()}}</span>
+    <v-footer
+      app
+      color="darkBlack"
+      class="font-weight-bold d-none d-lg-flex"
+      id="footer"
+    >
+      <v-row class="white--text pr-4 copyright" align-self="center">
+        <v-col>
+          <router-link to="/People" class="pr-4 footer-link"
+            >People</router-link
+          >
+          <router-link to="/Funders" class="pr-4 footer-link"
+            >Funders</router-link
+          >
+          <router-link to="/Contact" class="pr-4 footer-link"
+            >Contact</router-link
+          >
+          <router-link to="/Permissions" class="pr-4 footer-link"
+            >Permissions</router-link
+          >
+          <router-link to="/Booklet" class="pr-4 footer-link"
+            >Booklet</router-link
+          >
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col cols="1" class="px-0 mx-0 text-right" justify-self="end"> &copy; {{ new Date().getFullYear() }} </v-col>
+        <v-col cols="2" class="pa-0 ma-0" align-self="center">
+          <a href="http://www.greenhousestudios.uconn.edu">
+            <v-img
+              :src="require('@/assets/Logos/GSLogoGreen.png')"
+              contain
+            ></v-img>
+          </a>
+        </v-col>
+      </v-row>
     </v-footer>
   </v-app>
 </template>
@@ -103,11 +144,11 @@ export default {
     sections: [
       {
         title: "Home",
-        slides: []
+        slides: [],
       },
       {
         title: "About",
-        slides: []
+        slides: [],
       },
       {
         title: "Introduction",
@@ -115,12 +156,12 @@ export default {
           "Introduction: “And the Migrants Kept Coming”",
           "African American Settlement",
           "Puerto Rican Settlement",
-          "West Indian Settlement"
-        ]
+          "West Indian Settlement",
+        ],
       },
       {
         title: "Maps",
-        slides: []
+        slides: [],
       },
       {
         title: "Settlement",
@@ -131,8 +172,8 @@ export default {
           "West Indian Settlement",
           "Puerto Rican Settlement",
           "Headlines",
-          "Juxtapose test"
-        ]
+          "Juxtapose test",
+        ],
       },
       {
         title: "Housing",
@@ -145,17 +186,17 @@ export default {
           "Home Ownership",
           "Slumlords Now, Slumlords Then",
           "Housing Code Violations",
-          "The No More Slumlords Campaign"
-        ]
+          "The No More Slumlords Campaign",
+        ],
       },
       {
         title: "Timeline",
-        slides: []
+        slides: [],
       },
       {
         title: "Profiles",
-        slides: ["Tenant Activists Profiles", "Historic Firsts"]
-      }
+        slides: ["Tenant Activists Profiles", "Historic Firsts"],
+      },
     ],
     menuItems: [
       { title: "Home", path: "/Home" },
@@ -165,7 +206,7 @@ export default {
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
       { title: "Timeline", path: "/Timeline" },
-      { title: "Profiles", path: "/Profiles" }
+      { title: "Profiles", path: "/Profiles" },
     ],
     options: {
       licenseKey: "5040F97D-84574F59-952CE4FC-EAD7E65C",
@@ -195,7 +236,10 @@ export default {
         "Maps",
         "Maps",
         "Maps",
-        "Maps","Maps","Maps","Maps",
+        "Maps",
+        "Maps",
+        "Maps",
+        "Maps",
         "Settlement",
         "Housing",
         "Timeline",
@@ -219,16 +263,16 @@ export default {
         "Profiles",
         "Profiles",
         "Profiles",
-        "Profiles"
+        "Profiles",
       ],
-      sectionsColor: ["#FFFFFF"]
-    }
+      sectionsColor: ["#EEE"],
+    },
   }),
   methods: {
-    moveDown: function() {
+    moveDown: function () {
       this.$refs.fullpage.api.moveSectionDown();
     },
-    navigateToSection: function(i) {
+    navigateToSection: function (i) {
       // console.log(i)
       if (i > 3) i += 14;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
@@ -237,7 +281,7 @@ export default {
           this.$refs.fullpage.api.moveTo(i + 1);
         });
     },
-    navigateToSlide: function(i, index) {
+    navigateToSlide: function (i, index) {
       if (i > 3) i += 14;
       if (this.$route.name == "Main") {
         this.$refs.fullpage.api.moveTo(i + 1, index);
@@ -246,14 +290,14 @@ export default {
           this.$refs.fullpage.api.moveTo(i + 1, index);
         });
     },
-    navigateToProfile: function(i){
-      this.$refs.fullpage.api.moveTo(23 + i)
+    navigateToProfile: function (i) {
+      this.$refs.fullpage.api.moveTo(23 + i);
     },
-    navigateToMap: function(i){
-      console.log(this.$refs.fullpage.api.getActiveSection())
-      this.$refs.fullpage.api.moveTo(3 + i)
-    }
-  }
+    navigateToMap: function (i) {
+      console.log(this.$refs.fullpage.api.getActiveSection());
+      this.$refs.fullpage.api.moveTo(3 + i);
+    },
+  },
 };
 </script>
 
@@ -261,9 +305,11 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 v-application {
   font-display: fallback;
-  font-family: "Gilroy Extrabold" !important, // first choice font
-                "Helvetica", // fallback font if gilroy is not downloaded yet
-                "sans-serif"; // last resort, bottom of the barrel
+  font-family: "Gilroy Extrabold" !important,
+    // first choice font
+    "Helvetica",
+    // fallback font if gilroy is not downloaded yet
+    "sans-serif"; // last resort, bottom of the barrel
   overflow-x: hidden !important;
 }
 v-app-bar {
@@ -445,15 +491,15 @@ body {
 #revealscale {
   opacity: 0;
   -webkit-transform: scale(0.9);
-			 -moz-transform: scale(0.9);
-				-ms-transform: scale(0.9);
-				 -o-transform: scale(0.9);
-						transform: scale(0.9);
-		-webkit-transition: all 1s ease-in-out;
-			 -moz-transition: all 1s ease-in-out;
-				-ms-transition: all 1s ease-in-out;
-				 -o-transition: all 1s ease-in-out;
-						transition: all 1s ease-in-out;
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 #revealscale.visible {
   opacity: 1;
@@ -466,15 +512,15 @@ body {
 #revealrise {
   opacity: 0;
   -webkit-transform: translateY(40px);
-			 -moz-transform: translateY(40px);
-				-ms-transform: translateY(40px);
-				 -o-transform: translateY(40px);
-						transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  -ms-transform: translateY(40px);
+  -o-transform: translateY(40px);
+  transform: translateY(40px);
   -webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 #revealrise.visible {
   opacity: 1;
@@ -487,15 +533,15 @@ body {
 #revealslide {
   opacity: 0;
   -webkit-transform: translateX(-60px);
-			 -moz-transform: translateX(-60px);
-				-ms-transform: translateX(-60px);
-				 -o-transform: translateX(-60px);
-						transform: translateX(-60px);
+  -moz-transform: translateX(-60px);
+  -ms-transform: translateX(-60px);
+  -o-transform: translateX(-60px);
+  transform: translateX(-60px);
   -webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 #revealslide.visible {
   opacity: 1;
@@ -508,15 +554,15 @@ body {
 #revealslide2 {
   opacity: 0;
   -webkit-transform: translateX(60px);
-			 -moz-transform: translateX(60px);
-				-ms-transform: translateX(60px);
-				 -o-transform: translateX(60px);
-						transform: translateX(60px);
+  -moz-transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  -o-transform: translateX(60px);
+  transform: translateX(60px);
   -webkit-transition: all 1s ease-in-out;
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 #revealslide2.visible {
   opacity: 1;
@@ -545,5 +591,8 @@ body {
 }
 .text-outline-bottomleft {
   @include text-outline-mixin(3px, -3px);
+}
+.copyright {
+  display: inline-flex;
 }
 </style>
