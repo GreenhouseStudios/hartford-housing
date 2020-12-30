@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       funders: [
+        {name: "GREENHOUSE STUDIOS", link: "http://www.greenhousestudios.uconn.edu"},
         {name: "AFRICANA STUDIES INSTITUTE (ASI)", link: "https://africana.uconn.edu/"},
         {name: "COLLEGE OF LIBERAL ARTS AND SCIENCES (CLAS), OFFICE OF THE DEAN",link: "https://clas.uconn.edu/"},
         {name: "EL INSTITUTO: INSTITUTE OF LATINA/O, CARIBBEAN, AND LATIN AMERICAN STUDIES (ELIN)",link: "https://elin.uconn.edu/"},

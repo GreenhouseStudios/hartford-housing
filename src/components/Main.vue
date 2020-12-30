@@ -103,7 +103,7 @@
       </b-carousel>
     </div> -->
 
-    <div class="section">
+    <!-- <div class="section">
       <v-carousel height="100vh">
         <v-carousel-item>
           <v-row class="fill-height">
@@ -124,6 +124,15 @@
           </v-row>
         </v-carousel-item>
       </v-carousel>
+    </div> -->
+
+    <div class="section">
+      <v-img
+        :src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')"
+      ></v-img>
+      <v-img
+        :src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')"
+      ></v-img>
     </div>
 
     <div class="section">
