@@ -119,11 +119,13 @@
         </v-col>
         <v-spacer></v-spacer>
         <v-col cols="1" class="px-0 mx-0 text-right" justify-self="end" align-self="center"> &copy; {{ new Date().getFullYear() }} </v-col>
-        <v-col cols="2" class="pa-0 ma-0" align-self="center">
+        <v-col cols="1" class="pa-0 ma-0" align-self="center">
           <a href="http://www.greenhousestudios.uconn.edu">
             <v-img
               :src="require('@/assets/Logos/GSLogoGreen.png')"
               contain
+              max-height="5rem" 
+              class="mx-0"
             ></v-img>
           </a>
         </v-col>
