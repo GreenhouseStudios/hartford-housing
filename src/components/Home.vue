@@ -91,7 +91,6 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
   margin: 0 auto;
   height: 100vh;
   width: 100vw;
