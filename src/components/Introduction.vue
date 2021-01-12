@@ -92,7 +92,12 @@ export default {
   background-image: url("~@/assets/HomeBGFixed.png");
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
+    background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
   margin: 0 auto;
 }
 </style>
