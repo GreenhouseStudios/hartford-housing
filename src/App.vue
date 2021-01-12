@@ -305,6 +305,13 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+html{
+  height: 100%;
+  min-height: 100%;
+}
+body{
+  min-height: 100%;
+}
 v-application {
   font-display: fallback;
   font-family: "Gilroy Extrabold" !important,
