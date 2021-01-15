@@ -89,7 +89,7 @@ export default {
 </script>
 <style>
 #intro-section {
-  background-image: url("~@/assets/HomeBGFixed.png");
+  background-image: url("~@/assets/HHPHomeBackground.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;

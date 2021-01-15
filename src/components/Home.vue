@@ -83,7 +83,7 @@ export default {
   margin: auto;
 }
 #home-section {
-  background-image: url("~@/assets/HomeBGFixed.png");
+  background-image: url("~@/assets/HHPHomeBackground.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
