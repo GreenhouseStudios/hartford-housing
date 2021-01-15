@@ -48,11 +48,11 @@
           max-height="85vh"
         ></v-img>
       </v-row>
-      <v-row justify="center">
+      <!-- <v-row justify="center">
         <Card heading="Milagros Ortiz">
           <a @click="navigateToProfile(0)">Milagros Ortiz</a>
         </Card>
-      </v-row>
+      </v-row> -->
     </div>
 
     <div class="section">
