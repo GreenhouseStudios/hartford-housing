@@ -6,7 +6,7 @@ import Contact from '@/components/Contact'
 import Funders from '@/components/Funders'
 import People from '@/components/People'
 import Permissions from '@/components/Permissions'
-import Booklet from '@/components/Booklet'
+import Methodology from '@/components/Methodology'
 Vue.use(
   VueRouter
 )
@@ -41,9 +41,9 @@ const router = new VueRouter({
       component: Permissions
     },
     {
-      path: '/Booklet',
-      name: 'Booklet',
-      component: Booklet
+      path: '/Methodology',
+      name: 'Methodology',
+      component: Methodology
     }
   ]
 })

@@ -12,6 +12,7 @@
 
 <script>
 export default {
+    name: "Methodology",
     methods: {
         download: function(item) {
             if(item)
