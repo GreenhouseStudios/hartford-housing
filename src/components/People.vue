@@ -27,7 +27,8 @@ export default {
         { name: "JAMES KOLB", link: "https://greenhousestudios.uconn.edu/person/james-kolb/"},
         { name: "STEPHANIE ORTS", link: "https://www.stephanieorts.com/"},
         { name: "TOM LEE", link: "https://greenhousestudios.uconn.edu/person/tom-lee/" },
-        { name: "MACKENZIE FOX", link: "https://greenhousestudios.uconn.edu/person/mackenzie-fox/"}
+        { name: "MACKENZIE FOX", link: "https://greenhousestudios.uconn.edu/person/mackenzie-fox/"},
+        { name: "CARLY WANNER-HYDE", link: "https://greenhousestudios.uconn.edu/person/carly-wanner-hyde/"}
       ]
     };
   }
