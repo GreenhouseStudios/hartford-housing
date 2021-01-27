@@ -1,15 +1,18 @@
 <template>
 <div id="slide-bg" v-bind:background-image="background">
   <v-responsive :max-width="cardMaxWidth" max-height="90vh">
-    <v-card flat tile v-bind:color="myColor" class="ma-5">
+    <v-card flat tile v-bind:color="myColor" class="ma-1">
       <!-- <div class="outline"> -->
       <v-card flat tile color="lightBlack" class="pa-5 innercard">
-        <v-card-title
-          class="d-none d-md-block white--text display-1 font-weight-bold break-fix"
-        >{{heading}}</v-card-title>
-        <v-card-title class="d-block d-md-none white--text font-weight-bold break-fix">{{heading}}</v-card-title>
-        <v-card-text class="white--text font-weight-bold mr-5">{{body}}</v-card-text>
+        <v-card-title class="d-none d-md-block white--text display-1 font-weight-bold break-fix pa-4">{{heading}}</v-card-title>
+        <v-card-title class="d-block d-md-none white--text font-weight-bold break-fix pa-1">{{heading}}</v-card-title>
+        
+        <v-card-text class="d-block d-sm-none white--text font-weight-bold pa-1"
+        style="font-size: 12px; line-height: 5vw;">{{body}}</v-card-text>
+        <!-- small one ^ and big one v -->
+        <v-card-text class="d-none d-sm-block white--text font-weight-bold pa-4">{{body}}</v-card-text>
         <!-- <v-img v-bind:src="image"></v-img> -->
+
         <slot></slot>
       </v-card>
       <!-- </div> -->
