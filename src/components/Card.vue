@@ -1,4 +1,5 @@
 <template>
+<div id="slide-bg" v-bind:background-image="background">
   <v-responsive :max-width="cardMaxWidth" max-height="90vh">
     <v-card flat tile v-bind:color="myColor" class="ma-5">
       <!-- <div class="outline"> -->
@@ -6,7 +7,7 @@
         <v-card-title
           class="d-none d-md-block white--text display-1 font-weight-bold break-fix"
         >{{heading}}</v-card-title>
-        <v-card-title class="d-md-none white--text font-weight-bold break-fix">{{heading}}</v-card-title>
+        <v-card-title class="d-block d-md-none white--text font-weight-bold break-fix">{{heading}}</v-card-title>
         <v-card-text class="white--text font-weight-bold mr-5">{{body}}</v-card-text>
         <!-- <v-img v-bind:src="image"></v-img> -->
         <slot></slot>
@@ -14,6 +15,7 @@
       <!-- </div> -->
     </v-card>
   </v-responsive>
+</div>
 </template>
 
 
@@ -26,7 +28,7 @@ export default {
       myColor: null
     };
   },
-  props: ["heading", "body", "bgColor", "image"],
+  props: ["heading", "body", "bgColor", "image", "background"],
   created() {
     var randomIndex = Math.floor(Math.random() * this.cardColors.length);
     this.myColor = this.cardColors[randomIndex];
@@ -35,11 +37,11 @@ export default {
     cardMaxWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return "90vw";
+          return "99vw";
         case "sm":
-          return "60vw";
+          return "75vw";
         case "md":
-          return "35vw";
+          return "50vw";
         case "lg":
           return "35vw";
         case "xl":
@@ -50,11 +52,11 @@ export default {
     cardFontSize() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return "90vw";
+          return "50vw";
         case "sm":
-          return "60vw";
+          return "75vw";
         case "md":
-          return "34vw";
+          return "50vw";
         case "lg":
           return "25vw";
         case "xl":
@@ -100,5 +102,9 @@ v-card-text {
 }
 v-card-text {
   font-size: 16pt;
+}
+#slide-bg {
+  width: 100%;
+  height: 100%;
 }
 </style>

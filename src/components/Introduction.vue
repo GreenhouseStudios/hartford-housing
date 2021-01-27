@@ -3,16 +3,17 @@
     <v-container fluid fill-height>
       <v-row justify="center"
         ><h1
-          class="d-none d-lg-block section-header display-3 font-weight-bold"
+          class="d-none d-md-block display-3 font-weight-bold highlight-teal"
+          id="intro-title"
         >
           Introduction
         </h1>
-        <h1 class="d-lg-none section-header display-1 font-weight-bold">
+        <h1 class="d-block d-md-none display-1 font-weight-bold highlight-teal" id="intro-title">
           Introduction
         </h1></v-row
       >
       <v-row align="center">
-        <v-col cols="1"></v-col>
+        <!-- <v-col cols="1"></v-col> -->
         <v-col align-self="center">
           <div id="trigger3"></div>
           <div
@@ -49,7 +50,7 @@ export default {
           heading: "“And the Migrants Kept Coming”",
           body:
             "Jacob Lawrence concluded his magisterial 60-panel mosaic, The Migration Series, with a defiant and hopeful scene of African American men, women, and children on a railway platform. Bound for destinations like Harlem, San Francisco, Philadelphia, Chicago, and Hartford, migrants voted with their feet to pursue a better life.  “And the migrants kept coming,” panel 60, was the 1941 coda to Lawrence’s profound visual statement about the Great Migration of African Americans from the South. Yet panel 60 can conjure any epoch in American history. Lawrence’s visual panorama resonates with the generation of West Indians and Puerto Ricans who would undertake their own journeys—both epic and mundane—to find employment and make a new home in American cities. Hartford was one terminus for several generations of these migrants.",
-          img: "~@/assets/Lawrence/MOMA_PANEL60_900.jpg",
+          image: "~@/assets/Lawrence/MOMA_PANEL60_900.jpg",
         },
         {
           heading: "African American Settlement",
@@ -98,5 +99,8 @@ export default {
   -o-background-size: cover;
   background-size: cover;
   margin: 0 auto;
+}
+#intro-title {
+  color: white;
 }
 </style>

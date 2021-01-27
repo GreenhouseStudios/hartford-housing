@@ -39,7 +39,7 @@ civilian population that had contributed to the war effort. The war-time and pos
 war housing crisis led to policy interventions focused on slum clearance and the
 
 construction of public housing. The New England area needed 400,00 new homes
-with Connecticut facing a shortage of 80,000 new housing units.`
+with Connecticut facing a shortage of 80,000 new housing units.`,
         },
         { // lorem ipsum
           heading:"Public Housing",
@@ -136,10 +136,7 @@ begun. Overhauling Hartford’s outdated, ineffectual municipal housing code was
 movement; navigating the challenge of relocating to another unit proved to be another. Some families,
 like Milagros Ortiz’s, have had to move more than once, while others have left the state because of the
 limited resettlement options. Housing conditions have proven no better in some instances and many
-tenants have expressed distress about how dispersal has atomized the sense of community. Limited
-financial help, unrealistic deadlines, and feckless relocation specialist have wrought further emotional
-and financial havoc on tenants who have had to attend to their families’ needs while propelling a major
-social movement forward.`
+tenants have expressed distress about how dispersal has atomized the sense of community.`
         }
       ]
     };

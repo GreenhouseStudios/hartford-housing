@@ -387,6 +387,9 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 </script>
 
 <style scoped>
+.section {
+  overflow: hidden;
+}
 .profile-map {
   position: relative;
   top: -100px;

@@ -221,7 +221,7 @@ export default {
       autoScrolling: false, //this breaks app bar hiding
       slidesNavigation: true,
       slidesNavPosition: "bottom",
-      controlArrows: false,
+      controlArrows: true,
       verticalCentered: true,
       parallax: true,
       // anchors: [
