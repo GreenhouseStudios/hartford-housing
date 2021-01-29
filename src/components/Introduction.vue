@@ -1,6 +1,6 @@
 <template>
   <div class="section" id="intro-section">
-    <v-container fluid fill-height>
+    <v-container fluid fill-height pa-0>
       <v-row justify="center"
         ><h1
           class="d-none d-md-block display-3 font-weight-bold highlight-teal"

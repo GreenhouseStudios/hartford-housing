@@ -1,11 +1,13 @@
 <template>
 <div id="slide-bg" v-bind:background-image="background">
   <v-responsive :max-width="cardMaxWidth" max-height="90vh">
-    <v-card flat tile v-bind:color="myColor" class="ma-1">
+    <v-card flat tile v-bind:color="myColor" class="ma-4"
+    style="margin-top: 0 !important;">
       <!-- <div class="outline"> -->
-      <v-card flat tile color="lightBlack" class="pa-5 innercard">
+      <v-card flat tile color="lightBlack pa-3" class="innercard">
         <v-card-title class="d-none d-md-block white--text display-1 font-weight-bold break-fix pa-4">{{heading}}</v-card-title>
-        <v-card-title class="d-block d-md-none white--text font-weight-bold break-fix pa-1">{{heading}}</v-card-title>
+        <v-card-title class="d-block d-md-none white--text font-weight-bold break-fix pa-1"
+        style="font-size: 18px; line-height: 6vw;">{{heading}}</v-card-title>
         
         <v-card-text class="d-block d-sm-none white--text font-weight-bold pa-1"
         style="font-size: 12px; line-height: 5vw;">{{body}}</v-card-text>
@@ -40,7 +42,7 @@ export default {
     cardMaxWidth() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return "99vw";
+          return "98vw";
         case "sm":
           return "75vw";
         case "md":
@@ -91,6 +93,7 @@ v-card-text {
   top: 2vh;
   left: 2vw;
   overflow: visible;
+  padding: 5%;
 }
 .outline {
   outline-style: solid;

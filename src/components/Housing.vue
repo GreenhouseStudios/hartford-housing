@@ -88,8 +88,7 @@ housing market. Using the language of risk management, the FHA supported the cla
 neighborhoods according to their demographic profile. The process known as redlining coded
 maps according to the desirability and viability of loans in particular communities. Many of
 Hartford’s ethnic and racial minorities lived in neighborhood branded Grades C or D, the two
-lowest categories, making them ineligible for federally-backed loans. Even veterans in these
-neighborhoods faced difficulties accessing these loans.`
+lowest categories, making them ineligible for federally-backed loans.`
         },
         {
           // lorem ipsum
