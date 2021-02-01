@@ -72,8 +72,8 @@
             >
           </v-list-item>
           <v-list-item>
-            <router-link to="/Booklet" class="pr-4 footer-link centertext"
-              >Booklet</router-link
+            <router-link to="/Methodology" class="pr-4 footer-link centertext"
+              >Methodology</router-link
             >
           </v-list-item>
         </v-list>
@@ -113,8 +113,8 @@
           <router-link to="/Permissions" class="pr-4 footer-link"
             >Permissions</router-link
           >
-          <router-link to="/Booklet" class="pr-4 footer-link"
-            >Booklet</router-link
+          <router-link to="/Methodology" class="pr-4 footer-link"
+            >Methodology</router-link
           >
         </v-col>
         <v-spacer></v-spacer>
