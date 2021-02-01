@@ -31,7 +31,7 @@
         Map Booklet
       </h1>
       <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum. Sapien eget mi proin sed. Facilisi cras fermentum odio eu feugiat pretium nibh. Mauris rhoncus aenean vel elit scelerisque. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Sem viverra aliquet eget sit amet tellus. Lorem mollis aliquam ut porttitor leo a. Enim eu turpis egestas pretium. Pretium nibh ipsum consequat nisl vel pretium lectus. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Feugiat in fermentum posuere urna. Gravida rutrum quisque non tellus orci ac auctor augue. Et malesuada fames ac turpis egestas integer. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla.</p>
-      <b color="teal"><a :href="download(require('../assets/Maps/ethnicracialdist_1940.png'))">Download Booklet</a></b>
+      <v-btn color="teal" class="my-10"><a :href="download(require('../assets/Maps/ethnicracialdist_1940.png'))">Download Booklet</a></v-btn>
     </v-container>
   </div>
 </template>

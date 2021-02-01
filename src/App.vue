@@ -53,14 +53,14 @@
           <v-divider></v-divider>
           <v-list-item>
             <router-link to="/People" class="pr-4 footer-link centertext"
-              >People</router-link
+              >Credits</router-link
             >
           </v-list-item>
-          <v-list-item>
+          <!-- <v-list-item>
             <router-link to="/Funders" class="pr-4 footer-link centertext"
               >Funders</router-link
             >
-          </v-list-item>
+          </v-list-item> -->
           <v-list-item>
             <router-link to="/Contact" class="pr-4 footer-link centertext"
               >Contact</router-link
@@ -102,11 +102,11 @@
       <v-row class="white--text pr-4 copyright" align-self="center">
         <v-col>
           <router-link to="/People" class="pr-4 footer-link"
-            >People</router-link
+            >Credits</router-link
           >
-          <router-link to="/Funders" class="pr-4 footer-link"
+          <!-- <router-link to="/Funders" class="pr-4 footer-link"
             >Funders</router-link
-          >
+          > -->
           <router-link to="/Contact" class="pr-4 footer-link"
             >Contact</router-link
           >

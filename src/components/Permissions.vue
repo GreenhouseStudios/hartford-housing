@@ -1,11 +1,16 @@
 <template>
   <div>
-    <h1 class="display-3 pa-5">Permissions</h1>
     <v-container>
-      <v-row>
-        <h1 class="dispay-3">Rights and Permissions:</h1>
-        <p>All items on the Hartford Bound website are used with the permission of their original sources and repositories; rights and permissions to use and distribute those items are held with the original copyright owners, unless otherwise specified.</p>
-      </v-row>
+      <h1 class="section-header display-2 font-weight-bold mt-10">
+        Permissions
+      </h1>
+      <h1 class="display-1 font-weight-bold">
+        Reusing maps
+      </h1>
+      <p class="my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam etiam erat velit scelerisque in dictum. Sapien eget mi proin sed. Facilisi cras fermentum odio eu feugiat pretium nibh. Mauris rhoncus aenean vel elit scelerisque. Nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc. Sem viverra aliquet eget sit amet tellus. Lorem mollis aliquam ut porttitor leo a. Enim eu turpis egestas pretium. Pretium nibh ipsum consequat nisl vel pretium lectus. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Feugiat in fermentum posuere urna. Gravida rutrum quisque non tellus orci ac auctor augue. Et malesuada fames ac turpis egestas integer. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla.</p>
+      <v-img src="https://via.placeholder.com/300" class="mx-auto" max-width="300"></v-img>
+      <p class="my-5">Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Feugiat nisl pretium fusce id velit ut. Libero id faucibus nisl tincidunt eget nullam non nisi est. Diam volutpat commodo sed egestas egestas. Mi proin sed libero enim sed. Gravida dictum fusce ut placerat orci nulla pellentesque. Donec enim diam vulputate ut pharetra sit amet. Duis convallis convallis tellus id. Massa tincidunt nunc pulvinar sapien. Aliquam eleifend mi in nulla posuere sollicitudin aliquam. Orci dapibus ultrices in iaculis nunc sed augue lacus. Adipiscing bibendum est ultricies integer quis auctor elit sed. Urna neque viverra justo nec ultrices dui sapien eget. Et malesuada fames ac turpis egestas maecenas.</p>
+
     </v-container>
   </div>
 </template>
