@@ -1,54 +1,46 @@
 <template>
   <div id="slide-bg" v-bind:background-image="background">
     <v-responsive :max-width="cardMaxWidth" max-height="90vh">
-      <v-card
-        flat
-        tile
-        v-bind:color="myColor"
-        class="ma-4"
-        style="margin-top: 0 !important"
+      <!-- <div class="outline"> -->
+      <v-card flat tile color="lightBlack" class="d-none d-md-block pa-3 mx-10">
+        <v-card-title
+          class="d-none d-md-block white--text display-1 font-weight-bold break-fix pa-4"
+          >{{ heading }}</v-card-title
+        >
+        <v-card-text
+          class="d-none d-sm-block white--text font-weight-bold pa-4"
+          >{{ body }}</v-card-text
+        >
+      </v-card>
+      <v-btn class="d-block d-md-none" @click="overlay = !overlay" icon
+        ><v-icon>mdi-information</v-icon></v-btn
       >
-        <!-- <div class="outline"> -->
-        <v-card flat tile color="lightBlack pa-3" class="innercard">
-          <v-card-title
-            class="d-none d-md-block white--text display-1 font-weight-bold break-fix pa-4"
-            >{{ heading }}</v-card-title
-          >
+      <v-overlay :value="overlay" opacity="0.95" class="pa-3">
+        <v-card @click="overlay = !overlay">
           <v-card-title
             class="d-block d-md-none white--text font-weight-bold break-fix pa-1"
             style="font-size: 18px; line-height: 6vw"
             >{{ heading }}</v-card-title
           >
-
           <v-card-text
             class="d-block d-sm-none white--text font-weight-bold pa-1"
             style="font-size: 12px; line-height: 5vw"
             >{{ body }}</v-card-text
           >
-          <!-- small one ^ and big one v -->
-          <v-card-text
-            class="d-none d-sm-block white--text font-weight-bold pa-4"
-            >{{ body }}</v-card-text
-          >
-          <!-- <v-img v-bind:src="image"></v-img> -->
-
-          <slot></slot>
         </v-card>
-        <!-- </div> -->
-      </v-card>
+      </v-overlay>
     </v-responsive>
   </div>
 </template>
 
 
 <script>
-import {loremIpsum} from "lorem-ipsum"
+import { loremIpsum } from "lorem-ipsum";
 export default {
-  name: "Card",
+  name: "Caption",
   data() {
     return {
-      cardColors: ["green", "teal", "blue"],
-      myColor: null,
+      overlay: false,
     };
   },
   props: {
@@ -58,7 +50,7 @@ export default {
     },
     body: {
       type: String,
-      default: loremIpsum({count: 20})
+      default: loremIpsum({ count: 20 }),
     },
     image: {
       type: String,
@@ -68,10 +60,6 @@ export default {
       type: String,
       default: null,
     },
-  },
-  created() {
-    var randomIndex = Math.floor(Math.random() * this.cardColors.length);
-    this.myColor = this.cardColors[randomIndex];
   },
   computed: {
     cardMaxWidth() {

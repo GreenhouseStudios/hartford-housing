@@ -16,6 +16,7 @@
     "leaflet": "^1.6.0",
     "leaflet-gesture-handling": "^1.1.8",
     "leaflet-imageoverlay-rotated": "^0.2.1",
+    "lorem-ipsum": "^2.0.3",
     "scrollmagic": "^2.0.7",
     "svg-pan-zoom": "^3.6.1",
     "vue": "^2.6.11",

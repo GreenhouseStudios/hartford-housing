@@ -19,7 +19,9 @@
         City Boundaries Through Time
       </h1>
       <v-row>
-        <v-col md="3" class="pa-0"> </v-col>
+        <v-col md="3" class="pa-0 my-auto"> 
+          <Caption heading="Caption Example"></Caption>
+        </v-col>
         <v-col md="6" class="pa-0">
           <v-img
             :src="require('../assets/Maps/Final/Layout7.png')"
@@ -291,6 +293,7 @@ import Housing from "@/components/Housing";
 import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
+import Caption from "@/components/Caption";
 import ReadMoreCard from "@/components/ReadMoreCard";
 import svgPanZoom from "svg-pan-zoom";
 export default {
@@ -307,6 +310,7 @@ export default {
     Timeline,
     Card,
     ReadMoreCard,
+    Caption
   },
   methods: {
     handleProfileMapClick(index) {
