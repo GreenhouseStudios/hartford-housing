@@ -5,21 +5,30 @@
     <Introduction></Introduction>
     <!-- <Maps></Maps> -->
     <!-- Map section header -->
-    <v-row justify="center" class="mb-10 mt-5">
-      <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
+    <v-row
+      justify="center"
+      class="map-section-header mb-10 mt-5 py-5 text-outline-offset"
+    >
+      <h1
+        class="d-none d-md-block map-section-header section-header display-2 font-weight-bold text-outline-offset"
+      >
         Maps
       </h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
     <div class="section">
-      <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
-        City Boundaries Through Time
-      </h1>
-      <h1 class="d-md-none section-header h3 font-weight-bold">
-        City Boundaries Through Time
-      </h1>
+      <v-row align="center">
+        <div class="highlight-teal mx-auto">
+          <h1 class="d-none d-md-block display-1 font-weight-bold">
+            City Boundaries Through Time
+          </h1>
+          <h1 class="d-md-none h3 font-weight-bold">
+            City Boundaries Through Time
+          </h1>
+        </div>
+      </v-row>
       <v-row>
-        <v-col md="3" class="pa-0 my-auto"> 
+        <v-col md="3" class="pa-0 my-auto">
           <Caption heading="Caption Example"></Caption>
         </v-col>
         <v-col md="6" class="pa-0">
@@ -310,7 +319,7 @@ export default {
     Timeline,
     Card,
     ReadMoreCard,
-    Caption
+    Caption,
   },
   methods: {
     handleProfileMapClick(index) {
@@ -450,5 +459,8 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 .carousel-control-prev-icon {
   color: black;
   background: cadetblue;
+}
+.map-section-header {
+  background-color: #519ec8;
 }
 </style>

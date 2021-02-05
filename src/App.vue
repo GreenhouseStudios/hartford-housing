@@ -431,9 +431,9 @@ body {
   @extend .highlight;
   background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
 }
-.highlight-teal {
+.highlight-blue {
   @extend .highlight;
-  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #519ec8 30%);
 }
 .highlight-green {
   @extend .highlight;
