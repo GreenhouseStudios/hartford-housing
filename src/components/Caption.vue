@@ -11,6 +11,7 @@
           class="d-none d-sm-block white--text font-weight-bold pa-4"
           >{{ body }}</v-card-text
         >
+        <v-card-actions> <v-btn tile @click="$root.$children[0].navigateToSources()">Sources</v-btn></v-card-actions>
       </v-card>
       <v-overlay :value="overlay" opacity="0.95" class="pa-3">
         <v-card @click="overlay = !overlay">

@@ -283,6 +283,9 @@ export default {
           this.$refs.fullpage.api.moveTo(i + 1);
         });
     },
+    navigateToSources: function(){
+          this.$refs.fullpage.api.moveTo(43);
+    },
     navigateToSlide: function (i, index) {
       if (i > 3) i += 14;
       if (this.$route.name == "Main") {

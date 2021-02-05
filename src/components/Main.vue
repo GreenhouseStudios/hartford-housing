@@ -279,7 +279,21 @@
         </v-row>
       </v-container>
     </div>
-    <v-dialog v-model="dialog">
+   
+    <div class="section">
+      <h2 class="section-header display-1 font-weight-bold">Sources</h2>
+      <v-simple-table class="mx-10">
+        <template v-slot:default>
+          <tbody>
+            <tr v-for="n in (sources.length)">
+              <td>{{n}}.{{ sources[n] }}</td>
+              <td><a class="inline-link" @click="$root.$children[0].navigateToSection(3)">Map</a></td>
+            </tr>
+          </tbody>
+        </template>
+      </v-simple-table>
+    </div>
+     <v-dialog v-model="dialog">
       <v-card v-if="activeProfile">
         <v-card-title class="headline grey lighten-2" primary-title
           >{{ activeProfile.name }}'s Hartford</v-card-title
@@ -305,6 +319,7 @@ import Card from "@/components/Card";
 import Caption from "@/components/Caption";
 import ReadMoreCard from "@/components/ReadMoreCard";
 import svgPanZoom from "svg-pan-zoom";
+import { loremIpsum } from "lorem-ipsum";
 export default {
   name: "Main",
   components: {
@@ -344,6 +359,7 @@ export default {
       activeProfile: null,
       dialog: false,
       slides: ["Tenant Activists Profiles", "Historic Firsts"],
+      sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
       placeholderProfile: {
         name: 'Ashley "AJ" Johnson',
         img: require("../assets/AJJohnson/PastorAJJohnson.jpg"),
