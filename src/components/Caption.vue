@@ -12,9 +12,6 @@
           >{{ body }}</v-card-text
         >
       </v-card>
-      <v-btn class="d-block d-md-none" @click="overlay = !overlay" icon
-        ><v-icon>mdi-information</v-icon></v-btn
-      >
       <v-overlay :value="overlay" opacity="0.95" class="pa-3">
         <v-card @click="overlay = !overlay">
           <v-card-title
@@ -29,6 +26,8 @@
           >
         </v-card>
       </v-overlay>
+       <v-btn class="d-block d-md-none ml-5" @click="overlay = !overlay" icon
+        ><v-icon>mdi-information</v-icon></v-btn>
     </v-responsive>
   </div>
 </template>
