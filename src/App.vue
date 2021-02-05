@@ -337,6 +337,11 @@ v-footer a {
 .footer-link {
   text-decoration: none;
 }
+.inline-link{
+  font-weight: bold;
+  color: #72b591;
+  text-decoration: none;
+}
 h3 {
   margin: 0 auto;
   top: 100px;

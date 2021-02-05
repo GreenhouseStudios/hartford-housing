@@ -27,7 +27,8 @@
         </v-card>
       </v-overlay>
        <v-btn class="d-block d-md-none ml-5" @click="overlay = !overlay" icon
-        ><v-icon>mdi-information</v-icon></v-btn>
+        ><v-icon>mdi-information</v-icon></v-btn
+      >
     </v-responsive>
   </div>
 </template>

@@ -8,7 +8,10 @@
             v-bind:heading="heading"
             v-bind:body="body"
             id="revealrise"
-          ></Card>
+          >
+          <a class="inline-link" @click="navigateToSection">City Boundaries</a>
+          </Card>
+          
       </v-row>
     </v-container>
   </div>
@@ -41,6 +44,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    navigateToSection() {
+      this.$root.$children[0].navigateToSection(3);
+    }
   },
   filters: {
     capitalize: function (value) {
