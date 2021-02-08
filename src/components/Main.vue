@@ -66,7 +66,7 @@
     <div class="section">
       <v-row>
         <v-img
-          :src="require('../assets/Maps/ethnicracialdist_1940.png')"
+          :src="require('../assets/Maps/ethnicracialdist_1940.png?nf_resize=fit&w=300&h=400')"
           contain
           max-height="85vh"
         ></v-img>
