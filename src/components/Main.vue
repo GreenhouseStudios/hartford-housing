@@ -33,21 +33,15 @@
         </v-col>
         <v-col md="6" class="pa-0">
           <v-hover v-slot="{ hover }">
+            <v-card elevation="0">
             <v-img
               :src="require('../assets/Maps/Final/Layout7.png')"
               contain
               max-height="85vh"
             >
-              <v-expand-transition>
-                <v-row >
-                  <v-card align="center" class="pa-2" max-width="50%" tile  transition="v-slide-y-transition" color="lightBlack" v-if="hover">
-                    <v-card-text class="white--text caption">Source: {{
-                      sourcePlaceholder
-                    }}</v-card-text>
-                  </v-card>
-                </v-row>
-              </v-expand-transition>
             </v-img>
+            <v-card-text v-show="hover" class="white--text" style="position: absolute; background-color: #414240">Source: {{sourcePlaceholder}}</v-card-text>
+            </v-card>
           </v-hover>
         </v-col>
 
