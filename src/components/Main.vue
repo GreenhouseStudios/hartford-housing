@@ -17,8 +17,8 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
 
-<div class="section">
-  <b-carousel
+    <div class="section">
+      <b-carousel
         id="citytowncar"
         style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
         fade
@@ -28,35 +28,27 @@
         img-height="480"
       >
         <b-carousel-slide
-          caption="1635"
           :img-src="require('../assets/Maps/Final/CityTown/1635.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1784"
           :img-src="require('../assets/Maps/Final/CityTown/1784.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1853"
           :img-src="require('../assets/Maps/Final/CityTown/1853.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1859"
           :img-src="require('../assets/Maps/Final/CityTown/1859.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1871"
           :img-src="require('../assets/Maps/Final/CityTown/1871.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1873"
           :img-src="require('../assets/Maps/Final/CityTown/1873.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1881"
           :img-src="require('../assets/Maps/Final/CityTown/1881_FIX2.jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1897"
           :img-src="require('../assets/Maps/Final/CityTown/1897_FIX2.jpg')"
         ></b-carousel-slide>
       </b-carousel>
@@ -77,7 +69,7 @@
     </div>
 
     <div class="section">
-        <b-carousel
+      <b-carousel
         id="citytowncar"
         style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
         fade
@@ -115,13 +107,18 @@
         <v-col md="6" class="pa-0">
           <v-hover v-slot="{ hover }">
             <v-card elevation="0">
-            <v-img
-              :src="require('../assets/Maps/Final/Layout7.png')"
-              contain
-              max-height="85vh"
-            >
-            </v-img>
-            <v-card-text v-show="hover" class="white--text" style="position: absolute; background-color: #414240">Source: {{sourcePlaceholder}}</v-card-text>
+              <v-img
+                :src="require('../assets/Maps/Final/Layout7.png')"
+                contain
+                max-height="85vh"
+              >
+              </v-img>
+              <v-card-text
+                v-show="hover"
+                class="white--text"
+                style="position: absolute; background-color: #414240"
+                >Source: {{ sourcePlaceholder }}</v-card-text
+              >
             </v-card>
           </v-hover>
         </v-col>
@@ -559,48 +556,48 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
   background-color: #519ec8;
 }
 .carousel-inner {
-    .item {
-      opacity: 0;
-      -webkit-transition-property: opacity;
-      transition-property: opacity;
-    }
-
-    .active {
-      opacity: 1;
-    }
-
-    .active.left,
-    .active.right {
-      left: 0;
-      opacity: 0;
-      z-index: 1;
-    }
-
-    .next.left,
-    .prev.right {
-      opacity: 1;
-    }
+  .item {
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
   }
 
-  .carousel-control {
-    z-index: 2;
+  .active {
+    opacity: 1;
   }
+
+  .active.left,
+  .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .next.left,
+  .prev.right {
+    opacity: 1;
+  }
+}
+
+.carousel-control {
+  z-index: 2;
+}
 @media all and (transform-3d), (-webkit-transform-3d) {
-    .carousel-inner > .item.next,
-    .carousel-inner > .item.active.right {
-      -webkit-transform: translate3d( 0, 0, 0);
-      transform: translate3d( 0, 0, 0);
-    }
-    .carousel-inner > .item.prev,
-    .carousel-inner > .item.active.left {
-      -webkit-transform: translate3d( 0, 0, 0);
-      transform: translate3d( 0, 0, 0);
-    }
-    .carousel-inner > .item.next.left,
-    .carousel-inner > .item.prev.right,
-    .carousel-inner > .item.active {
-       -webkit-transform: translate3d(0, 0, 0);
-       transform: translate3d(0, 0, 0);
-    }
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-inner > .item.next.left,
+  .carousel-inner > .item.prev.right,
+  .carousel-inner > .item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 </style>
