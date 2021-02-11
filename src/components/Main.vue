@@ -80,11 +80,11 @@
       >
         <b-carousel-slide
           caption="1900"
-          :img-src="require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg')"
+          :img-src="require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
           caption="1940"
-          :img-src="require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg')"
+          :img-src="require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
       </b-carousel>
     </div>
