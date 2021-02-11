@@ -7,7 +7,7 @@
     <!-- Map section header -->
     <v-row
       justify="center"
-      class="map-section-header mb-10 mt-5 py-5 text-outline-offset"
+      class="map-section-header mt-5 py-5 text-outline-offset"
     >
       <h1
         class="d-none d-md-block map-section-header section-header display-2 font-weight-bold text-outline-offset"
@@ -16,6 +16,87 @@
       </h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
+
+<div class="section">
+  <b-carousel
+        id="citytowncar"
+        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
+        fade
+        interval="2500"
+        controls
+        img-width="1024"
+        img-height="480"
+      >
+        <b-carousel-slide
+          caption="1635"
+          :img-src="require('../assets/Maps/Final/CityTown/1635.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1784"
+          :img-src="require('../assets/Maps/Final/CityTown/1784.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1853"
+          :img-src="require('../assets/Maps/Final/CityTown/1853.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1859"
+          :img-src="require('../assets/Maps/Final/CityTown/1859.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1871"
+          :img-src="require('../assets/Maps/Final/CityTown/1871.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1873"
+          :img-src="require('../assets/Maps/Final/CityTown/1873.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1881"
+          :img-src="require('../assets/Maps/Final/CityTown/1881_FIX2.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1897"
+          :img-src="require('../assets/Maps/Final/CityTown/1897_FIX2.jpg')"
+        ></b-carousel-slide>
+      </b-carousel>
+      <!-- <v-row>
+        <v-col class="pa-0">
+          <v-hover v-slot="{ hover }">
+            <v-card elevation="0">
+            <v-img
+              :src="require('../assets/Maps/Final/CityTown/1635.jpg')"
+              contain
+            >
+            </v-img>
+            <v-card-text v-show="hover" class="white--text" style="position: absolute; background-color: #414240">Source: {{sourcePlaceholder}}</v-card-text>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row> -->
+    </div>
+
+    <div class="section">
+        <b-carousel
+        id="citytowncar"
+        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
+        fade
+        interval="2500"
+        controls
+        img-width="860"
+        img-height="480"
+      >
+        <b-carousel-slide
+          caption="1900"
+          :img-src="require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg')"
+        ></b-carousel-slide>
+        <b-carousel-slide
+          caption="1940"
+          :img-src="require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg')"
+        ></b-carousel-slide>
+      </b-carousel>
+    </div>
+
     <div class="section">
       <v-row align="center">
         <div class="highlight-teal mx-auto">
@@ -55,21 +136,6 @@
           </v-row>
         </v-col>
       </v-row>
-    </div>
-
-    <div class="section">
-      <v-row>
-        <v-img
-          :src="require('../assets/Maps/ethnicracialdist_1940.png?nf_resize=fit&w=300&h=400')"
-          contain
-          max-height="85vh"
-        ></v-img>
-      </v-row>
-      <!-- <v-row justify="center">
-        <Card heading="Milagros Ortiz">
-          <a @click="navigateToProfile(0)">Milagros Ortiz</a>
-        </Card>
-      </v-row> -->
     </div>
 
     <div class="section">
@@ -491,5 +557,50 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 }
 .map-section-header {
   background-color: #519ec8;
+}
+.carousel-inner {
+    .item {
+      opacity: 0;
+      -webkit-transition-property: opacity;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-inner > .item.next,
+    .carousel-inner > .item.active.right {
+      -webkit-transform: translate3d( 0, 0, 0);
+      transform: translate3d( 0, 0, 0);
+    }
+    .carousel-inner > .item.prev,
+    .carousel-inner > .item.active.left {
+      -webkit-transform: translate3d( 0, 0, 0);
+      transform: translate3d( 0, 0, 0);
+    }
+    .carousel-inner > .item.next.left,
+    .carousel-inner > .item.prev.right,
+    .carousel-inner > .item.active {
+       -webkit-transform: translate3d(0, 0, 0);
+       transform: translate3d(0, 0, 0);
+    }
 }
 </style>
