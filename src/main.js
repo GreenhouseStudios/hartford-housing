@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueFullPage from 'vue-fullpage.js'
+import VueYouTubeEmbed from 'vue-youtube-embed'
 import vuetify from './plugins/vuetify';
 import router from './router'
 import VueScrollmagic from 'vue-scrollmagic'
@@ -11,6 +12,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 Vue.use(VueFullPage);
+Vue.use(VueYouTubeEmbed)
 Vue.use(VueScrollmagic)
 Vue.use(BootstrapVue)
 

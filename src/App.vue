@@ -9,21 +9,21 @@
       <!-- Desktop nav -->
       <v-toolbar-items class="d-none d-lg-block">
         <v-menu
-          v-for="(section, i) in sections"
+          v-for="(section, sectionNum) in sections"
           :open-on-hover="true"
           :offset-y="true"
           :key="section.title"
         >
           <template v-slot:activator="{ on }">
-            <v-btn text @click="navigateToSection(i)" dark v-on="on">{{
+            <v-btn text @click="navigateToSection(sectionNum)" dark v-on="on">{{
               section.title
             }}</v-btn>
           </template>
-          <v-list v-if="sections[i].slides.length">
+          <v-list v-if="sections[sectionNum].slides.length">
             <v-list-item
-              v-for="(item, index) in section.slides"
-              @click="navigateToSlide(i, index)"
-              :key="index"
+              v-for="(item, subSectionNum) in section.slides"
+              @click="menuNavigate(sectionNum, subSectionNum)"
+              :key="subSectionNum"
             >
               <v-list-item-title>{{ item }}</v-list-item-title>
             </v-list-item>
@@ -163,7 +163,7 @@ export default {
       },
       {
         title: "Maps",
-        slides: [],
+        slides: ["Hartford Through Time", "Routes and Roots", "Mobilities", "Neighborhood Clusters", "Housing"],
       },
       {
         title: "Settlement",
@@ -224,50 +224,9 @@ export default {
       controlArrows: false,
       verticalCentered: true,
       parallax: true,
-      // anchors: [
-      //   "Home",
-      //   "About",
-      //   "Introduction",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Maps",
-      //   "Settlement",
-      //   "Housing",
-      //   "Timeline",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      //   "Profiles",
-      // ],
       sectionsColor: ["#EEE"],
+      anchors: ["Home", "About", "Introduction","Maps/HartfordThroughTime","Settlement","Housing","Timeline","Profiles"],
+      // lockAnchors: true,
     },
   }),
   methods: {
@@ -302,6 +261,14 @@ export default {
       console.log(this.$refs.fullpage.api.getActiveSection());
       this.$refs.fullpage.api.moveTo(3 + i);
     },
+    navigateToMapSection: function(section){
+      //find the map section by id
+      this.$refs.fullpage.api.moveTo(3 + i);
+    },
+    menuNavigate: function (section,subsection){
+      if(section === 4) this.navigateToMapSection(subsection);
+      else this.navigateToSlide(section,subsection);
+    }
   },
 };
 </script>

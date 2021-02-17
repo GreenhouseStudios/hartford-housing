@@ -44,6 +44,11 @@ const router = new VueRouter({
       path: '/Methodology',
       name: 'Methodology',
       component: Methodology
+    },
+    {
+      path: '*',
+      name: 'Main',
+      component: Main,
     }
   ]
 })

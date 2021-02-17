@@ -3,8 +3,6 @@
     <Home></Home>
     <About></About>
     <Introduction></Introduction>
-    <!-- <Maps></Maps> -->
-    <!-- Map section header -->
     <v-row
       justify="center"
       class="map-section-header mt-5 py-5 text-outline-offset"
@@ -16,6 +14,16 @@
       </h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
+
+    <!-- 0: Hartford Through Time -->
+
+    <div class="section">
+      <v-img
+        contain
+        max-height="90vh"
+        :src="require('../assets/Maps/Final/Layout7.png')"
+      ></v-img>
+    </div>
 
     <div class="section">
       <b-carousel
@@ -52,262 +60,268 @@
           :img-src="require('../assets/Maps/Final/CityTown/1897_FIX2.jpg')"
         ></b-carousel-slide>
       </b-carousel>
-      <!-- <v-row>
-        <v-col class="pa-0">
-          <v-hover v-slot="{ hover }">
-            <v-card elevation="0">
-            <v-img
-              :src="require('../assets/Maps/Final/CityTown/1635.jpg')"
-              contain
-            >
-            </v-img>
-            <v-card-text v-show="hover" class="white--text" style="position: absolute; background-color: #414240">Source: {{sourcePlaceholder}}</v-card-text>
-            </v-card>
-          </v-hover>
-        </v-col>
-      </v-row> -->
     </div>
 
     <div class="section">
+      <v-sheet color="blue" height="100vh" width="100vw">
+        <h1 class="section-header display-4 font-weight-bold">
+          Arterial Growth
+        </h1>
+      </v-sheet>
+    </div>
+
+    <!-- 1:Routes and Roots -->
+
+    <div class="section">
+      <v-sheet color="teal" height="100vh" width="100vw">
+        <h1 class="section-header display-4 font-weight-bold">
+          Global Roots of Hartford’s North End Population
+        </h1>
+      </v-sheet>
+    </div>
+
+    <div class="section">
+      <v-img
+        contain
+        max-height="90vh"
+        :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg')"
+      ></v-img>
+    </div>
+
+    <div class="section">
+      <v-img
+        contain
+        max-height="90vh"
+        :src="require('../assets/Maps/Colleges.jpg')"
+      ></v-img>
+    </div>
+
+    <div class="section">
+      <v-img
+        contain
+        max-height="90vh"
+        :src="require('../assets/Maps/Agricultural_Workers.jpg')"
+      ></v-img>
+    </div>
+
+    <!-- 2: Mobilities -->
+
+    <div class="section">
+      <!-- <MapCarousel></MapCarousel> -->
+
       <b-carousel
-        id="citytowncar"
+        id="race-ethnic"
         style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
         fade
         interval="2500"
         controls
-        img-width="860"
-        img-height="480"
+        img-width="30vw"
       >
         <b-carousel-slide
           caption="1900"
-          :img-src="require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
           caption="1940"
-          :img-src="require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
       </b-carousel>
     </div>
 
     <div class="section">
-      <v-row align="center">
-        <div class="highlight-teal mx-auto">
-          <h1 class="d-none d-md-block display-1 font-weight-bold">
-            City Boundaries Through Time
-          </h1>
-          <h1 class="d-md-none h3 font-weight-bold">
-            City Boundaries Through Time
-          </h1>
+      <v-sheet color="teal" height="100vh" width="100vw">
+        <div class="section">
+          <v-row class="d-none d-md-block">
+            <v-col col="3"></v-col>
+            <v-col col="6" class="mx-auto">
+              <youtube
+                video-id="kgqk1_dDP4o"
+                player-width="1600"
+                player-height="1200"
+                :player-vars="{
+                  autoplay: 1,
+                  modestbranding: 1,
+                  rel: 0,
+                  loop: 1,
+                }"
+              ></youtube>
+            </v-col>
+            <v-col col="3"></v-col>
+          </v-row>
+          <v-row class="d-block d-md-none">
+            <v-col class="mx-auto">
+              <youtube
+                video-id="kgqk1_dDP4o"
+                player-width="400"
+                player-height="300"
+                :player-vars="{
+                  autoplay: 1,
+                  modestbranding: 1,
+                  rel: 0,
+                  loop: 1,
+                }"
+              ></youtube>
+            </v-col>
+          </v-row>
         </div>
-      </v-row>
+      </v-sheet>
+    </div>
+
+    <div class="section">
+      <v-img
+        max-height="90vh"
+        contain
+        :src="require('../assets/Maps/Final/Canton/CommunitySuccession.jpg')"
+      ></v-img>
+    </div>
+
+    <div class="section">
+      <v-img
+        max-height="90vh"
+        contain
+        :src="require('../assets/Maps/Final/Canton/DemographicGrowth.jpg')"
+      ></v-img>
+    </div>
+
+    <!-- 3: Neighborhood Clusters -->
+
+    <div class="section">
       <v-row>
-        <v-col md="3" class="pa-0 my-auto">
-          <Caption heading="Caption Example"></Caption>
-        </v-col>
-        <v-col md="6" class="pa-0">
-          <v-hover v-slot="{ hover }">
-            <v-card elevation="0">
-              <v-img
-                :src="require('../assets/Maps/Final/Layout7.png')"
-                contain
-                max-height="85vh"
-              >
-              </v-img>
-              <v-card-text
-                v-show="hover"
-                class="white--text"
-                style="position: absolute; background-color: #414240"
-                >Source: {{ sourcePlaceholder }}</v-card-text
-              >
-            </v-card>
-          </v-hover>
-        </v-col>
-
-        <v-col md="1" align-self="center">
-          <v-row>
-            <v-img
-              :src="require('../assets/Maps/Final/Legend.png')"
-              contain
-              max-height="25vh"
-            ></v-img>
-          </v-row>
-        </v-col>
+        <b-carousel
+          id="citytowncar"
+          style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
+          fade
+          interval="2500"
+          controls
+          img-width="1024"
+          img-height="480"
+        >
+          <b-carousel-slide
+            img-height="90vh"
+            :img-src="
+              require('../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg')
+            "
+          ></b-carousel-slide>
+          <b-carousel-slide
+            img-height="90vh"
+            :img-src="require('../assets/Maps/Final/NorthEnd/PuertoRican.jpg')"
+          ></b-carousel-slide>
+          <b-carousel-slide
+            img-height="90vh"
+            :img-src="require('../assets/Maps/Final/NorthEnd/White.jpg')"
+          ></b-carousel-slide>
+        </b-carousel>
       </v-row>
     </div>
 
     <div class="section">
       <v-img
-        :src="require('../assets/Maps/NorthEnd.jpg')"
+        max-height="90vh"
         contain
-        max-height="85vh"
+        :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
       ></v-img>
     </div>
 
     <div class="section">
+      <v-sheet color="green" height="100vh" width="100vw">
+        <h1 class="section-header display-4 font-weight-bold">
+          Puerto Rican and West Indian Residents of Hartford
+        </h1>
+      </v-sheet>
+    </div>
+
+    <div class="section">
       <v-img
-        :src="require('../assets/Maps/BellevueSquare.jpg')"
+        max-height="90vh"
         contain
-        max-height="85vh"
+        :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
       ></v-img>
     </div>
 
+    <!-- 4: Housing -->
+
     <div class="section">
       <v-img
-        :src="require('../assets/Maps/PlacesofOrigin.jpg')"
+        max-height="90vh"
         contain
-        max-height="85vh"
-      ></v-img>
-    </div>
-
-    <!-- <div class="section">
-      <b-carousel
-        id="carousel-fade"
-        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
-        no-animation
-        controls
-        indicators
-        background="#FEFEFE"
-        img-width="1024"
-        img-height="480"
-      >
-        <b-carousel-slide
-          :img-src="
-            require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')
-          "
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="
-            require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')
-          "
-        ></b-carousel-slide>
-      </b-carousel>
-    </div> -->
-
-    <!-- <div class="section">
-      <v-carousel height="100vh">
-        <v-carousel-item>
-          <v-row class="fill-height">
-            <v-img
-              :src="
-                require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')
-              "
-            ></v-img>
-          </v-row>
-        </v-carousel-item>
-        <v-carousel-item>
-          <v-row class="fill-height">
-            <v-img
-              :src="
-                require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')
-              "
-            ></v-img>
-          </v-row>
-        </v-carousel-item>
-      </v-carousel>
-    </div> -->
-
-    <div class="section">
-      <v-img
-        :src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_1.png')"
-      ></v-img>
-      <v-img
-        :src="require('@/assets/Maps/ToggleTest/Agricultural_Workers_2.png')"
+        :src="
+          require('../assets/Maps/Final/SlumClearance/SlumClearance1934.jpg')
+        "
       ></v-img>
     </div>
 
     <div class="section">
+      <v-sheet color="blue" height="100vh" width="100vw">
+        <h1 class="section-header display-4 font-weight-bold">
+          Puerto Rican and West Indian Residents of Hartford
+        </h1>
+      </v-sheet>
+    </div>
+
+    <div class="section">
       <v-img
-        :src="require('../assets/Maps/Colleges.jpg')"
+        max-height="90vh"
         contain
-        max-height="85vh"
+        :src="
+          require('../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg')
+        "
+      ></v-img>
+    </div>
+
+    <div class="section">
+      <iframe
+        frameborder="0"
+        class="juxtapose"
+        width="90%"
+        height="1100"
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e71c7928-6d50-11eb-83c8-ebb5d6f907df"
+      ></iframe>
+    </div>
+
+    <div class="section">
+      <v-img
+        max-height="90vh"
+        contain
+        :src="require('../assets/Maps/Final/Renters/Renter-Occupied_3.jpg')"
       ></v-img>
     </div>
 
     <div class="section">
       <v-img
-        :src="require('../assets/Maps/HousingConditions.jpg')"
+        max-height="90vh"
         contain
-        max-height="85vh"
+        :src="require('../assets/Maps/Final/Renters/AveMonthlyRent2.jpg')"
+      ></v-img>
+    </div>
+
+     <div class="section">
+      <v-img
+        max-height="90vh"
+        contain
+        :src="require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')"
       ></v-img>
     </div>
 
     <div class="section">
       <v-img
-        :src="require('../assets/Maps/Surveys.jpg')"
+        max-height="90vh"
         contain
-        max-height="65vh"
+        :src="require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')"
       ></v-img>
     </div>
 
-    <div class="section">
-      <b-carousel
-        id="carousel-fade"
-        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
-        fade
-        controls
-        img-width="1024"
-        img-height="480"
-      >
-        <b-carousel-slide
-          caption="1940"
-          :img-src="require('@/assets/GeographicMobility1.jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          caption="1960"
-          :img-src="require('../assets/GeographicMobility2.jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          caption="1980"
-          :img-src="require('../assets/GeographicMobility3.jpg')"
-        ></b-carousel-slide>
-      </b-carousel>
-    </div>
-
-    <div class="section">
-      <h2 class="ma-5">Race and Ethnicity</h2>
+     <div class="section">
       <v-img
-        :src="require('../assets/Race_Ethnicity2.jpg')"
+        max-height="90vh"
         contain
-        max-height="65vh"
+        :src="require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')"
       ></v-img>
     </div>
 
-    <div class="section">
-      <h2 class="ma-5">Landmarks</h2>
-      <v-img
-        :src="require('../assets/landmarks.jpg')"
-        contain
-        max-height="65vh"
-      ></v-img>
-    </div>
-
-    <!-- <div class="section">
-            <h2 class="ma-5">Ship Manifest</h2>
-            <v-img
-              :src="require('../assets/ShipManifest.jpg')"
-              contain
-              max-height="65vh"
-            ></v-img>
-          </div> -->
-
-    <div class="section">
-      <v-img
-        :src="require('../assets/Maps/Projects.jpg')"
-        contain
-        max-height="65vh"
-      ></v-img>
-    </div>
-
-    <div class="section">
-      <v-img
-        :src="require('../assets/Maps/Racial_Imbalance.jpg')"
-        contain
-        max-height="65vh"
-      ></v-img>
-    </div>
-    <div class="section">
-      <Map></Map>
-    </div>
     <Settlement></Settlement>
     <Housing></Housing>
     <Timeline></Timeline>
@@ -393,6 +407,7 @@ import Timeline from "@/components/Timeline";
 import Card from "@/components/Card";
 import Caption from "@/components/Caption";
 import ReadMoreCard from "@/components/ReadMoreCard";
+import MapCarousel from "@/components/MapCarousel";
 import svgPanZoom from "svg-pan-zoom";
 import { loremIpsum } from "lorem-ipsum";
 export default {
@@ -410,6 +425,7 @@ export default {
     Card,
     ReadMoreCard,
     Caption,
+    MapCarousel,
   },
   methods: {
     handleProfileMapClick(index) {
@@ -434,6 +450,7 @@ export default {
       activeProfile: null,
       dialog: false,
       slides: ["Tenant Activists Profiles", "Historic Firsts"],
+      imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
       placeholderProfile: {
@@ -444,7 +461,7 @@ Neither their degrees nor their status in the community shielded them from discr
 of black people was an inspiration and he tried to identify where his passion and future lay. Would he get involved in politics? Would he be called to the ministry? He ran unsuccessfully for a seat on Hartford’s Court of Common Council and emerged from that experience with a keen understanding of politics as a tool. Since then, AJ Johnson has found his calling in both of his roles as Lead Community Organizer for the Christian Activities Council (now
 the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Refuge Church in Hartford. In these dual roles, Johnson sustains the legacy of civil rights and human rights pioneers like the Rev. Richard Battles of the Mt. Olive Baptist Church, William Brown, Executive Director of the Urban League of Greater Hartford and of his father Bishop Johnson. The passion he brings to the No More Slumlords movement is duplicated in his support of entrepreneurship in the local community and his backing of a $15 minimum wage.`,
       },
-      profiles: new Array(5)
+      profiles: new Array(1)
         .fill([
           {
             name: "Milagros Ortiz",
@@ -599,5 +616,8 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+}
+.carousel-item img {
+  height: 100vh !important ;
 }
 </style>

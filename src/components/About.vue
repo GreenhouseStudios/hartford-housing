@@ -1,7 +1,8 @@
 <template>
   <div class="section" id="about-section">
-    <v-container fluid fill-height>
-      <v-row>
+    <v-sheet height="100vh" width="100vw" color="teal">
+      <v-container fluid fill-height>
+        <v-row>
           <div id="trigger2"></div>
           <Card
             class="align-center"
@@ -9,11 +10,13 @@
             v-bind:body="body"
             id="revealrise"
           >
-          <a class="inline-link" @click="navigateToSection">City Boundaries</a>
+            <a class="inline-link" @click="navigateToSection"
+              >City Boundaries</a
+            >
           </Card>
-          
-      </v-row>
-    </v-container>
+        </v-row>
+      </v-container>
+    </v-sheet>
   </div>
 </template>
 
@@ -48,7 +51,7 @@ export default {
   methods: {
     navigateToSection() {
       this.$root.$children[0].navigateToSection(3);
-    }
+    },
   },
   filters: {
     capitalize: function (value) {
@@ -104,9 +107,9 @@ export default {
 }
 
 #about-section {
-  /* background-image: url("~@/assets/PlacesofOriginUpdate.jpg"); */
+  /* background-image: url("~@/assets/Maps/Final/Origins/NoLabelmod1.jpg"); */
   background-position: center center;
-  background-size: cover;
+  background-size: 10%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
