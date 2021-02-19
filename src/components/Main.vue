@@ -36,28 +36,28 @@
         img-height="480"
       >
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1635.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1635.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1784.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1784.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1853.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1853.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1859.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1859.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1871.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1871.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1873.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1873.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1881_FIX2.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1881_FIX2.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1897_FIX2.jpg')"
+          :img-src="require('../assets/Maps/Final/CityTown/1897_FIX2.jpg?nf_resize=fit&w=300&h=400')"
         ></b-carousel-slide>
       </b-carousel>
     </div>
