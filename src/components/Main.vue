@@ -84,7 +84,7 @@
       <v-img
         contain
         max-height="90vh"
-        :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg')"
+        :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg?nf_resize=fit&w=300&h=400')"
       ></v-img>
     </div>
 
