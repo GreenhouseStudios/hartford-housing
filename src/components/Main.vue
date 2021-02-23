@@ -21,7 +21,7 @@
       <v-img
         contain
         max-height="90vh"
-        :src="require('../assets/Maps/Final/Layout7.png?nf_resize=fit&w=300&h=400')"
+        src="../assets/Maps/Final/Layout7.png?nf_resize=fit&w=300&h=400"
       ></v-img>
     </div>
 
