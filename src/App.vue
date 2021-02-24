@@ -320,16 +320,26 @@ h3 {
   .fp-slidesNav.fp-bottom {
     bottom: 10px;
     margin: auto;
-    width: 600px;
+    width: 300px;
     z-index: 1;
+    ul {
+      text-align: center;
+      width: 100%;
+      padding-left: 0px !important;
+    }
   }
 }
 @media only screen and (max-width: 600px) {
   .fp-slidesNav.fp-bottom {
     bottom: 30px;
     margin: auto;
-    width: 600px;
+    width: 300px;
     z-index: 1;
+    ul {
+      text-align: center;
+      width: 100%;
+      padding-left: 0px !important;
+    }
   }
 }
 @media only screen and (min-width: 600px) {
@@ -341,6 +351,7 @@ h3 {
     ul {
       text-align: center;
       width: 100%;
+      padding-left: 0px !important;
     }
   }
 }
