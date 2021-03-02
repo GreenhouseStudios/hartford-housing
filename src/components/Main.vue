@@ -84,27 +84,6 @@
               '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg',
             ]"
           ></ResponsiveMap>
-          <!-- <VuePictureElement
-            alt="Some picture"
-            :path="'src/assets/Maps/Breakpoints/Boundaries/'"
-            :extensions="['jpg']"
-            :settings="settings"
-            :name="'boundaries'"
-          ></VuePictureElement> -->
-
-          <!-- <picture>
-            <img
-              sizes="(max-width: 1400px) 100vw, 1400px"
-              
-              :src="require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg')"
-              alt="boundaries"
-            />
-          </picture> -->
-          <!-- <v-img
-        contain
-        max-height="90vh"
-        src="../assets/Maps/Final/Layout7.png?nf_resize=fit&w=300&h=400"
-      ></v-img> -->
         </v-col>
       </v-row>
     </div>
@@ -163,39 +142,45 @@
     </div>
 
     <div class="section">
-      <v-sheet color="blue" height="100vh" width="100vw">
-        <h1 class="section-header display-4 font-weight-bold">
-          Arterial Growth
-        </h1>
-      </v-sheet>
+      <v-card class="d-flex align-center" height="100vh">
+        <v-img
+          :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+          max-height="75vh"
+          contain
+        ></v-img>
+      </v-card>
     </div>
 
     <!-- 1:Routes and Roots -->
 
     <div class="section">
-      <v-sheet color="teal" height="100vh" width="100vw">
-        <h1 class="section-header display-4 font-weight-bold">
-          Global Roots of Hartford’s North End Population
-        </h1>
-      </v-sheet>
+      <v-card class="d-flex align-center" height="100vh">
+        <v-img
+          :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+          max-height="75vh"
+          contain
+        ></v-img>
+      </v-card>
     </div>
 
     <div class="section">
-      <v-img
-        contain
-        max-height="90vh"
-        :src="
-          require('../assets/Maps/Final/Origins/OriginWithLabel.jpg?nf_resize=fit&w=300&h=400')
-        "
-      ></v-img>
+      <v-card class="d-flex align-center" height="100vh">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg')"
+        ></v-img>
+      </v-card>
     </div>
 
     <div class="section">
-      <v-img
-        contain
-        max-height="90vh"
-        :src="require('../assets/Maps/Colleges.jpg')"
-      ></v-img>
+      <v-card class="d-flex align-center" height="100vh">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Colleges.jpg')"
+        ></v-img>
+      </v-card>
     </div>
 
     <div class="section">
@@ -209,75 +194,18 @@
     <!-- 2: Mobilities -->
 
     <div class="section">
-      <!-- <MapCarousel></MapCarousel> -->
-
-      <b-carousel
-        id="race-ethnic"
-        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
-        fade
-        :interval="2500"
-        controls
-        img-width="30vw"
-      >
-        <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg?nf_resize=fit&w=300&h=400')
-          "
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg?nf_resize=fit&w=300&h=400')
-          "
-        ></b-carousel-slide>
-      </b-carousel>
+      <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
     </div>
 
     <div div class="section">
-      <v-img
-        :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-        max-height="75vh"
-        contain
-      ></v-img>
+      <v-card class="d-flex align-center" height="100vh">
+        <v-img
+          :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+          max-height="75vh"
+          contain
+        ></v-img>
+      </v-card>
     </div>
-
-    <!-- <div class="section">
-      <v-sheet color="teal" height="100vh" width="100vw">
-        <div class="section">
-          <v-row class="d-none d-md-block">
-            <v-col col="3"></v-col>
-            <v-col col="6" class="mx-auto">
-              <youtube
-                video-id="kgqk1_dDP4o"
-                player-width="1600"
-                player-height="1200"
-                :player-vars="{
-                  autoplay: 1,
-                  modestbranding: 1,
-                  rel: 0,
-                  loop: 1,
-                }"
-              ></youtube>
-            </v-col>
-            <v-col col="3"></v-col>
-          </v-row>
-          <v-row class="d-block d-md-none">
-            <v-col class="mx-auto">
-              <youtube
-                video-id="kgqk1_dDP4o"
-                player-width="400"
-                player-height="300"
-                :player-vars="{
-                  autoplay: 1,
-                  modestbranding: 1,
-                  rel: 0,
-                  loop: 1,
-                }"
-              ></youtube>
-            </v-col>
-          </v-row>
-        </div>
-      </v-sheet>
-    </div> -->
 
     <div class="section">
       <v-row class="my-10 mx-auto">
@@ -647,6 +575,14 @@ export default {
         },
         {
           img: require("../assets/Maps/Final/PuertoRicans/PR2018.jpg"),
+        },
+      ],
+      racialEthnicImages: [
+        {
+          img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/RaceEthnic/1940_FIX.jpg"),
         },
       ],
       settings: {
