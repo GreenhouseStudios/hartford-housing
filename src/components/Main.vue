@@ -15,14 +15,98 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
 
+    <div class="section">
+      <v-row align="center">
+        <v-card align-self="center" class="mx-auto ma-10" width="50vw">
+          <v-btn
+            class="d-block"
+            tile
+            elevation="0"
+            x-large
+            color="teal"
+            width="100%"
+            >Hartford Through Time</v-btn
+          >
+          <v-btn
+            class="d-block"
+            tile
+            elevation="0"
+            x-large
+            color="blue"
+            width="100%"
+            >Routes and Roots</v-btn
+          >
+          <v-btn
+            class="d-block"
+            tile
+            elevation="0"
+            x-large
+            color="green"
+            width="100%"
+            >Mobilities</v-btn
+          >
+          <v-btn
+            class="d-block"
+            tile
+            elevation="0"
+            x-large
+            color="teal"
+            width="100%"
+            >Housing</v-btn
+          >
+          <v-btn
+            class="d-block"
+            tile
+            elevation="0"
+            x-large
+            color="blue"
+            width="100%"
+            >Neighborhood Clusters</v-btn
+          >
+        </v-card>
+        <!-- <v-col class="mx-auto">
+          
+        </v-col> -->
+      </v-row>
+    </div>
+
     <!-- 0: Hartford Through Time -->
 
     <div class="section">
-      <v-img
+      <v-row class="mx-auto">
+        <v-col class="mx-auto">
+          <ResponsiveMap
+            :srcset="[
+              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg',
+              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg',
+              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg',
+              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg',
+              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg',
+            ]"
+          ></ResponsiveMap>
+          <!-- <VuePictureElement
+            alt="Some picture"
+            :path="'src/assets/Maps/Breakpoints/Boundaries/'"
+            :extensions="['jpg']"
+            :settings="settings"
+            :name="'boundaries'"
+          ></VuePictureElement> -->
+
+          <!-- <picture>
+            <img
+              sizes="(max-width: 1400px) 100vw, 1400px"
+              
+              :src="require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg')"
+              alt="boundaries"
+            />
+          </picture> -->
+          <!-- <v-img
         contain
         max-height="90vh"
         src="../assets/Maps/Final/Layout7.png?nf_resize=fit&w=300&h=400"
-      ></v-img>
+      ></v-img> -->
+        </v-col>
+      </v-row>
     </div>
 
     <div class="section">
@@ -30,34 +114,50 @@
         id="citytowncar"
         style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
         fade
-        interval="2500"
+        :interval="2500"
         controls
         img-width="1024"
         img-height="480"
       >
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1635.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1635.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1784.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1784.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1853.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1853.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1859.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1859.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1871.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1871.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1873.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1873.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1881_FIX2.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1881_FIX2.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1897_FIX2.jpg?nf_resize=fit&w=300&h=400')"
+          :img-src="
+            require('../assets/Maps/Final/CityTown/1897_FIX2.jpg?nf_resize=fit&w=300&h=400')
+          "
         ></b-carousel-slide>
       </b-carousel>
     </div>
@@ -84,7 +184,9 @@
       <v-img
         contain
         max-height="90vh"
-        :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg?nf_resize=fit&w=300&h=400')"
+        :src="
+          require('../assets/Maps/Final/Origins/OriginWithLabel.jpg?nf_resize=fit&w=300&h=400')
+        "
       ></v-img>
     </div>
 
@@ -113,18 +215,16 @@
         id="race-ethnic"
         style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
         fade
-        interval="2500"
+        :interval="2500"
         controls
         img-width="30vw"
       >
         <b-carousel-slide
-          caption="1900"
           :img-src="
             require('../assets/Maps/Final/RaceEthnic/1900_FIX.jpg?nf_resize=fit&w=300&h=400')
           "
         ></b-carousel-slide>
         <b-carousel-slide
-          caption="1940"
           :img-src="
             require('../assets/Maps/Final/RaceEthnic/1940_FIX.jpg?nf_resize=fit&w=300&h=400')
           "
@@ -132,7 +232,15 @@
       </b-carousel>
     </div>
 
-    <div class="section">
+    <div div class="section">
+      <v-img
+        :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+        max-height="75vh"
+        contain
+      ></v-img>
+    </div>
+
+    <!-- <div class="section">
       <v-sheet color="teal" height="100vh" width="100vw">
         <div class="section">
           <v-row class="d-none d-md-block">
@@ -169,53 +277,52 @@
           </v-row>
         </div>
       </v-sheet>
-    </div>
+    </div> -->
 
     <div class="section">
+      <v-row class="my-10 mx-auto">
+        <h1
+          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+        >
+          Canton Street Case Study
+        </h1>
+        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+          Canton Street Case Study
+        </h1>
+      </v-row>
+
       <v-img
         max-height="90vh"
         contain
-        :src="require('../assets/Maps/Final/Canton/CommunitySuccession.jpg')"
+        :src="require('../assets/Maps/Final/Canton/Indicator.jpg')"
       ></v-img>
     </div>
 
     <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/Canton/DemographicGrowth.jpg')"
-      ></v-img>
+      <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
     </div>
 
     <!-- 3: Neighborhood Clusters -->
 
     <div class="section">
-      <v-row>
-        <b-carousel
-          id="citytowncar"
-          style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
-          fade
-          interval="2500"
-          controls
-          img-width="1024"
-          img-height="480"
-        >
-          <b-carousel-slide
-            img-height="90vh"
-            :img-src="
-              require('../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg')
-            "
-          ></b-carousel-slide>
-          <b-carousel-slide
-            img-height="90vh"
-            :img-src="require('../assets/Maps/Final/NorthEnd/PuertoRican.jpg')"
-          ></b-carousel-slide>
-          <b-carousel-slide
-            img-height="90vh"
-            :img-src="require('../assets/Maps/Final/NorthEnd/White.jpg')"
-          ></b-carousel-slide>
-        </b-carousel>
-      </v-row>
+      <MobileSlidesSection
+        :imgSet="northEndImages"
+        :maxHeight="'50vh'"
+      ></MobileSlidesSection>
+    </div>
+
+    <div class="section">
+      <MobileSlidesSection
+        :imgSet="puertoRicanImages"
+        :slidesOnly="true"
+      ></MobileSlidesSection>
+    </div>
+
+    <div class="section">
+      <MobileSlidesSection
+        :imgSet="westIndianImages"
+        :slidesOnly="true"
+      ></MobileSlidesSection>
     </div>
 
     <div class="section">
@@ -224,14 +331,6 @@
         contain
         :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
       ></v-img>
-    </div>
-
-    <div class="section">
-      <v-sheet color="green" height="100vh" width="100vw">
-        <h1 class="section-header display-4 font-weight-bold">
-          Puerto Rican and West Indian Residents of Hartford
-        </h1>
-      </v-sheet>
     </div>
 
     <div class="section">
@@ -244,7 +343,7 @@
 
     <!-- 4: Housing -->
 
-    <div class="section">
+    <!-- <div class="section">
       <v-img
         max-height="90vh"
         contain
@@ -255,14 +354,6 @@
     </div>
 
     <div class="section">
-      <v-sheet color="blue" height="100vh" width="100vw">
-        <h1 class="section-header display-4 font-weight-bold">
-          Puerto Rican and West Indian Residents of Hartford
-        </h1>
-      </v-sheet>
-    </div>
-
-    <div class="section">
       <v-img
         max-height="90vh"
         contain
@@ -270,56 +361,89 @@
           require('../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg')
         "
       ></v-img>
-    </div>
+    </div> -->
+
+    <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
 
     <div class="section">
       <iframe
         frameborder="0"
         class="juxtapose"
         width="90%"
-        height="1100"
+        height="800"
         src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e71c7928-6d50-11eb-83c8-ebb5d6f907df"
       ></iframe>
     </div>
 
-    <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/Renters/Renter-Occupied_3.jpg')"
-      ></v-img>
+    <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
+
+    <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
+
+    <div class="section" v-if="!isMobile">
+      <v-row>
+        <v-col cols="4">
+          <v-img
+            max-height="50vh"
+            contain
+            :src="
+              require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
+            "
+            class="d-inline"
+          ></v-img>
+        </v-col>
+        <v-col cols="4"
+          ><v-img
+            max-height="50vh"
+            contain
+            :src="
+              require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
+            "
+            class="d-inline"
+          ></v-img
+        ></v-col>
+        <v-col cols="4"
+          ><v-img
+            max-height="50vh"
+            contain
+            :src="
+              require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
+            "
+            class="d-inline"
+          ></v-img
+        ></v-col>
+      </v-row>
     </div>
 
-    <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/Renters/AveMonthlyRent2.jpg')"
-      ></v-img>
-    </div>
+    <div class="section" v-if="isMobile">
+      <div class="slide">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="
+            require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
+          "
+        ></v-img>
+      </div>
 
-     <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')"
-      ></v-img>
-    </div>
+      <div class="slide active">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="
+            require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
+          "
+        ></v-img>
+      </div>
 
-    <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')"
-      ></v-img>
-    </div>
-
-     <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')"
-      ></v-img>
+      <div class="slide">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="
+            require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
+          "
+        ></v-img>
+      </div>
     </div>
 
     <Settlement></Settlement>
@@ -410,6 +534,10 @@ import ReadMoreCard from "@/components/ReadMoreCard";
 import MapCarousel from "@/components/MapCarousel";
 import svgPanZoom from "svg-pan-zoom";
 import { loremIpsum } from "lorem-ipsum";
+import VuePictureElement from "vue-picture-element";
+import VueResponsiveImage from "vue-responsive-image";
+import ResponsiveMap from "@/components/ResponsiveMap";
+import MobileSlidesSection from "@/components/MobileSlidesSection";
 export default {
   name: "Main",
   components: {
@@ -426,6 +554,9 @@ export default {
     ReadMoreCard,
     Caption,
     MapCarousel,
+    VuePictureElement,
+    ResponsiveMap,
+    MobileSlidesSection,
   },
   methods: {
     handleProfileMapClick(index) {
@@ -453,6 +584,87 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
+      cantonImages: [
+        { img: require("../assets/Maps/Final/Canton/Canton1920.jpg") },
+        { img: require("../assets/Maps/Final/Canton/Canton1930.jpg") },
+      ],
+      northEndImages: [
+        {
+          img: require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"),
+        },
+        { img: require("../assets/Maps/Final/NorthEnd/PuertoRican.jpg") },
+        { img: require("../assets/Maps/Final/NorthEnd/White.jpg") },
+      ],
+      rentingImages: [
+        {
+          img: require("../assets/Maps/Final/Renters/Renter-Occupied_3.jpg"),
+        },
+        { img: require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg") },
+      ],
+      publicHousingImages: [
+        {
+          img: require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/SlumClearance/SlumClearance1934.jpg"),
+        },
+      ],
+      westIndianImages: [
+        {
+          img: require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/WestIndians/WI1990.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/WestIndians/WI2000.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/WestIndians/WI2010.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/WestIndians/WI2018.jpg"),
+        },
+      ],
+      westIndianImages: [
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/1970.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/1980.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/1990.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/2000.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/2010.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/PuertoRicans/PR2018.jpg"),
+        },
+      ],
+      settings: {
+        label: {
+          /* All available media queries. Used for the `media` attribute. */
+          media: { "max-width": "1400px", orientation: "landscape" },
+
+          /* Delimeters for width or pixel-ratio. Don't mix them! The next line is for width. */
+          delimeters: ["200w", "330w", "431w", "520w", "599w", "674w", "754w"],
+          // (Or, for pixel ratio, use `['2x', '3x']`)
+
+          /* Used for the `size` attribute. */
+          size: [
+            [{ "max-width": "330px" }, "280px"],
+            [{ "max-width": "431px" }, "440px"]["800px"],
+          ],
+        },
+      },
       placeholderProfile: {
         name: 'Ashley "AJ" Johnson',
         img: require("../assets/AJJohnson/PastorAJJohnson.jpg"),
@@ -504,6 +716,18 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
         ])
         .flat(),
     };
+  },
+  computed: {
+    isMobile() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return true;
+        case "sm":
+          return true;
+        default:
+          return false;
+      }
+    },
   },
 };
 </script>
