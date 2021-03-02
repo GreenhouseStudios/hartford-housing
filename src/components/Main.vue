@@ -626,7 +626,7 @@ export default {
           img: require("../assets/Maps/Final/WestIndians/WI2018.jpg"),
         },
       ],
-      westIndianImages: [
+      puertoRicanImages: [
         {
           img: require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
         },
