@@ -10,9 +10,6 @@
             v-bind:body="body"
             id="revealrise"
           >
-            <a class="inline-link" @click="navigateToSection"
-              >City Boundaries</a
-            >
           </Card>
         </v-row>
       </v-container>

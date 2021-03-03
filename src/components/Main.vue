@@ -71,16 +71,20 @@
     </div>
 
     <!-- 0: Hartford Through Time -->
-    <v-card align-content="center" width="100vw" color="blue" tile class="elevation-0">
+    <v-card
+      align-content="center"
+      width="100vw"
+      color="blue"
+      tile
+      class="elevation-0"
+    >
       <h1 class="text-center py-6 font-weight-bold h1">
         Hartford Through Time
       </h1>
     </v-card>
 
     <div class="section">
-      <ResponsiveMap
-        :srcset="boundaryMaps"
-      ></ResponsiveMap>
+      <ResponsiveMap :srcset="boundaryMaps"></ResponsiveMap>
     </div>
 
     <div class="section">
@@ -102,10 +106,14 @@
 
     <!-- 1:Routes and Roots -->
 
-    <v-card align-content="center" width="100vw" color="teal" tile class="elevation-0">
-      <h1 class="text-center py-6 font-weight-bold h1">
-        Roots and Routes
-      </h1>
+    <v-card
+      align-content="center"
+      width="100vw"
+      color="teal"
+      tile
+      class="elevation-0"
+    >
+      <h1 class="text-center py-6 font-weight-bold h1">Roots and Routes</h1>
     </v-card>
 
     <div class="section">
@@ -148,17 +156,42 @@
 
     <!-- 2: Mobilities -->
 
-    <v-card align-content="center" width="100vw" color="green" tile class="elevation-0">
-      <h1 class="text-center py-6 font-weight-bold h1">
-        Mobilities
-      </h1>
+    <v-card
+      align-content="center"
+      width="100vw"
+      color="green"
+      tile
+      class="elevation-0"
+    >
+      <h1 class="text-center py-6 font-weight-bold h1">Mobilities</h1>
     </v-card>
 
     <div class="section">
+      <v-row class="my-10 mx-auto">
+        <h1
+          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+        >
+          Ethnic and Racial Distribution
+        </h1>
+        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+          Ethnic and Racial Distribution
+        </h1>
+      </v-row>
       <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
     </div>
 
     <div div class="section">
+      <v-row class="my-10 mx-auto">
+        <h1
+          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+        >
+          Population Drift and Community Succession
+        </h1>
+        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+          Population Drift and Community Succession
+        </h1>
+      </v-row>
+
       <v-card class="d-flex align-center" height="100vh">
         <v-img
           :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
@@ -193,8 +226,13 @@
 
     <!-- 3: Neighborhood Clusters -->
 
-    
-    <v-card align-content="center" width="100vw" color="blue" tile class="elevation-0">
+    <v-card
+      align-content="center"
+      width="100vw"
+      color="blue"
+      tile
+      class="elevation-0"
+    >
       <h1 class="text-center py-6 font-weight-bold h1">
         Neighborhood Clusters
       </h1>
@@ -239,14 +277,20 @@
 
     <!-- 4: Housing -->
 
-     <v-card align-content="center" width="100vw" color="teal" tile class="elevation-0">
-      <h1 class="text-center py-6 font-weight-bold h1">
-        Housing
-      </h1>
+    <v-card
+      align-content="center"
+      width="100vw"
+      color="teal"
+      tile
+      class="elevation-0"
+    >
+      <h1 class="text-center py-6 font-weight-bold h1">Housing</h1>
     </v-card>
 
-    <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
-
+    <div class="section">
+      <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
+    </div>
+    
     <div class="section">
       <iframe
         frameborder="0"
@@ -258,11 +302,41 @@
     </div>
 
     <div class="section">
+      <iframe
+        frameborder="0"
+        class="juxtapose"
+        width="90%"
+        height="1400"
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
+      ></iframe>
+    </div>
+
+    <div class="section">
+      <v-row class="my-10 mx-auto">
+        <h1
+          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+        >
+          Renting Hartford
+        </h1>
+        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+          Renting Hartford
+        </h1>
+      </v-row>
       <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
     </div>
     <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
 
     <div class="section" v-if="!isMobile">
+      <v-row class="my-10 mx-auto">
+        <h1
+          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+        >
+          Housing Conditions
+        </h1>
+        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+          Housing Conditions
+        </h1>
+      </v-row>
       <v-row>
         <v-col cols="4">
           <v-img
@@ -462,12 +536,12 @@ export default {
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
       boundaryMaps: [
-          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg'),
-          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg'),
-          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg'),
-          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg'),
-          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg'),
-        ],
+        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
+        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg"),
+        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg"),
+        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg"),
+        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg"),
+      ],
       cityTownImages: [
         { img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg") },
         { img: require("../assets/Maps/Final/CityTown/1784 (Large).jpg") },
