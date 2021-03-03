@@ -202,8 +202,6 @@
 
 <script>
 import Map from "@/components/Map";
-import svgPanZoom from "svg-pan-zoom";
-import PublicHousingLocations from "@/assets/PublicHousingLocations.svg";
 import Card from "./Card.vue";
 export default {
   name: "Maps",

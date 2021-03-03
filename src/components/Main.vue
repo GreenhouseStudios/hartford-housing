@@ -100,42 +100,42 @@
       >
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1635.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1635 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1784.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1784 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1853.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1853 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1859.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1859 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1871.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1871 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1873.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1873 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1881_FIX2.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1881_FIX2 (Large).jpg')
           "
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
-            require('../assets/Maps/Final/CityTown/1897_FIX2.jpg?nf_resize=fit&w=300&h=400')
+            require('../assets/Maps/Final/CityTown/1897_FIX2 (Large).jpg')
           "
         ></b-carousel-slide>
       </b-carousel>
@@ -298,7 +298,7 @@
         frameborder="0"
         class="juxtapose"
         width="90%"
-        height="800"
+        height="1400"
         src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e71c7928-6d50-11eb-83c8-ebb5d6f907df"
       ></iframe>
     </div>
@@ -460,7 +460,6 @@ import Card from "@/components/Card";
 import Caption from "@/components/Caption";
 import ReadMoreCard from "@/components/ReadMoreCard";
 import MapCarousel from "@/components/MapCarousel";
-import svgPanZoom from "svg-pan-zoom";
 import { loremIpsum } from "lorem-ipsum";
 import VuePictureElement from "vue-picture-element";
 import VueResponsiveImage from "vue-responsive-image";
