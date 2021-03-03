@@ -89,44 +89,7 @@
     </div>
 
     <div class="section">
-      <b-carousel
-        id="citytowncar"
-        style="text-shadow: 0px 0px 2px #000; width: 100%; margin: auto"
-        fade
-        :interval="2500"
-        controls
-        img-width="1024"
-        img-height="480"
-      >
-        <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1635 (Large).jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1784 (Large).jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1853 (Large).jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1859 (Large).jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1871 (Large).jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="require('../assets/Maps/Final/CityTown/1873 (Large).jpg')"
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1881_FIX2 (Large).jpg')
-          "
-        ></b-carousel-slide>
-        <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1897_FIX2 (Large).jpg')
-          "
-        ></b-carousel-slide>
-      </b-carousel>
+      <MobileSlidesSection :imgSet="cityTownImages" :slidesOnly="true"></MobileSlidesSection>
     </div>
 
     <div class="section">
@@ -497,6 +460,16 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
+      cityTownImages:  [
+        { img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1784 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1853 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1859 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1871 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1873 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1881_FIX2 (Large).jpg") },
+        { img: require("../assets/Maps/Final/CityTown/1897_FIX2 (Large).jpg") },
+      ],
       cantonImages: [
         { img: require("../assets/Maps/Final/Canton/Canton1920.jpg") },
         { img: require("../assets/Maps/Final/Canton/Canton1930.jpg") },
