@@ -450,8 +450,6 @@ import Caption from "@/components/Caption";
 import ReadMoreCard from "@/components/ReadMoreCard";
 import MapCarousel from "@/components/MapCarousel";
 import { loremIpsum } from "lorem-ipsum";
-import VuePictureElement from "vue-picture-element";
-import VueResponsiveImage from "vue-responsive-image";
 import ResponsiveMap from "@/components/ResponsiveMap";
 import MobileSlidesSection from "@/components/MobileSlidesSection";
 export default {
@@ -470,7 +468,6 @@ export default {
     ReadMoreCard,
     Caption,
     MapCarousel,
-    VuePictureElement,
     ResponsiveMap,
     MobileSlidesSection,
   },
