@@ -11,7 +11,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 Vue.use(VueFullPage);
-Vue.use(VueYouTubeEmbed)
 Vue.use(VueScrollmagic)
 Vue.use(BootstrapVue)
 
