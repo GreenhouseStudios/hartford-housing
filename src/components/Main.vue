@@ -99,34 +99,22 @@
         img-height="480"
       >
         <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1635 (Large).jpg')
-          "
+          :img-src="require('../assets/Maps/Final/CityTown/1635 (Large).jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1784 (Large).jpg')
-          "
+          :img-src="require('../assets/Maps/Final/CityTown/1784 (Large).jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1853 (Large).jpg')
-          "
+          :img-src="require('../assets/Maps/Final/CityTown/1853 (Large).jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1859 (Large).jpg')
-          "
+          :img-src="require('../assets/Maps/Final/CityTown/1859 (Large).jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1871 (Large).jpg')
-          "
+          :img-src="require('../assets/Maps/Final/CityTown/1871 (Large).jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
-          :img-src="
-            require('../assets/Maps/Final/CityTown/1873 (Large).jpg')
-          "
+          :img-src="require('../assets/Maps/Final/CityTown/1873 (Large).jpg')"
         ></b-carousel-slide>
         <b-carousel-slide
           :img-src="
@@ -299,12 +287,13 @@
         class="juxtapose"
         width="90%"
         height="1400"
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=e71c7928-6d50-11eb-83c8-ebb5d6f907df"
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
       ></iframe>
     </div>
 
-    <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
-
+    <div class="section">
+      <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
+    </div>
     <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
 
     <div class="section" v-if="!isMobile">
