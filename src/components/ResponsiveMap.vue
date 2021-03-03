@@ -22,15 +22,15 @@ export default {
     src() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return require(this.srcset[0]);
+          return this.srcset[0];
         case "sm":
-          return require(this.srcset[1]);
+          return this.srcset[1];
         case "md":
-          return require(this.srcset[2]);
+          return this.srcset[2];
         case "lg":
-          return require(this.srcset[3]);
+          return this.srcset[3];
         case "xl":
-          return require(this.srcset[4]);
+          return this.srcset[4];
       }
     },
   },

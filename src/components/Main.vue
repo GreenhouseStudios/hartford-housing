@@ -71,25 +71,23 @@
     </div>
 
     <!-- 0: Hartford Through Time -->
+    <v-card align-content="center" width="100vw" color="blue" tile class="elevation-0">
+      <h1 class="text-center py-6 font-weight-bold h1">
+        Hartford Through Time
+      </h1>
+    </v-card>
 
     <div class="section">
-      <v-row class="mx-auto">
-        <v-col class="mx-auto">
-          <ResponsiveMap
-            :srcset="[
-              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg',
-              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg',
-              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg',
-              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg',
-              '../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg',
-            ]"
-          ></ResponsiveMap>
-        </v-col>
-      </v-row>
+      <ResponsiveMap
+        :srcset="boundaryMaps"
+      ></ResponsiveMap>
     </div>
 
     <div class="section">
-      <MobileSlidesSection :imgSet="cityTownImages" :slidesOnly="true"></MobileSlidesSection>
+      <MobileSlidesSection
+        :imgSet="cityTownImages"
+        :slidesOnly="true"
+      ></MobileSlidesSection>
     </div>
 
     <div class="section">
@@ -103,6 +101,12 @@
     </div>
 
     <!-- 1:Routes and Roots -->
+
+    <v-card align-content="center" width="100vw" color="teal" tile class="elevation-0">
+      <h1 class="text-center py-6 font-weight-bold h1">
+        Roots and Routes
+      </h1>
+    </v-card>
 
     <div class="section">
       <v-card class="d-flex align-center" height="100vh">
@@ -144,6 +148,12 @@
 
     <!-- 2: Mobilities -->
 
+    <v-card align-content="center" width="100vw" color="green" tile class="elevation-0">
+      <h1 class="text-center py-6 font-weight-bold h1">
+        Mobilities
+      </h1>
+    </v-card>
+
     <div class="section">
       <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
     </div>
@@ -182,6 +192,13 @@
     </div>
 
     <!-- 3: Neighborhood Clusters -->
+
+    
+    <v-card align-content="center" width="100vw" color="blue" tile class="elevation-0">
+      <h1 class="text-center py-6 font-weight-bold h1">
+        Neighborhood Clusters
+      </h1>
+    </v-card>
 
     <div class="section">
       <MobileSlidesSection
@@ -222,25 +239,11 @@
 
     <!-- 4: Housing -->
 
-    <!-- <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="
-          require('../assets/Maps/Final/SlumClearance/SlumClearance1934.jpg')
-        "
-      ></v-img>
-    </div>
-
-    <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="
-          require('../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg')
-        "
-      ></v-img>
-    </div> -->
+     <v-card align-content="center" width="100vw" color="teal" tile class="elevation-0">
+      <h1 class="text-center py-6 font-weight-bold h1">
+        Housing
+      </h1>
+    </v-card>
 
     <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
 
@@ -403,7 +406,6 @@ import Home from "@/components/Home";
 import About from "@/components/About";
 import Introduction from "@/components/Introduction";
 import Maps from "@/components/Maps";
-import Map from "@/components/Map";
 import Settlement from "@/components/Settlement";
 import Housing from "@/components/Housing";
 import ProfileMenu from "@/components/ProfileMenu";
@@ -421,7 +423,6 @@ export default {
     Home,
     About,
     Introduction,
-    Map,
     Maps,
     Settlement,
     Housing,
@@ -460,7 +461,14 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
-      cityTownImages:  [
+      boundaryMaps: [
+          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg'),
+          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg'),
+          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg'),
+          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg'),
+          require('../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg'),
+        ],
+      cityTownImages: [
         { img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg") },
         { img: require("../assets/Maps/Final/CityTown/1784 (Large).jpg") },
         { img: require("../assets/Maps/Final/CityTown/1853 (Large).jpg") },

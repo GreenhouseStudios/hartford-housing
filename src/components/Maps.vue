@@ -201,12 +201,10 @@
 </template>
 
 <script>
-import Map from "@/components/Map";
 import Card from "./Card.vue";
 export default {
   name: "Maps",
   components: {
-    Map,
     Card,
   },
   data() {
