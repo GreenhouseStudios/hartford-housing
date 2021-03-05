@@ -261,9 +261,9 @@ export default {
       console.log(this.$refs.fullpage.api.getActiveSection());
       this.$refs.fullpage.api.moveTo(3 + i);
     },
-    navigateToMapSection: function(section){
+    navigateToMapSection: function(i){
       //find the map section by id
-      this.$refs.fullpage.api.moveTo(3 + i);
+      this.$refs.fullpage.api.moveTo(2 + i);
     },
     menuNavigate: function (section,subsection){
       if(section === 4) this.navigateToMapSection(subsection);

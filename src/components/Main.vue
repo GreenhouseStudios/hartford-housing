@@ -24,8 +24,9 @@
             tile
             elevation="0"
             x-large
-            color="teal"
+            color="blue"
             width="100%"
+            @click="navigateToMapSection(3)"
             >Hartford Through Time</v-btn
           >
           <v-btn
@@ -33,8 +34,9 @@
             tile
             elevation="0"
             x-large
-            color="blue"
+            color="teal"
             width="100%"
+            @click="navigateToMapSection(6)"
             >Routes and Roots</v-btn
           >
           <v-btn
@@ -44,16 +46,8 @@
             x-large
             color="green"
             width="100%"
+            @click="navigateToMapSection(10)"
             >Mobilities</v-btn
-          >
-          <v-btn
-            class="d-block"
-            tile
-            elevation="0"
-            x-large
-            color="teal"
-            width="100%"
-            >Housing</v-btn
           >
           <v-btn
             class="d-block"
@@ -62,7 +56,18 @@
             x-large
             color="blue"
             width="100%"
+            @click="navigateToMapSection(15)"
             >Neighborhood Clusters</v-btn
+          >
+          <v-btn
+            class="d-block"
+            tile
+            elevation="0"
+            x-large
+            color="teal"
+            width="100%"
+            @click="navigateToMapSection(20)"
+            >Housing</v-btn
           >
         </v-card>
         <!-- <v-col class="mx-auto">
@@ -224,6 +229,9 @@
       ></v-img>
     </div>
 
+    <div class="section">
+      <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
+    </div>
     <div class="section">
       <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
     </div>
@@ -527,6 +535,9 @@ export default {
     navigateToProfile(i) {
       this.$root.$children[0].navigateToProfile(i);
     },
+    navigateToMapSection(i){
+      this.$root.$children[0].navigateToMapSection(i);
+    }
   },
   data() {
     return {
