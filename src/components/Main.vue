@@ -1,5 +1,6 @@
 <template>
-  <v-container fluid pa-0 style="margin: 0; float: unset; display: contents">
+  <v-container fluid pa-0 style="margin: 0; float: unset; display: visible"> 
+    <!-- changed 'display: contents' to visible because it doesn't work with position:sticky -->
     <Home></Home>
     <About></About>
     <Introduction></Introduction>
@@ -71,14 +72,15 @@
     </div>
 
     <!-- 0: Hartford Through Time -->
+  <div class="mapsection">
     <v-card
       align-content="center"
       width="100vw"
       color="blue"
       tile
-      class="elevation-0"
+      class="elevation-0 banner"
     >
-      <h1 class="text-center py-6 font-weight-bold h1">
+      <h1 class="text-center py-6 font-weight-bold h1 display-2">
         Hartford Through Time
       </h1>
     </v-card>
@@ -103,17 +105,18 @@
         ></v-img>
       </v-card>
     </div>
+  </div>
 
     <!-- 1:Routes and Roots -->
-
+  <div class="mapsection">
     <v-card
       align-content="center"
       width="100vw"
       color="teal"
       tile
-      class="elevation-0"
+      class="elevation-0 banner"
     >
-      <h1 class="text-center py-6 font-weight-bold h1">Roots and Routes</h1>
+      <h1 class=" text-center py-6 font-weight-bold h1 display-2">Roots and Routes</h1>
     </v-card>
 
     <div class="section">
@@ -153,27 +156,28 @@
         :src="require('../assets/Maps/Agricultural_Workers.jpg')"
       ></v-img>
     </div>
+  </div>
 
     <!-- 2: Mobilities -->
-
+  <div class="mapsection">
     <v-card
       align-content="center"
       width="100vw"
       color="green"
       tile
-      class="elevation-0"
+      class="elevation-0 banner"
     >
-      <h1 class="text-center py-6 font-weight-bold h1">Mobilities</h1>
+      <h1 class="text-center py-6 font-weight-bold h1 display-2">Mobilities</h1>
     </v-card>
 
     <div class="section">
       <v-row class="my-10 mx-auto">
         <h1
-          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+          class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
         >
           Ethnic and Racial Distribution
         </h1>
-        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+        <h1 class="d-md-none map-section-header-green section-header h4 mx-auto">
           Ethnic and Racial Distribution
         </h1>
       </v-row>
@@ -183,11 +187,11 @@
     <div div class="section">
       <v-row class="my-10 mx-auto">
         <h1
-          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+          class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
         >
           Population Drift and Community Succession
         </h1>
-        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+        <h1 class="d-md-none map-section-header-green section-header h4 mx-auto">
           Population Drift and Community Succession
         </h1>
       </v-row>
@@ -204,11 +208,11 @@
     <div class="section">
       <v-row class="my-10 mx-auto">
         <h1
-          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+          class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
         >
           Canton Street Case Study
         </h1>
-        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+        <h1 class="d-md-none map-section-header-green section-header h4 mx-auto">
           Canton Street Case Study
         </h1>
       </v-row>
@@ -223,17 +227,18 @@
     <div class="section">
       <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
     </div>
+  </div>
 
     <!-- 3: Neighborhood Clusters -->
-
+  <div class="mapsection">
     <v-card
       align-content="center"
       width="100vw"
       color="blue"
       tile
-      class="elevation-0"
+      class="elevation-0 banner"
     >
-      <h1 class="text-center py-6 font-weight-bold h1">
+      <h1 class="text-center py-6 font-weight-bold h1 display-2">
         Neighborhood Clusters
       </h1>
     </v-card>
@@ -273,17 +278,17 @@
         :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
       ></v-img>
     </div>
-
+  </div>
     <!-- 4: Housing -->
-
+  <div class="mapsection">
     <v-card
       align-content="center"
       width="100vw"
       color="teal"
       tile
-      class="elevation-0"
+      class="elevation-0 banner"
     >
-      <h1 class="text-center py-6 font-weight-bold h1">Housing</h1>
+      <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
     </v-card>
 
     <div class="section">
@@ -313,11 +318,11 @@
     <div class="section">
       <v-row class="my-10 mx-auto">
         <h1
-          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+          class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
         >
           Renting Hartford
         </h1>
-        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+        <h1 class="d-md-none map-section-header-teal section-header h4 mx-auto">
           Renting Hartford
         </h1>
       </v-row>
@@ -328,11 +333,11 @@
     <div class="section" v-if="!isMobile">
       <v-row class="my-10 mx-auto">
         <h1
-          class="d-none d-md-block map-section-header section-header display-2 font-weight-bold mx-auto"
+          class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
         >
           Housing Conditions
         </h1>
-        <h1 class="d-md-none map-section-header section-header h4 mx-auto">
+        <h1 class="d-md-none map-section-header-teal section-header h4 mx-auto">
           Housing Conditions
         </h1>
       </v-row>
@@ -367,6 +372,7 @@
         ></v-col>
       </v-row></v-card>
     </div>
+  </div>
 
     <div class="section" v-if="isMobile">
       <div class="slide">
@@ -522,7 +528,6 @@ export default {
       this.$root.$children[0].navigateToProfile(i);
     },
   },
-  mounted() {},
   data() {
     return {
       profileToMapMapping: [1],
@@ -706,6 +711,18 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 </script>
 
 <style scoped>
+.banner {
+  width: 100%;
+  height: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.mapsection {
+  width: 100%;
+  overflow: visible;
+  height: 100%;
+}
 .section {
   overflow: hidden;
 }
@@ -769,6 +786,13 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 .map-section-header {
   background-color: #519ec8;
 }
+.map-section-header-green {
+  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
+}
+.map-section-header-teal {
+  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+}
+
 .carousel-inner {
   .item {
     opacity: 0;
