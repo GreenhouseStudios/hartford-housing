@@ -1,21 +1,28 @@
 <template>
   <div>
     <v-row v-if="showSlides || slidesOnly">
-      <div class="slide" v-for="(obj,index) in imgSet" :key="index">
+      <div class="slide" v-for="(obj, index) in imgSet" :key="index">
         <v-img :max-height="maxHeight" contain :src="obj.img"></v-img>
       </div>
     </v-row>
-    <v-row class="d-none d-md-block" v-if="!showSlides && !slidesOnly">
-      <v-col class="d-flex">
-        <v-img
-          v-for="(obj,index) in imgSet"
+    <v-card
+      class="d-none d-md-block elevation-0"
+      height="100vh"
+      width="100vw"
+      align-content="center"
+      justify-content="center"
+      v-if="!showSlides && !slidesOnly"
+    >
+      <v-row>
+        <v-col
+          v-for="(obj, index) in imgSet"
           :key="index"
-          contain
-          :src="obj.img"
-          :max-height="maxHeight"
-        ></v-img>
-      </v-col>
-    </v-row>
+          class="d-flex my-auto"
+          :cols="12 / imgSet.length"
+        >
+          <v-img contain :src="obj.img" :max-height="maxHeight"></v-img> </v-col
+      ></v-row>
+    </v-card>
   </div>
 </template>
 
@@ -23,8 +30,7 @@
 export default {
   name: "MobileSlidesSection",
   data() {
-      return {
-      }
+    return {};
   },
   props: {
     imgSet: {
@@ -34,10 +40,10 @@ export default {
       type: String,
       default: "90vh",
     },
-    slidesOnly:{
+    slidesOnly: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   computed: {
     showSlides() {
@@ -47,7 +53,7 @@ export default {
         case "sm":
           return true;
         default:
-          return false
+          return false;
       }
     },
   },

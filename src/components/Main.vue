@@ -95,7 +95,7 @@
     </div>
 
     <div class="section">
-      <v-card class="d-flex align-center" height="100vh">
+      <v-card class="d-flex align-center elevation-0" height="100vh">
         <v-img
           :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
           max-height="75vh"
@@ -117,7 +117,7 @@
     </v-card>
 
     <div class="section">
-      <v-card class="d-flex align-center" height="100vh">
+      <v-card class="d-flex align-center elevation-0" height="100vh">
         <v-img
           :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
           max-height="75vh"
@@ -192,7 +192,7 @@
         </h1>
       </v-row>
 
-      <v-card class="d-flex align-center" height="100vh">
+      <v-card class="d-flex align-center elevation-0" height="100vh">
         <v-img
           :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
           max-height="75vh"
@@ -241,7 +241,6 @@
     <div class="section">
       <MobileSlidesSection
         :imgSet="northEndImages"
-        :maxHeight="'50vh'"
       ></MobileSlidesSection>
     </div>
 
@@ -290,7 +289,7 @@
     <div class="section">
       <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
     </div>
-    
+
     <div class="section">
       <iframe
         frameborder="0"
@@ -337,38 +336,36 @@
           Housing Conditions
         </h1>
       </v-row>
-      <v-row>
-        <v-col cols="4">
+      <v-card height="100vh" class="elevation-0" align-content="center">
+      <v-row align="center">
+        <v-col cols="4" align-self="center">
           <v-img
-            max-height="50vh"
+            max-height="71vh"
             contain
             :src="
               require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
             "
-            class="d-inline"
           ></v-img>
         </v-col>
-        <v-col cols="4"
+        <v-col cols="4" align-self="center"
           ><v-img
-            max-height="50vh"
+            max-height="90vh"
             contain
             :src="
               require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
             "
-            class="d-inline"
           ></v-img
         ></v-col>
-        <v-col cols="4"
+        <v-col cols="4" align-self="center"
           ><v-img
-            max-height="50vh"
+            max-height="71vh"
             contain
             :src="
               require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
             "
-            class="d-inline"
           ></v-img
         ></v-col>
-      </v-row>
+      </v-row></v-card>
     </div>
 
     <div class="section" v-if="isMobile">

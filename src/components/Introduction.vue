@@ -4,12 +4,12 @@
     <v-container fluid fill-height pa-0>
       <v-row justify="center"
         ><h1
-          class="d-none d-md-block display-3 font-weight-bold highlight-teal"
+          class="d-none d-md-block display-3 font-weight-bold highlight-teal text-center"
           id="intro-title"
         >
           Introduction
         </h1>
-        <h1 class="d-block d-md-none display-1 font-weight-bold highlight-teal" id="intro-title">
+        <h1 class="d-block d-md-none display-1 font-weight-bold highlight-teal text-center" id="intro-title">
           Introduction
         </h1></v-row
       >
