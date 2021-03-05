@@ -168,27 +168,27 @@ export default {
       {
         title: "Settlement",
         slides: [
-          "Journeys",
-          "Georgia,Puerto Rico, Jamaica",
-          "African American Settlement",
-          "West Indian Settlement",
-          "Puerto Rican Settlement",
-          "Headlines",
-          "Juxtapose test",
+          // "Journeys",
+          // "Georgia,Puerto Rico, Jamaica",
+          // "African American Settlement",
+          // "West Indian Settlement",
+          // "Puerto Rican Settlement",
+          // "Headlines",
+          // "Juxtapose test",
         ],
       },
       {
         title: "Housing",
         slides: [
-          "Post WWII Housing Crisis",
-          "Public Housing",
-          "Charter House Terrace",
-          "Bellevue Square",
-          "Redlining",
-          "Home Ownership",
-          "Slumlords Now, Slumlords Then",
-          "Housing Code Violations",
-          "The No More Slumlords Campaign",
+          // "Post WWII Housing Crisis",
+          // "Public Housing",
+          // "Charter House Terrace",
+          // "Bellevue Square",
+          // "Redlining",
+          // "Home Ownership",
+          // "Slumlords Now, Slumlords Then",
+          // "Housing Code Violations",
+          // "The No More Slumlords Campaign",
         ],
       },
       {
@@ -197,7 +197,10 @@ export default {
       },
       {
         title: "Profiles",
-        slides: ["Tenant Activists Profiles", "Historic Firsts"],
+        slides: [
+          // "Tenant Activists Profiles",
+          //  "Historic Firsts"
+           ],
       },
     ],
     menuItems: [
@@ -235,7 +238,7 @@ export default {
     },
     navigateToSection: function (i) {
       // console.log(i)
-      if (i > 3) i += 14;
+      if (i > 3) i += 22;
       if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
       else
         this.$router.push("/").then(() => {
