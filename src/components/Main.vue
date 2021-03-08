@@ -233,7 +233,7 @@
       <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
     </div>
     <div class="section">
-      <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
+      <MobileSlidesSection :imgSet="cantonImages2"></MobileSlidesSection>
     </div>
   </div>
 
@@ -568,6 +568,10 @@ export default {
       cantonImages: [
         { img: require("../assets/Maps/Final/Canton/Canton1920.jpg") },
         { img: require("../assets/Maps/Final/Canton/Canton1930.jpg") },
+      ],
+         cantonImages2: [
+        { img: require("../assets/Maps/Final/Canton/Canton2_Occ.jpg") },
+        { img: require("../assets/Maps/Final/Canton/Canton2_Pop.jpg") },
       ],
       northEndImages: [
         {
