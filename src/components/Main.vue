@@ -77,19 +77,24 @@
     </div>
 
     <!-- 0: Hartford Through Time -->
-  <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="blue"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">
-        Hartford Through Time
-      </h1>
-    </v-card>
-
+    <div class="mapsection">
+      <!-- <vue-position-sticky :offsetTop="0" sticky-class="myClass" /> -->
+      <!-- <vue-position-sticky :offsetBottom="30" @change="handleStickyChange" /> -->
+      <vue-position-sticky>
+        <span>
+          <v-card
+            align-content="center"
+            width="100vw"
+            color="blue"
+            tile
+            class="elevation-0 banner"
+          >
+            <h1 class="text-center py-6 font-weight-bold h1 display-2">
+              Hartford Through Time
+            </h1>
+          </v-card>
+        </span>
+      </vue-position-sticky>
     <div class="section">
       <ResponsiveMap :srcset="boundaryMaps"></ResponsiveMap>
     </div>
@@ -114,6 +119,8 @@
 
     <!-- 1:Routes and Roots -->
   <div class="mapsection">
+    <vue-position-sticky>
+      <span>
     <v-card
       align-content="center"
       width="100vw"
@@ -123,6 +130,8 @@
     >
       <h1 class=" text-center py-6 font-weight-bold h1 display-2">Roots and Routes</h1>
     </v-card>
+      </span>
+    </vue-position-sticky>
 
     <div class="section">
       <v-card class="d-flex align-center elevation-0" height="100vh">
@@ -165,15 +174,19 @@
 
     <!-- 2: Mobilities -->
   <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="green"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">Mobilities</h1>
-    </v-card>
+    <vue-position-sticky>
+      <span>
+        <v-card
+          align-content="center"
+          width="100vw"
+          color="green"
+          tile
+          class="elevation-0 banner"
+        >
+          <h1 class="text-center py-6 font-weight-bold h1 display-2">Mobilities</h1>
+        </v-card>
+      </span>
+    </vue-position-sticky>
 
     <div class="section">
       <v-row class="my-10 mx-auto">
@@ -239,17 +252,21 @@
 
     <!-- 3: Neighborhood Clusters -->
   <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="blue"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">
-        Neighborhood Clusters
-      </h1>
-    </v-card>
+    <vue-position-sticky>
+      <span>
+        <v-card
+          align-content="center"
+          width="100vw"
+          color="blue"
+          tile
+          class="elevation-0 banner"
+        >
+          <h1 class="text-center py-6 font-weight-bold h1 display-2">
+            Neighborhood Clusters
+          </h1>
+        </v-card>
+      </span>
+    </vue-position-sticky>
 
     <div class="section">
       <MobileSlidesSection
@@ -289,15 +306,19 @@
   </div>
     <!-- 4: Housing -->
   <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="teal"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
-    </v-card>
+    <vue-position-sticky>
+      <span>
+        <v-card
+          align-content="center"
+          width="100vw"
+          color="teal"
+          tile
+          class="elevation-0 banner"
+        >
+          <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
+        </v-card>
+      </span>
+    </vue-position-sticky>
 
     <div class="section">
       <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
