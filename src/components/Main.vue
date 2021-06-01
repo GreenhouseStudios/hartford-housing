@@ -303,24 +303,44 @@
       <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
     </div>
 
-    <div class="section">
+    <div class="section desktop-only">
       <iframe
         frameborder="0"
         class="juxtapose"
         width="90%"
-        height="1400"
+        height="100%"
         src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
       ></iframe>
     </div>
 
-    <div class="section">
+    <div class="section mobile-only">
+      <iframe 
+        frameborder="0" 
+        class="juxtapose" 
+        width="100%" 
+        height="100%" 
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c28c8692-8354-11eb-83c8-ebb5d6f907df">
+      </iframe>
+    </div>
+
+    <div class="section desktop-only">
       <iframe
         frameborder="0"
         class="juxtapose"
         width="90%"
-        height="1400"
+        height="100%"
         src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
       ></iframe>
+    </div>
+
+    <div class="section mobile-only">
+      <iframe 
+        frameborder="0" 
+        class="juxtapose" 
+        width="100%" 
+        height="100%" 
+        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b9e2c68-835a-11eb-83c8-ebb5d6f907df">
+      </iframe>
     </div>
 
     <div class="section">
@@ -724,11 +744,25 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
   },
 };
 </script>
-
 <style scoped>
+@media only screen and (max-width: 768px){
+  .mobile-only {
+    display: visible;
+  }
+  .desktop-only {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px){
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: visible;
+  }
+}
 .banner {
   width: 100%;
-  height: 100px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
