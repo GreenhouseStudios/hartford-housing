@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid pa-0 style="margin: 0; float: unset; display: visible"> 
+  <v-container fluid pa-0 style="margin: 0; float: unset; display: visible">
     <!-- changed 'display: contents' to visible because it doesn't work with position:sticky -->
     <Home></Home>
     <About></About>
@@ -77,330 +77,346 @@
     </div>
 
     <!-- 0: Hartford Through Time -->
-  <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="blue"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">
-        Hartford Through Time
-      </h1>
-    </v-card>
-
-    <div class="section">
-      <ResponsiveMap :srcset="boundaryMaps"></ResponsiveMap>
-    </div>
-
-    <div class="section">
-      <MobileSlidesSection
-        :imgSet="cityTownImages"
-        :slidesOnly="true"
-      ></MobileSlidesSection>
-    </div>
-
-    <div class="section">
-      <v-card class="d-flex align-center elevation-0" height="100vh">
-        <v-img
-          :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-          max-height="75vh"
-          contain
-        ></v-img>
+    <div class="mapsection">
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="blue"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Hartford Through Time
+        </h1>
       </v-card>
+
+      <div class="section">
+        <ResponsiveMap :srcset="boundaryMaps"></ResponsiveMap>
+      </div>
+
+      <div class="section">
+        <MobileSlidesSection
+          :imgSet="cityTownImages"
+          :slidesOnly="true"
+        ></MobileSlidesSection>
+      </div>
+
+      <div class="section">
+        <v-card class="d-flex align-center elevation-0" height="100vh">
+          <v-img
+            :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+            max-height="75vh"
+            contain
+          ></v-img>
+        </v-card>
+      </div>
     </div>
-  </div>
 
     <!-- 1:Routes and Roots -->
-  <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="teal"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class=" text-center py-6 font-weight-bold h1 display-2">Roots and Routes</h1>
-    </v-card>
-
-    <div class="section">
-      <v-card class="d-flex align-center elevation-0" height="100vh">
-        <v-img
-          :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-          max-height="75vh"
-          contain
-        ></v-img>
+    <div class="mapsection">
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="teal"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Roots and Routes
+        </h1>
       </v-card>
-    </div>
 
-    <div class="section">
-      <v-card class="d-flex align-center" height="100vh">
+      <div class="section">
+        <v-card class="d-flex align-center elevation-0" height="100vh">
+          <v-img
+            :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+            max-height="75vh"
+            contain
+          ></v-img>
+        </v-card>
+      </div>
+
+      <div class="section">
+        <v-card class="d-flex align-center" height="100vh">
+          <v-img
+            contain
+            max-height="90vh"
+            :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg')"
+          ></v-img>
+        </v-card>
+      </div>
+
+      <div class="section">
+        <v-card class="d-flex align-center" height="100vh">
+          <v-img
+            contain
+            max-height="90vh"
+            :src="require('../assets/Maps/Colleges.jpg')"
+          ></v-img>
+        </v-card>
+      </div>
+
+      <div class="section">
         <v-img
           contain
           max-height="90vh"
-          :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg')"
+          :src="require('../assets/Maps/Agricultural_Workers.jpg')"
         ></v-img>
-      </v-card>
+      </div>
     </div>
-
-    <div class="section">
-      <v-card class="d-flex align-center" height="100vh">
-        <v-img
-          contain
-          max-height="90vh"
-          :src="require('../assets/Maps/Colleges.jpg')"
-        ></v-img>
-      </v-card>
-    </div>
-
-    <div class="section">
-      <v-img
-        contain
-        max-height="90vh"
-        :src="require('../assets/Maps/Agricultural_Workers.jpg')"
-      ></v-img>
-    </div>
-  </div>
 
     <!-- 2: Mobilities -->
-  <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="green"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">Mobilities</h1>
-    </v-card>
-
-    <div class="section">
-      <v-row class="my-10 mx-auto">
-        <h1
-          class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
-        >
-          Ethnic and Racial Distribution
+    <div class="mapsection">
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="green"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Mobilities
         </h1>
-        <h1 class="d-md-none map-section-header-green section-header h4 mx-auto">
-          Ethnic and Racial Distribution
-        </h1>
-      </v-row>
-      <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
-    </div>
-
-    <div div class="section">
-      <v-row class="my-10 mx-auto">
-        <h1
-          class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
-        >
-          Population Drift and Community Succession
-        </h1>
-        <h1 class="d-md-none map-section-header-green section-header h4 mx-auto">
-          Population Drift and Community Succession
-        </h1>
-      </v-row>
-
-      <v-card class="d-flex align-center elevation-0" height="100vh">
-        <v-img
-          :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-          max-height="75vh"
-          contain
-        ></v-img>
       </v-card>
-    </div>
 
-    <div class="section">
-      <v-row class="my-10 mx-auto">
-        <h1
-          class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
-        >
-          Canton Street Case Study
-        </h1>
-        <h1 class="d-md-none map-section-header-green section-header h4 mx-auto">
-          Canton Street Case Study
-        </h1>
-      </v-row>
+      <div class="section">
+        <v-row class="my-10 mx-auto">
+          <h1
+            class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
+          >
+            Ethnic and Racial Distribution
+          </h1>
+          <h1
+            class="d-md-none map-section-header-green section-header h4 mx-auto"
+          >
+            Ethnic and Racial Distribution
+          </h1>
+        </v-row>
+        <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
+      </div>
 
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/Canton/Indicator.jpg')"
-      ></v-img>
-    </div>
+      <div div class="section">
+        <v-row class="my-10 mx-auto">
+          <h1
+            class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
+          >
+            Population Drift and Community Succession
+          </h1>
+          <h1
+            class="d-md-none map-section-header-green section-header h4 mx-auto"
+          >
+            Population Drift and Community Succession
+          </h1>
+        </v-row>
 
-    <div class="section">
-      <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
+        <v-card class="d-flex align-center elevation-0" height="100vh">
+          <v-img
+            :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
+            max-height="75vh"
+            contain
+          ></v-img>
+        </v-card>
+      </div>
+
+      <div class="section">
+        <v-row class="my-10 mx-auto">
+          <h1
+            class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
+          >
+            Canton Street Case Study
+          </h1>
+          <h1
+            class="d-md-none map-section-header-green section-header h4 mx-auto"
+          >
+            Canton Street Case Study
+          </h1>
+        </v-row>
+
+        <v-img
+          max-height="90vh"
+          contain
+          :src="require('../assets/Maps/Final/Canton/Indicator.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section">
+        <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
+      </div>
+      <div class="section">
+        <MobileSlidesSection :imgSet="cantonImages2"></MobileSlidesSection>
+      </div>
     </div>
-    <div class="section">
-      <MobileSlidesSection :imgSet="cantonImages2"></MobileSlidesSection>
-    </div>
-  </div>
 
     <!-- 3: Neighborhood Clusters -->
-  <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="blue"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">
-        Neighborhood Clusters
-      </h1>
-    </v-card>
+    <div class="mapsection">
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="blue"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Neighborhood Clusters
+        </h1>
+      </v-card>
 
-    <div class="section">
-      <MobileSlidesSection
-        :imgSet="northEndImages"
-      ></MobileSlidesSection>
-    </div>
+      <div class="section">
+        <MobileSlidesSection :imgSet="northEndImages"></MobileSlidesSection>
+      </div>
 
-    <div class="section">
-      <MobileSlidesSection
-        :imgSet="puertoRicanImages"
-        :slidesOnly="true"
-      ></MobileSlidesSection>
-    </div>
+      <div class="section">
+        <MobileSlidesSection
+          :imgSet="puertoRicanImages"
+          :slidesOnly="true"
+        ></MobileSlidesSection>
+      </div>
 
-    <div class="section">
-      <MobileSlidesSection
-        :imgSet="westIndianImages"
-        :slidesOnly="true"
-      ></MobileSlidesSection>
-    </div>
+      <div class="section">
+        <MobileSlidesSection
+          :imgSet="westIndianImages"
+          :slidesOnly="true"
+        ></MobileSlidesSection>
+      </div>
 
-    <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
-      ></v-img>
-    </div>
+      <div class="section">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
+        ></v-img>
+      </div>
 
-    <div class="section">
-      <v-img
-        max-height="90vh"
-        contain
-        :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
-      ></v-img>
+      <div class="section">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
+        ></v-img>
+      </div>
     </div>
-  </div>
     <!-- 4: Housing -->
-  <div class="mapsection">
-    <v-card
-      align-content="center"
-      width="100vw"
-      color="teal"
-      tile
-      class="elevation-0 banner"
-    >
-      <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
-    </v-card>
+    <div class="mapsection">
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="teal"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
+      </v-card>
 
-    <div class="section">
-      <MobileSlidesSection :imgSet="publicHousingImages"></MobileSlidesSection>
-    </div>
+      <div class="section">
+        <MobileSlidesSection
+          :imgSet="publicHousingImages"
+        ></MobileSlidesSection>
+      </div>
 
-    <div class="section desktop-only">
-      <iframe
-        frameborder="0"
-        class="juxtapose"
-        width="90%"
-        height="100%"
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
-      ></iframe>
-    </div>
+      <div class="section desktop-only">
+        <iframe
+          frameborder="0"
+          class="juxtapose"
+          width="90%"
+          height="100%"
+          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
+        ></iframe>
+      </div>
 
-    <div class="section mobile-only">
-      <iframe 
-        frameborder="0" 
-        class="juxtapose" 
-        width="100%" 
-        height="100%" 
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c28c8692-8354-11eb-83c8-ebb5d6f907df">
-      </iframe>
-    </div>
-
-    <div class="section desktop-only">
-      <iframe
-        frameborder="0"
-        class="juxtapose"
-        width="90%"
-        height="100%"
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
-      ></iframe>
-    </div>
-
-    <div class="section mobile-only">
-      <iframe 
-        frameborder="0" 
-        class="juxtapose" 
-        width="100%" 
-        height="100%" 
-        src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b9e2c68-835a-11eb-83c8-ebb5d6f907df">
-      </iframe>
-    </div>
-
-    <div class="section">
-      <v-row class="my-10 mx-auto">
-        <h1
-          class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
+      <div class="section mobile-only">
+        <iframe
+          frameborder="0"
+          class="juxtapose"
+          width="100%"
+          height="100%"
+          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c28c8692-8354-11eb-83c8-ebb5d6f907df"
         >
-          Renting Hartford
-        </h1>
-        <h1 class="d-md-none map-section-header-teal section-header h4 mx-auto">
-          Renting Hartford
-        </h1>
-      </v-row>
-      <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
-    </div>
-    <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
+        </iframe>
+      </div>
 
-    <div class="section" v-if="!isMobile">
-      <v-row class="my-10 mx-auto">
-        <h1
-          class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
+      <div class="section desktop-only">
+        <iframe
+          frameborder="0"
+          class="juxtapose"
+          width="90%"
+          height="100%"
+          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
+        ></iframe>
+      </div>
+
+      <div class="section mobile-only">
+        <iframe
+          frameborder="0"
+          class="juxtapose"
+          width="100%"
+          height="100%"
+          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b9e2c68-835a-11eb-83c8-ebb5d6f907df"
         >
-          Housing Conditions
-        </h1>
-        <h1 class="d-md-none map-section-header-teal section-header h4 mx-auto">
-          Housing Conditions
-        </h1>
-      </v-row>
-      <v-card height="100vh" class="elevation-0" align-content="center">
-      <v-row align="center">
-        <v-col cols="4" align-self="center">
-          <v-img
-            max-height="71vh"
-            contain
-            :src="
-              require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
-            "
-          ></v-img>
-        </v-col>
-        <v-col cols="4" align-self="center"
-          ><v-img
-            max-height="90vh"
-            contain
-            :src="
-              require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
-            "
-          ></v-img
-        ></v-col>
-        <v-col cols="4" align-self="center"
-          ><v-img
-            max-height="71vh"
-            contain
-            :src="
-              require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
-            "
-          ></v-img
-        ></v-col>
-      </v-row></v-card>
+        </iframe>
+      </div>
+
+      <div class="section">
+        <v-row class="my-10 mx-auto">
+          <h1
+            class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
+          >
+            Renting Hartford
+          </h1>
+          <h1
+            class="d-md-none map-section-header-teal section-header h4 mx-auto"
+          >
+            Renting Hartford
+          </h1>
+        </v-row>
+        <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
+      </div>
+      <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
+
+      <div class="section" v-if="!isMobile">
+        <v-row class="my-10 mx-auto">
+          <h1
+            class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
+          >
+            Housing Conditions
+          </h1>
+          <h1
+            class="d-md-none map-section-header-teal section-header h4 mx-auto"
+          >
+            Housing Conditions
+          </h1>
+        </v-row>
+        <v-card height="100vh" class="elevation-0" align-content="center">
+          <v-row align="center">
+            <v-col cols="4" align-self="center">
+              <v-img
+                max-height="71vh"
+                contain
+                :src="
+                  require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
+                "
+              ></v-img>
+            </v-col>
+            <v-col cols="4" align-self="center"
+              ><v-img
+                max-height="90vh"
+                contain
+                :src="
+                  require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
+                "
+              ></v-img
+            ></v-col>
+            <v-col cols="4" align-self="center"
+              ><v-img
+                max-height="71vh"
+                contain
+                :src="
+                  require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
+                "
+              ></v-img
+            ></v-col> </v-row
+        ></v-card>
+      </div>
     </div>
-  </div>
 
     <div class="section" v-if="isMobile">
       <div class="slide">
@@ -437,7 +453,25 @@
     <Settlement></Settlement>
     <Housing></Housing>
     <Timeline></Timeline>
-    <ProfileMenu></ProfileMenu>
+
+    <div class="section">
+      <v-row justify="center">
+        <v-col cols="3"></v-col>
+        <v-col cols="6" justify="center" class="d-flex">
+          <v-card min-width="50vw">
+            <vue-plyr>
+              <div
+                data-plyr-provider="youtube"
+                data-plyr-embed-id="kgqk1_dDP4o"
+              ></div>
+            </vue-plyr>
+            <!-- <v-img src="https://picsum.photos/200/300"></v-img> -->
+          </v-card>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
+    </div>
+    <!-- <ProfileMenu></ProfileMenu>
     <div class="section" v-for="(prof, j) in profiles" :key="j">
       <v-container fluid>
         <v-row>
@@ -473,7 +507,7 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
+    </div> -->
 
     <div class="section">
       <h2 class="section-header display-1 font-weight-bold">Sources</h2>
@@ -522,6 +556,7 @@ import MapCarousel from "@/components/MapCarousel";
 import { loremIpsum } from "lorem-ipsum";
 import ResponsiveMap from "@/components/ResponsiveMap";
 import MobileSlidesSection from "@/components/MobileSlidesSection";
+
 export default {
   name: "Main",
   components: {
@@ -555,9 +590,9 @@ export default {
     navigateToProfile(i) {
       this.$root.$children[0].navigateToProfile(i);
     },
-    navigateToMapSection(i){
+    navigateToMapSection(i) {
       this.$root.$children[0].navigateToMapSection(i);
-    }
+    },
   },
   data() {
     return {
@@ -589,7 +624,7 @@ export default {
         { img: require("../assets/Maps/Final/Canton/Canton1920.jpg") },
         { img: require("../assets/Maps/Final/Canton/Canton1930.jpg") },
       ],
-         cantonImages2: [
+      cantonImages2: [
         { img: require("../assets/Maps/Final/Canton/Canton2_Occ.jpg") },
         { img: require("../assets/Maps/Final/Canton/Canton2_Pop.jpg") },
       ],
@@ -745,7 +780,7 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
 };
 </script>
 <style scoped>
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .mobile-only {
     display: visible;
   }
@@ -753,7 +788,7 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
     display: none;
   }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .mobile-only {
     display: none;
   }
