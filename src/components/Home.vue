@@ -2,12 +2,19 @@
   <div class="section" id="home-section">
     <v-container fluid fill-height>
       <v-row>
-        <v-col cols="3"></v-col>
-        <v-col class="d-flex flex-column" cols="6">
+        <v-col cols="1" md="3"></v-col>
+        <v-col class="d-flex flex-column" cols="10" md="6">
           <v-img
             :src="require('../assets/homelogo.png')"
             contain
             max-height="70%"
+            class="d-none d-md-block"
+          >
+          </v-img>
+          <v-img
+            :src="require('../assets/homelogo.png')"
+            contain
+            class="d-block d-md-none"
           >
           </v-img>
           <v-card
@@ -33,7 +40,7 @@
             <span class="l-slant-green">West Indians</span> Made Hartford Home
           </v-card>
         </v-col>
-        <v-col cols="3"></v-col>
+        <v-col cols="1" md="3"></v-col>
       </v-row>
     </v-container>
   </div>

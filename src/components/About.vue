@@ -5,9 +5,13 @@
         <v-row>
           <div id="trigger2"></div>
           <v-col cols="2"></v-col>
-          <v-col >
+          <v-col class="d-none d-md-block">
             <div id="about-heading">{{ heading }}</div>
             <div id="about-body">{{ body }}</div>
+          </v-col>
+          <v-col class="d-md-none">
+            <div id="m-heading">{{ heading }}</div>
+            <div>{{ body }}</div>
           </v-col>
           <v-col cols="2"></v-col>
         </v-row>
@@ -72,6 +76,10 @@ export default {
   font-size: 5rem;
 }
 #about-body{
+  font-size: 2rem;
+}
+#m-heading{
+  font-weight: 800 !important;
   font-size: 2rem;
 }
 </style>

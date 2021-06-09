@@ -1,9 +1,9 @@
 <template>
   <div class="section">
-    <h1 class="d-none d-md-block section-header display-3 font-weight-bold">
+    <h1 class="d-none d-md-block section-header display-3 font-weight-bold py-10 mb-10">
       Timeline
     </h1>
-    <h1 class="d-md-none section-header display-1 font-weight-bold">
+    <h1 class="d-md-none section-header display-1 font-weight-bold mb-10">
       Timeline
     </h1>
     <div>

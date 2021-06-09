@@ -497,8 +497,8 @@
       
       <v-row justify="center">
         <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex">
-          <h2 class="section-header display-1 font-weight-bold">Canadians</h2>
+        <v-col cols="6" justify="center" class="d-flex flex-column">
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Canadians</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -514,7 +514,8 @@
     <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex">
+        <v-col cols="6" justify="center" class="d-flex flex-column">
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Italians - Irish - Russians</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -530,7 +531,8 @@
     <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex">
+        <v-col cols="6" justify="center" class="d-flex flex-column">
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Irish</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -546,7 +548,8 @@
     <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex">
+        <v-col cols="6" justify="center" class="d-flex flex-column">
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Irish</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -562,7 +565,8 @@
     <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex">
+        <v-col cols="6" justify="center" class="d-flex flex-column">
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Polish</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -578,7 +582,8 @@
     <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex">
+        <v-col cols="6" justify="center" class="d-flex flex-column">
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Russians</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
