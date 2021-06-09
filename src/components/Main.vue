@@ -4,12 +4,16 @@
     <Home></Home>
     <About></About>
     <Introduction></Introduction>
-    <v-row
-      justify="center"
-      class="map-section-header mt-5 py-5 text-outline-offset"
-    >
+    <v-row justify="center" class="map-section-header py-5 text-outline-offset">
       <h1
-        class="d-none d-md-block map-section-header section-header display-2 font-weight-bold text-outline-offset"
+        class="
+          d-none d-md-block
+          map-section-header
+          section-header
+          display-2
+          font-weight-bold
+          text-outline-offset
+        "
       >
         Maps
       </h1>
@@ -182,7 +186,14 @@
       <div class="section">
         <v-row class="my-10 mx-auto">
           <h1
-            class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
+            class="
+              d-none d-md-block
+              map-section-header-green
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
           >
             Ethnic and Racial Distribution
           </h1>
@@ -198,7 +209,14 @@
       <div div class="section">
         <v-row class="my-10 mx-auto">
           <h1
-            class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
+            class="
+              d-none d-md-block
+              map-section-header-green
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
           >
             Population Drift and Community Succession
           </h1>
@@ -221,7 +239,14 @@
       <div class="section">
         <v-row class="my-10 mx-auto">
           <h1
-            class="d-none d-md-block map-section-header-green section-header display-2 font-weight-bold mx-auto"
+            class="
+              d-none d-md-block
+              map-section-header-green
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
           >
             Canton Street Case Study
           </h1>
@@ -358,7 +383,14 @@
       <div class="section">
         <v-row class="my-10 mx-auto">
           <h1
-            class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
+            class="
+              d-none d-md-block
+              map-section-header-teal
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
           >
             Renting Hartford
           </h1>
@@ -375,7 +407,14 @@
       <div class="section" v-if="!isMobile">
         <v-row class="my-10 mx-auto">
           <h1
-            class="d-none d-md-block map-section-header-teal section-header display-2 font-weight-bold mx-auto"
+            class="
+              d-none d-md-block
+              map-section-header-teal
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
           >
             Housing Conditions
           </h1>
@@ -462,10 +501,89 @@
             <vue-plyr>
               <div
                 data-plyr-provider="youtube"
-                data-plyr-embed-id="kgqk1_dDP4o"
+                data-plyr-embed-id="fgghMRHTKA0"
               ></div>
             </vue-plyr>
-            <!-- <v-img src="https://picsum.photos/200/300"></v-img> -->
+          </v-card>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
+    </div>
+    <div class="section">
+      <v-row justify="center">
+        <v-col cols="3"></v-col>
+        <v-col cols="6" justify="center" class="d-flex">
+          <v-card min-width="50vw">
+            <vue-plyr>
+              <div
+                data-plyr-provider="youtube"
+                data-plyr-embed-id="r4119mpVRis"
+              ></div>
+            </vue-plyr>
+          </v-card>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
+    </div>
+       <div class="section">
+      <v-row justify="center">
+        <v-col cols="3"></v-col>
+        <v-col cols="6" justify="center" class="d-flex">
+          <v-card min-width="50vw">
+            <vue-plyr>
+              <div
+                data-plyr-provider="youtube"
+                data-plyr-embed-id="cb0B0oyL5gA"
+              ></div>
+            </vue-plyr>
+          </v-card>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
+    </div>
+    <div class="section">
+      <v-row justify="center">
+        <v-col cols="3"></v-col>
+        <v-col cols="6" justify="center" class="d-flex">
+          <v-card min-width="50vw">
+            <vue-plyr>
+              <div
+                data-plyr-provider="youtube"
+                data-plyr-embed-id="kv50tsnkaPE"
+              ></div>
+            </vue-plyr>
+          </v-card>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
+    </div>
+    <div class="section">
+      <v-row justify="center">
+        <v-col cols="3"></v-col>
+        <v-col cols="6" justify="center" class="d-flex">
+          <v-card min-width="50vw">
+            <vue-plyr>
+              <div
+                data-plyr-provider="youtube"
+                data-plyr-embed-id="y1FR2AIs-uI"
+              ></div>
+            </vue-plyr>
+          </v-card>
+        </v-col>
+        <v-col cols="3"></v-col>
+      </v-row>
+    </div>
+      <div class="section">
+      <v-row justify="center">
+        <v-col cols="3"></v-col>
+        <v-col cols="6" justify="center" class="d-flex">
+          <v-card min-width="50vw">
+            <vue-plyr>
+              <div
+                data-plyr-provider="youtube"
+                data-plyr-embed-id="SGI3kAdR2yQ"
+              ></div>
+            </vue-plyr>
           </v-card>
         </v-col>
         <v-col cols="3"></v-col>
@@ -528,7 +646,7 @@
         </template>
       </v-simple-table>
     </div>
-    <v-dialog v-model="dialog">
+    <!-- <v-dialog v-model="dialog">
       <v-card v-if="activeProfile">
         <v-card-title class="headline grey lighten-2" primary-title
           >{{ activeProfile.name }}'s Hartford</v-card-title
@@ -536,7 +654,7 @@
         <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
         <v-card-text>{{ activeProfile.body }}</v-card-text>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
   </v-container>
 </template>
 
