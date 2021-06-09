@@ -494,9 +494,11 @@
     <Timeline></Timeline>
 
     <div class="section">
+      
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex">
+          <h2 class="section-header display-1 font-weight-bold">Canadians</h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -525,7 +527,7 @@
         <v-col cols="3"></v-col>
       </v-row>
     </div>
-       <div class="section">
+    <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex">
@@ -573,7 +575,7 @@
         <v-col cols="3"></v-col>
       </v-row>
     </div>
-      <div class="section">
+    <div class="section">
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex">

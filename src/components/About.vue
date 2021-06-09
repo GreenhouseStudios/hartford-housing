@@ -1,16 +1,15 @@
 <template>
-  <div class="section" id="about-section">
+  <div>
     <v-sheet height="100vh" width="100vw" color="teal">
       <v-container fluid fill-height>
         <v-row>
           <div id="trigger2"></div>
-          <Card
-            class="align-center"
-            v-bind:heading="heading"
-            v-bind:body="body"
-            id="revealrise"
-          >
-          </Card>
+          <v-col cols="2"></v-col>
+          <v-col >
+            <div id="about-heading">{{ heading }}</div>
+            <div id="about-body">{{ body }}</div>
+          </v-col>
+          <v-col cols="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>
@@ -31,18 +30,7 @@ export default {
     return {
       subtitle: "African Amerian, Puerto Rican and West Indian",
       heading: "About",
-      body:
-        "Hartford, Connecticut attracted three waves of internal and transnational migrations of African American, Puerto Rican, and West Indian communities that transformed the city’s racial and ethnic landscape. These monumental shifts in mobilities unfolded in many other metropolitan areas in the United States like Chicago and Philadelphia, Harlem and San Francisco in the twentieth century. This project explores the history of migration, housing, settlement, community formation, and succession through the lens of Hartford, one of America’s wealthiest cities at the end of the Civil War.  ",
-      slides: [
-        {
-          image: require("../assets/eastside_men.png"),
-          offsetH: "25",
-          offsetV: "25",
-          rotation: "0",
-          cardWidth: "550",
-          cardHeight: "410",
-        },
-      ],
+      body: "Hartford, Connecticut attracted three waves of internal and transnational migrations of African American, Puerto Rican, and West Indian communities that transformed the city’s racial and ethnic landscape. These monumental shifts in mobilities unfolded in many other metropolitan areas in the United States like Chicago and Philadelphia, Harlem and San Francisco in the twentieth century. This project explores the history of migration, housing, settlement, community formation, and succession through the lens of Hartford, one of America’s wealthiest cities at the end of the Civil War.  ",
     };
   },
   methods: {
@@ -80,36 +68,10 @@ export default {
 </script>
 
 <style scoped>
-.align-right {
-  position: relative;
-  float: right;
-  margin: 20px;
+#about-heading{
+  font-size: 5rem;
 }
-.align-center {
-  margin: auto;
-}
-.align-left {
-  position: relative;
-  float: left;
-  margin: 20px;
-}
-.bod {
-  max-width: 500px;
-}
-#subtitle {
-  text-align: center;
-}
-.section {
-  height: 4000px;
-}
-
-#about-section {
-  /* background-image: url("~@/assets/Maps/Final/Origins/NoLabelmod1.jpg"); */
-  background-position: center center;
-  background-size: 10%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+#about-body{
+  font-size: 2rem;
 }
 </style>

@@ -195,13 +195,13 @@ export default {
         title: "Timeline",
         slides: [],
       },
-      {
-        title: "Profiles",
-        slides: [
-          // "Tenant Activists Profiles",
-          //  "Historic Firsts"
-           ],
-      },
+      // {
+      //   title: "Profiles",
+      //   slides: [
+      //     // "Tenant Activists Profiles",
+      //     //  "Historic Firsts"
+      //      ],
+      // },
     ],
     menuItems: [
       { title: "Home", path: "/Home" },
@@ -211,7 +211,7 @@ export default {
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
       { title: "Timeline", path: "/Timeline" },
-      { title: "Profiles", path: "/Profiles" },
+      // { title: "Profiles", path: "/Profiles" },
     ],
     options: {
       licenseKey: "5040F97D-84574F59-952CE4FC-EAD7E65C",
