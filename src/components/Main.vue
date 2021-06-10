@@ -95,7 +95,7 @@
       </v-card>
 
       <div class="section">
-        <ResponsiveMap :srcset="boundaryMaps"></ResponsiveMap>
+          <ResponsiveMap :srcset="boundaryMaps" :capHead="captions[0].heading" :capBody="captions[0].body"></ResponsiveMap>
       </div>
 
       <div class="section">
@@ -494,11 +494,12 @@
     <Timeline></Timeline>
 
     <div class="section">
-      
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Canadians</h2>
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+            Canadians
+          </h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -515,7 +516,9 @@
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Italians - Irish - Russians</h2>
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+            Italians - Irish - Russians
+          </h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -532,7 +535,9 @@
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Irish</h2>
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+            Irish
+          </h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -549,7 +554,9 @@
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Irish</h2>
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+            Irish
+          </h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -566,7 +573,9 @@
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Polish</h2>
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+            Polish
+          </h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -583,7 +592,9 @@
       <v-row justify="center">
         <v-col cols="3"></v-col>
         <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">Russians</h2>
+          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+            Russians
+          </h2>
           <v-card min-width="50vw">
             <vue-plyr>
               <div
@@ -728,6 +739,12 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
+      captions:[
+        {
+          heading: "Hartford Through Time",
+          body: "Harford’s present extent of 18 square miles is an artifact of town and city amalgamation between 1784 and 1896. Each change redefined the city in relation to its commercial business district as well as the future towns and suburbs of East Hartford, Manchester, and West Hartford. By 1881, the town and city had coterminous boundaries and consolidated government followed in April 1896. Native American, European, and African diasporic communities shaped the early histories of mobility, displacement, dispossession, and settlement in Hartford. The Great Migrations of African Americans, West Indians, and Puerto Ricans would transform the twentieth-century trajectory of the city."
+        }
+      ],
       boundaryMaps: [
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg"),

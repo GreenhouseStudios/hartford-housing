@@ -1,22 +1,37 @@
 <template>
   <div>
     <v-row>
-      <v-col class="mx-auto">
-        <picture>
-          <v-img :src="src" contain max-height="90vh"></v-img>
-        </picture>
-      </v-col>
+      <v-col cols="4"></v-col>
+      <v-hover v-slot="{ hover }">
+        <v-col cols="4">
+          <picture>
+            <v-img :src="src" contain max-height="90vh"></v-img>
+          </picture>
+          <Caption v-if="hover" :body="capBody" :heading="capHead"></Caption>
+        </v-col>
+      </v-hover>
+      <v-col cols="4"> </v-col>
     </v-row>
   </div>
 </template>
 
 <script>
+import Caption from "./Caption.vue";
 export default {
   name: "ResponsiveMap",
+  components: {
+    Caption,
+  },
   props: {
     srcset: {
       type: Array,
     },
+    capHead:{
+      type: String
+    },
+    capBody:{
+      type: String
+    }
   },
   computed: {
     src() {

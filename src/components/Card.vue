@@ -9,19 +9,19 @@
         style="margin-top: 0 !important"
       >
         <!-- <div class="outline"> -->
-        <v-card flat tile color="lightBlack pa-3" class="innercard">
+        <v-card flat tile color="lightBlack pa-10" class="innercard">
           <v-card-title
             class="d-none d-md-block white--text display-1 font-weight-bold break-fix pa-4"
             >{{ heading }}</v-card-title
           >
           <v-card-title
-            class="d-block d-md-none white--text font-weight-bold break-fix pa-1"
+            class="d-block d-md-none white--text font-weight-bold break-fix pa-5"
             style="font-size: 18px; line-height: 6vw"
             >{{ heading }}</v-card-title
           >
 
           <v-card-text
-            class="d-block d-sm-none white--text font-weight-bold pa-1"
+            class="d-block d-sm-none white--text font-weight-bold pa-4"
             style="font-size: 12px; line-height: 5vw"
             >{{ body }}</v-card-text
           >
@@ -85,7 +85,7 @@ export default {
         case "lg":
           return "35vw";
         case "xl":
-          return "35vw";
+          return "40vw";
       }
       return "25vw";
     },
@@ -111,7 +111,7 @@ export default {
 <style  scoped>
 v-card {
   max-width: 20vw;
-  max-height: 80vh;
+  max-height: 100vh;
   text-overflow: ellipsis;
 }
 v-card-title {

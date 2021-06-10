@@ -154,12 +154,7 @@ export default {
       },
       {
         title: "Introduction",
-        slides: [
-          "Introduction: “And the Migrants Kept Coming”",
-          "African American Settlement",
-          "Puerto Rican Settlement",
-          "West Indian Settlement",
-        ],
+        slides: []
       },
       {
         title: "Maps",
@@ -167,14 +162,11 @@ export default {
       },
       {
         title: "Settlement",
+  
         slides: [
-          // "Journeys",
-          // "Georgia,Puerto Rico, Jamaica",
-          // "African American Settlement",
-          // "West Indian Settlement",
-          // "Puerto Rican Settlement",
-          // "Headlines",
-          // "Juxtapose test",
+          "African American Settlement",
+          "Puerto Rican Settlement",
+          "West Indian Settlement",
         ],
       },
       {

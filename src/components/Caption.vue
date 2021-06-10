@@ -134,6 +134,9 @@ v-card-text {
   font-size: 16pt;
 }
 #slide-bg {
+  position: absolute;
+  top: 20px;
+  left: 0;
   width: 100%;
   height: 100%;
 }
