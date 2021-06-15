@@ -241,7 +241,7 @@
             <v-col cols="3"></v-col>
             <v-col cols="6" justify="center" class="d-flex flex-column">
               <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-                {{map.label}}
+                {{ map.label }}
               </h2>
               <v-card min-width="50vw">
                 <vue-plyr>
@@ -376,6 +376,18 @@
       </div>
 
       <div class="section desktop-only">
+        <h1
+          class="
+            text-center
+            py-6
+            font-weight-bold
+            h1
+            display-2
+            map-section-header-green
+          "
+        >
+          Bellevue 1934 vs 1965
+        </h1>
         <iframe
           frameborder="0"
           class="juxtapose"
@@ -386,6 +398,18 @@
       </div>
 
       <div class="section mobile-only">
+        <h1
+          class="
+            text-center
+            py-6
+            font-weight-bold
+            h1
+            display-2
+            map-section-header-green
+          "
+        >
+          Bellevue 1934 vs 1965
+        </h1>
         <iframe
           frameborder="0"
           class="juxtapose"
@@ -397,6 +421,19 @@
       </div>
 
       <div class="section desktop-only">
+        <h1
+          class="
+            text-center
+            py-6
+            font-weight-bold
+            h1
+            display-2
+            map-section-header-teal
+          "
+        >
+          Windsor 1934 vs 1965
+        </h1>
+
         <iframe
           frameborder="0"
           class="juxtapose"
@@ -407,6 +444,18 @@
       </div>
 
       <div class="section mobile-only">
+        <h1
+          class="
+            text-center
+            py-6
+            font-weight-bold
+            h1
+            display-2
+            map-section-header-teal
+          "
+        >
+          Windsor 1934 vs 1965
+        </h1>
         <iframe
           frameborder="0"
           class="juxtapose"
