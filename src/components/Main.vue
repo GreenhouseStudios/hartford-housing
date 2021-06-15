@@ -95,7 +95,11 @@
       </v-card>
 
       <div class="section">
-          <ResponsiveMap :srcset="boundaryMaps" :capHead="captions[0].heading" :capBody="captions[0].body"></ResponsiveMap>
+        <ResponsiveMap
+          :srcset="boundaryMaps"
+          :capHead="captions[0].heading"
+          :capBody="captions[0].body"
+        ></ResponsiveMap>
       </div>
 
       <div class="section">
@@ -141,13 +145,11 @@
       </div>
 
       <div class="section">
-        <v-card class="d-flex align-center" height="100vh">
-          <v-img
-            contain
-            max-height="90vh"
-            :src="require('../assets/Maps/Final/Origins/OriginWithLabel.jpg')"
-          ></v-img>
-        </v-card>
+        <div class="slide" v-for="(obj, index) in originsImages" :key="index">
+          <v-card max-height="800" elevation="0">
+            <v-img max-height="80vh" contain :src="obj.img"></v-img>
+          </v-card>
+        </div>
       </div>
 
       <div class="section">
@@ -164,7 +166,14 @@
         <v-img
           contain
           max-height="90vh"
-          :src="require('../assets/Maps/Agricultural_Workers.jpg')"
+          :src="require('../assets/Maps/Final/Jamaica/Parishes.jpg')"
+        ></v-img>
+      </div>
+      <div class="section">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/Jamaica/locations.jpg')"
         ></v-img>
       </div>
     </div>
@@ -308,7 +317,7 @@
         <v-img
           max-height="90vh"
           contain
-          :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
+          :src="require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg')"
         ></v-img>
       </div>
 
@@ -316,7 +325,23 @@
         <v-img
           max-height="90vh"
           contain
-          :src="require('../assets/Maps/Final/ForeignBornPop/2018.jpg')"
+          :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section">
+        <v-img
+          max-height="90vh"
+          contain
+          :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
         ></v-img>
       </div>
     </div>
@@ -739,11 +764,11 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
-      captions:[
+      captions: [
         {
           heading: "Hartford Through Time",
-          body: "Harford’s present extent of 18 square miles is an artifact of town and city amalgamation between 1784 and 1896. Each change redefined the city in relation to its commercial business district as well as the future towns and suburbs of East Hartford, Manchester, and West Hartford. By 1881, the town and city had coterminous boundaries and consolidated government followed in April 1896. Native American, European, and African diasporic communities shaped the early histories of mobility, displacement, dispossession, and settlement in Hartford. The Great Migrations of African Americans, West Indians, and Puerto Ricans would transform the twentieth-century trajectory of the city."
-        }
+          body: "Harford’s present extent of 18 square miles is an artifact of town and city amalgamation between 1784 and 1896. Each change redefined the city in relation to its commercial business district as well as the future towns and suburbs of East Hartford, Manchester, and West Hartford. By 1881, the town and city had coterminous boundaries and consolidated government followed in April 1896. Native American, European, and African diasporic communities shaped the early histories of mobility, displacement, dispossession, and settlement in Hartford. The Great Migrations of African Americans, West Indians, and Puerto Ricans would transform the twentieth-century trajectory of the city.",
+        },
       ],
       boundaryMaps: [
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
@@ -761,6 +786,15 @@ export default {
         { img: require("../assets/Maps/Final/CityTown/1873 (Large).jpg") },
         { img: require("../assets/Maps/Final/CityTown/1881_FIX2 (Large).jpg") },
         { img: require("../assets/Maps/Final/CityTown/1897_FIX2 (Large).jpg") },
+      ],
+      originsImages: [
+        { img: require("../assets/Maps/Final/Origins/OriginWithLabel.jpg") },
+        { img: require("../assets/Maps/Final/Origins/Barbados.jpg") },
+        { img: require("../assets/Maps/Final/Origins/Georgia.jpg") },
+        { img: require("../assets/Maps/Final/Origins/Jamaica.jpg") },
+        { img: require("../assets/Maps/Final/Origins/Puerto_Rico.jpg") },
+        { img: require("../assets/Maps/Final/Origins/TheBahamas.jpg") },
+        { img: require("../assets/Maps/Final/Origins/TrinidadandTobago.jpg") },
       ],
       cantonImages: [
         { img: require("../assets/Maps/Final/Canton/Canton1920.jpg") },
