@@ -236,13 +236,25 @@
           </h1>
         </v-row>
 
-        <v-card class="d-flex align-center elevation-0" height="100vh">
-          <v-img
-            :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-            max-height="75vh"
-            contain
-          ></v-img>
-        </v-card>
+        <div class="section" v-for="map in driftMaps" :key="map.label">
+          <v-row justify="center">
+            <v-col cols="3"></v-col>
+            <v-col cols="6" justify="center" class="d-flex flex-column">
+              <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
+                {{map.label}}
+              </h2>
+              <v-card min-width="50vw">
+                <vue-plyr>
+                  <div
+                    data-plyr-provider="youtube"
+                    :data-plyr-embed-id="map.code"
+                  ></div>
+                </vue-plyr>
+              </v-card>
+            </v-col>
+            <v-col cols="3"></v-col>
+          </v-row>
+        </div>
       </div>
 
       <div class="section">
@@ -518,120 +530,6 @@
     <Housing></Housing>
     <Timeline></Timeline>
 
-    <div class="section">
-      <v-row justify="center">
-        <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-            Canadians
-          </h2>
-          <v-card min-width="50vw">
-            <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="fgghMRHTKA0"
-              ></div>
-            </vue-plyr>
-          </v-card>
-        </v-col>
-        <v-col cols="3"></v-col>
-      </v-row>
-    </div>
-    <div class="section">
-      <v-row justify="center">
-        <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-            Italians - Irish - Russians
-          </h2>
-          <v-card min-width="50vw">
-            <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="r4119mpVRis"
-              ></div>
-            </vue-plyr>
-          </v-card>
-        </v-col>
-        <v-col cols="3"></v-col>
-      </v-row>
-    </div>
-    <div class="section">
-      <v-row justify="center">
-        <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-            Irish
-          </h2>
-          <v-card min-width="50vw">
-            <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="cb0B0oyL5gA"
-              ></div>
-            </vue-plyr>
-          </v-card>
-        </v-col>
-        <v-col cols="3"></v-col>
-      </v-row>
-    </div>
-    <div class="section">
-      <v-row justify="center">
-        <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-            Irish
-          </h2>
-          <v-card min-width="50vw">
-            <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="kv50tsnkaPE"
-              ></div>
-            </vue-plyr>
-          </v-card>
-        </v-col>
-        <v-col cols="3"></v-col>
-      </v-row>
-    </div>
-    <div class="section">
-      <v-row justify="center">
-        <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-            Polish
-          </h2>
-          <v-card min-width="50vw">
-            <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="y1FR2AIs-uI"
-              ></div>
-            </vue-plyr>
-          </v-card>
-        </v-col>
-        <v-col cols="3"></v-col>
-      </v-row>
-    </div>
-    <div class="section">
-      <v-row justify="center">
-        <v-col cols="3"></v-col>
-        <v-col cols="6" justify="center" class="d-flex flex-column">
-          <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-            Russians
-          </h2>
-          <v-card min-width="50vw">
-            <vue-plyr>
-              <div
-                data-plyr-provider="youtube"
-                data-plyr-embed-id="SGI3kAdR2yQ"
-              ></div>
-            </vue-plyr>
-          </v-card>
-        </v-col>
-        <v-col cols="3"></v-col>
-      </v-row>
-    </div>
     <!-- <ProfileMenu></ProfileMenu>
     <div class="section" v-for="(prof, j) in profiles" :key="j">
       <v-container fluid>
@@ -675,7 +573,7 @@
       <v-simple-table class="mx-10">
         <template v-slot:default>
           <tbody>
-            <tr v-for="n in sources.length">
+            <tr v-for="n in sources.length" :key="n">
               <td>{{ n }}.{{ sources[n] }}</td>
               <td>
                 <a
@@ -764,6 +662,14 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
+      driftMaps: [
+        { label: "Canadians", code: "fgghMRHTKA0" },
+        { label: "Italians - Irish - Russians", code: "r4119mpVRis" },
+        { label: "Irish", code: "cb0B0oyL5gA" },
+        { label: "Italians", code: "kv50tsnkaPE" },
+        { label: "Polish", code: "y1FR2AIs-uI" },
+        { label: "Russians", code: "SGI3kAdR2yQ" },
+      ],
       captions: [
         {
           heading: "Hartford Through Time",
