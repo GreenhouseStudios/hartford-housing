@@ -200,6 +200,6 @@ to spend emotional and financial capital addressing horrendous living conditions
   margin: auto;
 }
 .tall {
-  height: 1350px !important;
+  /* height: 1350px !important; */
 }
 </style>
