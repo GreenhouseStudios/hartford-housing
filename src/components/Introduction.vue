@@ -36,7 +36,7 @@
               <v-card-text>{{ lorem.generateParagraphs(3) }}</v-card-text>
               <v-card-text>{{ lorem.generateParagraphs(4) }}</v-card-text>
               <v-card-actions>
-                <v-btn>Read the Full Essay</v-btn>
+                <v-btn @click="$router.push({name:'Essay'})">Read the Full Essay</v-btn>
               </v-card-actions>
             </v-card>
             <!-- <Card></Card> -->

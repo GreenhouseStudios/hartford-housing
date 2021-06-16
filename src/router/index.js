@@ -7,6 +7,7 @@ import Funders from '@/components/Funders'
 import People from '@/components/People'
 import Permissions from '@/components/Permissions'
 import Methodology from '@/components/Methodology'
+import IntroEssay from '@/components/IntroEssay'
 Vue.use(
   VueRouter
 )
@@ -44,6 +45,11 @@ const router = new VueRouter({
       path: '/Methodology',
       name: 'Methodology',
       component: Methodology
+    },
+    {
+      path: '/Essay',
+      name: 'Essay',
+      component: IntroEssay
     },
     {
       path: '*',
