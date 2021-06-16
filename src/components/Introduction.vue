@@ -34,8 +34,7 @@
             <v-card class="pa-10">
               <v-card-title></v-card-title>
               <v-card-text>{{ lorem.generateParagraphs(3) }}</v-card-text>
-              <v-card-text>{{ lorem.generateParagraphs(5) }}</v-card-text>
-              <v-card-text>{{ lorem.generateParagraphs(5) }}</v-card-text>
+              <v-card-text>{{ lorem.generateParagraphs(4) }}</v-card-text>
               <v-card-actions>
                 <v-btn>Read the Full Essay</v-btn>
               </v-card-actions>
