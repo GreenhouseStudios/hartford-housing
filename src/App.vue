@@ -29,6 +29,11 @@
             </v-list-item>
           </v-list>
         </v-menu>
+        <v-menu>
+            <template v-slot:activator="{ on }">
+            <v-btn text @click="$router.push({name:'Methodology'})" dark v-on="on">Methodology</v-btn>
+          </template>
+        </v-menu>
       </v-toolbar-items>
 
       <!-- Mobile Nav -->
@@ -71,11 +76,11 @@
               >Permissions</router-link
             >
           </v-list-item>
-          <v-list-item>
+          <!-- <v-list-item>
             <router-link to="/Methodology" class="pr-4 footer-link centertext"
               >Methodology</router-link
             >
-          </v-list-item>
+          </v-list-item> -->
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -113,9 +118,9 @@
           <router-link to="/Permissions" class="pr-4 footer-link"
             >Permissions</router-link
           >
-          <router-link to="/Methodology" class="pr-4 footer-link"
+          <!-- <router-link to="/Methodology" class="pr-4 footer-link"
             >Methodology</router-link
-          >
+          > -->
         </v-col>
         <v-spacer></v-spacer>
         <v-col cols="1" class="px-0 mx-0 text-right" justify-self="end" align-self="center"> &copy; {{ new Date().getFullYear() }} </v-col>
@@ -188,6 +193,10 @@ export default {
         slides: [],
       },
       // {
+      //   title: "Methodology",
+      //   slides: [],
+      // },
+      // {
       //   title: "Profiles",
       //   slides: [
       //     // "Tenant Activists Profiles",
@@ -203,6 +212,7 @@ export default {
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
       { title: "Timeline", path: "/Timeline" },
+      // { title: "Methodology", path: "/Methodology" },
       // { title: "Profiles", path: "/Profiles" },
     ],
     options: {
