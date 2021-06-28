@@ -29,11 +29,6 @@
             </v-list-item>
           </v-list>
         </v-menu>
-        <v-menu>
-            <template v-slot:activator="{ on }">
-            <v-btn text @click="$router.push({name:'Methodology'})" dark v-on="on">Methodology</v-btn>
-          </template>
-        </v-menu>
       </v-toolbar-items>
 
       <!-- Mobile Nav -->
@@ -57,30 +52,20 @@
           </v-list-item>
           <v-divider></v-divider>
           <v-list-item>
-            <router-link to="/People" class="pr-4 footer-link centertext"
+            <router-link to="/People" class="pr-4 footer-link centertext teal--text"
               >Credits</router-link
             >
           </v-list-item>
-          <!-- <v-list-item>
-            <router-link to="/Funders" class="pr-4 footer-link centertext"
-              >Funders</router-link
-            >
-          </v-list-item> -->
           <v-list-item>
-            <router-link to="/Contact" class="pr-4 footer-link centertext"
+            <router-link to="/Contact" class="pr-4 footer-link centertext blue--text"
               >Contact</router-link
             >
           </v-list-item>
           <v-list-item>
-            <router-link to="/Permissions" class="pr-4 footer-link centertext"
-              >Permissions</router-link
-            >
-          </v-list-item>
-          <!-- <v-list-item>
-            <router-link to="/Methodology" class="pr-4 footer-link centertext"
+            <router-link to="/Methodology" class="pr-4 footer-link centertext green--text"
               >Methodology</router-link
             >
-          </v-list-item> -->
+          </v-list-item>
         </v-list>
       </v-menu>
     </v-app-bar>
@@ -106,21 +91,15 @@
     >
       <v-row class="white--text pr-4 copyright" align-self="center">
         <v-col>
-          <router-link to="/People" class="pr-4 footer-link"
+          <router-link to="/People" class="pr-4 footer-link teal--text"
             >Credits</router-link
           >
-          <!-- <router-link to="/Funders" class="pr-4 footer-link"
-            >Funders</router-link
-          > -->
-          <router-link to="/Contact" class="pr-4 footer-link"
+          <router-link to="/Contact" class="pr-4 footer-link blue--text"
             >Contact</router-link
           >
-          <router-link to="/Permissions" class="pr-4 footer-link"
-            >Permissions</router-link
-          >
-          <!-- <router-link to="/Methodology" class="pr-4 footer-link"
+          <router-link to="/Methodology" class="pr-4 footer-link green--text"
             >Methodology</router-link
-          > -->
+          >
         </v-col>
         <v-spacer></v-spacer>
         <v-col cols="1" class="px-0 mx-0 text-right" justify-self="end" align-self="center"> &copy; {{ new Date().getFullYear() }} </v-col>
@@ -177,32 +156,12 @@ export default {
       {
         title: "Housing",
         slides: [
-          // "Post WWII Housing Crisis",
-          // "Public Housing",
-          // "Charter House Terrace",
-          // "Bellevue Square",
-          // "Redlining",
-          // "Home Ownership",
-          // "Slumlords Now, Slumlords Then",
-          // "Housing Code Violations",
-          // "The No More Slumlords Campaign",
         ],
       },
       {
         title: "Timeline",
         slides: [],
       },
-      // {
-      //   title: "Methodology",
-      //   slides: [],
-      // },
-      // {
-      //   title: "Profiles",
-      //   slides: [
-      //     // "Tenant Activists Profiles",
-      //     //  "Historic Firsts"
-      //      ],
-      // },
     ],
     menuItems: [
       { title: "Home", path: "/Home" },
@@ -212,7 +171,6 @@ export default {
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
       { title: "Timeline", path: "/Timeline" },
-      // { title: "Methodology", path: "/Methodology" },
       // { title: "Profiles", path: "/Profiles" },
     ],
     options: {
