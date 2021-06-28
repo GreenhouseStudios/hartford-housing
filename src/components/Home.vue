@@ -22,11 +22,12 @@
             color="white"
             id="subtitle"
             class="d-none d-md-block font-weight-bold pa-3 h1"
+            style="width: 65%; margin: 0 auto"
           >
-            How
-            <span class="r-slant">African Americans</span>,
-            <span class="l-slant-teal">Puerto Ricans</span> and
-            <span class="highlight-green">West Indians</span> Made Hartford Home
+          The story of
+            <span class="r-slant">Race</span>,
+            <span class="l-slant-teal">Migration</span> and
+            <span class="highlight-green">Mobility</span> in Hartford 
           </v-card>
           <v-card
             tile
@@ -34,10 +35,10 @@
             id="subtitle"
             class="d-block d-md-none font-weight-bold pa-2"
           >
-            How
-            <span class="r-slant">African Americans</span>,
-            <span class="highlight-teal">Puerto Ricans</span> and
-            <span class="l-slant-green">West Indians</span> Made Hartford Home
+              The story of
+            <span class="r-slant">Race</span>,
+            <span class="l-slant-teal">Migration</span> and
+            <span class="highlight-green">Mobility</span> in Hartford 
           </v-card>
           <v-card
             tile
