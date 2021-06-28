@@ -39,6 +39,26 @@
             <span class="highlight-teal">Puerto Ricans</span> and
             <span class="l-slant-green">West Indians</span> Made Hartford Home
           </v-card>
+          <v-card
+            tile
+            color="white"
+            id="subtitle"
+            class="d-none d-md-block font-weight-bold pa-3 display-2 ma-3"
+          >
+            By
+            <span class="r-slant">Fiona Vernal</span> and
+            <span class="l-slant-teal">James Kolb</span> 
+          </v-card>
+          <v-card
+            tile
+            color="white"
+            id="subtitle"
+            class="d-block d-md-none font-weight-bold pa-3 ma-3"
+          >
+            By
+            <span class="r-slant">Fiona Vernal</span> and
+            <span class="l-slant-teal">James Kolb</span> 
+          </v-card>
         </v-col>
         <v-col cols="1" md="3"></v-col>
       </v-row>
