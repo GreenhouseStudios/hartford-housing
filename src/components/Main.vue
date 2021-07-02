@@ -3,6 +3,7 @@
     <!-- changed 'display: contents' to visible because it doesn't work with position:sticky -->
     <Home></Home>
     <About></About>
+    <LandAcknowledgement></LandAcknowledgement>
     <Introduction></Introduction>
     <v-row justify="center" class="map-section-header py-5 text-outline-offset">
       <h1
@@ -664,6 +665,7 @@ import MapCarousel from "@/components/MapCarousel";
 import { loremIpsum } from "lorem-ipsum";
 import ResponsiveMap from "@/components/ResponsiveMap";
 import MobileSlidesSection from "@/components/MobileSlidesSection";
+import LandAcknowledgement from './LandAcknowledgement.vue';
 
 export default {
   name: "Main",
@@ -682,6 +684,7 @@ export default {
     MapCarousel,
     ResponsiveMap,
     MobileSlidesSection,
+    LandAcknowledgement,
   },
   methods: {
     handleProfileMapClick(index) {
