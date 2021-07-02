@@ -74,8 +74,8 @@
     </v-row>
 
     <v-row>
-      <v-col cols="4"></v-col>
-      <v-col cols="4" class="gallery">
+      <v-col cols="3"></v-col>
+      <v-col cols="6" class="gallery">
         <v-hover
           v-slot="{ hover }"
           v-for="(tile, index) in tiles"
@@ -85,15 +85,15 @@
           <v-card
             :elevation="hover ? 12 : 2"
             aspect-ratio="1"
-            height="15rem"
-            width="15rem"
+            height="12rem"
+            width="12rem"
             class="pa-5"
           >
-            <v-img :src="tile" contain max-width="13rem" max-height="13rem"></v-img>
+            <v-img :src="tile" contain max-width="10rem" max-height="10rem"></v-img>
           </v-card>
         </v-hover>
       </v-col>
-      <v-col cols="4"></v-col>
+      <v-col cols="3"></v-col>
     </v-row>
   </div>
 </template>
@@ -126,5 +126,6 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 </style>
