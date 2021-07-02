@@ -5,82 +5,7 @@
     <About></About>
     <LandAcknowledgement></LandAcknowledgement>
     <Introduction></Introduction>
-    <v-row justify="center" class="map-section-header py-5 text-outline-offset">
-      <h1
-        class="
-          d-none d-md-block
-          map-section-header
-          section-header
-          display-2
-          font-weight-bold
-          text-outline-offset
-        "
-      >
-        Maps
-      </h1>
-      <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
-    </v-row>
-
-    <div class="section">
-      <v-row align="center">
-        <v-card align-self="center" class="mx-auto ma-10" width="50vw">
-          <v-btn
-            class="d-block"
-            tile
-            elevation="0"
-            x-large
-            color="blue"
-            width="100%"
-            @click="navigateToMapSection(3)"
-            >Hartford Through Time</v-btn
-          >
-          <v-btn
-            class="d-block"
-            tile
-            elevation="0"
-            x-large
-            color="teal"
-            width="100%"
-            @click="navigateToMapSection(6)"
-            >Routes and Roots</v-btn
-          >
-          <v-btn
-            class="d-block"
-            tile
-            elevation="0"
-            x-large
-            color="green"
-            width="100%"
-            @click="navigateToMapSection(10)"
-            >Mobilities</v-btn
-          >
-          <v-btn
-            class="d-block"
-            tile
-            elevation="0"
-            x-large
-            color="blue"
-            width="100%"
-            @click="navigateToMapSection(15)"
-            >Neighborhood Clusters</v-btn
-          >
-          <v-btn
-            class="d-block"
-            tile
-            elevation="0"
-            x-large
-            color="teal"
-            width="100%"
-            @click="navigateToMapSection(20)"
-            >Housing</v-btn
-          >
-        </v-card>
-        <!-- <v-col class="mx-auto">
-          
-        </v-col> -->
-      </v-row>
-    </div>
-
+    <TableContents :tiles="galleryImgs"></TableContents>
     <!-- 0: Hartford Through Time -->
     <div class="mapsection">
       <v-card
@@ -665,8 +590,8 @@ import MapCarousel from "@/components/MapCarousel";
 import { loremIpsum } from "lorem-ipsum";
 import ResponsiveMap from "@/components/ResponsiveMap";
 import MobileSlidesSection from "@/components/MobileSlidesSection";
-import LandAcknowledgement from './LandAcknowledgement.vue';
-
+import LandAcknowledgement from "./LandAcknowledgement.vue";
+import TableContents from "./TableContents.vue";
 export default {
   name: "Main",
   components: {
@@ -685,6 +610,7 @@ export default {
     ResponsiveMap,
     MobileSlidesSection,
     LandAcknowledgement,
+    TableContents,
   },
   methods: {
     handleProfileMapClick(index) {
@@ -714,6 +640,21 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
+      galleryImgs: [
+        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
+        require("../assets/Maps/Final/CityTown/1635 (Large).jpg") ,
+        require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
+        require('../assets/Maps/Colleges.jpg'),
+        require('../assets/Maps/Final/Jamaica/Parishes.jpg'),
+        require('../assets/Maps/Final/Jamaica/locations.jpg'),
+        require("../assets/Maps/Final/Canton/Canton1920.jpg"),
+        require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"),
+        require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
+        require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg'),
+        require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
+        require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+        require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
+      ],
       driftMaps: [
         { label: "Canadians", code: "fgghMRHTKA0" },
         { label: "Italians - Irish - Russians", code: "r4119mpVRis" },
@@ -734,6 +675,8 @@ export default {
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg"),
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg"),
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg"),
+        require("../assets/Maps/Final/Renters/Renter-Occupied_3.jpg"),
+        require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg")
       ],
       cityTownImages: [
         { img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg") },
@@ -913,7 +856,7 @@ the Center for Leadership and Justice) and as Senior Pastor of the Urban Hope Re
   },
 };
 </script>
-<style scoped>
+<style>
 @media only screen and (max-width: 768px) {
   .mobile-only {
     display: visible;
