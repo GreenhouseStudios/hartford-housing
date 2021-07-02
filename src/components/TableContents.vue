@@ -85,11 +85,11 @@
           <v-card
             :elevation="hover ? 12 : 2"
             aspect-ratio="1"
-            height="130px"
-            width="130px"
+            height="15rem"
+            width="15rem"
             class="pa-5"
           >
-            <v-img :src="tile" contain max-width="100px" max-height="100px"></v-img>
+            <v-img :src="tile" contain max-width="13rem" max-height="13rem"></v-img>
           </v-card>
         </v-hover>
       </v-col>
