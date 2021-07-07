@@ -1,5 +1,5 @@
 <template>
-  <div class="section" id="home-section">
+  <div class="section nav-section" id="home-section">
     <v-container fluid fill-height>
       <v-row>
         <v-col cols="1" md="3"></v-col>

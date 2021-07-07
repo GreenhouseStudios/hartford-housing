@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="section nav-section">
     <v-sheet height="100vh" width="100vw" color="teal">
       <v-container fluid fill-height>
         <v-row>

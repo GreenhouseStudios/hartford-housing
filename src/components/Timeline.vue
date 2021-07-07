@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section nav-section">
     <h1 class="d-none d-md-block section-header display-3 font-weight-bold py-10 mb-10">
       Timeline
     </h1>

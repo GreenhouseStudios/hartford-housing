@@ -1,5 +1,5 @@
 <template>
-  <div class="section">
+  <div class="section nav-section">
     <v-row justify="center" class="map-section-header py-5 text-outline-offset">
       <h1
         class="

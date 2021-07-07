@@ -1,5 +1,5 @@
 <template>
-  <div class="section tall">
+  <div class="section nav-section tall">
     <v-container fluid>
       <v-row justify="center">
         <h1 class="d-none d-md-block section-header display-2 font-weight-bold">

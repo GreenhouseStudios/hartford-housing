@@ -521,44 +521,6 @@
     <Housing></Housing>
     <Timeline></Timeline>
 
-    <!-- <ProfileMenu></ProfileMenu>
-    <div class="section" v-for="(prof, j) in profiles" :key="j">
-      <v-container fluid>
-        <v-row>
-          <v-col cols="12" md="6">
-            <v-img
-              :src="prof.img"
-              height="600"
-              width="400"
-              class="d-none d-md-block"
-            ></v-img>
-            <v-hover v-slot:default="{ hover }" class="d-none d-md-block">
-              <v-card
-                :elevation="hover ? 16 : 2"
-                height="200"
-                width="147"
-                class="profile-map"
-                @click.stop="toMap(j)"
-              >
-                <v-img
-                  src="@/assets/joshmap.jpg"
-                  max-height="200"
-                  contain
-                ></v-img>
-              </v-card>
-            </v-hover>
-          </v-col>
-          <v-col cols="12" md="6">
-            <ReadMoreCard
-              v-bind:body="prof.body"
-              v-bind:heading="prof.name"
-              v-bind:image="prof.img"
-            ></ReadMoreCard>
-          </v-col>
-        </v-row>
-      </v-container>
-    </div> -->
-
     <div class="section">
       <h2 class="section-header display-1 font-weight-bold">Sources</h2>
       <v-simple-table class="mx-10">

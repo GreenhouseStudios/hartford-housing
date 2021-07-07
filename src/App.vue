@@ -75,12 +75,12 @@
         ref="fullpage"
         :options="options"
         id="fullpage"
-        v-if="$route.name == 'Main'"
+     
       >
         <router-view></router-view>
       </full-page>
       <!-- I mean, I guess this works... -->
-      <router-view v-else></router-view>
+      <!-- <router-view v-else></router-view> -->
     </v-content>
 
     <v-footer
@@ -119,6 +119,8 @@
 </template>
 
 <script>
+const sects = [...document.getElementsByClassName("section")];
+const navSections = [...document.getElementsByClassName("nav-section")];
 export default {
   name: "App",
   data: () => ({
@@ -127,6 +129,9 @@ export default {
     tagPrefix: "#",
     sideNav: true,
     drawer: false,
+    sectionEls: null,
+    navSects: null,
+    navNums: [],
     sections: [
       {
         title: "Home",
@@ -187,8 +192,8 @@ export default {
       controlArrows: false,
       verticalCentered: true,
       parallax: true,
-      sectionsColor: ["#EEE"],
-      anchors: ["Home", "About", "Introduction","Maps/HartfordThroughTime","Settlement","Housing","Timeline","Profiles"],
+      sectionsColor: ["#FFF"],
+      anchors: ["Home", "About", "Introduction","Maps","Settlement","Housing","Timeline","Profiles"],
       // lockAnchors: true,
     },
   }),
@@ -198,11 +203,10 @@ export default {
     },
     navigateToSection: function (i) {
       // console.log(i)
-      if (i > 3) i += 22;
-      if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(i + 1);
+      if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(this.navNums[i]);
       else
         this.$router.push("/").then(() => {
-          this.$refs.fullpage.api.moveTo(i + 1);
+          this.$refs.fullpage.api.moveTo(this.navNums[i]);
         });
     },
     navigateToSources: function(){
@@ -232,6 +236,12 @@ export default {
       if(section === 4) this.navigateToMapSection(subsection);
       else this.navigateToSlide(section,subsection);
     }
+  },
+  mounted () {
+    this.navSects = Array.from(this.$el.querySelectorAll(".nav-section"));
+    this.sectionEls = Array.from(this.$el.querySelectorAll(".section"));
+    var matches = this.sectionEls.filter(x => this.navSects.includes(x));
+    this.navNums = matches.map(x => this.sectionEls.indexOf(x) + 1)
   },
 };
 </script>
