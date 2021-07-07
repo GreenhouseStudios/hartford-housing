@@ -5,6 +5,7 @@
         <v-img :max-height="maxHeight" contain :src="obj.img"></v-img>
       </div>
     </v-row>
+    <router-link to="/Map/1234">
     <v-card
       class="d-none d-md-block elevation-0"
       height="100vh"
@@ -23,6 +24,7 @@
           <v-img contain :src="obj.img" :max-height="maxHeight"></v-img> </v-col
       ></v-row>
     </v-card>
+    </router-link>
   </div>
 </template>
 

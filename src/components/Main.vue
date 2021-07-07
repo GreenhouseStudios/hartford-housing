@@ -21,6 +21,7 @@
       </v-card>
 
       <div class="section">
+        <router-link to="/Map/1234">
         <v-card class="d-flex align-center" height="100vh">
           <v-img
             contain
@@ -28,6 +29,7 @@
             :src="require('../assets/Maps/Final/BoundariesThroughTime/thumbnail_cityboundaries_labels.jpg')"
           ></v-img>
         </v-card>
+        </router-link>
       </div>
 
       <div class="section">
@@ -38,6 +40,7 @@
       </div>
 
       <div class="section">
+        <router-link to="/Map/1234">
         <v-card class="d-flex align-center elevation-0" height="100vh">
           <v-img
             :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
@@ -45,6 +48,7 @@
             contain
           ></v-img>
         </v-card>
+        </router-link>
       </div>
     </div>
 
@@ -63,6 +67,7 @@
       </v-card>
 
       <div class="section">
+        <router-link to="/Map/1234">
         <v-card class="d-flex align-center elevation-0" height="100vh">
           <v-img
             :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
@@ -70,17 +75,21 @@
             contain
           ></v-img>
         </v-card>
+        </router-link>
       </div>
 
       <div class="section">
+        <router-link to="/Map/1234">
         <div class="slide" v-for="(obj, index) in originsImages" :key="index">
           <v-card max-height="800" elevation="0">
             <v-img max-height="80vh" contain :src="obj.img"></v-img>
           </v-card>
         </div>
+        </router-link>
       </div>
 
       <div class="section">
+        <router-link to="/Map/1234">
         <v-card class="d-flex align-center" height="100vh">
           <v-img
             contain
@@ -88,21 +97,26 @@
             :src="require('../assets/Maps/Colleges.jpg')"
           ></v-img>
         </v-card>
+        </router-link>
       </div>
 
       <div class="section">
+        <router-link to="/Map/1234">
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/Jamaica/Parishes.jpg')"
         ></v-img>
+        </router-link>
       </div>
       <div class="section">
+        <router-link to="/Map/1234">
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/Jamaica/locations.jpg')"
         ></v-img>
+        </router-link>
       </div>
     </div>
 

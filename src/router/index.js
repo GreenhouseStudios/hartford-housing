@@ -8,59 +8,59 @@ import People from '@/components/People'
 import Permissions from '@/components/Permissions'
 import Methodology from '@/components/Methodology'
 import IntroEssay from '@/components/IntroEssay'
+import MapSetDetail from '@/components/MapSetDetail'
 Vue.use(
-  VueRouter
+    VueRouter
 )
 
 const router = new VueRouter({
-  base: '/hartford-housing/',
-  routes: [
-    {
-      path:'/',
-      name: 'Main',
-      component: Main,
-      alias: ['/About','Introduction/:id','/Housing/:id','/Home', '/Settlement/:id','/Timeline','/Profiles','/Maps']
-    },
-    {
-      path: '/Contact',
-      name: 'Contact',
-      component: Contact
-    },
-    {
-      path: '/Funders',
-      name: 'Funders',
-      component: Funders
-    },
-    {
-      path: '/People',
-      name: 'People',
-      component: People
-    },
-    {
-      path: '/Permissions',
-      name: 'Permissions',
-      component: Permissions
-    },
-    {
-      path: '/Methodology',
-      name: 'Methodology',
-      component: Methodology
-    },
-    {
-      path: '/Essay',
-      name: 'Essay',
-      component: IntroEssay
-    },
-    {
-      path: '*',
-      name: 'Main',
-      component: Main,
-    }
-  ]
+    base: '/hartford-housing/',
+    routes: [{
+            path: '/',
+            name: 'Main',
+            component: Main,
+            alias: ['/About', 'Introduction/:id', '/Housing/:id', '/Home', '/Settlement/:id', '/Timeline', '/Profiles', '/Maps']
+        },
+        {
+            path: '/Contact',
+            name: 'Contact',
+            component: Contact
+        },
+        {
+            path: '/Funders',
+            name: 'Funders',
+            component: Funders
+        },
+        {
+            path: '/People',
+            name: 'People',
+            component: People
+        },
+        {
+            path: '/Permissions',
+            name: 'Permissions',
+            component: Permissions
+        },
+        {
+            path: '/Methodology',
+            name: 'Methodology',
+            component: Methodology
+        },
+        {
+            path: '/Essay',
+            name: 'Essay',
+            component: IntroEssay
+        },
+        {
+            path: '*',
+            name: 'Main',
+            component: Main,
+        },
+        {
+            path: '/Map/:id',
+            name: 'MapSetDetail',
+            component: MapSetDetail
+        }
+    ]
 })
-
-// router.afterEach((to,from) =>{
-
-// })
-
 export default router;
