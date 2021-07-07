@@ -21,11 +21,13 @@
       </v-card>
 
       <div class="section">
-        <ResponsiveMap
-          :srcset="boundaryMaps"
-          :capHead="captions[0].heading"
-          :capBody="captions[0].body"
-        ></ResponsiveMap>
+        <v-card class="d-flex align-center" height="100vh">
+          <v-img
+            contain
+            max-height="90vh"
+            :src="require('../assets/Maps/Final/BoundariesThroughTime/thumbnail_cityboundaries_labels.jpg')"
+          ></v-img>
+        </v-card>
       </div>
 
       <div class="section">
@@ -642,18 +644,18 @@ export default {
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
       galleryImgs: [
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
-        require("../assets/Maps/Final/CityTown/1635 (Large).jpg") ,
+        require("../assets/Maps/Final/CityTown/1635 (Large).jpg"),
         require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
-        require('../assets/Maps/Colleges.jpg'),
-        require('../assets/Maps/Final/Jamaica/Parishes.jpg'),
-        require('../assets/Maps/Final/Jamaica/locations.jpg'),
+        require("../assets/Maps/Colleges.jpg"),
+        require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
+        require("../assets/Maps/Final/Jamaica/locations.jpg"),
         require("../assets/Maps/Final/Canton/Canton1920.jpg"),
         require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"),
         require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
-        require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg'),
+        require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg"),
         require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
         require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
-        require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
+        require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
       ],
       driftMaps: [
         { label: "Canadians", code: "fgghMRHTKA0" },
@@ -676,7 +678,7 @@ export default {
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg"),
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg"),
         require("../assets/Maps/Final/Renters/Renter-Occupied_3.jpg"),
-        require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg")
+        require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
       ],
       cityTownImages: [
         { img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg") },
