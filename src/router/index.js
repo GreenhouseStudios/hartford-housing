@@ -15,12 +15,13 @@ Vue.use(
 
 const router = new VueRouter({
     base: '/hartford-housing/',
-    routes: [{
-            path: '/',
-            name: 'Main',
-            component: Main,
-            alias: ['/About', 'Introduction/:id', '/Housing/:id', '/Home', '/Settlement/:id', '/Timeline', '/Profiles', '/Maps']
-        },
+    routes: [
+        // {
+        //     path: '/',
+        //     name: 'Main',
+        //     component: Main,
+        //     alias: ['/About', 'Introduction/:id', '/Housing/:id', '/Home', '/Settlement/:id', '/Timeline', '/Profiles', '/Maps']
+        // },
         {
             path: '/Contact',
             name: 'Contact',

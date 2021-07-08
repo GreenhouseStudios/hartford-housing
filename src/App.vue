@@ -193,7 +193,7 @@ export default {
       verticalCentered: true,
       parallax: true,
       sectionsColor: ["#FFF"],
-      anchors: ["Home", "About", "Introduction","Maps","Settlement","Housing","Timeline","Profiles"],
+      // anchors: ["Home", "About", "Introduction","Maps","Settlement","Housing","Timeline","Profiles"],
       // lockAnchors: true,
     },
   }),
