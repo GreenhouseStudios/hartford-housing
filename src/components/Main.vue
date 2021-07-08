@@ -323,12 +323,12 @@
       <div id="sticky-container">
         <v-img
           :src="require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')"
-          max-height="30rem"
+          max-height="25rem"
           contain
           id="juxt-context"
         ></v-img>
       </div>
-      <div class="section desktop-only">
+      <div class="section d-none d-md-flex">
         <h1
           class="
             text-center
@@ -350,7 +350,7 @@
         ></iframe>
       </div>
 
-      <div class="section mobile-only">
+      <div class="section d-sm-flex d-md-none">
         <h1
           class="
             text-center
@@ -373,7 +373,7 @@
         </iframe>
       </div>
 
-      <div class="section desktop-only">
+      <div class="section d-none d-md-flex">
         <h1
           class="
             text-center
@@ -396,7 +396,7 @@
         ></iframe>
       </div>
 
-      <div class="section mobile-only">
+      <div class="section d-sm-flex d-md-none">
         <h1
           class="
             text-center
@@ -801,12 +801,12 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.1,
         // Duration of animation
-        duration: "5300",
+        duration: "2100",
       }) // Declaration of animation and attaching to element
       // .setClassToggle("#revealscale", "visible")
       .setPin("#sticky-container",{pushFollowers: false})
       // Helpful tags for orientation on the screen
-      .addIndicators({ name: "2 (duration: 1000)" });
+      // .addIndicators({ name: "2 (duration: 1000)" });
     // Add Scene to controller
     this.$scrollmagic.addScene(bellevueSticky);
   },
