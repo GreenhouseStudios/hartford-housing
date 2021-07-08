@@ -96,7 +96,7 @@
             <v-img
               contain
               max-height="90vh"
-              :src="require('../assets/Maps/Colleges.jpg')"
+              :src="require('../assets/Maps/Final/Colleges/Colleges.jpg')"
             ></v-img>
           </v-card>
         </router-link>
