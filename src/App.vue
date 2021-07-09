@@ -119,8 +119,6 @@
 </template>
 
 <script>
-const sects = [...document.getElementsByClassName("section")];
-const navSections = [...document.getElementsByClassName("nav-section")];
 export default {
   name: "App",
   data: () => ({
@@ -129,9 +127,10 @@ export default {
     tagPrefix: "#",
     sideNav: true,
     drawer: false,
-    sectionEls: null,
+    fpSections: null,
     navSects: null,
     navNums: [],
+    mapNums: [],
     sections: [
       {
         title: "Home",
@@ -212,13 +211,11 @@ export default {
     navigateToSources: function(){
           this.$refs.fullpage.api.moveTo(43);
     },
-    navigateToSlide: function (i, index) {
-      if (i > 3) i += 14;
-      if (this.$route.name == "Main") {
-        this.$refs.fullpage.api.moveTo(i + 1, index);
-      } else
+    navigateToSlide: function (i, slide) {
+     if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(this.navNums[i],slide);
+      else
         this.$router.push("/").then(() => {
-          this.$refs.fullpage.api.moveTo(i + 1, index);
+          this.$refs.fullpage.api.moveTo(this.navNums[i],slide);
         });
     },
     navigateToProfile: function (i) {
@@ -230,18 +227,24 @@ export default {
     },
     navigateToMapSection: function(i){
       //find the map section by id
-      this.$refs.fullpage.api.moveTo(2 + i);
+      console.log(this.mapNums[i]);
+      this.$refs.fullpage.api.moveTo(this.mapNums[i]);
     },
     menuNavigate: function (section,subsection){
-      if(section === 4) this.navigateToMapSection(subsection);
+      if(section === 3) this.navigateToMapSection(subsection);
       else this.navigateToSlide(section,subsection);
     }
   },
   mounted () {
+    this.fpSections = Array.from(this.$el.querySelectorAll(".section"));
+
     this.navSects = Array.from(this.$el.querySelectorAll(".nav-section"));
-    this.sectionEls = Array.from(this.$el.querySelectorAll(".section"));
-    var matches = this.sectionEls.filter(x => this.navSects.includes(x));
-    this.navNums = matches.map(x => this.sectionEls.indexOf(x) + 1)
+    var matches = this.fpSections.filter(x => this.navSects.includes(x));
+    this.navNums = matches.map(x => this.fpSections.indexOf(x) + 1);
+
+    var mapChapterDivs = Array.from(this.$el.querySelectorAll(".map-section"));
+    var fpMapChapters = this.fpSections.filter(x => mapChapterDivs.includes(x));
+    this.mapNums = fpMapChapters.map(x => this.fpSections.indexOf(x) + 1)
   },
 };
 </script>

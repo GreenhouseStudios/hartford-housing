@@ -20,7 +20,7 @@
         </h1>
       </v-card>
 
-      <div class="section">
+      <div class="section map-section">
         <router-link to="/Map/1234">
           <v-card class="d-flex align-center" height="100vh">
             <v-img
@@ -68,7 +68,7 @@
         </h1>
       </v-card>
 
-      <div class="section">
+      <div class="section map-section">
         <router-link to="/Map/1234">
           <v-card class="d-flex align-center elevation-0" height="100vh">
             <v-img
@@ -123,7 +123,7 @@
     </div>
 
     <!-- 2: Mobilities -->
-    <div class="mapsection">
+    <div>
       <v-card
         align-content="center"
         width="100vw"
@@ -136,7 +136,7 @@
         </h1>
       </v-card>
 
-      <div class="section">
+      <div class="section map-section">
         <v-row class="my-10 mx-auto">
           <h1
             class="
@@ -251,7 +251,7 @@
         </h1>
       </v-card>
 
-      <div class="section">
+      <div class="section map-section">
         <MobileSlidesSection :imgSet="northEndImages"></MobileSlidesSection>
       </div>
 
@@ -313,7 +313,7 @@
         <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
       </v-card>
 
-      <div class="section">
+      <div class="section map-section">
         <MobileSlidesSection
           :imgSet="publicHousingImages"
         ></MobileSlidesSection>
@@ -323,7 +323,7 @@
       <div id="sticky-container">
         <v-img
           :src="require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')"
-          max-height="25rem"
+          max-height="18rem"
           contain
           id="juxt-context"
         ></v-img>
@@ -333,6 +333,7 @@
           class="
             text-center
             py-6
+            my-6
             font-weight-bold
             h1
             display-2
@@ -340,14 +341,14 @@
           "
         >
           Bellevue 1934 vs 1965
-        </h1>
+        </h1><div class="d-flex">
         <iframe
           frameborder="0"
-          class="juxtapose"
+          class="juxtapose my-10"
           width="90%"
           height="100%"
           src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
-        ></iframe>
+        ></iframe></div>
       </div>
 
       <div class="section d-sm-flex d-md-none">
@@ -355,6 +356,7 @@
           class="
             text-center
             py-6
+            my-6  
             font-weight-bold
             h1
             display-2
@@ -365,7 +367,7 @@
         </h1>
         <iframe
           frameborder="0"
-          class="juxtapose"
+          class="juxtapose my-10"
           width="100%"
           height="100%"
           src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c28c8692-8354-11eb-83c8-ebb5d6f907df"
@@ -378,6 +380,7 @@
           class="
             text-center
             py-6
+            my-6  
             font-weight-bold
             h1
             display-2
@@ -389,7 +392,7 @@
 
         <iframe
           frameborder="0"
-          class="juxtapose"
+          class="juxtapose my-10"
           width="90%"
           height="100%"
           src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
@@ -401,6 +404,7 @@
           class="
             text-center
             py-6
+            my-6  
             font-weight-bold
             h1
             display-2
@@ -411,7 +415,7 @@
         </h1>
         <iframe
           frameborder="0"
-          class="juxtapose"
+          class="juxtapose my-10"
           width="100%"
           height="100%"
           src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b9e2c68-835a-11eb-83c8-ebb5d6f907df"
@@ -801,7 +805,7 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.1,
         // Duration of animation
-        duration: "2100",
+        duration: "1700",
       }) // Declaration of animation and attaching to element
       // .setClassToggle("#revealscale", "visible")
       .setPin("#sticky-container",{pushFollowers: false})
@@ -962,7 +966,6 @@ export default {
   z-index: 9999;
 }
 #juxt-context {
-  position: absolute;
-  right:0;
+  transform: translate(500px,450px);
 }
 </style>

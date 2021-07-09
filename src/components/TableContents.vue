@@ -18,54 +18,15 @@
     <v-row align="center">
       <v-card align-self="center" class="mx-auto ma-10" width="50vw">
         <v-btn
+          v-for="(item,i) in menuItems" :key="item"
           class="d-block"
           tile
           elevation="0"
           x-large
-          color="blue"
+          :color="colors[i]"
           width="100%"
-          @click="navigateToMapSection(3)"
-          >Hartford Through Time</v-btn
-        >
-        <v-btn
-          class="d-block"
-          tile
-          elevation="0"
-          x-large
-          color="teal"
-          width="100%"
-          @click="navigateToMapSection(6)"
-          >Routes and Roots</v-btn
-        >
-        <v-btn
-          class="d-block"
-          tile
-          elevation="0"
-          x-large
-          color="green"
-          width="100%"
-          @click="navigateToMapSection(10)"
-          >Mobilities</v-btn
-        >
-        <v-btn
-          class="d-block"
-          tile
-          elevation="0"
-          x-large
-          color="blue"
-          width="100%"
-          @click="navigateToMapSection(15)"
-          >Neighborhood Clusters</v-btn
-        >
-        <v-btn
-          class="d-block"
-          tile
-          elevation="0"
-          x-large
-          color="teal"
-          width="100%"
-          @click="navigateToMapSection(20)"
-          >Housing</v-btn
+          @click="navigateToMapSection(i)"
+          >{{item}}</v-btn
         >
       </v-card>
       <!-- <v-col class="mx-auto">
@@ -109,14 +70,25 @@ export default {
         caption: "Hartford Through Time",
       }),
     },
+    menuItems: {
+      type: Array,
+      default: ['Hartford Through Time',
+        'Routes and Roots',
+        'Mobilities',
+        'Neighborhood Clusters',
+        'Housing'
+      ]
+    }
   },
   data() {
     return {
-      galleryTiles: new Array(18).fill({
-        img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
-        caption: "Hartford Through Time",
-      }),
+      colors: ["blue","teal","green","blue","teal","green"]
     };
+  },
+  methods: {
+    navigateToMapSection(i) {
+      this.$root.$children[0].navigateToMapSection(i);
+    },
   },
 };
 </script>
