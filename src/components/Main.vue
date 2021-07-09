@@ -20,7 +20,7 @@
         </h1>
       </v-card>
 
-      <div class="section map-section">
+      <div class="section map-section map-set">
         <router-link to="/Map/1234">
           <v-card class="d-flex align-center" height="100vh">
             <v-img
@@ -34,14 +34,14 @@
         </router-link>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <MobileSlidesSection
           :imgSet="cityTownImages"
           :slidesOnly="true"
         ></MobileSlidesSection>
       </div>
 
-      <div class="section">
+      <!-- <div class="section map-set">
         <router-link to="/Map/1234">
           <v-card class="d-flex align-center elevation-0" height="100vh">
             <v-img
@@ -51,7 +51,7 @@
             ></v-img>
           </v-card>
         </router-link>
-      </div>
+      </div> -->
     </div>
 
     <!-- 1:Routes and Roots -->
@@ -68,7 +68,7 @@
         </h1>
       </v-card>
 
-      <div class="section map-section">
+      <!-- <div class="section map-section map-set">
         <router-link to="/Map/1234">
           <v-card class="d-flex align-center elevation-0" height="100vh">
             <v-img
@@ -78,9 +78,9 @@
             ></v-img>
           </v-card>
         </router-link>
-      </div>
+      </div> -->
 
-      <div class="section">
+      <div class="section map-set">
         <router-link to="/Map/1234">
           <div class="slide" v-for="(obj, index) in originsImages" :key="index">
             <v-card max-height="800" elevation="0">
@@ -90,7 +90,7 @@
         </router-link>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <router-link to="/Map/1234">
           <v-card class="d-flex align-center" height="100vh">
             <v-img
@@ -102,7 +102,7 @@
         </router-link>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <router-link to="/Map/1234">
           <v-img
             contain
@@ -136,7 +136,7 @@
         </h1>
       </v-card>
 
-      <div class="section map-section">
+      <div class="section map-section map-set">
         <v-row class="my-10 mx-auto">
           <h1
             class="
@@ -159,7 +159,7 @@
         <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
       </div>
 
-      <div div class="section">
+      <div div class="section map-set">
         <v-row class="my-10 mx-auto">
           <h1
             class="
@@ -201,7 +201,7 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <v-row class="my-10 mx-auto">
           <h1
             class="
@@ -251,25 +251,25 @@
         </h1>
       </v-card>
 
-      <div class="section map-section">
+      <div class="section map-section map-set">
         <MobileSlidesSection :imgSet="northEndImages"></MobileSlidesSection>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <MobileSlidesSection
           :imgSet="puertoRicanImages"
           :slidesOnly="true"
         ></MobileSlidesSection>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <MobileSlidesSection
           :imgSet="westIndianImages"
           :slidesOnly="true"
         ></MobileSlidesSection>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <v-img
           max-height="90vh"
           contain
@@ -313,7 +313,7 @@
         <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
       </v-card>
 
-      <div class="section map-section">
+      <div class="section map-section map-set">
         <MobileSlidesSection
           :imgSet="publicHousingImages"
         ></MobileSlidesSection>
@@ -328,7 +328,7 @@
           id="juxt-context"
         ></v-img>
       </div>
-      <div class="section d-none d-md-flex">
+      <div class="section d-none d-md-flex map-set">
         <h1
           class="
             text-center
@@ -423,7 +423,7 @@
         </iframe>
       </div>
 
-      <div class="section">
+      <div class="section map-set">
         <v-row class="my-10 mx-auto">
           <h1
             class="
@@ -633,20 +633,41 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
-      galleryImgs: [
+      alleryImgs: [
         require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
         require("../assets/Maps/Final/CityTown/1635 (Large).jpg"),
         require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
         require("../assets/Maps/Colleges.jpg"),
         require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
-        require("../assets/Maps/Final/Jamaica/locations.jpg"),
+        require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+        require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
         require("../assets/Maps/Final/Canton/Canton1920.jpg"),
         require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"),
+        require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
         require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
         require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg"),
-        require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
-        require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+        require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
+        require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
+        require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg"),
         require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
+      ],
+      galleryImgs: [
+       {title: "City Boundaries",img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg")},
+       {title: "City and Town",img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg")},
+       {title: "Origins",img: require("../assets/Maps/Final/Origins/OriginWithLabel.jpg")},
+       {title: "Colleges",img: require("../assets/Maps/Colleges.jpg")},
+       {title: "Jamaica",img: require("../assets/Maps/Final/Jamaica/Parishes.jpg")},
+       {title: "Racial And Ethnic Distribution",img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg")},
+       {title: "Population Drift and Ethnic Succession",img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg")},
+       {title: "Canton",img: require("../assets/Maps/Final/Canton/Canton1920.jpg")},
+       {title: "North End",img: require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg")},
+       {title: "Puerto Ricans",img: require("../assets/Maps/Final/PuertoRicans/1960.jpg")},
+       {title: "West Indians",img: require("../assets/Maps/Final/WestIndians/WI1980.jpg")},
+       {title: "Foreign-Born Population",img: require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg")},
+       {title: "Redlined Districts",img: require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg")},
+       {title: "Bellevue",img: require("../assets/Maps/Final/Jamaica/Parishes.jpg")},
+       {title: "Renters",img: require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg")},
+       {title: "Housing Conditions",img: require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg")},
       ],
       driftMaps: [
         { label: "Canadians", code: "fgghMRHTKA0" },

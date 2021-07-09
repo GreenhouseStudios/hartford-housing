@@ -6,24 +6,20 @@
       </div>
     </v-row>
     <router-link to="/Map/1234">
-    <v-card
-      class="d-none d-md-block elevation-0"
-      height="100vh"
-      width="100vw"
-      align-content="center"
-      justify-content="center"
-      v-if="!showSlides && !slidesOnly"
-    >
-      <v-row>
+      <v-row class="d-md-flex justify-center align-center">
         <v-col
           v-for="(obj, index) in imgSet"
           :key="index"
-          class="d-flex my-auto"
           :cols="12 / imgSet.length"
         >
-          <v-img contain :src="obj.img" :max-height="maxHeight"></v-img> </v-col
+          <v-card
+            class="elevation-0 d-flex align-center"
+            height="85vh"
+            v-if="!showSlides && !slidesOnly"
+          >
+            <v-img contain :src="obj.img" :max-height="maxHeight"></v-img>
+          </v-card> </v-col
       ></v-row>
-    </v-card>
     </router-link>
   </div>
 </template>
@@ -40,7 +36,7 @@ export default {
     },
     maxHeight: {
       type: String,
-      default: "90vh",
+      default: "70vh",
     },
     slidesOnly: {
       type: Boolean,

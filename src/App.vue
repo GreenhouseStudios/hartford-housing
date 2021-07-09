@@ -131,6 +131,7 @@ export default {
     navSects: null,
     navNums: [],
     mapNums: [],
+    setNums: [],
     sections: [
       {
         title: "Home",
@@ -226,9 +227,10 @@ export default {
       this.$refs.fullpage.api.moveTo(3 + i);
     },
     navigateToMapSection: function(i){
-      //find the map section by id
-      console.log(this.mapNums[i]);
       this.$refs.fullpage.api.moveTo(this.mapNums[i]);
+    },
+    navigateToMapSet: function(i){
+      this.$refs.fullpage.api.moveTo(this.setNums[i]);
     },
     menuNavigate: function (section,subsection){
       if(section === 3) this.navigateToMapSection(subsection);
@@ -245,6 +247,10 @@ export default {
     var mapChapterDivs = Array.from(this.$el.querySelectorAll(".map-section"));
     var fpMapChapters = this.fpSections.filter(x => mapChapterDivs.includes(x));
     this.mapNums = fpMapChapters.map(x => this.fpSections.indexOf(x) + 1)
+
+    var mapSets = Array.from(this.$el.querySelectorAll(".map-set"));
+    var fpMapSets = this.fpSections.filter(x => mapSets.includes(x));
+    this.setNums =  fpMapSets.map(x => this.fpSections.indexOf(x) + 1)
   },
 };
 </script>

@@ -36,22 +36,29 @@
 
     <v-row>
       <v-col cols="3"></v-col>
-      <v-col cols="6" class="gallery">
+      <v-col cols="12" md="6" class="gallery">
         <v-hover
           v-slot="{ hover }"
           v-for="(tile, index) in tiles"
           :key="index"
-          class="ma-3"
+          class="ma-2"
         >
+        <v-responsive :aspect-ratio="1">
+          <div class="d-flex-column align-center justify-center">
           <v-card
             :elevation="hover ? 12 : 2"
-            aspect-ratio="1"
-            height="12rem"
-            width="12rem"
-            class="pa-5"
+            height="200"
+            width="200"
+            class="pa-2 d-flex-column align-center justify-center"
+            @click="navigateToMapSet(index)"
           >
-            <v-img :src="tile" contain max-width="10rem" max-height="10rem"></v-img>
+            <v-img :src="tile.img" :title="tile.title" max-width="100%" max-height="100%"></v-img>
+            <div style="position: absolute; bottom: 0; background-color:#FFF; width:100%;"  class="pa-2 text-center d-flex justify-center align-center">
+              <h3>{{tile.title}}</h3>  
+            </div>
           </v-card>
+          </div>
+          </v-responsive>
         </v-hover>
       </v-col>
       <v-col cols="3"></v-col>
@@ -89,6 +96,9 @@ export default {
     navigateToMapSection(i) {
       this.$root.$children[0].navigateToMapSection(i);
     },
+    navigateToMapSet(i){
+      this.$root.$children[0].navigateToMapSet(i);
+    }
   },
 };
 </script>
