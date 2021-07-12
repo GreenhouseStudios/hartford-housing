@@ -18,7 +18,8 @@
     <v-row align="center">
       <v-card align-self="center" class="mx-auto ma-10" width="50vw">
         <v-btn
-          v-for="(item,i) in menuItems" :key="item"
+          v-for="(item, i) in menuItems"
+          :key="item"
           class="d-block"
           tile
           elevation="0"
@@ -26,7 +27,7 @@
           :color="colors[i]"
           width="100%"
           @click="navigateToMapSection(i)"
-          >{{item}}</v-btn
+          >{{ item }}</v-btn
         >
       </v-card>
       <!-- <v-col class="mx-auto">
@@ -43,21 +44,43 @@
           :key="index"
           class="ma-2"
         >
-        <v-responsive :aspect-ratio="1">
-          <div class="d-flex-column align-center justify-center">
-          <v-card
-            :elevation="hover ? 12 : 2"
-            height="200"
-            width="200"
-            class="pa-2 d-flex-column align-center justify-center"
-            @click="navigateToMapSet(index)"
-          >
-            <v-img :src="tile.img" :title="tile.title" max-width="100%" max-height="100%"></v-img>
-            <div style="position: absolute; bottom: 0; background-color:#FFF; width:100%;"  class="pa-2 text-center d-flex justify-center align-center">
-              <h3>{{tile.title}}</h3>  
+          <v-responsive :aspect-ratio="1">
+            <div class="d-flex-column align-center justify-center">
+              <v-card
+                :elevation="hover ? 12 : 2"
+                height="200"
+                width="200"
+                class="d-flex-column align-center justify-center"
+                @click="navigateToMapSet(index)"
+                style="overflow: hidden"
+              >
+                <v-img
+                  :src="tile.img"
+                  :title="tile.title"
+                  height="150px"
+                ></v-img>
+                <div
+                  style="
+                    position: absolute;
+                    bottom: 0;
+                    background-color: #111;
+                    width: 100%;
+                    height: 25%;
+                  "
+                  class="
+                    pa-2
+                    white--text
+                    caption
+                    text-center
+                    d-flex
+                    justify-center
+                    align-center
+                  "
+                >
+                  <h3>{{ tile.title }}</h3>
+                </div>
+              </v-card>
             </div>
-          </v-card>
-          </div>
           </v-responsive>
         </v-hover>
       </v-col>
@@ -79,26 +102,27 @@ export default {
     },
     menuItems: {
       type: Array,
-      default: ['Hartford Through Time',
-        'Routes and Roots',
-        'Mobilities',
-        'Neighborhood Clusters',
-        'Housing'
-      ]
-    }
+      default: [
+        "Hartford Through Time",
+        "Routes and Roots",
+        "Mobilities",
+        "Neighborhood Clusters",
+        "Housing",
+      ],
+    },
   },
   data() {
     return {
-      colors: ["blue","teal","green","blue","teal","green"]
+      colors: ["blue", "teal", "green", "blue", "teal", "green"],
     };
   },
   methods: {
     navigateToMapSection(i) {
       this.$root.$children[0].navigateToMapSection(i);
     },
-    navigateToMapSet(i){
+    navigateToMapSet(i) {
       this.$root.$children[0].navigateToMapSet(i);
-    }
+    },
   },
 };
 </script>
@@ -108,6 +132,6 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-items: center;
 }
 </style>

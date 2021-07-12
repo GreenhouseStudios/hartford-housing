@@ -32,11 +32,6 @@ export default {
       body: "",
     };
   },
-  methods: {
-    navigateToSection() {
-      this.$root.$children[0].navigateToSection(3);
-    },
-  },
   filters: {
     capitalize: function (value) {
       if (!value) return "";

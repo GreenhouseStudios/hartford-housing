@@ -37,11 +37,6 @@ export default {
       body: "Hartford, Connecticut attracted three waves of internal and transnational migrations of African American, Puerto Rican, and West Indian communities that transformed the city’s racial and ethnic landscape. These monumental shifts in mobilities unfolded in many other metropolitan areas in the United States like Chicago and Philadelphia, Harlem and San Francisco in the twentieth century. This project explores the history of migration, housing, settlement, community formation, and succession through the lens of Hartford, one of America’s wealthiest cities at the end of the Civil War.  ",
     };
   },
-  methods: {
-    navigateToSection() {
-      this.$root.$children[0].navigateToSection(3);
-    },
-  },
   filters: {
     capitalize: function (value) {
       if (!value) return "";

@@ -80,7 +80,7 @@
         </router-link>
       </div> -->
 
-      <div class="section map-set">
+      <div class="section map-set map-section">
         <router-link to="/Map/1234">
           <div class="slide" v-for="(obj, index) in originsImages" :key="index">
             <v-card max-height="800" elevation="0">
