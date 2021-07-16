@@ -193,6 +193,7 @@ export default {
       verticalCentered: true,
       parallax: true,
       sectionsColor: ["#FFF"],
+      controlArrows: true,
       // anchors: ["Home", "About", "Introduction","Maps","Settlement","Housing","Timeline","Profiles"],
       // lockAnchors: true,
     },
@@ -571,5 +572,16 @@ body {
 }
 .copyright {
   display: inline-flex;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #000;
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #000 transparent transparent;
 }
 </style>
