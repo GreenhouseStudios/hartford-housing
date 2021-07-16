@@ -181,23 +181,15 @@
         </v-row>
 
         <div class="section" v-for="map in driftMaps" :key="map.label">
-          <v-row justify="center">
-            <v-col cols="3"></v-col>
-            <v-col cols="6" justify="center" class="d-flex flex-column">
-              <h2 class="section-header display-1 font-weight-bold pa-10 ma-10">
-                {{ map.label }}
-              </h2>
-              <v-card min-width="50vw">
-                <vue-plyr>
-                  <div
-                    data-plyr-provider="youtube"
-                    :data-plyr-embed-id="map.code"
-                  ></div>
-                </vue-plyr>
-              </v-card>
-            </v-col>
-            <v-col cols="3"></v-col>
-          </v-row>
+          <div>
+            <iframe
+              :src="'https://www.youtube.com/embed/' + map.code + '?&autoplay=1&loop=1&playlist=' + map.code + '&origin=https://hartfordbound.com'"
+              id="myVideo"
+              frameborder="0"
+              allowfullscreen
+              style="pointer-events: none;"
+            ></iframe>
+          </div>
         </div>
       </div>
 
@@ -341,14 +333,16 @@
           "
         >
           Bellevue 1934 vs 1965
-        </h1><div class="d-flex">
-        <iframe
-          frameborder="0"
-          class="juxtapose my-10"
-          width="90%"
-          height="100%"
-          src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
-        ></iframe></div>
+        </h1>
+        <div class="d-flex">
+          <iframe
+            frameborder="0"
+            class="juxtapose my-10"
+            width="90%"
+            height="100%"
+            src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
+          ></iframe>
+        </div>
       </div>
 
       <div class="section d-sm-flex d-md-none">
@@ -356,7 +350,7 @@
           class="
             text-center
             py-6
-            my-6  
+            my-6
             font-weight-bold
             h1
             display-2
@@ -380,7 +374,7 @@
           class="
             text-center
             py-6
-            my-6  
+            my-6
             font-weight-bold
             h1
             display-2
@@ -404,7 +398,7 @@
           class="
             text-center
             py-6
-            my-6  
+            my-6
             font-weight-bold
             h1
             display-2
@@ -652,22 +646,67 @@ export default {
         require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
       ],
       galleryImgs: [
-       {title: "City Boundaries",img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg")},
-       {title: "City and Town",img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg")},
-       {title: "Origins",img: require("../assets/Maps/Final/Origins/OriginWithLabel.jpg")},
-       {title: "Colleges",img: require("../assets/Maps/Colleges.jpg")},
-       {title: "Jamaica",img: require("../assets/Maps/Final/Jamaica/Parishes.jpg")},
-       {title: "Racial And Ethnic Distribution",img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg")},
-       {title: "Population Drift and Ethnic Succession",img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg")},
-       {title: "Canton",img: require("../assets/Maps/Final/Canton/Canton1920.jpg")},
-       {title: "North End",img: require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg")},
-       {title: "Puerto Ricans",img: require("../assets/Maps/Final/PuertoRicans/1960.jpg")},
-       {title: "West Indians",img: require("../assets/Maps/Final/WestIndians/WI1980.jpg")},
-       {title: "Foreign-Born Population",img: require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg")},
-       {title: "Redlined Districts",img: require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg")},
-       {title: "Bellevue",img: require("../assets/Maps/Final/Jamaica/Parishes.jpg")},
-       {title: "Renters",img: require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg")},
-       {title: "Housing Conditions",img: require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg")},
+        {
+          title: "City Boundaries",
+          img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
+        },
+        {
+          title: "City and Town",
+          img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg"),
+        },
+        {
+          title: "Origins",
+          img: require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
+        },
+        { title: "Colleges", img: require("../assets/Maps/Colleges.jpg") },
+        {
+          title: "Jamaica",
+          img: require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
+        },
+        {
+          title: "Racial And Ethnic Distribution",
+          img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+        },
+        {
+          title: "Population Drift and Ethnic Succession",
+          img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+        },
+        {
+          title: "Canton",
+          img: require("../assets/Maps/Final/Canton/Canton1920.jpg"),
+        },
+        {
+          title: "North End",
+          img: require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"),
+        },
+        {
+          title: "Puerto Ricans",
+          img: require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
+        },
+        {
+          title: "West Indians",
+          img: require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
+        },
+        {
+          title: "Foreign-Born Population",
+          img: require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg"),
+        },
+        {
+          title: "Redlined Districts",
+          img: require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
+        },
+        {
+          title: "Bellevue",
+          img: require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
+        },
+        {
+          title: "Renters",
+          img: require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg"),
+        },
+        {
+          title: "Housing Conditions",
+          img: require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
+        },
       ],
       driftMaps: [
         { label: "Canadians", code: "fgghMRHTKA0" },
@@ -804,6 +843,9 @@ export default {
           ],
         },
       },
+      plyrOptions: {
+        hideControls: true,
+      },
     };
   },
   computed: {
@@ -829,9 +871,9 @@ export default {
         duration: "1700",
       }) // Declaration of animation and attaching to element
       // .setClassToggle("#revealscale", "visible")
-      .setPin("#sticky-container",{pushFollowers: false})
-      // Helpful tags for orientation on the screen
-      // .addIndicators({ name: "2 (duration: 1000)" });
+      .setPin("#sticky-container", { pushFollowers: false });
+    // Helpful tags for orientation on the screen
+    // .addIndicators({ name: "2 (duration: 1000)" });
     // Add Scene to controller
     this.$scrollmagic.addScene(bellevueSticky);
   },
@@ -987,6 +1029,24 @@ export default {
   z-index: 9999;
 }
 #juxt-context {
-  transform: translate(500px,450px);
+  transform: translate(500px, 450px);
+}
+.plyr.plyr--stopped .plyr__controls {
+  display: none;
+}
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-color: black; /* in case the video doesn't fit the whole page*/
+  /* background-image: ; */
+  background-position: center center;
+  background-size: contain;
+  object-fit: cover; /*cover video background */
+  z-index: 3;
 }
 </style>
