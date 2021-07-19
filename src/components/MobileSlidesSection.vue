@@ -2,25 +2,30 @@
   <div>
     <v-row v-if="showSlides || slidesOnly">
       <div class="slide" v-for="(obj, index) in imgSet" :key="index">
+        <div class="d-flex flex-column align-center">
         <v-img :max-height="maxHeight" contain :src="obj.img"></v-img>
+        <router-link to="/Map/1" class="display-1 font-weight-bold">Map Details</router-link>
+        </div>
       </div>
     </v-row>
-    <router-link to="/Map/1234">
-      <v-row class="d-md-flex justify-center align-center">
+      <v-row class="d-md-flex">
         <v-col
           v-for="(obj, index) in imgSet"
           :key="index"
           :cols="12 / imgSet.length"
         >
           <v-card
-            class="elevation-0 d-flex align-center"
+            class="d-flex flex-column justify-center align-center"
             height="85vh"
             v-if="!showSlides && !slidesOnly"
+            elevation="0"
           >
             <v-img contain :src="obj.img" :max-height="maxHeight"></v-img>
+            <router-link to="/Map/1" class="display-1 font-weight-bold">Map Details</router-link>
           </v-card> </v-col
-      ></v-row>
-    </router-link>
+      >
+      </v-row>
+    
   </div>
 </template>
 

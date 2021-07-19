@@ -21,17 +21,18 @@
       </v-card>
 
       <div class="section map-section map-set">
-        <router-link to="/Map/1234">
-          <v-card class="d-flex align-center" height="100vh">
-            <v-img
-              contain
-              max-height="90vh"
-              :src="
-                require('../assets/Maps/Final/BoundariesThroughTime/thumbnail_cityboundaries_labels.jpg')
-              "
-            ></v-img>
-          </v-card>
-        </router-link>
+        <v-card class="d-flex flex-column align-center" height="100vh">
+          <v-img
+            contain
+            max-height="90vh"
+            :src="
+              require('../assets/Maps/Final/BoundariesThroughTime/thumbnail_cityboundaries_labels.jpg')
+            "
+          ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"
+            >Map Details</router-link
+          >
+        </v-card>
       </div>
 
       <div class="section map-set">
@@ -40,18 +41,6 @@
           :slidesOnly="true"
         ></MobileSlidesSection>
       </div>
-
-      <!-- <div class="section map-set">
-        <router-link to="/Map/1234">
-          <v-card class="d-flex align-center elevation-0" height="100vh">
-            <v-img
-              :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-              max-height="75vh"
-              contain
-            ></v-img>
-          </v-card>
-        </router-link>
-      </div> -->
     </div>
 
     <!-- 1:Routes and Roots -->
@@ -81,44 +70,53 @@
       </div> -->
 
       <div class="section map-set map-section">
-        <router-link to="/Map/1234">
-          <div class="slide" v-for="(obj, index) in originsImages" :key="index">
-            <v-card max-height="800" elevation="0">
-              <v-img max-height="80vh" contain :src="obj.img"></v-img>
-            </v-card>
-          </div>
-        </router-link>
-      </div>
-
-      <div class="section map-set">
-        <router-link to="/Map/1234">
-          <v-card class="d-flex align-center" height="100vh">
-            <v-img
-              contain
-              max-height="90vh"
-              :src="require('../assets/Maps/Final/Colleges/Colleges.jpg')"
-            ></v-img>
+        <div class="slide" v-for="(obj, index) in originsImages" :key="index">
+          <v-card max-height="800" elevation="0">
+            <v-img max-height="80vh" contain :src="obj.img"></v-img>
           </v-card>
-        </router-link>
+        </div>
+        <router-link to="/Map/1" class="display-1 font-weight-bold"
+          >Map Details</router-link
+        >
       </div>
 
       <div class="section map-set">
-        <router-link to="/Map/1234">
+        <v-card
+          class="d-flex flex-column align-center justify-center"
+          elevation="0"
+          height="100vh"
+        >
           <v-img
             contain
             max-height="90vh"
-            :src="require('../assets/Maps/Final/Jamaica/Parishes.jpg')"
+            :src="require('../assets/Maps/Final/Colleges/Colleges.jpg')"
           ></v-img>
-        </router-link>
+          <router-link to="/Map/1" class="display-1 font-weight-bold">Map Details</router-link
+          >
+        </v-card>
       </div>
-      <div class="section">
-        <router-link to="/Map/1234">
-          <v-img
-            contain
-            max-height="90vh"
-            :src="require('../assets/Maps/Final/Jamaica/locations.jpg')"
-          ></v-img>
-        </router-link>
+
+      <div
+        class="section  map-set"
+      >
+       <div class="d-flex flex-column align-center justify-center"> <v-img
+          contain
+          max-height="80vh"
+          :src="require('../assets/Maps/Final/Jamaica/Parishes.jpg')"
+        ></v-img>
+        <router-link to="/Map/1" class="display-1 font-weight-bold">Map Details</router-link
+        ></div>
+      </div>
+      <div
+        class="section  map-set"
+      >
+       <div class="d-flex flex-column align-center justify-center"> <v-img
+          contain
+          max-height="80vh"
+          :src="require('../assets/Maps/Final/Jamaica/locations.jpg')"
+        ></v-img>
+        <router-link to="/Map/1" class="display-1 font-weight-bold">Map Details</router-link
+        ></div>
       </div>
     </div>
 
@@ -183,11 +181,17 @@
         <div class="section" v-for="map in driftMaps" :key="map.label">
           <div>
             <iframe
-              :src="'https://www.youtube.com/embed/' + map.code + '?&autoplay=1&loop=1&playlist=' + map.code + '&origin=https://hartfordbound.com'"
+              :src="
+                'https://www.youtube.com/embed/' +
+                map.code +
+                '?&autoplay=1&loop=1&playlist=' +
+                map.code +
+                '&origin=https://hartfordbound.com'
+              "
               id="myVideo"
               frameborder="0"
               allowfullscreen
-              style="pointer-events: none;"
+              style="pointer-events: none"
             ></iframe>
           </div>
         </div>
@@ -658,7 +662,10 @@ export default {
           title: "Origins",
           img: require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
         },
-        { title: "Colleges", img: require("../assets/Maps/Colleges.jpg") },
+        {
+          title: "College Workers",
+          img: require("../assets/Maps/Final/Colleges/Colleges.jpg"),
+        },
         {
           title: "Jamaica",
           img: require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
@@ -672,7 +679,7 @@ export default {
           img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
         },
         {
-          title: "Canton",
+          title: "Canton Street",
           img: require("../assets/Maps/Final/Canton/Canton1920.jpg"),
         },
         {
@@ -696,8 +703,8 @@ export default {
           img: require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
         },
         {
-          title: "Bellevue",
-          img: require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
+          title: "Bellevue Street",
+          img: require("../assets/Maps/Final/Bellevue/GeographicContext.jpg"),
         },
         {
           title: "Renters",
