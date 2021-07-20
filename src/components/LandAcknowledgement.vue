@@ -4,18 +4,43 @@
       <v-container fluid fill-height>
         <v-row>
           <div id="trigger2"></div>
-          <v-col cols="2"></v-col>
+          <v-col cols="0" md="2"></v-col>
           <v-col class="d-none d-md-block">
             <div id="about-heading">{{ heading }}</div>
             <div id="about-body">{{ body }}</div>
-            <p><span>All land in the State of Connecticut was once Native territory, which is why it is our duty to acknowledge that the University of Connecticut a land grant institution, is existing on Native land. It is important to understand the long-standing history that has brought you to reside on the land and to seek to understand your place within that history. Land acknowledgments do not exist in the past tense or historical context: colonialism is a current ongoing process, and we need to build our mindfulness of our present participation. It is also worth noting that acknowledging the land is Indigenous protocol. <a href="http://www.lspirg.org/knowtheland" style="color: white" rel="noopener">http://www.lspirg.org/knowtheland<span></span></a></span></p>
-            <p><span style="font-weight: 400;">The Office for Diversity and Inclusion worked with the three co-founders of the </span><a href="https://www.akomawt.org/" style="color: white" rel="noopener"><span style="font-weight: 400;">Akomawt Educational Initiative</span><span class="glyphicon glyphicon-new-window"></span></a><span style="font-weight: 400;"> to create a land acknowledgment that rightfully recognizes the history of the Native peoples territories. It is important to our office to work with members of the greater Connecticut community to continue our efforts of educating our campus on the value of diversity and inclusion. This initiative continues to fulfill the mission of the Office for Diversity and Inclusion to continue to build a more welcoming and inclusive community. </span></p>
+            <p>
+            The University of Connecticut’s Office for Diversity and Inclusion
+            worked with the three co-founders of the <a style="color: white;" href="https://www.akomawt.org/">Akomawt Educational
+            Initiative</a> to create a land acknowledgment that rightfully
+            recognizes the history of Native peoples’ territories. </p>
+            <p>
+            Any exploration of how Hartford became home begins with acknowledging
+            that the land on which we gather in Connecticut is the territory of
+            the Mohegan, Mashantucket Pequot, Eastern Pequot, Schaghticoke,
+            Golden Hill Paugussett,  Nipmuc, and Lenape Peoples, who have
+            stewarded this land throughout the generations. We thank them for
+            their strength and resilience in protecting this land and aspire to
+            uphold our responsibilities according to their example
+            </p>
           </v-col>
           <v-col class="d-md-none">
             <div id="m-heading">{{ heading }}</div>
-            <div>{{ body }}</div>
+               <p>
+            The University of Connecticut’s Office for Diversity and Inclusion
+            worked with the three co-founders of the <a style="color: white;" href="https://www.akomawt.org/">Akomawt Educational
+            Initiative</a> to create a land acknowledgment that rightfully
+            recognizes the history of Native peoples’ territories. </p>
+            <p>
+            Any exploration of how Hartford became home begins with acknowledging
+            that the land on which we gather in Connecticut is the territory of
+            the Mohegan, Mashantucket Pequot, Eastern Pequot, Schaghticoke,
+            Golden Hill Paugussett,  Nipmuc, and Lenape Peoples, who have
+            stewarded this land throughout the generations. We thank them for
+            their strength and resilience in protecting this land and aspire to
+            uphold our responsibilities according to their example
+            </p>
           </v-col>
-          <v-col cols="2"></v-col>
+          <v-col cols="0" md="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>
@@ -46,13 +71,13 @@ export default {
 </script>
 
 <style scoped>
-#about-heading{
+#about-heading {
   font-size: 5rem;
 }
-#about-body{
+#about-body {
   font-size: 2rem;
 }
-#m-heading{
+#m-heading {
   font-weight: 800 !important;
   font-size: 2rem;
 }

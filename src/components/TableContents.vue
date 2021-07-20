@@ -102,7 +102,7 @@ export default {
     },
     menuItems: {
       type: Array,
-      default: [
+      default: () => [
         "Hartford Through Time",
         "Routes and Roots",
         "Mobilities",
