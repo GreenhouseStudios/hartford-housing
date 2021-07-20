@@ -44,12 +44,12 @@
           :key="index"
           class="ma-2"
         >
-          <v-responsive :aspect-ratio="1">
+          
             <div class="d-flex-column align-center justify-center">
               <v-card
                 :elevation="hover ? 12 : 2"
-                height="200"
-                width="200"
+                height="12rem"
+                width="12rem"
                 class="d-flex-column align-center justify-center"
                 @click="navigateToMapSet(index)"
                 style="overflow: hidden"
@@ -57,7 +57,7 @@
                 <v-img
                   :src="tile.img"
                   :title="tile.title"
-                  height="150px"
+                  height="12rem"
                 ></v-img>
                 <div
                   style="
@@ -81,7 +81,7 @@
                 </div>
               </v-card>
             </div>
-          </v-responsive>
+          
         </v-hover>
       </v-col>
       <v-col cols="3"></v-col>
