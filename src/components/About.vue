@@ -6,7 +6,7 @@
           <div id="trigger2"></div>
           <v-col cols="2"></v-col>
           <v-col class="d-none d-md-block">
-            <div id="about-heading">{{ heading }}</div>
+            <div id="about-heading" class="font-weight-bold">{{ heading }}</div>
             <div id="about-body">{{ body }}</div>
           </v-col>
           <v-col class="d-md-none">

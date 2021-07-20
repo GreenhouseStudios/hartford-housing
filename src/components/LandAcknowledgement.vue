@@ -6,38 +6,49 @@
           <div id="trigger2"></div>
           <v-col cols="0" md="2"></v-col>
           <v-col class="d-none d-md-block">
-            <div id="about-heading">{{ heading }}</div>
+            <div id="about-heading" class="display-4 font-weight-bold">{{ heading }}</div>
             <div id="about-body">{{ body }}</div>
-            <p>
-            The University of Connecticut’s Office for Diversity and Inclusion
-            worked with the three co-founders of the <a style="color: white;" href="https://www.akomawt.org/">Akomawt Educational
-            Initiative</a> to create a land acknowledgment that rightfully
-            recognizes the history of Native peoples’ territories. </p>
-            <p>
-            Any exploration of how Hartford became home begins with acknowledging
-            that the land on which we gather in Connecticut is the territory of
-            the Mohegan, Mashantucket Pequot, Eastern Pequot, Schaghticoke,
-            Golden Hill Paugussett,  Nipmuc, and Lenape Peoples, who have
-            stewarded this land throughout the generations. We thank them for
-            their strength and resilience in protecting this land and aspire to
-            uphold our responsibilities according to their example
-            </p>
+            <div class="display-1">
+              <p>
+                The University of Connecticut’s Office for Diversity and
+                Inclusion worked with the three co-founders of the
+                <a style="color: white" href="https://www.akomawt.org/"
+                  >Akomawt Educational Initiative</a
+                >
+                to create a land acknowledgment that rightfully recognizes the
+                history of Native peoples’ territories.
+              </p>
+              <p>
+                Any exploration of how Hartford became home begins with
+                acknowledging that the land on which we gather in Connecticut is
+                the territory of the Mohegan, Mashantucket Pequot, Eastern
+                Pequot, Schaghticoke, Golden Hill Paugussett,  Nipmuc, and
+                Lenape Peoples, who have stewarded this land throughout the
+                generations. We thank them for their strength and resilience in
+                protecting this land and aspire to uphold our responsibilities
+                according to their example
+              </p>
+            </div>
           </v-col>
           <v-col class="d-md-none">
             <div id="m-heading">{{ heading }}</div>
-               <p>
-            The University of Connecticut’s Office for Diversity and Inclusion
-            worked with the three co-founders of the <a style="color: white;" href="https://www.akomawt.org/">Akomawt Educational
-            Initiative</a> to create a land acknowledgment that rightfully
-            recognizes the history of Native peoples’ territories. </p>
             <p>
-            Any exploration of how Hartford became home begins with acknowledging
-            that the land on which we gather in Connecticut is the territory of
-            the Mohegan, Mashantucket Pequot, Eastern Pequot, Schaghticoke,
-            Golden Hill Paugussett,  Nipmuc, and Lenape Peoples, who have
-            stewarded this land throughout the generations. We thank them for
-            their strength and resilience in protecting this land and aspire to
-            uphold our responsibilities according to their example
+              The University of Connecticut’s Office for Diversity and Inclusion
+              worked with the three co-founders of the
+              <a style="color: white" href="https://www.akomawt.org/"
+                >Akomawt Educational Initiative</a
+              >
+              to create a land acknowledgment that rightfully recognizes the
+              history of Native peoples’ territories.
+            </p>
+            <p>
+              Any exploration of how Hartford became home begins with
+              acknowledging that the land on which we gather in Connecticut is
+              the territory of the Mohegan, Mashantucket Pequot, Eastern Pequot,
+              Schaghticoke, Golden Hill Paugussett,  Nipmuc, and Lenape Peoples,
+              who have stewarded this land throughout the generations. We thank
+              them for their strength and resilience in protecting this land and
+              aspire to uphold our responsibilities according to their example
             </p>
           </v-col>
           <v-col cols="0" md="2"></v-col>
