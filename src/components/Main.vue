@@ -1,4 +1,5 @@
 <template>
+<full-page ref="fullpage" :options="options" id="fullpage">
   <v-container fluid pa-0 style="margin: 0; float: unset; display: visible">
     <!-- changed 'display: contents' to visible because it doesn't work with position:sticky -->
     <Home></Home>
@@ -7,7 +8,7 @@
     <Introduction></Introduction>
     <TableContents :tiles="galleryImgs"></TableContents>
     <!-- 0: Hartford Through Time -->
-    <div class="mapsection">
+    <div class="map-section">
       <v-card
         align-content="center"
         width="100vw"
@@ -57,18 +58,6 @@
         </h1>
       </v-card>
 
-      <!-- <div class="section map-section map-set">
-        <router-link to="/Map/1234">
-          <v-card class="d-flex align-center elevation-0" height="100vh">
-            <v-img
-              :src="require('../assets/Maps/Gifs/ItalyAnimation.gif')"
-              max-height="75vh"
-              contain
-            ></v-img>
-          </v-card>
-        </router-link>
-      </div> -->
-
       <div class="section map-set map-section">
         <div class="slide" v-for="(obj, index) in originsImages" :key="index">
           <v-card max-height="800" elevation="0">
@@ -108,7 +97,7 @@
         ></div>
       </div>
       <div
-        class="section  map-set"
+        class="section"
       >
        <div class="d-flex flex-column align-center justify-center"> <v-img
           contain
@@ -178,7 +167,7 @@
           </h1>
         </v-row>
 
-        <div class="section" v-for="map in driftMaps" :key="map.label">
+        <div class="section" style="position:relative" v-for="map in driftMaps" :key="map.label">
           <div>
             <iframe
               :src="
@@ -445,7 +434,7 @@
       </div>
       <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
 
-      <div class="section" v-if="!isMobile">
+      <div class="section map-set" v-if="!isMobile">
         <v-row class="my-10 mx-auto">
           <h1
             class="
@@ -563,6 +552,7 @@
       </v-card>
     </v-dialog> -->
   </v-container>
+  </full-page>
 </template>
 
 <script>
@@ -631,24 +621,18 @@ export default {
       imgs: ["../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"],
       sourcePlaceholder: loremIpsum({ count: 40, units: "words" }),
       sources: loremIpsum({ count: 50, units: "sentences" }).split("."),
-      alleryImgs: [
-        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
-        require("../assets/Maps/Final/CityTown/1635 (Large).jpg"),
-        require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
-        require("../assets/Maps/Colleges.jpg"),
-        require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
-        require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
-        require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
-        require("../assets/Maps/Final/Canton/Canton1920.jpg"),
-        require("../assets/Maps/Final/NorthEnd/AfricanAmerican.jpg"),
-        require("../assets/Maps/Final/PuertoRicans/1960.jpg"),
-        require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
-        require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg"),
-        require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
-        require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
-        require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg"),
-        require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
-      ],
+       options: {
+      licenseKey: "5040F97D-84574F59-952CE4FC-EAD7E65C",
+      navigation: false,
+      navigationPosition: "right",
+      fitToSection: false,
+      autoScrolling: false, //this breaks app bar hiding
+      slidesNavigation: true,
+      slidesNavPosition: "bottom",
+      controlArrows: false,
+      verticalCentered: true,
+      controlArrows: true,
+    },
       galleryImgs: [
         {
           title: "City Boundaries",
@@ -1043,17 +1027,10 @@ export default {
 }
 #myVideo {
   position: absolute;
-  right: 0;
   bottom: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% 100%;
-  background-color: black; /* in case the video doesn't fit the whole page*/
-  /* background-image: ; */
-  background-position: center center;
-  background-size: contain;
-  object-fit: cover; /*cover video background */
-  z-index: 3;
+  margin: 0 auto;
 }
 </style>

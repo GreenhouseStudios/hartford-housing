@@ -1,132 +1,29 @@
 <template>
   <v-app>
-    <v-app-bar app fixed color="darkBlack" dark hide-on-scroll>
-      <router-link to="/" id="site-title">
-        <v-toolbar-title>Hartford Bound</v-toolbar-title>
-      </router-link>
-      <v-spacer></v-spacer>
-
-      <!-- Desktop nav -->
-      <v-toolbar-items class="d-none d-lg-block">
-        <v-menu
-          v-for="(section, sectionNum) in sections"
-          :open-on-hover="true"
-          :offset-y="true"
-          :key="section.title"
-        >
-          <template v-slot:activator="{ on }">
-            <v-btn text @click="navigateToSection(sectionNum)" dark v-on="on">{{
-              section.title
-            }}</v-btn>
-          </template>
-          <v-list v-if="sections[sectionNum].slides.length">
-            <v-list-item
-              v-for="(item, subSectionNum) in section.slides"
-              @click="menuNavigate(sectionNum, subSectionNum)"
-              :key="subSectionNum"
-            >
-              <v-list-item-title>{{ item }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </v-toolbar-items>
-
-      <!-- Mobile Nav -->
-      <v-menu min-width="100%" :offset-y="true" tile>
-        <template v-slot:activator="{ on, attrs }">
-          <v-app-bar-nav-icon
-            class="d-flex d-lg-none ma-1"
-            color="white"
-            @click="drawer"
-            v-bind="attrs"
-            v-on="on"
-          ></v-app-bar-nav-icon>
-        </template>
-        <v-list class="centertext">
-          <v-list-item
-            v-for="(section, j) in sections"
-            :key="section.title"
-            @click="navigateToSection(j)"
-          >
-            <v-list-item-title>{{ section.title }}</v-list-item-title>
-          </v-list-item>
-          <v-divider></v-divider>
-          <v-list-item>
-            <router-link to="/People" class="pr-4 footer-link centertext teal--text"
-              >Credits</router-link
-            >
-          </v-list-item>
-          <v-list-item>
-            <router-link to="/Contact" class="pr-4 footer-link centertext blue--text"
-              >Contact</router-link
-            >
-          </v-list-item>
-          <v-list-item>
-            <router-link to="/Methodology" class="pr-4 footer-link centertext green--text"
-              >Methodology</router-link
-            >
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
-
+    <Nav :sections="sections" v-on:move-to-section="moveToSection"></Nav>
     <v-content>
-      <full-page
-        ref="fullpage"
-        :options="options"
-        id="fullpage"
-     
-      >
-        <router-view></router-view>
-      </full-page>
-      <!-- I mean, I guess this works... -->
-      <!-- <router-view v-else></router-view> -->
+      <router-view></router-view>
     </v-content>
 
-    <v-footer
-      app
-      color="darkBlack"
-      class="font-weight-bold d-none d-lg-flex"
-      id="footer"
-    >
-      <v-row class="white--text pr-4 copyright" align-self="center">
-        <v-col>
-          <router-link to="/People" class="pr-4 footer-link teal--text"
-            >Credits</router-link
-          >
-          <router-link to="/Contact" class="pr-4 footer-link blue--text"
-            >Contact</router-link
-          >
-          <router-link to="/Methodology" class="pr-4 footer-link green--text"
-            >Methodology</router-link
-          >
-        </v-col>
-        <v-spacer></v-spacer>
-        <v-col cols="1" class="px-0 mx-0 text-right" justify-self="end" align-self="center"> &copy; {{ new Date().getFullYear() }} </v-col>
-        <v-col cols="1" class="pa-0 ma-0" align-self="center">
-          <a href="http://www.greenhousestudios.uconn.edu">
-            <v-img
-              :src="require('@/assets/Logos/GSLogoGreen.png')"
-              contain
-              max-height="5rem" 
-              class="mx-0"
-            ></v-img>
-          </a>
-        </v-col>
-      </v-row>
-    </v-footer>
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 export default {
   name: "App",
+  components: {
+    Footer,
+    Nav,
+  },
   data: () => ({
     fillerText:
       "Challenges and opportunities; collective impact incubator energize natural resources. Shared value; circular innovate social entrepreneur impact investing change-makers challenges and opportunities B-corp outcomes. Disrupt fairness empower, blended value framework. Boots on the ground; move the needle global, leverage improve the world milestones benefit corporation greenwashing ideate. But; save the world, her body her rights LGBTQ+ a efficient storytelling empower external partners. Framework society circular thought leadership expose the truth strategy strategy big data save the world. Replicable shared value mass incarceration, thought partnership, big data paradigm engaging granular. Grit change-makers triple bottom line energize LGBTQ+ low-hanging fruit thought leadership. Replicable overcome injustice thought partnership empathetic rubric when blended value synergy uplift. Thought provoking innovation thought provoking academic, effective altruism collaborative consumption indicators movements replicable. Shared unit of analysis empower communities innovate youth social enterprise expose the truth. Communities technology; compelling; communities inspiring transparent; social entrepreneurship. Inspirational framework collective impact efficient.",
     tagPrefix: "#",
     sideNav: true,
-    drawer: false,
+
     fpSections: null,
     navSects: null,
     navNums: [],
@@ -143,25 +40,27 @@ export default {
       },
       {
         title: "Introduction",
-        slides: []
+        slides: [],
       },
       {
         title: "Maps",
-        slides: ["Hartford Through Time", "Routes and Roots", "Mobilities", "Neighborhood Clusters", "Housing"],
+        slides: [
+          "Hartford Through Time",
+          "Routes and Roots",
+          "Mobilities",
+          "Neighborhood Clusters",
+          "Housing",
+        ],
       },
       {
         title: "Settlement",
-  
+
         slides: [
-          "African American Settlement",
-          "Puerto Rican Settlement",
-          "West Indian Settlement",
         ],
       },
       {
         title: "Housing",
-        slides: [
-        ],
+        slides: [],
       },
       {
         title: "Timeline",
@@ -176,93 +75,64 @@ export default {
       { title: "Settlement", path: "/Settlement" },
       { title: "Housing", path: "/Housing" },
       { title: "Timeline", path: "/Timeline" },
-      // { title: "Profiles", path: "/Profiles" },
     ],
-    options: {
-      licenseKey: "5040F97D-84574F59-952CE4FC-EAD7E65C",
-      // menu: "#menu",
-      navigation: false,
-      navigationPosition: "right",
-      // sectionSelector: '.section',
-      // slideSelector: '.fp-slide',
-      fitToSection: false,
-      autoScrolling: false, //this breaks app bar hiding
-      slidesNavigation: true,
-      slidesNavPosition: "bottom",
-      controlArrows: false,
-      verticalCentered: true,
-      parallax: true,
-      sectionsColor: ["#FFF"],
-      controlArrows: true,
-      // anchors: ["Home", "About", "Introduction","Maps","Settlement","Housing","Timeline","Profiles"],
-      // lockAnchors: true,
-    },
   }),
   methods: {
-    moveDown: function () {
-      this.$refs.fullpage.api.moveSectionDown();
-    },
-    navigateToSection: function (i) {
+    moveToSection: function (i, j) {
       // console.log(i)
-      if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(this.navNums[i]);
-      else
+      if (this.$route.name == "Main") {
+        this.move(i, j);
+      } else
         this.$router.push("/").then(() => {
-          this.$refs.fullpage.api.moveTo(this.navNums[i]);
+          this.move(i, j);
         });
     },
-    navigateToSources: function(){
-          this.$refs.fullpage.api.moveTo(43);
+    move: function (i, j) {
+      if(j) this.navigateToMapSection(j);
+      else window.fullpage_api.moveTo(this.navNums[i]);
     },
     navigateToSlide: function (i, slide) {
-     if (this.$route.name == "Main") this.$refs.fullpage.api.moveTo(this.navNums[i],slide);
+      if (this.$route.name == "Main")
+        window.fullpage_api.moveTo(this.navNums[i], slide);
       else
         this.$router.push("/").then(() => {
-          this.$refs.fullpage.api.moveTo(this.navNums[i],slide);
+          window.fullpage_api.moveTo(this.navNums[i], slide);
         });
     },
-    navigateToProfile: function (i) {
-      this.$refs.fullpage.api.moveTo(23 + i);
+    navigateToMapSection: function (i) {
+      window.fullpage_api.moveTo(this.mapNums[i]);
     },
-    navigateToMap: function (i) {
-      console.log(this.$refs.fullpage.api.getActiveSection());
-      this.$refs.fullpage.api.moveTo(3 + i);
+    navigateToMapSet: function (i) {
+      window.fullpage_api.moveTo(this.setNums[i]);
     },
-    navigateToMapSection: function(i){
-      this.$refs.fullpage.api.moveTo(this.mapNums[i]);
-    },
-    navigateToMapSet: function(i){
-      this.$refs.fullpage.api.moveTo(this.setNums[i]);
-    },
-    menuNavigate: function (section,subsection){
-      if(section === 3) this.navigateToMapSection(subsection);
-      else this.navigateToSlide(section,subsection);
-    }
   },
-  mounted () {
+  mounted() {
     this.fpSections = Array.from(this.$el.querySelectorAll(".section"));
 
     this.navSects = Array.from(this.$el.querySelectorAll(".nav-section"));
-    var matches = this.fpSections.filter(x => this.navSects.includes(x));
-    this.navNums = matches.map(x => this.fpSections.indexOf(x) + 1);
+    var matches = this.fpSections.filter((x) => this.navSects.includes(x));
+    this.navNums = matches.map((x) => this.fpSections.indexOf(x) + 1);
 
     var mapChapterDivs = Array.from(this.$el.querySelectorAll(".map-section"));
-    var fpMapChapters = this.fpSections.filter(x => mapChapterDivs.includes(x));
-    this.mapNums = fpMapChapters.map(x => this.fpSections.indexOf(x) + 1)
+    var fpMapChapters = this.fpSections.filter((x) =>
+      mapChapterDivs.includes(x)
+    );
+    this.mapNums = fpMapChapters.map((x) => this.fpSections.indexOf(x) + 1);
 
     var mapSets = Array.from(this.$el.querySelectorAll(".map-set"));
-    var fpMapSets = this.fpSections.filter(x => mapSets.includes(x));
-    this.setNums =  fpMapSets.map(x => this.fpSections.indexOf(x) + 1)
+    var fpMapSets = this.fpSections.filter((x) => mapSets.includes(x));
+    this.setNums = fpMapSets.map((x) => this.fpSections.indexOf(x) + 1);
   },
 };
 </script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-html{
+html {
   height: 100%;
   min-height: 100%;
 }
-body{
+body {
   min-height: 100%;
 }
 v-application {
@@ -290,7 +160,7 @@ v-footer a {
 .footer-link {
   text-decoration: none;
 }
-.inline-link{
+.inline-link {
   font-weight: bold;
   color: #72b591;
   text-decoration: none;
@@ -574,14 +444,14 @@ body {
   display: inline-flex;
 }
 .fp-controlArrow.fp-next {
-    right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #000;
+  right: 15px;
+  border-width: 38.5px 0 38.5px 34px;
+  border-color: transparent transparent transparent #000;
 }
 .fp-controlArrow.fp-prev {
-    left: 15px;
-    width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #000 transparent transparent;
+  left: 15px;
+  width: 0;
+  border-width: 38.5px 34px 38.5px 0;
+  border-color: transparent #000 transparent transparent;
 }
 </style>
