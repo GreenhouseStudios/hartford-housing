@@ -305,15 +305,8 @@
       </div>
 
       <div id="bellevue-trigger"></div>
-      <div id="sticky-container">
-        <v-img
-          :src="require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')"
-          max-height="18rem"
-          contain
-          id="juxt-context"
-        ></v-img>
-      </div>
-      <div class="section d-none d-md-flex map-set">
+     
+      <div class="section d-none d-md-flex map-set" style="position:relative">
         <h1
           class="
             text-center
@@ -327,15 +320,24 @@
         >
           Bellevue 1934 vs 1965
         </h1>
-        <div class="d-flex">
+        <div style="height: 100vh;">
           <iframe
             frameborder="0"
             class="juxtapose my-10"
-            width="90%"
+            width="100%"
             height="100%"
             src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
           ></iframe>
         </div>
+         <div id="sticky-container">
+        <v-img
+          :src="require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')"
+          max-height="14em"
+          style="right: -285px"
+          contain
+          id="juxt-context"
+        ></v-img>
+      </div>
       </div>
 
       <div class="section d-sm-flex d-md-none">
@@ -859,7 +861,7 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.1,
         // Duration of animation
-        duration: "1700",
+        duration: "1500",
       }) // Declaration of animation and attaching to element
       // .setClassToggle("#revealscale", "visible")
       .setPin("#sticky-container", { pushFollowers: false });
@@ -1017,6 +1019,8 @@ export default {
   height: 100vh !important ;
 }
 #sticky-container {
+  position: absolute;
+  top: -250px;
   z-index: 9999;
 }
 #juxt-context {
