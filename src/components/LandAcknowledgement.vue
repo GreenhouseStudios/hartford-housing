@@ -92,4 +92,7 @@ export default {
   font-weight: 800 !important;
   font-size: 2rem;
 }
+.v-sheet{
+  border-radius: 0;
+}
 </style>

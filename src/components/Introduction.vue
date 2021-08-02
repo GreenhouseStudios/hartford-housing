@@ -115,4 +115,7 @@ export default {
 #intro-title {
   color: white;
 }
+.v-sheet{
+  border-radius: 0;
+}
 </style>
