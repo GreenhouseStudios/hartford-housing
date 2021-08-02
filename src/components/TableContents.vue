@@ -30,26 +30,23 @@
           >{{ item }}</v-btn
         >
       </v-card>
-      <!-- <v-col class="mx-auto">
-          
-        </v-col> -->
+   
     </v-row>
 
-    <v-row>
-      <v-col cols="3"></v-col>
-      <v-col cols="12" md="6" class="gallery">
+    <v-row class="d-flex justify-center">
+      
+      <v-col class="gallery">
         <v-hover
           v-slot="{ hover }"
           v-for="(tile, index) in tiles"
           :key="index"
           class="ma-2"
         >
-          
-            <div class="d-flex-column align-center justify-center">
+            <div class="d-flex align-center justify-center">
               <v-card
                 :elevation="hover ? 12 : 2"
-                height="12rem"
-                width="12rem"
+                :height="$vuetify.breakpoint.mdAndUp ? '12em' : '7em' "
+                :width="$vuetify.breakpoint.mdAndUp ? '12em' : '7em' "
                 class="d-flex-column align-center justify-center"
                 @click="navigateToMapSet(index)"
                 style="overflow: hidden"
@@ -81,10 +78,8 @@
                 </div>
               </v-card>
             </div>
-          
         </v-hover>
       </v-col>
-      <v-col cols="3"></v-col>
     </v-row>
   </div>
 </template>
@@ -128,10 +123,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media only screen and(max-width: 600px) {
 .gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-items: center;
+  max-width: 90%;
+  justify-content: center;
+}  
+}
+@media only screen and(min-width: 600px) {
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-items: center;
+  max-width: 50%;
+  justify-content: center;
+}  
 }
 </style>
