@@ -454,4 +454,7 @@ body {
   border-width: 38.5px 34px 38.5px 0;
   border-color: transparent #000 transparent transparent;
 }
+a{
+  text-decoration: none;
+}
 </style>
