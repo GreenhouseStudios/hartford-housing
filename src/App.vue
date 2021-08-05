@@ -245,33 +245,33 @@ body {
 }
 .highlight {
   position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    180deg,
-    rgba(81, 159, 200, 0) 30%,
-    rgb(81, 159, 200) 30%
-  );
 }
-.highlight::after {
-  content: "";
-  background-color: rgb(81, 159, 200);
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
+.highlight:before, 
+.highlight:after {
+  content: " ";
+  display: block;
+  height: 110%;
+  width: 110%;
+  margin-left: -5%;
+  margin-right: -5%;
+  position: absolute;
+  transform: skew(-15deg);
+}
+.highlight:before {
+  background: rgba(252, 130, 29, 1);
+  z-index:-100;
 }
 .highlight-teal {
   @extend .highlight;
-  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
+  background-color: #72b591;
 }
 .highlight-blue {
   @extend .highlight;
-  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #519ec8 30%);
+  background-color: #519ec8;
 }
 .highlight-green {
   @extend .highlight;
-  background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
+  background-color: #d1d35e;
 }
 .r-slant {
   @extend .highlight;
@@ -280,12 +280,13 @@ body {
   &::before,
   ::after {
     content: " ";
-    background-color: rgb(81, 159, 200);
+    background-color: rgb(81, 159, 200);    
     display: inline-block;
     height: 80%;
     width: 100%;
+    margin: auto;
     margin-top: 3%;
-    position: absolute;
+    position: absolute;    
     transform: skew(-1deg) rotate(-1deg);
   }
   &::before {
@@ -296,18 +297,14 @@ body {
   @extend .r-slant;
   &::before,
   ::after {
-    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
-    height: 100%;
-    margin-top: -3%;
+    background-color: #72b591;
   }
 }
 .r-slant-green {
   @extend .r-slant;
   &::before,
   ::after {
-    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
-    height: 100%;
-    margin-top: -3%;
+    background-color:#d1d35e;
   }
 }
 .l-slant {
@@ -321,18 +318,14 @@ body {
   @extend .l-slant;
   &::before,
   ::after {
-    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
-    height: 100%;
-    margin-top: -3%;
+    background-color: #72b591;
   }
 }
 .l-slant-green {
   @extend .l-slant;
   &::before,
   ::after {
-    background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #d1d35e 30%);
-    height: 100%;
-    margin-top: -3%;
+    background-color: #d1d35e;
   }
 }
 //* Scrollmagic classes -------------------------------------//
