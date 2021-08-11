@@ -31,7 +31,7 @@
               "
             ></v-img>
             <router-link to="/Map/1" class="display-1 font-weight-bold"
-              >Map Details</router-link
+              > <v-btn> Map Details</v-btn></router-link
             >
           </v-card>
         </div>
@@ -65,7 +65,7 @@
             </v-card>
           </div>
           <router-link to="/Map/1" class="display-1 font-weight-bold"
-            >Map Details</router-link
+            ><v-btn>Map Details</v-btn></router-link
           >
         </div>
 
@@ -81,7 +81,7 @@
               :src="require('../assets/Maps/Final/Colleges/Colleges.jpg')"
             ></v-img>
             <router-link to="/Map/1" class="display-1 font-weight-bold"
-              >Map Details</router-link
+              ><v-btn>Map Details</v-btn></router-link
             >
           </v-card>
         </div>
@@ -94,7 +94,7 @@
               :src="require('../assets/Maps/Final/Jamaica/Parishes.jpg')"
             ></v-img>
             <router-link to="/Map/1" class="display-1 font-weight-bold"
-              >Map Details</router-link
+              ><v-btn>Map Details</v-btn></router-link
             >
           </div>
         </div>
@@ -106,7 +106,7 @@
               :src="require('../assets/Maps/Final/Jamaica/locations.jpg')"
             ></v-img>
             <router-link to="/Map/1" class="display-1 font-weight-bold"
-              >Map Details</router-link
+              ><v-btn>Map Details</v-btn></router-link
             >
           </div>
         </div>
@@ -195,7 +195,7 @@
                 :src="
                   'https://www.youtube.com/embed/' +
                   map.code +
-                  '?&autoplay=1&loop=1&playlist=' +
+                  '?&autoplay=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=' +
                   map.code +
                   '&origin=https://hartfordbound.com'
                 "
@@ -280,38 +280,43 @@
             :imgSet="westIndianImages"
             :slidesOnly="true"
           ></MobileSlidesSection>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link>
         </div>
 
-        <div class="section map-set">
-          <v-img
+        <div class="section map-set d-flex flex-column">
+         <div class="d-flex flex-column justify-center align-center"> <v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg')"
           ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
         </div>
 
-        <div class="section">
-          <v-img
+        <div class="section d-flex flex-column">
+          <div class="d-flex flex-column justify-center align-center"><v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
           ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
         </div>
 
-        <div class="section">
-          <v-img
+        <div class="section d-flex flex-column">
+          <div class="d-flex flex-column justify-center align-center"><v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
           ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
         </div>
 
         <div class="section">
-          <v-img
+          <div class="d-flex flex-column justify-center align-center"><v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
           ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
         </div>
       </div>
       <!-- 4: Housing -->
@@ -369,7 +374,7 @@
                 require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')
               "
               max-height="30em"
-              style="right: -70em"
+              style="right: -30em"
               contain
               id="juxt-context"
             ></v-img>
@@ -514,70 +519,16 @@
               Housing Conditions
             </h1>
           </v-row>
-          <v-card height="100vh" class="elevation-0" align-content="center">
-            <v-row align="center">
-              <v-col cols="4" align-self="center">
-                <v-img
-                  max-height="71vh"
-                  contain
-                  :src="
-                    require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
-                  "
-                ></v-img>
-              </v-col>
-              <v-col cols="4" align-self="center"
-                ><v-img
-                  max-height="90vh"
-                  contain
-                  :src="
-                    require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
-                  "
-                ></v-img
-              ></v-col>
-              <v-col cols="4" align-self="center"
-                ><v-img
-                  max-height="71vh"
-                  contain
-                  :src="
-                    require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
-                  "
-                ></v-img
-              ></v-col> </v-row
-          ></v-card>
+            <MobileSlidesSection 
+            :imgSet="housingConditionImages"
+            :slidesOnly="true"
+          ></MobileSlidesSection>
+<router-link to="/Map/1" class="display-1 font-weight-bold"
+              > <v-btn> Map Details</v-btn></router-link
+            >
         </div>
       </div>
 
-      <div class="section" v-if="isMobile">
-        <div class="slide">
-          <v-img
-            max-height="90vh"
-            contain
-            :src="
-              require('../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg')
-            "
-          ></v-img>
-        </div>
-
-        <div class="slide active">
-          <v-img
-            max-height="90vh"
-            contain
-            :src="
-              require('../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg')
-            "
-          ></v-img>
-        </div>
-
-        <div class="slide">
-          <v-img
-            max-height="90vh"
-            contain
-            :src="
-              require('../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg')
-            "
-          ></v-img>
-        </div>
-      </div>
 
       <Settlement></Settlement>
       <Housing></Housing>
@@ -654,7 +605,7 @@ export default {
     TableContents,
   },
   methods: {
-    handleProfileMapClick(index) {
+    MobileSlidesSectionMapClick(index) {
       this.dialog = true;
       this.activeProfile = this.profiles[index];
     },
@@ -689,9 +640,8 @@ export default {
         autoScrolling: false, //this breaks app bar hiding
         slidesNavigation: true,
         slidesNavPosition: "bottom",
-        controlArrows: false,
-        verticalCentered: true,
         controlArrows: true,
+        verticalCentered: true,
       },
       galleryImgs: [
         {
@@ -830,6 +780,18 @@ export default {
           img: require("../assets/Maps/Final/SlumClearance/SlumClearance1934.jpg"),
         },
       ],
+        housingConditionImages: [
+        {
+          img: require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
+        },
+        {
+          img: require("../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg"),
+        },
+         {
+          img: require("../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg"),
+        },
+      ],
+      
       westIndianImages: [
         {
           img: require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
@@ -919,7 +881,7 @@ export default {
         // {0,0.5,1} - animations starts from {top,center,end} of window
         triggerHook: 0.1,
         // Duration of animation
-        duration: "2000",
+        duration: "1600",
       }) // Declaration of animation and attaching to element
       // .setClassToggle("#revealscale", "visible")
       .setPin("#sticky-container", { pushFollowers: false });
@@ -1094,5 +1056,8 @@ export default {
   width: 100%;
   height: 100%;
   margin: 0 auto;
+}
+.v-btn{
+  text-decoration: none;
 }
 </style>
