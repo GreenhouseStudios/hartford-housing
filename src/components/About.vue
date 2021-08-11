@@ -1,16 +1,24 @@
 <template>
   <div class="section nav-section">
-    <v-sheet height="100vh" width="100vw" color="teal">
+    <v-sheet height="100vh" width="100vw" color="teal" class="background">
       <v-container fluid fill-height>
         <v-row>
           <div id="trigger2"></div>
           <v-col cols="2"></v-col>
           <v-col class="d-none d-md-block">
-            <div id="about-heading" class="font-weight-bold">{{ heading }}</div>
+            <div id="about-heading" class="font-weight-bold">
+              <span class="highlight-green">
+              {{ heading }}
+              </span>
+            </div>
             <div id="about-body">{{ body }}</div>
           </v-col>
           <v-col class="d-md-none">
-            <div id="m-heading">{{ heading }}</div>
+            <div id="m-heading">
+              <span class="highlight-green">
+                {{ heading }}
+              </span>
+            </div>
             <div>{{ body }}</div>
           </v-col>
           <v-col cols="2"></v-col>
@@ -68,10 +76,10 @@ export default {
 
 <style scoped>
 #about-heading{
-  font-size: 5rem;
+  font-size: 4rem;
 }
 #about-body{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #m-heading{
   font-weight: 800 !important;
@@ -79,5 +87,14 @@ export default {
 }
 .v-sheet{
   border-radius: 0;
+}
+.background{
+  background-image: url("~@/assets/skyline.png");
+  background-repeat: no-repeat;
+  background-position: center bottom; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100%;
 }
 </style>

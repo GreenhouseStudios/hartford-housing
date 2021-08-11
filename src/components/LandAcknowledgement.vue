@@ -4,11 +4,15 @@
       <v-container fluid fill-height>
         <v-row>
           <div id="trigger2"></div>
-          <v-col cols="0" md="2"></v-col>
+          <v-col cols="2" md="2"></v-col>
           <v-col class="d-none d-md-block">
-            <div id="about-heading" class="display-4 font-weight-bold">{{ heading }}</div>
+            <div id="about-heading" class="font-weight-bold">
+              <span class="highlight-teal">
+                {{ heading }}
+              </span>
+            </div>
             <div id="about-body">{{ body }}</div>
-            <div class="display-1">
+            <div id="about-body">
               <p>
                 The University of Connecticut’s Office for Diversity and
                 Inclusion worked with the three co-founders of the
@@ -31,7 +35,11 @@
             </div>
           </v-col>
           <v-col class="d-md-none">
-            <div id="m-heading">{{ heading }}</div>
+            <div id="m-heading">
+              <span class="highlight-teal">
+                {{ heading }}
+              </span>
+            </div>
             <p>
               The University of Connecticut’s Office for Diversity and Inclusion
               worked with the three co-founders of the
@@ -51,7 +59,7 @@
               aspire to uphold our responsibilities according to their example
             </p>
           </v-col>
-          <v-col cols="0" md="2"></v-col>
+          <v-col cols="2" md="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>
@@ -83,10 +91,10 @@ export default {
 
 <style scoped>
 #about-heading {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 #about-body {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #m-heading {
   font-weight: 800 !important;
