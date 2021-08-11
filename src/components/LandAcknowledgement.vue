@@ -2,10 +2,8 @@
   <div>
     <v-sheet height="100vh" width="100vw" color="blue">
       <v-container fluid fill-height>
-        <v-row>
-          <div id="trigger2"></div>
-          <v-col cols="0" md="2"></v-col>
-          <v-col class="d-none d-md-block">
+        <v-row justify="center">
+          <v-col class="d-none d-md-block mx-5 px-5" md="6">
             <div id="about-heading" class="display-4 font-weight-bold">{{ heading }}</div>
             <div id="about-body">{{ body }}</div>
             <div class="display-1">
@@ -30,7 +28,7 @@
               </p>
             </div>
           </v-col>
-          <v-col class="d-md-none">
+          <v-col class="d-md-none px-5 mx-5">
             <div id="m-heading">{{ heading }}</div>
             <p>
               The University of Connecticut’s Office for Diversity and Inclusion
@@ -51,7 +49,6 @@
               aspire to uphold our responsibilities according to their example
             </p>
           </v-col>
-          <v-col cols="0" md="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>

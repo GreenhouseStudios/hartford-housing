@@ -2,18 +2,18 @@
   <div class="section nav-section">
     <v-sheet height="100vh" width="100vw" color="teal">
       <v-container fluid fill-height>
-        <v-row>
+        <v-row justify="center">
           <div id="trigger2"></div>
-          <v-col cols="2"></v-col>
-          <v-col class="d-none d-md-block">
+          
+          <v-col class="d-none d-md-block" md="6">
             <div id="about-heading" class="font-weight-bold">{{ heading }}</div>
             <div id="about-body">{{ body }}</div>
           </v-col>
-          <v-col class="d-md-none">
+          <v-col class="d-md-none mx-5 px-5">
             <div id="m-heading">{{ heading }}</div>
             <div>{{ body }}</div>
           </v-col>
-          <v-col cols="2"></v-col>
+          
         </v-row>
       </v-container>
     </v-sheet>
