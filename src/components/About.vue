@@ -2,10 +2,8 @@
   <div class="section nav-section">
     <v-sheet height="100vh" width="100vw" color="teal" class="background">
       <v-container fluid fill-height>
-        <v-row>
-          <div id="trigger2"></div>
-          <v-col cols="2"></v-col>
-          <v-col class="d-none d-md-block">
+        <v-row justify="center">
+          <v-col class="d-none d-md-block" md="6">
             <div id="about-heading" class="font-weight-bold">
               <span class="highlight-green">
               {{ heading }}
@@ -13,7 +11,7 @@
             </div>
             <div id="about-body">{{ body }}</div>
           </v-col>
-          <v-col class="d-md-none">
+          <v-col class="d-md-none mx-5 px-5">
             <div id="m-heading">
               <span class="highlight-green">
                 {{ heading }}
@@ -21,7 +19,7 @@
             </div>
             <div>{{ body }}</div>
           </v-col>
-          <v-col cols="2"></v-col>
+          
         </v-row>
       </v-container>
     </v-sheet>
@@ -54,22 +52,6 @@ export default {
     allCaps: function (value) {
       return value.toUpperCase();
     },
-  },
-  mounted() {
-    const scene2 = this.$scrollmagic
-      .scene({
-        // ID of element where animation starts
-        triggerElement: "#trigger2",
-        // {0,0.5,1} - animations starts from {top,center,end} of window
-        triggerHook: 0.7,
-        // Duration of animation
-        duration: "99%",
-      }) // Declaration of animation and attaching to element
-      .setClassToggle("#revealrise", "visible");
-    // Helpful tags for orientation on the screen
-    // .addIndicators({ name: "2 (duration: 300)" });
-    // Add Scene to controller
-    this.$scrollmagic.addScene(scene2);
   },
 };
 </script>

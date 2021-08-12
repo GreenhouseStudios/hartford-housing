@@ -533,35 +533,6 @@
       <Settlement></Settlement>
       <Housing></Housing>
       <Timeline></Timeline>
-
-      <div class="section">
-        <h2 class="section-header display-1 font-weight-bold">Sources</h2>
-        <v-simple-table class="mx-10">
-          <template v-slot:default>
-            <tbody>
-              <tr v-for="n in sources.length" :key="n">
-                <td>{{ n }}.{{ sources[n] }}</td>
-                <td>
-                  <a
-                    class="inline-link"
-                    @click="$root.$children[0].navigateToSection(3)"
-                    >Map</a
-                  >
-                </td>
-              </tr>
-            </tbody>
-          </template>
-        </v-simple-table>
-      </div>
-      <!-- <v-dialog v-model="dialog">
-      <v-card v-if="activeProfile">
-        <v-card-title class="headline grey lighten-2" primary-title
-          >{{ activeProfile.name }}'s Hartford</v-card-title
-        >
-        <v-img src="@/assets/joshmap.jpg" max-height="600" contain></v-img>
-        <v-card-text>{{ activeProfile.body }}</v-card-text>
-      </v-card>
-    </v-dialog> -->
     </v-container>
   </full-page>
 </template>

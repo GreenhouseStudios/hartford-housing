@@ -1,16 +1,10 @@
 <template>
-  <div>
-    <v-sheet height="100vh" width="100vw" color="blue">
+  <div class="section">
+    <v-sheet height="100%" width="100vw" color="blue">
       <v-container fluid fill-height>
-        <v-row>
-          <div id="trigger2"></div>
-          <v-col cols="2" md="2"></v-col>
-          <v-col class="d-none d-md-block">
-            <div id="about-heading" class="font-weight-bold">
-              <span class="highlight-teal">
-                {{ heading }}
-              </span>
-            </div>
+        <v-row justify="center" align="center">
+          <v-col class="d-none d-md-flex flex-column justify-center align-center mx-5 px-5" md="6">
+            <div id="about-heading" class="display-4 font-weight-bold ma-4"><span class="highlight-teal">{{ heading }}</span></div>
             <div id="about-body">{{ body }}</div>
             <div id="about-body">
               <p>
@@ -34,7 +28,7 @@
               </p>
             </div>
           </v-col>
-          <v-col class="d-md-none">
+          <v-col class="d-md-none px-5 mx-5">
             <div id="m-heading">
               <span class="highlight-teal">
                 {{ heading }}
@@ -59,7 +53,6 @@
               aspire to uphold our responsibilities according to their example
             </p>
           </v-col>
-          <v-col cols="2" md="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>
