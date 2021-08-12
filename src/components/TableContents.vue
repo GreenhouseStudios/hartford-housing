@@ -45,8 +45,8 @@
             <div class="d-flex align-center justify-center">
               <v-card
                 :elevation="hover ? 12 : 2"
-                :height="$vuetify.breakpoint.mdAndUp ? '12em' : '7em' "
-                :width="$vuetify.breakpoint.mdAndUp ? '12em' : '7em' "
+                height="12em"
+                width="12em"
                 class="d-flex-column align-center justify-center"
                 @click="navigateToMapSet(index)"
                 style="overflow: hidden"

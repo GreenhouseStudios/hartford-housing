@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <v-sheet height="100vh" width="100vw" color="blue">
+  <div class="section">
+    <v-sheet height="100%" width="100vw" color="blue">
       <v-container fluid fill-height>
-        <v-row justify="center">
-          <v-col class="d-none d-md-block mx-5 px-5" md="6">
-            <div id="about-heading" class="display-4 font-weight-bold">{{ heading }}</div>
+        <v-row justify="center" align="center">
+          <v-col class="d-none d-md-flex flex-column justify-center align-center mx-5 px-5" md="6">
+            <div id="about-heading" class="display-4 font-weight-bold ma-4"><span class="highlight-teal">{{ heading }}</span></div>
             <div id="about-body">{{ body }}</div>
-            <div class="display-1">
+            <div id="about-body">
               <p>
                 The University of Connecticut’s Office for Diversity and
                 Inclusion worked with the three co-founders of the
@@ -29,7 +29,11 @@
             </div>
           </v-col>
           <v-col class="d-md-none px-5 mx-5">
-            <div id="m-heading">{{ heading }}</div>
+            <div id="m-heading">
+              <span class="highlight-teal">
+                {{ heading }}
+              </span>
+            </div>
             <p>
               The University of Connecticut’s Office for Diversity and Inclusion
               worked with the three co-founders of the
@@ -80,10 +84,10 @@ export default {
 
 <style scoped>
 #about-heading {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 #about-body {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #m-heading {
   font-weight: 800 !important;
