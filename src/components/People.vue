@@ -4,58 +4,51 @@
       <h1 class="section-header display-2 font-weight-bold mt-10">
         <span class="l-slant-green">Funding</span>
       </h1>
-        <!-- <v-col>
-          <v-row
-            v-for="(funder, index) in funders"
-            v-bind:key="index"
-            class="pa-5"
-          >
-          <v-card tile class="foundercard pa-5" color="lightBlack">
-            <v-img v-bind:src="funder.image"></v-img> 
-            <div class="cardtext">
-              <a class="font-weight-bold" :href="funder.link">
-                {{ funder.name }}
-              </a>
-            </div>
-          </v-card>
-          </v-row>
-        </v-col> -->
         <div>
           <div v-for="(funder, index) in funders"
             v-bind:key="index"
             class="pa-1 foundercard"
             style="display:inline-block;">
-          <v-card tile class="pa-5" :color="tileColor()">
-            <v-responsive :aspect-ratio="1">
-            <a class="font-weight-bold" :href="funder.link">
-              <v-img class="cardimg" v-bind:src="funder.image"></v-img>
-            </a>
-            <!-- <div class="cardtext">
-              <a class="font-weight-bold" :href="funder.link">
-                {{ funder.name }}
-              </a>
-            </div> -->
-            </v-responsive>
-          </v-card>
+          <a class="font-weight-bold" :href="funder.link">
+            <v-card tile class="pa-5" :color="tileColor()">
+              <v-responsive :aspect-ratio="1">
+                <v-img class="cardimg" v-bind:src="funder.image"></v-img>
+              </v-responsive>
+            </v-card>
+          </a>
           </div>
         </div>
 
-      <h1 class="section-header display-2 font-weight-bold mt-10">People</h1>
-      <v-row>
-        <v-col></v-col>
-        <v-col>
-          <v-row
-            v-for="(person, index) in people"
-            v-bind:key="index"
-            class="pa-5"
-          >
-            <a class="font-weight-bold" :href="person.link">{{
-              person.name
-            }}</a>
-          </v-row>
-        </v-col>
-        <v-col></v-col>
-      </v-row>
+      <h1 class="section-header display-2 font-weight-bold mt-10">
+        <span class="r-slant-green">
+          People
+        </span>
+      </h1>
+      <div>
+        <div
+          v-for="(person, index) in people"
+          v-bind:key="index"
+          class="pa-1 foundercard"
+          style="display:inline-block;"
+        >   
+          <a :href="person.link">       
+          <v-card tile class="pa-5" :color="tileColor()">
+            <v-responsive :aspect-ratio="1">
+              <div style="  position: relative;
+                top: 50%;
+                transform: translateY(-50%);">
+                <div class="font-weight-bold persontitle">
+                  {{person.name}}
+                </div>
+                <div class="personrole">
+                  {{person.role}}
+                </div>
+              </div>
+            </v-responsive>
+          </v-card>
+          </a>
+        </div>
+      </div>
     </v-container>
   </div>
 </template>
@@ -71,27 +64,36 @@ export default {
         {
           name: "DR. FIONA VERNAL",
           link: "https://greenhousestudios.uconn.edu/person/fiona-vernal//",
+          role: "PI",
         },
-        { name: "LAURA BEDOYA" },
-        { name: "MALACHI BRIDGES" },
-        { name: "GEORGIA BROWN" },
-        { name: "AALIYAH CAMPBELL" },
+        { name: "LAURA BEDOYA", role: "Research", },
+        { name: "MALACHI BRIDGES", role: "Research", },
+        { name: "GEORGIA BROWN", role: "Research", },
+        { name: "AALIYAH CAMPBELL", role: "Research", },
         {
           name: "JAMES KOLB",
           link: "https://greenhousestudios.uconn.edu/person/james-kolb/",
+          role: "PI, Map Design",
         },
-        { name: "STEPHANIE ORTS", link: "https://www.stephanieorts.com/" },
+        { 
+          name: "STEPHANIE ORTS", 
+          link: "https://www.stephanieorts.com/", 
+          role: "Graphic Design", 
+        },
         {
           name: "TOM LEE",
           link: "https://greenhousestudios.uconn.edu/person/tom-lee/",
+          role: "Web Development",
         },
         {
           name: "MACKENZIE FOX",
           link: "https://greenhousestudios.uconn.edu/person/mackenzie-fox/",
+          role: "Web Development, Illustration",
         },
         {
           name: "CARLY WANNER-HYDE",
           link: "https://greenhousestudios.uconn.edu/person/carly-wanner-hyde/",
+          role: "Layout Design",
         },
       ],
       funders: [
@@ -149,7 +151,7 @@ export default {
   methods: {
     tileColor(){
       if(this.colorIndex == 2){
-        this.colorIndex = 1;
+        this.colorIndex = 0;
       }else{
       this.colorIndex++;
       }
@@ -160,14 +162,28 @@ export default {
 </script>
 
 <style scoped>
-.foundercard{
+/* On large screens that are 993px or more, make 5 columns */
+.foundercard {
   margin: auto;
-  width:  33%;
+  width:  20%;
   height: auto;
 }
-.cardtext{
-  text-align: center;
-  padding-top: 15px;
+v-container{
+  padding-bottom: 50px;
+}
+
+/* On screens that are 992px or less, make 4 columns */
+@media screen and (max-width: 992px) {
+    .foundercard {
+      width:  25%;
+    }
+}
+
+/* On screens that are 600px or less, make 2 columns */
+@media screen and (max-width: 600px) {
+    .foundercard {
+      width:  50%;
+    }
 }
 .outline {
   outline-style: solid;
@@ -178,5 +194,16 @@ export default {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+.persontitle{
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+.personrole{
+  color: white;
+  text-align: center;
+  font-style: italic;
 }
 </style>
