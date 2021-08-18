@@ -195,7 +195,7 @@
                 :src="
                   'https://www.youtube.com/embed/' +
                   map.code +
-                  '?&autoplay=1&loop=1&mute=1&controls=0&showinfo=0&modestbranding=1&playlist=' +
+                  '?&autoplay=1&loop=1&mute=1&controls=0&playsinline=1&showinfo=0&modestbranding=1&playlist=' +
                   map.code +
                   '&origin=https://hartfordbound.com'
                 "
