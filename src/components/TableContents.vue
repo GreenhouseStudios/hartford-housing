@@ -16,7 +16,7 @@
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
     <v-row align="center">
-      <v-card align-self="center" class="mx-auto ma-10" width="50vw">
+      <v-card align-self="center" class="mx-auto ma-10 menuitems">
         <v-btn
           v-for="(item, i) in menuItems"
           :key="item"
@@ -132,6 +132,9 @@ export default {
   max-width: 90%;
   justify-content: center;
 }  
+.menuitems{
+  width: 60vw;
+}
 }
 @media only screen and(min-width: 600px) {
 .gallery {
@@ -139,8 +142,11 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-items: center;
-  max-width: 50%;
+  max-width: 70%;
   justify-content: center;
 }  
+.menuitems{
+  width: 50vw;
+}
 }
 </style>
