@@ -4,7 +4,7 @@
       <h1 class="section-header display-2 font-weight-bold mt-10">
         <span class="l-slant-green">Funding</span>
       </h1>
-        <div>
+        <div class="boxwrapper">
           <div v-for="(funder, index) in funders"
             v-bind:key="index"
             class="pa-1 foundercard"
@@ -24,7 +24,7 @@
           People
         </span>
       </h1>
-      <div>
+      <div class="boxwrapper">
         <div
           v-for="(person, index) in people"
           v-bind:key="index"
@@ -165,17 +165,20 @@ export default {
 /* On large screens that are 993px or more, make 5 columns */
 .foundercard {
   margin: auto;
-  width:  20%;
+  width:  25%;
   height: auto;
 }
-v-container{
-  padding-bottom: 50px;
+.boxwrapper {
+  padding: 2% 15%; 
 }
 
 /* On screens that are 992px or less, make 4 columns */
 @media screen and (max-width: 992px) {
     .foundercard {
       width:  25%;
+    }
+    .boxwrapper {
+      padding: 2% 5%;
     }
 }
 
@@ -184,6 +187,13 @@ v-container{
     .foundercard {
       width:  50%;
     }
+    .boxwrapper {
+      padding: 2% 0;
+    }
+}
+
+v-container{
+  padding-bottom: 50px;
 }
 .outline {
   outline-style: solid;
