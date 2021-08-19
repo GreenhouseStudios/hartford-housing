@@ -22,7 +22,7 @@
         </v-card>
 
         <div class="section map-section map-set">
-          <v-card class="d-flex flex-column align-center" height="100vh">
+          <v-card class="d-flex flex-column align-center" >
             <v-img
               contain
               max-height="90vh"
@@ -73,7 +73,7 @@
           <v-card
             class="d-flex flex-column align-center justify-center"
             elevation="0"
-            height="100vh"
+
           >
             <v-img
               contain
@@ -281,7 +281,7 @@
             :imgSet="westIndianImages"
             :slidesOnly="true"
           ></MobileSlidesSection>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link>
+          <!-- <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link> -->
         </div>
 
         <div class="section map-set d-flex flex-column">
@@ -866,6 +866,12 @@ export default {
   .desktop-only {
     display: visible;
   }
+}
+.fp-section.fp-table {
+  height: auto !important; 
+  } 
+.fp-tableCell { 
+  height: auto !important;
 }
 .banner {
   width: 100%;

@@ -7,7 +7,7 @@
         </div>
         
       </div>
-      <router-link to="/Map/1" class="display-1 font-weight-bold mx-auto" style="position: absolute; bottom: 80px; right: 46.5vw;"><v-btn>Map Details</v-btn></router-link>
+      <!-- <router-link to="/Map/1" class="display-1 font-weight-bold mx-auto" style="position: absolute; bottom: 80px; right: 46.5vw;"><v-btn>Map Details</v-btn></router-link> -->
     </v-row>
     <v-row v-else>
       <v-col
@@ -25,7 +25,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <router-link to="/Map/1" class="display-1 font-weight-bold mx-auto"><v-btn>Map Details</v-btn></router-link>
+    <router-link to="/Map/1" class="display-1 font-weight-bold mx-auto"><v-btn style="margin-top: 40px">Map Details</v-btn></router-link>
   </div>
 </template>
 
