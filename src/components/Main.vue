@@ -203,6 +203,7 @@
                 frameborder="0"
                 allowfullscreen
                 style="pointer-events: none"
+                loading="lazy"
               ></iframe>
             </div>
           </div>
@@ -541,17 +542,10 @@
 import Home from "@/components/Home";
 import About from "@/components/About";
 import Introduction from "@/components/Introduction";
-import Maps from "@/components/Maps";
 import Settlement from "@/components/Settlement";
 import Housing from "@/components/Housing";
-import ProfileMenu from "@/components/ProfileMenu";
 import Timeline from "@/components/Timeline";
-import Card from "@/components/Card";
-import Caption from "@/components/Caption";
-import ReadMoreCard from "@/components/ReadMoreCard";
-import MapCarousel from "@/components/MapCarousel";
 import { loremIpsum } from "lorem-ipsum";
-import ResponsiveMap from "@/components/ResponsiveMap";
 import MobileSlidesSection from "@/components/MobileSlidesSection";
 import LandAcknowledgement from "./LandAcknowledgement.vue";
 import TableContents from "./TableContents.vue";
@@ -561,16 +555,9 @@ export default {
     Home,
     About,
     Introduction,
-    Maps,
     Settlement,
     Housing,
-    ProfileMenu,
     Timeline,
-    Card,
-    ReadMoreCard,
-    Caption,
-    MapCarousel,
-    ResponsiveMap,
     MobileSlidesSection,
     LandAcknowledgement,
     TableContents,
