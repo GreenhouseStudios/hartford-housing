@@ -126,7 +126,7 @@
           </h1>
         </v-card>
 
-        <div class="section map-section map-set">
+        
           <v-row class="my-10 mx-auto">
             <h1
               class="
@@ -152,6 +152,7 @@
               Ethnic and Racial Distribution
             </h1>
           </v-row>
+          <div class="section map-section map-set">
           <MobileSlidesSection
             :imgSet="racialEthnicImages"
           ></MobileSlidesSection>
@@ -317,7 +318,10 @@
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
           ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
+          <router-link to="/Map/1" class="display-1 font-weight-bold">
+            <v-btn class="mapbutton">Map Details</v-btn>
+          </router-link>
+          </div>
         </div>
       </div>
       <!-- 4: Housing -->
@@ -464,7 +468,6 @@
           </iframe>
         </div>
 
-        <div class="section map-set">
           <v-row class="my-10 mx-auto">
             <h1
               class="
@@ -490,11 +493,12 @@
               Renting Hartford
             </h1>
           </v-row>
+          <div class="section map-set">
           <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
         </div>
         <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
 
-        <div class="section map-set" v-if="!isMobile">
+        <div v-if="!isMobile">
           <v-row class="my-10 mx-auto">
             <h1
               class="
@@ -520,13 +524,12 @@
               Housing Conditions
             </h1>
           </v-row>
+          <div class="section map-set">
             <MobileSlidesSection 
             :imgSet="housingConditionImages"
             :slidesOnly="true"
           ></MobileSlidesSection>
-<router-link to="/Map/1" class="display-1 font-weight-bold"
-              > <v-btn> Map Details</v-btn></router-link
-            >
+          </div>
         </div>
       </div>
 
@@ -851,6 +854,9 @@ export default {
 };
 </script>
 <style>
+a{
+  margin: 15px 0;
+}
 @media only screen and (max-width: 768px) {
   .mobile-only {
     display: visible;

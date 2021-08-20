@@ -133,7 +133,7 @@ export default {
   justify-content: center;
 }  
 .menuitems{
-  width: 60vw;
+  width: 75vw;
 }
 }
 @media only screen and(min-width: 600px) {
