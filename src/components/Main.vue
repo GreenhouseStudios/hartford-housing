@@ -127,7 +127,7 @@
         </v-card>
 
         
-          <v-row class="my-10 mx-auto">
+          <v-row class="ma-10">
             <h1
               class="
                 d-none d-md-block
@@ -159,7 +159,7 @@
         </div>
 
         <div div class="section map-set">
-          <v-row class="my-10 mx-auto">
+          <v-row class="ma-10">
             <h1
               class="
                 d-none d-md-block
@@ -211,7 +211,7 @@
         </div>
 
         <div class="section map-set">
-          <v-row class="my-10 mx-auto">
+          <v-row class="ma-10">
             <h1
               class="
                 d-none d-md-block
@@ -354,7 +354,7 @@
             class="
               text-center
               py-6
-              my-6
+              ma-10
               font-weight-bold
               h1
               display-2
@@ -391,7 +391,7 @@
             class="
               text-center
               py-6
-              my-6
+              ma-10
               font-weight-bold
               h1
               display-2
@@ -425,7 +425,7 @@
             class="
               text-center
               py-6
-              my-6
+              ma-10
               font-weight-bold
               h1
               display-2
@@ -449,7 +449,7 @@
             class="
               text-center
               py-6
-              my-6
+              ma-10
               font-weight-bold
               h1
               display-2
