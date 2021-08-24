@@ -4,7 +4,8 @@
       <v-container fluid fill-height>
         <v-row>
           <div id="trigger2"></div>
-          <v-col cols="2"></v-col>
+          <v-col class="d-block d-sm-none" cols="1"></v-col>
+          <v-col class="d-none d-sm-block" cols="2"></v-col>
           <v-col class="d-none d-md-block">
             <div id="about-heading" class="font-weight-bold">
               <span class="highlight-green">
@@ -21,7 +22,8 @@
             </div>
             <div>{{ body }}</div>
           </v-col>
-          <v-col cols="2"></v-col>
+          <v-col class="d-block d-sm-none" cols="1"></v-col>
+          <v-col class="d-none d-sm-block" cols="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>

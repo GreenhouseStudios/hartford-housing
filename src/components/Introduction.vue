@@ -48,10 +48,10 @@
           </v-card>
       </v-row>
       <v-row class="d-flex d-md-none justify-center">
-          <v-card max-width="75%">
+          <v-card max-width="90%">
             <v-card-title class="display-1 font-weight-bold">Sample Title</v-card-title>
-            <v-card-text style="font-size: medium; line-height: 1.5em">{{
-              lorem.generateParagraphs(3)
+            <v-card-text class="card-text" style="font-size: small; line-height: 1.5em">{{
+              lorem.generateParagraphs(2)
             }}</v-card-text>
             <v-card-actions>
               <a

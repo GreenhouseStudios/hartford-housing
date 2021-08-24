@@ -9,19 +9,19 @@
         style="margin-top: 0 !important"
       >
         <!-- <div class="outline"> -->
-        <v-card flat tile color="lightBlack pa-10" class="innercard">
+        <v-card flat tile color="lightBlack card-padding" class="innercard">
           <v-card-title
             class="d-none d-md-block white--text display-1 font-weight-bold break-fix pa-4"
             >{{ heading }}</v-card-title
           >
           <v-card-title
-            class="d-block d-md-none white--text font-weight-bold break-fix pa-5"
+            class="d-block d-md-none white--text font-weight-bold break-fix pa-1"
             style="font-size: 18px; line-height: 6vw"
             >{{ heading }}</v-card-title
           >
 
           <v-card-text
-            class="d-block d-sm-none white--text font-weight-bold pa-4"
+            class="d-block d-sm-none white--text font-weight-bold pa-1"
             style="font-size: 12px; line-height: 5vw"
             >{{ body }}</v-card-text
           >
@@ -109,6 +109,21 @@ export default {
 </script>
 
 <style  scoped>
+@media only screen and (max-width: 400px) {
+  .card-padding{
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card-padding{
+    padding: 40px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .card-padding{
+    padding: 40px;
+  }
+}
 v-card {
   max-width: 20vw;
   max-height: 100vh;

@@ -4,7 +4,8 @@
       <v-container fluid fill-height>
         <v-row>
           <div id="trigger2"></div>
-          <v-col cols="2" md="2"></v-col>
+          <v-col class="d-block d-sm-none" cols="1"></v-col>
+          <v-col class="d-none d-sm-block" cols="2"></v-col>
           <v-col class="d-none d-md-block">
             <div id="about-heading" class="font-weight-bold">
               <span class="highlight-teal">
@@ -59,7 +60,8 @@
               aspire to uphold our responsibilities according to their example
             </p>
           </v-col>
-          <v-col cols="2" md="2"></v-col>
+          <v-col class="d-block d-sm-none" cols="1"></v-col>
+          <v-col class="d-none d-sm-block" cols="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>
@@ -102,5 +104,15 @@ export default {
 }
 .v-sheet{
   border-radius: 0;
+}
+@media only screen and(max-width: 600px) {
+p{
+  font-size: .9rem;
+}
+}
+@media only screen and(min-width: 600px) {
+p{
+  font-size: 1.5rem;
+}
 }
 </style>
