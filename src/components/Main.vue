@@ -22,7 +22,7 @@
         </v-card>
 
         <div class="section map-section map-set">
-          <v-card class="d-flex flex-column align-center" >
+          <v-card class="d-flex flex-column align-center">
             <v-img
               contain
               max-height="90vh"
@@ -30,8 +30,8 @@
                 require('../assets/Maps/Final/BoundariesThroughTime/thumbnail_cityboundaries_labels.jpg')
               "
             ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              > <v-btn> Map Details</v-btn></router-link
+            <router-link to="/Map/1" class="display-1 font-weight-bold">
+              <v-btn> Map Details</v-btn></router-link
             >
           </v-card>
         </div>
@@ -73,7 +73,6 @@
           <v-card
             class="d-flex flex-column align-center justify-center"
             elevation="0"
-
           >
             <v-img
               contain
@@ -126,33 +125,26 @@
           </h1>
         </v-card>
 
-        
-          <v-row class="ma-10">
-            <h1
-              class="
-                d-none d-md-block
-                map-section-header-green
-                section-header
-                display-2
-                font-weight-bold
-                mx-auto
-              "
-            >
-              Ethnic and Racial Distribution
-            </h1>
-            <h1
-              class="
-                d-md-none
-                map-section-header-green
-                section-header
-                h4
-                mx-auto
-              "
-            >
-              Ethnic and Racial Distribution
-            </h1>
-          </v-row>
-          <div class="section map-section map-set">
+        <v-row class="ma-10">
+          <h1
+            class="
+              d-none d-md-block
+              map-section-header-green
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
+          >
+            Ethnic and Racial Distribution
+          </h1>
+          <h1
+            class="d-md-none map-section-header-green section-header h4 mx-auto"
+          >
+            Ethnic and Racial Distribution
+          </h1>
+        </v-row>
+        <div class="section map-section map-set">
           <MobileSlidesSection
             :imgSet="racialEthnicImages"
           ></MobileSlidesSection>
@@ -286,41 +278,54 @@
         </div>
 
         <div class="section map-set d-flex flex-column">
-         <div class="d-flex flex-column justify-center align-center"> <v-img
-            max-height="90vh"
-            contain
-            :src="require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg')"
-          ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
+          <div class="d-flex flex-column justify-center align-center">
+            <v-img
+              max-height="90vh"
+              contain
+              :src="require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg')"
+            ></v-img>
+            <router-link to="/Map/1" class="display-1 font-weight-bold"
+              ><v-btn>Map Details</v-btn></router-link
+            >
+          </div>
         </div>
 
         <div class="section d-flex flex-column">
-          <div class="d-flex flex-column justify-center align-center"><v-img
-            max-height="90vh"
-            contain
-            :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
-          ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
+          <div class="d-flex flex-column justify-center align-center">
+            <v-img
+              max-height="90vh"
+              contain
+              :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
+            ></v-img>
+            <router-link to="/Map/1" class="display-1 font-weight-bold"
+              ><v-btn>Map Details</v-btn></router-link
+            >
+          </div>
         </div>
 
         <div class="section d-flex flex-column">
-          <div class="d-flex flex-column justify-center align-center"><v-img
-            max-height="90vh"
-            contain
-            :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
-          ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link></div>
+          <div class="d-flex flex-column justify-center align-center">
+            <v-img
+              max-height="90vh"
+              contain
+              :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
+            ></v-img>
+            <router-link to="/Map/1" class="display-1 font-weight-bold"
+              ><v-btn>Map Details</v-btn></router-link
+            >
+          </div>
         </div>
 
         <div class="section">
-          <div class="d-flex flex-column justify-center align-center"><v-img
-            max-height="90vh"
-            contain
-            :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
-          ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold">
-            <v-btn class="mapbutton">Map Details</v-btn>
-          </router-link>
+          <div class="d-flex flex-column justify-center align-center">
+            <v-img
+              max-height="90vh"
+              contain
+              :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
+            ></v-img>
+            <router-link to="/Map/1" class="display-1 font-weight-bold">
+              <v-btn class="mapbutton">Map Details</v-btn>
+            </router-link>
           </div>
         </div>
       </div>
@@ -354,7 +359,7 @@
             class="
               text-center
               py-6
-              ma-10
+              mb-10
               font-weight-bold
               h1
               display-2
@@ -363,26 +368,15 @@
           >
             Bellevue 1934 vs 1965
           </h1>
-          <div style="height: 100vh">
+          <div>
             <iframe
               frameborder="0"
-              class="juxtapose my-10"
+              class="juxtapose"
               width="100%"
-              height="3312"
+              height="800px"
               scrolling="no"
               src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
             ></iframe>
-          </div>
-          <div id="sticky-container" class="d-md-block">
-            <v-img
-              :src="
-                require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')
-              "
-              max-height="30em"
-              style="right: -30em"
-              contain
-              id="juxt-context"
-            ></v-img>
           </div>
         </div>
 
@@ -391,7 +385,7 @@
             class="
               text-center
               py-6
-              ma-10
+              mb-10
               font-weight-bold
               h1
               display-2
@@ -402,15 +396,16 @@
           </h1>
           <iframe
             frameborder="0"
-            class="juxtapose my-10"
+            class="juxtapose"
             width="100%"
-            height="100%"
+            height="600px"
+            scrolling="no"
             src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c28c8692-8354-11eb-83c8-ebb5d6f907df"
           >
           </iframe>
         </div>
 
-        <div class="d-block d-md-none">
+        <div class="d-md-block ma-2">
           <v-img
             :src="
               require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')
@@ -425,7 +420,7 @@
             class="
               text-center
               py-6
-              ma-10
+              mb-10
               font-weight-bold
               h1
               display-2
@@ -437,9 +432,10 @@
 
           <iframe
             frameborder="0"
-            class="juxtapose my-10"
-            width="90%"
-            height="100%"
+            class="juxtapose"
+            width="100%"
+            height="800px"
+            scrolling="no"
             src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
           ></iframe>
         </div>
@@ -449,7 +445,7 @@
             class="
               text-center
               py-6
-              ma-10
+              mb-10
               font-weight-bold
               h1
               display-2
@@ -460,40 +456,35 @@
           </h1>
           <iframe
             frameborder="0"
-            class="juxtapose my-10"
+            class="juxtapose"
             width="100%"
-            height="100%"
+            height="600px"
+            scrolling="no"
             src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b9e2c68-835a-11eb-83c8-ebb5d6f907df"
           >
           </iframe>
         </div>
 
-          <v-row class="my-10 mx-auto">
-            <h1
-              class="
-                d-none d-md-block
-                map-section-header-teal
-                section-header
-                display-2
-                font-weight-bold
-                mx-auto
-              "
-            >
-              Renting Hartford
-            </h1>
-            <h1
-              class="
-                d-md-none
-                map-section-header-teal
-                section-header
-                h4
-                mx-auto
-              "
-            >
-              Renting Hartford
-            </h1>
-          </v-row>
-          <div class="section map-set">
+        <v-row class="my-10 mx-auto">
+          <h1
+            class="
+              d-none d-md-block
+              map-section-header-teal
+              section-header
+              display-2
+              font-weight-bold
+              mx-auto
+            "
+          >
+            Renting Hartford
+          </h1>
+          <h1
+            class="d-md-none map-section-header-teal section-header h4 mx-auto"
+          >
+            Renting Hartford
+          </h1>
+        </v-row>
+        <div class="section map-set">
           <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
         </div>
         <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
@@ -525,14 +516,13 @@
             </h1>
           </v-row>
           <div class="section map-set">
-            <MobileSlidesSection 
-            :imgSet="housingConditionImages"
-            :slidesOnly="true"
-          ></MobileSlidesSection>
+            <MobileSlidesSection
+              :imgSet="housingConditionImages"
+              :slidesOnly="true"
+            ></MobileSlidesSection>
           </div>
         </div>
       </div>
-
 
       <Settlement></Settlement>
       <Housing></Housing>
@@ -741,18 +731,18 @@ export default {
           img: require("../assets/Maps/Final/SlumClearance/SlumClearance1934.jpg"),
         },
       ],
-        housingConditionImages: [
+      housingConditionImages: [
         {
           img: require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
         },
         {
           img: require("../assets/Maps/Final/HousingConditions/NeedingRepair2.jpg"),
         },
-         {
+        {
           img: require("../assets/Maps/Final/HousingConditions/State_of_Repair_vs_Occupancy.jpg"),
         },
       ],
-      
+
       westIndianImages: [
         {
           img: require("../assets/Maps/Final/WestIndians/WI1980.jpg"),
@@ -854,7 +844,7 @@ export default {
 };
 </script>
 <style>
-a{
+a {
   margin: 15px 0;
 }
 @media only screen and (max-width: 768px) {
@@ -874,9 +864,9 @@ a{
   }
 }
 .fp-section.fp-table {
-  height: auto !important; 
-  } 
-.fp-tableCell { 
+  height: auto !important;
+}
+.fp-tableCell {
   height: auto !important;
 }
 .banner {
@@ -1027,7 +1017,7 @@ a{
   height: 100%;
   margin: 0 auto;
 }
-.v-btn{
+.v-btn {
   text-decoration: none;
 }
 </style>
