@@ -599,7 +599,7 @@ export default {
         navigationPosition: "right",
         fitToSection: false,
         autoScrolling: false, //this breaks app bar hiding
-        slidesNavigation: true,
+        slidesNavigation: false, //hide slide dots
         slidesNavPosition: "bottom",
         controlArrows: true,
         verticalCentered: true,
