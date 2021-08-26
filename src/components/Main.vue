@@ -183,7 +183,8 @@
             v-for="map in driftMaps"
             :key="map.label"
           >
-            <div>
+          <h1 style="text-align:center">{{map.label}}</h1>
+            <div class="mb-5">
               <iframe
                 :src="
                   'https://www.youtube.com/embed/' +
@@ -192,11 +193,12 @@
                   map.code +
                   '&origin=https://hartfordbound.com'
                 "
-                id="myVideo"
                 frameborder="0"
                 allowfullscreen
                 style="pointer-events: none"
                 loading="lazy"
+                width="100%"
+                height="800px"
               ></iframe>
             </div>
           </div>
@@ -245,7 +247,7 @@
       </div>
 
       <!-- 3: Neighborhood Clusters -->
-      <div class="mapsection">
+      <div class="map-section">
         <v-card
           align-content="center"
           width="100vw"
@@ -824,23 +826,6 @@ export default {
       }
     },
   },
-  mounted() {
-    const bellevueSticky = this.$scrollmagic
-      .scene({
-        // ID of element where animation starts
-        triggerElement: "#bellevue-trigger",
-        // {0,0.5,1} - animations starts from {top,center,end} of window
-        triggerHook: 0.1,
-        // Duration of animation
-        duration: "1600",
-      }) // Declaration of animation and attaching to element
-      // .setClassToggle("#revealscale", "visible")
-      .setPin("#sticky-container", { pushFollowers: false });
-    // Helpful tags for orientation on the screen
-    // .addIndicators({ name: "2 (duration: 1000)" });
-    // Add Scene to controller
-    this.$scrollmagic.addScene(bellevueSticky);
-  },
 };
 </script>
 <style>
@@ -936,10 +921,6 @@ a {
   animation: fader 15s linear infinite;
   animation-play-state: paused;
 }
-.carousel-control-prev-icon {
-  color: black;
-  background: cadetblue;
-}
 .map-section-header {
   background-color: #519ec8;
 }
@@ -948,66 +929,6 @@ a {
 }
 .map-section-header-teal {
   background: linear-gradient(180deg, rgba(81, 159, 200, 0) 30%, #72b591 30%);
-}
-
-.carousel-inner {
-  .item {
-    opacity: 0;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-  }
-
-  .active {
-    opacity: 1;
-  }
-
-  .active.left,
-  .active.right {
-    left: 0;
-    opacity: 0;
-    z-index: 1;
-  }
-
-  .next.left,
-  .prev.right {
-    opacity: 1;
-  }
-}
-
-.carousel-control {
-  z-index: 2;
-}
-@media all and (transform-3d), (-webkit-transform-3d) {
-  .carousel-inner > .item.next,
-  .carousel-inner > .item.active.right {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-inner > .item.prev,
-  .carousel-inner > .item.active.left {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .carousel-inner > .item.next.left,
-  .carousel-inner > .item.prev.right,
-  .carousel-inner > .item.active {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-.carousel-item img {
-  height: 100vh !important ;
-}
-#sticky-container {
-  position: absolute;
-  top: -250px;
-  z-index: 9999;
-}
-#juxt-context {
-  transform: translate(500px, 450px);
-}
-.plyr.plyr--stopped .plyr__controls {
-  display: none;
 }
 #myVideo {
   position: absolute;
