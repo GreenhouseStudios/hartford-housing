@@ -1,4 +1,4 @@
-# hhp
+# Hartford Bound
 
 Live demo
 https://adoring-almeida-c0c4b7.netlify.app/#/
