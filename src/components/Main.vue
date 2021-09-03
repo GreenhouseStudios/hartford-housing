@@ -182,7 +182,7 @@
             style="position: relative"
             v-for="map in driftMaps"
             :key="map.label"
-          >
+          ><div class="d-flex flex-column align-center">
           <h1 style="text-align:center">{{map.label}}</h1>
             <div class="mb-5">
               <iframe
@@ -195,12 +195,12 @@
                 "
                 frameborder="0"
                 allowfullscreen
-                style="pointer-events: none"
+                style="pointer-events: none;"
                 loading="lazy"
-                width="100%"
-                height="800px"
+                width="1440px"
+                height="810px"
               ></iframe>
-            </div>
+            </div></div>
           </div>
         </div>
 
@@ -663,12 +663,12 @@ export default {
         },
       ],
       driftMaps: [
-        { label: "Canadians", code: "fgghMRHTKA0" },
-        { label: "Italians - Irish - Russians", code: "r4119mpVRis" },
-        { label: "Irish", code: "cb0B0oyL5gA" },
-        { label: "Italians", code: "kv50tsnkaPE" },
-        { label: "Polish", code: "y1FR2AIs-uI" },
-        { label: "Russians", code: "SGI3kAdR2yQ" },
+        { label: "Canadians", code: "A1vxNXc5VXM" },
+        { label: "Italians - Irish - Russians", code: "m5pspShU30I" },
+        { label: "Irish", code: "46hftqsrO8A" },
+        { label: "Italians", code: "4KIuzkhkjiY" },
+        { label: "Polish", code: "Mc2bnn4xB-I" },
+        { label: "Russians", code: "YkcxRNjt3Fw" },
       ],
       captions: [
         {
