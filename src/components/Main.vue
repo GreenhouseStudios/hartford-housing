@@ -491,7 +491,7 @@
         </div>
         <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
 
-        <div v-if="!isMobile">
+        <div>
           <v-row class="my-10 mx-auto">
             <h1
               class="

@@ -25,7 +25,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <router-link to="/Map/1" class="display-1 font-weight-bold mx-auto"><v-btn style="margin-top: 40px">Map Details</v-btn></router-link>
+    <router-link to="/Map/1" class="display-1 font-weight-bold mx-auto"><v-btn style="margin-top: 10px">Map Details</v-btn></router-link>
   </div>
 </template>
 
