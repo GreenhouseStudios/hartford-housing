@@ -10,7 +10,7 @@
             class="pa-1 foundercard"
             style="display:inline-block;">
           <a class="font-weight-bold" :href="funder.link">
-            <v-card tile class="pa-5" :color="tileColor()">
+            <v-card tile class="pa-5" :color="tileColor(index)">
               <v-responsive :aspect-ratio="1">
                 <v-img class="cardimg" v-bind:src="funder.image"></v-img>
               </v-responsive>
@@ -32,7 +32,7 @@
           style="display:inline-block;"
         >   
           <a :href="person.link">       
-          <v-card tile class="pa-5" :color="tileColor()">
+          <v-card tile class="pa-5" :color="tileColor(index)">
             <v-responsive :aspect-ratio="1">
               <div style="  position: relative;
                 top: 50%;
@@ -58,7 +58,6 @@ export default {
   name: "PEOPLE",
   data() {
     return {
-      colorIndex: 1,
       cardColors: ["green", "teal", "blue"],
       people: [
         {
@@ -149,13 +148,11 @@ export default {
     };
   },
   methods: {
-    tileColor(){
-      if(this.colorIndex == 2){
-        this.colorIndex = 0;
-      }else{
-      this.colorIndex++;
+    tileColor(i){
+      while(i > 2){
+        i = i-3;
       }
-      return this.cardColors[this.colorIndex];
+      return this.cardColors[i]
     }
   },
 };
