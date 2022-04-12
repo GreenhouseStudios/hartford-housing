@@ -183,7 +183,7 @@
             v-for="map in driftMaps"
             :key="map.label"
           ><div class="d-flex flex-column align-center">
-          <h1 style="text-align:center">{{map.label}}</h1>
+          <h1 class="highlight-green ma-2 pa-1" style="text-align:center">{{map.label}}</h1>
             <div class="mb-5">
               <iframe
                 :src="
@@ -491,7 +491,7 @@
         </div>
         <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
 
-        <div v-if="!isMobile">
+        <div>
           <v-row class="my-10 mx-auto">
             <h1
               class="
