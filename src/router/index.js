@@ -9,6 +9,7 @@ import Permissions from '@/components/Permissions'
 import Methodology from '@/components/Methodology'
 import IntroEssay from '@/components/IntroEssay'
 import MapSetDetail from '@/components/MapSetDetail'
+import FutureDirections from '@/components/FutureDirections'
 Vue.use(
     VueRouter
 )
@@ -61,6 +62,11 @@ const router = new VueRouter({
             path: '/Map/:id',
             name: 'MapSetDetail',
             component: MapSetDetail
+        },
+        {
+            path: '/FutureDirections',
+            name: 'FutureDirections',
+            component: FutureDirections
         }
     ]
 })

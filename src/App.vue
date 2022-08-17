@@ -58,10 +58,10 @@ export default {
         slides: [
         ],
       },
-      {
-        title: "Housing",
-        slides: [],
-      },
+      // {
+      //   title: "Housing",
+      //   slides: [],
+      // },
       {
         title: "Timeline",
         slides: [],
@@ -73,7 +73,7 @@ export default {
       { title: "Introduction", path: "/Introduction" },
       { title: "Maps", path: "/Maps" },
       { title: "Settlement", path: "/Settlement" },
-      { title: "Housing", path: "/Housing" },
+      // { title: "Housing", path: "/Housing" },
       { title: "Timeline", path: "/Timeline" },
     ],
   }),

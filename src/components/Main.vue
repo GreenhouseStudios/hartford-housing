@@ -37,9 +37,11 @@
         </div>
 
         <div class="section map-set">
+          <!-- <v-img :src="require('../assets/Maps/Final/CityTown/1635 (Large).jpg')">
+          </v-img> -->
           <MobileSlidesSection
             :imgSet="cityTownImages"
-            :slidesOnly="true"
+            slidesOnly
           ></MobileSlidesSection>
         </div>
       </div>
@@ -204,46 +206,7 @@
           </div>
         </div>
 
-        <div class="section map-set">
-          <v-row class="ma-10">
-            <h1
-              class="
-                d-none d-md-block
-                map-section-header-green
-                section-header
-                display-2
-                font-weight-bold
-                mx-auto
-              "
-            >
-              Canton Street Case Study
-            </h1>
-            <h1
-              class="
-                d-md-none
-                map-section-header-green
-                section-header
-                h4
-                mx-auto
-              "
-            >
-              Canton Street Case Study
-            </h1>
-          </v-row>
-
-          <v-img
-            max-height="90vh"
-            contain
-            :src="require('../assets/Maps/Final/Canton/Indicator.jpg')"
-          ></v-img>
-        </div>
-
-        <div class="section">
-          <MobileSlidesSection :imgSet="cantonImages"></MobileSlidesSection>
-        </div>
-        <div class="section">
-          <MobileSlidesSection :imgSet="cantonImages2"></MobileSlidesSection>
-        </div>
+        
       </div>
 
       <!-- 3: Neighborhood Clusters -->
@@ -267,14 +230,14 @@
         <div class="section map-set">
           <MobileSlidesSection
             :imgSet="puertoRicanImages"
-            :slidesOnly="true"
+            slidesOnly
           ></MobileSlidesSection>
         </div>
 
         <div class="section map-set">
           <MobileSlidesSection
             :imgSet="westIndianImages"
-            :slidesOnly="true"
+            slidesOnly
           ></MobileSlidesSection>
           <!-- <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link> -->
         </div>
@@ -331,201 +294,7 @@
           </div>
         </div>
       </div>
-      <!-- 4: Housing -->
-      <div class="mapsection">
-        <v-card
-          align-content="center"
-          width="100vw"
-          color="teal"
-          tile
-          class="elevation-0 banner"
-        >
-          <h1 class="text-center py-6 font-weight-bold h1 display-2">
-            Housing
-          </h1>
-        </v-card>
-
-        <div class="section map-section map-set">
-          <MobileSlidesSection
-            :imgSet="publicHousingImages"
-          ></MobileSlidesSection>
-        </div>
-
-        <div id="bellevue-trigger"></div>
-
-        <div
-          class="section d-none d-md-flex map-set"
-          style="position: relative"
-        >
-          <h1
-            class="
-              text-center
-              py-6
-              mb-10
-              font-weight-bold
-              h1
-              display-2
-              map-section-header-green
-            "
-          >
-            Bellevue 1934 vs 1965
-          </h1>
-          <div>
-            <iframe
-              frameborder="0"
-              class="juxtapose"
-              width="100%"
-              height="800px"
-              scrolling="no"
-              src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=1f01859e-7bb2-11eb-83c8-ebb5d6f907df"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="section d-sm-flex d-md-none">
-          <h1
-            class="
-              text-center
-              py-6
-              mb-10
-              font-weight-bold
-              h1
-              display-2
-              map-section-header-green
-            "
-          >
-            Bellevue 1934 vs 1965
-          </h1>
-          <iframe
-            frameborder="0"
-            class="juxtapose"
-            width="100%"
-            height="600px"
-            scrolling="no"
-            src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=c28c8692-8354-11eb-83c8-ebb5d6f907df"
-          >
-          </iframe>
-        </div>
-
-        <div class="d-md-block ma-2">
-          <v-img
-            :src="
-              require('../assets/Maps/Final/Bellevue/GeographicContext.jpg')
-            "
-            max-height="30em"
-            contain
-          ></v-img>
-        </div>
-
-        <div class="section d-none d-md-flex">
-          <h1
-            class="
-              text-center
-              py-6
-              mb-10
-              font-weight-bold
-              h1
-              display-2
-              map-section-header-teal
-            "
-          >
-            Windsor 1934 vs 1965
-          </h1>
-
-          <iframe
-            frameborder="0"
-            class="juxtapose"
-            width="100%"
-            height="800px"
-            scrolling="no"
-            src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=0f636f6a-7c40-11eb-83c8-ebb5d6f907df"
-          ></iframe>
-        </div>
-
-        <div class="section d-sm-flex d-md-none">
-          <h1
-            class="
-              text-center
-              py-6
-              mb-10
-              font-weight-bold
-              h1
-              display-2
-              map-section-header-teal
-            "
-          >
-            Windsor 1934 vs 1965
-          </h1>
-          <iframe
-            frameborder="0"
-            class="juxtapose"
-            width="100%"
-            height="600px"
-            scrolling="no"
-            src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=6b9e2c68-835a-11eb-83c8-ebb5d6f907df"
-          >
-          </iframe>
-        </div>
-
-        <v-row class="my-10 mx-auto">
-          <h1
-            class="
-              d-none d-md-block
-              map-section-header-teal
-              section-header
-              display-2
-              font-weight-bold
-              mx-auto
-            "
-          >
-            Renting Hartford
-          </h1>
-          <h1
-            class="d-md-none map-section-header-teal section-header h4 mx-auto"
-          >
-            Renting Hartford
-          </h1>
-        </v-row>
-        <div class="section map-set">
-          <MobileSlidesSection :imgSet="rentingImages"></MobileSlidesSection>
-        </div>
-        <!-- Not using MobileSlidesSection for the Housing Condition set because we want the middle slide (Slide 2) to be the default slide -->
-
-        <div>
-          <v-row class="my-10 mx-auto">
-            <h1
-              class="
-                d-none d-md-block
-                map-section-header-teal
-                section-header
-                display-2
-                font-weight-bold
-                mx-auto
-              "
-            >
-              Housing Conditions
-            </h1>
-            <h1
-              class="
-                d-md-none
-                map-section-header-teal
-                section-header
-                h4
-                mx-auto
-              "
-            >
-              Housing Conditions
-            </h1>
-          </v-row>
-          <div class="section map-set">
-            <MobileSlidesSection
-              :imgSet="housingConditionImages"
-              :slidesOnly="true"
-            ></MobileSlidesSection>
-          </div>
-        </div>
-      </div>
-
+     
       <Settlement></Settlement>
       <Housing></Housing>
       <Timeline></Timeline>
@@ -591,7 +360,7 @@ export default {
         navigationPosition: "right",
         fitToSection: false,
         autoScrolling: false, //this breaks app bar hiding
-        slidesNavigation: false, //hide slide dots
+        slidesNavigation: true, //hide slide dots
         slidesNavPosition: "bottom",
         controlArrows: true,
         verticalCentered: true,
@@ -675,15 +444,6 @@ export default {
           heading: "Hartford Through Time",
           body: "Harford’s present extent of 18 square miles is an artifact of town and city amalgamation between 1784 and 1896. Each change redefined the city in relation to its commercial business district as well as the future towns and suburbs of East Hartford, Manchester, and West Hartford. By 1881, the town and city had coterminous boundaries and consolidated government followed in April 1896. Native American, European, and African diasporic communities shaped the early histories of mobility, displacement, dispossession, and settlement in Hartford. The Great Migrations of African Americans, West Indians, and Puerto Ricans would transform the twentieth-century trajectory of the city.",
         },
-      ],
-      boundaryMaps: [
-        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
-        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_847.jpg"),
-        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg"),
-        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1231.jpg"),
-        require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1400.jpg"),
-        require("../assets/Maps/Final/Renters/Renter-Occupied_3.jpg"),
-        require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
       ],
       cityTownImages: [
         { img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg") },
