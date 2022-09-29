@@ -3,7 +3,7 @@
     <v-row v-if="showSlides || slidesOnly" class="d-flex">
       <div class="slide" v-for="(obj, index) in imgSet" :key="index">
         <div class="d-flex flex-column align-center">
-          <v-img :max-height="maxHeight" contain :src="obj.img"></v-img>
+          <v-img min-width="200px" :max-height="maxHeight" contain :src="obj.img"></v-img>
         </div>
         
       </div>
@@ -41,7 +41,7 @@ export default {
     },
     maxHeight: {
       type: String,
-      default: "80vh",
+      default: "75vh",
     },
     slidesOnly: {
       type: Boolean,
