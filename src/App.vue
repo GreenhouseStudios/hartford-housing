@@ -49,14 +49,12 @@ export default {
           "Routes and Roots",
           "Mobilities",
           "Neighborhood Clusters",
-          "Housing",
         ],
       },
       {
         title: "Settlement",
 
-        slides: [
-        ],
+        slides: [],
       },
       // {
       //   title: "Housing",
@@ -88,40 +86,49 @@ export default {
         });
     },
     move: function (i, j) {
-      if(j) this.navigateToMapSection(j);
-      else window.fullpage_api.moveTo(this.navNums[i]);
+      if (j) this.navigateToMapSection(j);
+      else window.fullpage_api.moveTo(this.navNums[i] + 1);
     },
     navigateToSlide: function (i, slide) {
       if (this.$route.name == "Main")
-        window.fullpage_api.moveTo(this.navNums[i], slide);
+        window.fullpage_api.moveTo(this.navNums[i] + 1, slide);
       else
         this.$router.push("/").then(() => {
-          window.fullpage_api.moveTo(this.navNums[i], slide);
+          window.fullpage_api.moveTo(this.navNums[i] + 1, slide);
         });
     },
     navigateToMapSection: function (i) {
-      window.fullpage_api.moveTo(this.mapNums[i]);
+      var section = this.mapNums[i];
+      console.log(section);
+      window.fullpage_api.moveTo(section + 1);
     },
     navigateToMapSet: function (i) {
-      window.fullpage_api.moveTo(this.setNums[i]);
+      console.log(this.setNums[i]);
+      console.log(this.fpSections[this.setNums[i]]);
+      window.fullpage_api.moveTo(this.setNums[i] + 1);
     },
   },
   mounted() {
+    //List of divs with fullpagejs section class
     this.fpSections = Array.from(this.$el.querySelectorAll(".section"));
 
+    //sections that should be reachable by clicking on the top nav buttons
     this.navSects = Array.from(this.$el.querySelectorAll(".nav-section"));
+    //fullpage sections that are nav sections
     var matches = this.fpSections.filter((x) => this.navSects.includes(x));
-    this.navNums = matches.map((x) => this.fpSections.indexOf(x) + 1);
+    this.navNums = matches.map((x) => this.fpSections.indexOf(x));
 
-    var mapChapterDivs = Array.from(this.$el.querySelectorAll(".map-section"));
+    //divs marked with a class map-chapter
+    var mapChapterDivs = Array.from(this.$el.querySelectorAll(".map-chapter"));
+    //map-chapter divs that are also fullpage sections
     var fpMapChapters = this.fpSections.filter((x) =>
       mapChapterDivs.includes(x)
     );
-    this.mapNums = fpMapChapters.map((x) => this.fpSections.indexOf(x) + 1);
+    this.mapNums = fpMapChapters.map((x) => this.fpSections.indexOf(x));
 
-    var mapSets = Array.from(this.$el.querySelectorAll(".map-set"));
+    var mapSets = Array.from(this.$el.querySelectorAll(".map"));
     var fpMapSets = this.fpSections.filter((x) => mapSets.includes(x));
-    this.setNums = fpMapSets.map((x) => this.fpSections.indexOf(x) + 1);
+    this.setNums = fpMapSets.map((x) => this.fpSections.indexOf(x));
   },
 };
 </script>
@@ -235,18 +242,11 @@ h3 {
   width: 100%;
   text-align: center;
 }
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden !important;
-}
-body {
-  position: relative;
-}
+
 .highlight {
   position: relative;
 }
-.highlight:before, 
+.highlight:before,
 .highlight:after {
   content: " ";
   display: block;
@@ -259,7 +259,7 @@ body {
 }
 .highlight:before {
   background: rgba(252, 130, 29, 1);
-  z-index:-100;
+  z-index: -100;
 }
 .highlight-teal {
   @extend .highlight;
@@ -280,13 +280,13 @@ body {
   &::before,
   ::after {
     content: " ";
-    background-color: rgb(81, 159, 200);    
+    background-color: rgb(81, 159, 200);
     display: inline-block;
     height: 80%;
     width: 100%;
     margin: auto;
     margin-top: 3%;
-    position: absolute;    
+    position: absolute;
     transform: skew(-1deg) rotate(-1deg);
   }
   &::before {
@@ -304,7 +304,7 @@ body {
   @extend .r-slant;
   &::before,
   ::after {
-    background-color:#d1d35e;
+    background-color: #d1d35e;
   }
 }
 .l-slant {
@@ -447,7 +447,7 @@ body {
   border-width: 38.5px 34px 38.5px 0;
   border-color: transparent #000 transparent transparent;
 }
-a{
+a {
   text-decoration: none;
 }
 </style>

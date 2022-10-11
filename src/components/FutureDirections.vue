@@ -13,7 +13,7 @@
         <h1 class="text-center py-6 font-weight-bold h1 display-2">Housing</h1>
       </v-card>
 
-      <div class="section map-section map-set">
+      <div class="section">
         <MobileSlidesSection
           :imgSet="publicHousingImages"
         ></MobileSlidesSection>
@@ -228,16 +228,16 @@ export default {
   },
   data() {
     return {
-              options: {
-        licenseKey: "5040F97D-84574F59-952CE4FC-EAD7E65C",
-        navigation: false,
-        navigationPosition: "right",
-        fitToSection: false,
-        autoScrolling: false, //this breaks app bar hiding
-        slidesNavigation: true, //hide slide dots
-        slidesNavPosition: "bottom",
-        controlArrows: true,
-        verticalCentered: true,
+        options: {
+          licenseKey: "5040F97D-84574F59-952CE4FC-EAD7E65C",
+          navigation: false,
+          navigationPosition: "right",
+          fitToSection: false,
+          autoScrolling: false, //this breaks app bar hiding
+          slidesNavigation: true, //hide slide dots
+          slidesNavPosition: "bottom",
+          controlArrows: true,
+          verticalCentered: true,
       },
     }
   },

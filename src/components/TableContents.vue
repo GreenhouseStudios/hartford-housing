@@ -15,6 +15,8 @@
       </h1>
       <h1 class="d-md-none section-header display-1 font-weight-bold">Maps</h1>
     </v-row>
+
+    <!-- Maps Nav Menu -->
     <v-row align="center">
       <v-card align-self="center" class="mx-auto ma-10 menuitems">
         <v-btn
@@ -33,6 +35,7 @@
    
     </v-row>
 
+    <!-- Individual Map Gallery -->
     <v-row class="d-flex justify-center">
       
       <v-col class="gallery">
@@ -91,7 +94,7 @@ export default {
     tiles: {
       type: Array,
       default: new Array(18).fill({
-        img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
+        img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_1047.jpg"),
         caption: "Hartford Through Time",
       }),
     },
@@ -102,7 +105,6 @@ export default {
         "Routes and Roots",
         "Mobilities",
         "Neighborhood Clusters",
-        "Housing",
       ],
     },
   },

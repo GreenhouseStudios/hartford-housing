@@ -8,293 +8,290 @@
       <Introduction></Introduction>
       <TableContents :tiles="galleryImgs"></TableContents>
       <!-- 0: Hartford Through Time -->
-      <div class="map-section">
-        <v-card
-          align-content="center"
-          width="100vw"
-          color="blue"
-          tile
-          class="elevation-0 banner"
-        >
-          <h1 class="text-center py-6 font-weight-bold h1 display-2">
-            Hartford Through Time
-          </h1>
+
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="blue"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Hartford Through Time
+        </h1>
+      </v-card>
+
+      <div class="section map-chapter map" id="hartford-through-time">
+        <v-card class="d-flex flex-column align-center">
+          <v-img
+            contain
+            max-height="90vh"
+            :src="
+              require('../assets/Maps/Final/BoundariesThroughTime/BoundariesThroughTime3.jpg')
+            "
+          ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold">
+            <v-btn> Map Details</v-btn></router-link
+          >
         </v-card>
+      </div>
 
-        <div class="section map-section map-set">
-          <v-card class="d-flex flex-column align-center">
-            <v-img
-              contain
-              max-height="90vh"
-              :src="
-                require('../assets/Maps/Final/BoundariesThroughTime/thumbnail_cityboundaries_labels.jpg')
-              "
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold">
-              <v-btn> Map Details</v-btn></router-link
-            >
-          </v-card>
-        </div>
+      <div class="section map" id="city-town">
+        <MobileSlidesSection
+          :imgSet="cityTownImages"
+          slidesOnly
+        ></MobileSlidesSection>
+      </div>
 
-        <div class="section map-set">
-          <!-- <v-img :src="require('../assets/Maps/Final/CityTown/1635 (Large).jpg')">
-          </v-img> -->
-          <MobileSlidesSection
-            :imgSet="cityTownImages"
-            slidesOnly
-          ></MobileSlidesSection>
-        </div>
+      <div class="section map" id="hartford-in-context">
+        <v-img
+        max-height="90vh" 
+          :src="require('../assets/Maps/Final/HartfordInContext2.jpg')"
+        ></v-img>
       </div>
 
       <!-- 1:Routes and Roots -->
-      <div class="mapsection">
-        <v-card
-          align-content="center"
-          width="100vw"
-          color="teal"
-          tile
-          class="elevation-0 banner"
-        >
-          <h1 class="text-center py-6 font-weight-bold h1 display-2">
-            Roots and Routes
-          </h1>
-        </v-card>
 
-        <div class="section map-set map-section">
-          <div class="slide" v-for="(obj, index) in originsImages" :key="index">
-            <v-card max-height="800" elevation="0">
-              <v-img max-height="80vh" contain :src="obj.img"></v-img>
-            </v-card>
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="teal"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Roots and Routes
+        </h1>
+      </v-card>
+
+      <div class="section map-chapter map" style="background: #4A4E50" id="routes-roots">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/BlackRoots1805.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section map" style="background: #4A4E50" id="origins">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/Origins/PrimaryOrigins.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section map" style="background: #4A4E50" id="college-recruitment">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="
+            require('../assets/Maps/Final/ShadeTobaccoRecruitment_update.jpg')
+          "
+        ></v-img>
+      </div>
+
+      <div class="section map" style="background: #4A4E50" id="jamaica-parish">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/Jamaica/Jamaica_Parish.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section map" style="background: #4A4E50" id="jamaica-locality">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/Jamaica/Jamaica_Locality.jpg')"
+        ></v-img>
+      </div>
+
+      <div class="section map" style="background: #4A4E50" id="tobacco-valley">
+        <v-img
+          contain
+          max-height="90vh"
+          :src="require('../assets/Maps/Final/CTTobaccoValley.jpg')"
+        ></v-img>
+      </div>
+
+      <!-- 2: Mobilities -->
+
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="green"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Mobilities
+        </h1>
+      </v-card>
+
+      <v-row class="ma-10">
+        <h1
+          class="
+            d-none d-md-block
+            map-section-header-green
+            section-header
+            display-2
+            font-weight-bold
+            mx-auto
+          "
+        >
+          Ethnic and Racial Distribution
+        </h1>
+        <h1
+          class="d-md-none map-section-header-green section-header h4 mx-auto"
+        >
+          Ethnic and Racial Distribution
+        </h1>
+      </v-row>
+      <div class="section map-chapter map" id="mobilities">
+        <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
+      </div>
+
+      <v-row class="ma-10">
+        <h1
+          class="
+            d-none d-md-block
+            map-section-header-green
+            section-header
+            display-2
+            font-weight-bold
+            mx-auto
+          "
+        >
+          Population Drift and Community Succession
+        </h1>
+        <h1
+          class="d-md-none map-section-header-green section-header h4 mx-auto"
+        >
+          Population Drift and Community Succession
+        </h1>
+      </v-row>
+
+      <div
+        class="section"
+        style="position: relative"
+        v-for="(map, index) in driftMaps"
+        :class="index === 0 ? 'map' : ''"
+        :key="map.label"
+      >
+        <div class="d-flex flex-column align-center">
+          <h1 class="highlight-green ma-2 pa-1" style="text-align: center">
+            {{ map.label }}
+          </h1>
+          <div class="mb-5">
+            <iframe
+              :src="
+                'https://www.youtube.com/embed/' +
+                map.code +
+                '?&autoplay=1&loop=1&mute=1&controls=0&playsinline=1&showinfo=0&modestbranding=1&playlist=' +
+                map.code +
+                '&origin=https://hartfordbound.com'
+              "
+              frameborder="0"
+              allowfullscreen
+              style="pointer-events: none"
+              loading="lazy"
+              width="1440px"
+              height="810px"
+            ></iframe>
           </div>
+        </div>
+      </div>
+
+      <!-- 3: Neighborhood Clusters -->
+
+      <v-card
+        align-content="center"
+        width="100vw"
+        color="blue"
+        tile
+        class="elevation-0 banner"
+      >
+        <h1 class="text-center py-6 font-weight-bold h1 display-2">
+          Neighborhood Clusters
+        </h1>
+      </v-card>
+
+      <div class="section map-chapter map" id="neighborhood-clusters">
+        <!-- <v-img :src="require('../assets/Maps/Final/Clusters/CemeteryLaneCluster.jpg')"></v-img> -->
+        <MobileSlidesSection
+          :imgSet="clusters"
+          slidesOnly
+        ></MobileSlidesSection>
+      </div>
+
+      <div class="section map">
+        <MobileSlidesSection :imgSet="northEndImages"></MobileSlidesSection>
+      </div>
+
+      <div class="section map">
+        <v-img  max-height="90vh" :src="require('../assets/Maps/Final/PuertoRicans2.png')"></v-img>
+      </div>
+
+      <div class="section map">
+        <v-img max-height="90vh"  :src="require('../assets/Maps/Final/WestIndians2.png')"></v-img>
+      </div>
+
+      <div class="section map">
+        <v-img max-height="90vh" :src="require('../assets/Maps/Final/MemberLists2.jpg')"></v-img>
+      </div>
+
+      <div class="section map d-flex flex-column">
+        <div class="d-flex flex-column justify-center align-center">
+          <v-img
+            max-height="90vh"
+            contain
+            :src="require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg')"
+          ></v-img>
           <router-link to="/Map/1" class="display-1 font-weight-bold"
             ><v-btn>Map Details</v-btn></router-link
           >
         </div>
+      </div>
 
-        <div class="section map-set">
-          <v-card
-            class="d-flex flex-column align-center justify-center"
-            elevation="0"
+      <div class="section map d-flex flex-column">
+        <div class="d-flex flex-column justify-center align-center">
+          <v-img
+            max-height="90vh"
+            contain
+            :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
+          ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"
+            ><v-btn>Map Details</v-btn></router-link
           >
-            <v-img
-              contain
-              max-height="90vh"
-              :src="require('../assets/Maps/Final/Colleges/Colleges.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              ><v-btn>Map Details</v-btn></router-link
-            >
-          </v-card>
-        </div>
-
-        <div class="section map-set">
-          <div class="d-flex flex-column align-center justify-center">
-            <v-img
-              contain
-              max-height="80vh"
-              :src="require('../assets/Maps/Final/Jamaica/Parishes.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              ><v-btn>Map Details</v-btn></router-link
-            >
-          </div>
-        </div>
-        <div class="section">
-          <div class="d-flex flex-column align-center justify-center">
-            <v-img
-              contain
-              max-height="80vh"
-              :src="require('../assets/Maps/Final/Jamaica/locations.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              ><v-btn>Map Details</v-btn></router-link
-            >
-          </div>
         </div>
       </div>
 
-      <!-- 2: Mobilities -->
-      <div>
-        <v-card
-          align-content="center"
-          width="100vw"
-          color="green"
-          tile
-          class="elevation-0 banner"
-        >
-          <h1 class="text-center py-6 font-weight-bold h1 display-2">
-            Mobilities
-          </h1>
-        </v-card>
-
-        <v-row class="ma-10">
-          <h1
-            class="
-              d-none d-md-block
-              map-section-header-green
-              section-header
-              display-2
-              font-weight-bold
-              mx-auto
-            "
+      <div class="section map d-flex flex-column">
+        <div class="d-flex flex-column justify-center align-center">
+          <v-img
+            max-height="90vh"
+            contain
+            :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
+          ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold"
+            ><v-btn>Map Details</v-btn></router-link
           >
-            Ethnic and Racial Distribution
-          </h1>
-          <h1
-            class="d-md-none map-section-header-green section-header h4 mx-auto"
-          >
-            Ethnic and Racial Distribution
-          </h1>
-        </v-row>
-        <div class="section map-section map-set">
-          <MobileSlidesSection
-            :imgSet="racialEthnicImages"
-          ></MobileSlidesSection>
         </div>
-
-        <div div class="section map-set">
-          <v-row class="ma-10">
-            <h1
-              class="
-                d-none d-md-block
-                map-section-header-green
-                section-header
-                display-2
-                font-weight-bold
-                mx-auto
-              "
-            >
-              Population Drift and Community Succession
-            </h1>
-            <h1
-              class="
-                d-md-none
-                map-section-header-green
-                section-header
-                h4
-                mx-auto
-              "
-            >
-              Population Drift and Community Succession
-            </h1>
-          </v-row>
-
-          <div
-            class="section"
-            style="position: relative"
-            v-for="map in driftMaps"
-            :key="map.label"
-          ><div class="d-flex flex-column align-center">
-          <h1 class="highlight-green ma-2 pa-1" style="text-align:center">{{map.label}}</h1>
-            <div class="mb-5">
-              <iframe
-                :src="
-                  'https://www.youtube.com/embed/' +
-                  map.code +
-                  '?&autoplay=1&loop=1&mute=1&controls=0&playsinline=1&showinfo=0&modestbranding=1&playlist=' +
-                  map.code +
-                  '&origin=https://hartfordbound.com'
-                "
-                frameborder="0"
-                allowfullscreen
-                style="pointer-events: none;"
-                loading="lazy"
-                width="1440px"
-                height="810px"
-              ></iframe>
-            </div></div>
-          </div>
-        </div>
-
-        
       </div>
 
-      <!-- 3: Neighborhood Clusters -->
-      <div class="map-section">
-        <v-card
-          align-content="center"
-          width="100vw"
-          color="blue"
-          tile
-          class="elevation-0 banner"
-        >
-          <h1 class="text-center py-6 font-weight-bold h1 display-2">
-            Neighborhood Clusters
-          </h1>
-        </v-card>
-
-        <div class="section map-section map-set">
-          <MobileSlidesSection :imgSet="northEndImages"></MobileSlidesSection>
-        </div>
-
-        <div class="section map-set">
-          <MobileSlidesSection
-            :imgSet="puertoRicanImages"
-            slidesOnly
-          ></MobileSlidesSection>
-        </div>
-
-        <div class="section map-set">
-          <MobileSlidesSection
-            :imgSet="westIndianImages"
-            slidesOnly
-          ></MobileSlidesSection>
-          <!-- <router-link to="/Map/1" class="display-1 font-weight-bold"><v-btn>Map Details</v-btn></router-link> -->
-        </div>
-
-        <div class="section map-set d-flex flex-column">
-          <div class="d-flex flex-column justify-center align-center">
-            <v-img
-              max-height="90vh"
-              contain
-              :src="require('../assets/Maps/Final/ForeignBornPop/1900_FB.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              ><v-btn>Map Details</v-btn></router-link
-            >
-          </div>
-        </div>
-
-        <div class="section d-flex flex-column">
-          <div class="d-flex flex-column justify-center align-center">
-            <v-img
-              max-height="90vh"
-              contain
-              :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              ><v-btn>Map Details</v-btn></router-link
-            >
-          </div>
-        </div>
-
-        <div class="section d-flex flex-column">
-          <div class="d-flex flex-column justify-center align-center">
-            <v-img
-              max-height="90vh"
-              contain
-              :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold"
-              ><v-btn>Map Details</v-btn></router-link
-            >
-          </div>
-        </div>
-
-        <div class="section">
-          <div class="d-flex flex-column justify-center align-center">
-            <v-img
-              max-height="90vh"
-              contain
-              :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
-            ></v-img>
-            <router-link to="/Map/1" class="display-1 font-weight-bold">
-              <v-btn class="mapbutton">Map Details</v-btn>
-            </router-link>
-          </div>
+      <div class="section map">
+        <div class="d-flex flex-column justify-center align-center">
+          <v-img
+            max-height="90vh"
+            contain
+            :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
+          ></v-img>
+          <router-link to="/Map/1" class="display-1 font-weight-bold">
+            <v-btn class="mapbutton">Map Details</v-btn>
+          </router-link>
         </div>
       </div>
-     
+
       <Settlement></Settlement>
       <Housing></Housing>
       <Timeline></Timeline>
@@ -366,37 +363,54 @@ export default {
         verticalCentered: true,
       },
       galleryImgs: [
+        //Hartford Through Time
         {
           title: "City Boundaries",
-          img: require("../assets/Maps/Breakpoints/Boundaries/Boundaries_fbvrbz_c_scale,w_599.jpg"),
+          img: require("../assets/Maps/Final/BoundariesThroughTime/BoundariesThroughTime3.jpg"),
         },
         {
           title: "City and Town",
           img: require("../assets/Maps/Final/CityTown/1635 (Large).jpg"),
         },
         {
+          title: "Hartford In Context",
+          img: require("../assets/Maps/Final/HartfordInContext2.jpg"),
+        },
+
+        //Roots and Routes
+        {
+          title: "Black Roots",
+          img: require("../assets/Maps/Final/BlackRoots1805.jpg"),
+        },
+        {
           title: "Origins",
-          img: require("../assets/Maps/Final/Origins/OriginWithLabel.jpg"),
+          img: require("../assets/Maps/Final/Origins/PrimaryOrigins.jpg"),
         },
         {
           title: "College Workers",
-          img: require("../assets/Maps/Final/Colleges/Colleges.jpg"),
+          img: require("../assets/Maps/Final/ShadeTobaccoRecruitment_update.jpg"),
         },
         {
           title: "Jamaica",
-          img: require("../assets/Maps/Final/Jamaica/Parishes.jpg"),
+          img: require("../assets/Maps/Final/Jamaica/Jamaica_Locality.jpg"),
         },
         {
+          title: "CT Tobacco Valley",
+          img: require("../assets/Maps/Final/CTTobaccoValley.jpg"),
+        },
+        //Mobilities
+        {
           title: "Racial And Ethnic Distribution",
-          img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+          img: require("../assets/Maps/Final/RaceEthnic/EthnicRacialDist1900.jpg"),
         },
         {
           title: "Population Drift and Ethnic Succession",
-          img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+          img: require("../assets/Maps/Final/driftmap.png"),
         },
+        //Neighborhood Clusters
         {
-          title: "Canton Street",
-          img: require("../assets/Maps/Final/Canton/Canton1920.jpg"),
+          title: "Cemetery Lane",
+          img: require("../assets/Maps/Final/churchmovement.jpg"),
         },
         {
           title: "North End",
@@ -414,24 +428,9 @@ export default {
           title: "Foreign-Born Population",
           img: require("../assets/Maps/Final/ForeignBornPop/1900_FB.jpg"),
         },
-        {
-          title: "Redlined Districts",
-          img: require("../assets/Maps/Final/Redlining/RedlinedDistricts1937.jpg"),
-        },
-        {
-          title: "Bellevue Street",
-          img: require("../assets/Maps/Final/Bellevue/GeographicContext.jpg"),
-        },
-        {
-          title: "Renters",
-          img: require("../assets/Maps/Final/Renters/AveMonthlyRent2.jpg"),
-        },
-        {
-          title: "Housing Conditions",
-          img: require("../assets/Maps/Final/HousingConditions/LackingPrivateBath2.jpg"),
-        },
       ],
       driftMaps: [
+        { label: "19th Century Mobility", code: "nUEEx9RvCI0" },
         { label: "Canadians", code: "A1vxNXc5VXM" },
         { label: "Italians - Irish - Russians", code: "m5pspShU30I" },
         { label: "Irish", code: "46hftqsrO8A" },
@@ -547,11 +546,18 @@ export default {
       ],
       racialEthnicImages: [
         {
-          img: require("../assets/Maps/Final/RaceEthnic/1900_FIX.jpg"),
+          img: require("../assets/Maps/Final/RaceEthnic/EthnicRacialDist1900.jpg"),
         },
         {
-          img: require("../assets/Maps/Final/RaceEthnic/1940_FIX.jpg"),
+          img: require("../assets/Maps/Final/RaceEthnic/EthnicRacialDist1940.jpg"),
         },
+      ],
+      clusters: [
+        {
+          img: require("../assets/Maps/Final/Clusters/CemeteryLaneCluster.jpg"),
+        },
+        { img: require("../assets/Maps/Final/Clusters/CTRIVERCLUSTER.jpg") },
+        { img: require("../assets/Maps/Final/Clusters/MillRiverCluster.jpg") },
       ],
       settings: {
         label: {

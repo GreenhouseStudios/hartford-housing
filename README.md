@@ -23,5 +23,12 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
+## Project notes
+
+### Fullpage JS
+
+We are using fullpagejs to divide content into screen-height sections
+### Navigation system
+- `.map-chapter` marks a group of maps that can be reached by clicking on the map gallery tiles
+-  `.map` marks an individual map section

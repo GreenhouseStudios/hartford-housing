@@ -1,5 +1,5 @@
 <template>
-  <div class="section nav-section">
+  <div class="section">
     <h1 class="d-none d-md-block section-header display-3 font-weight-bold">Housing</h1>
     <h1 class="d-md-none section-header display-1 font-weight-bold">Housing</h1>
     <!-- <div v-for="slide in slides" v-bind:key="slide" class="slide">
