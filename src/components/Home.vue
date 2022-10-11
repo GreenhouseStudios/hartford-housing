@@ -1,69 +1,72 @@
 <template>
-  <div class="section nav-section" id="home-section">
-    <v-container fluid fill-height>
-      <v-row>
-        <v-col cols="1" md="3"></v-col>
-        <v-col class="d-flex flex-column" cols="10" md="6">
-          <v-img
-            :src="require('../assets/homelogo.png')"
-            contain
-            max-height="70%"
-            class="d-none d-md-block"
-          >
-          </v-img>
-          <v-img
-            :src="require('../assets/homelogo.png')"
-            contain
-            class="d-block d-md-none"
-          >
-          </v-img>
-          <v-card
-            tile
-            color="white"
-            id="subtitle"
-            class="d-none d-md-block font-weight-bold pa-3 h1"
-            style="width: 65%; margin: 0 auto"
-          >
+  <div
+    class="section nav-section"
+    style="height: 100vh;"
+    id="home-section"
+    v-bind:style="{ 'background-image': bgImage }"
+  >
+    <div class="container">
+      <v-img
+        :src="require('../assets/homelogo.png')"
+      max-height="60vh"
+      min-height="400"
+      contain
+        class="d-none d-md-inline-block"
+      >
+      </v-img>
+      <v-img
+        :src="require('../assets/homelogo.png')"
+        contain
+        min-height="300"
+        max-height="500"
+        class="d-inline-block d-md-none"
+      >
+      </v-img>
+      <div class="subtitle-container">
+        <v-card
+          tile
+          color="white"
+          id="subtitle"
+          class="d-none d-md-inline-block font-weight-bold pa-3 h1"
+        >
           The story of
-            <span class="r-slant">Race</span>,
-            <span class="l-slant-teal">Migration</span> and
-            <span class="highlight-green">Mobility</span> in Hartford 
-          </v-card>
-          <v-card
-            tile
-            color="white"
-            id="subtitle"
-            class="d-block d-md-none font-weight-bold pa-2"
-          >
-              The story of
-            <span class="r-slant">Race</span>,
-            <span class="l-slant-teal">Migration</span> and
-            <span class="highlight-green">Mobility</span> in Hartford 
-          </v-card>
-          <v-card
-            tile
-            color="white"
-            id="subtitle"
-            class="d-none d-md-block font-weight-bold pa-3 display-2 ma-3"
-          >
-            By
-            <span class="r-slant">Fiona Vernal</span> and
-            <span class="l-slant-teal">James Kolb</span> 
-          </v-card>
-          <v-card
-            tile
-            color="white"
-            id="subtitle"
-            class="d-block d-md-none font-weight-bold pa-3 ma-3"
-          >
-            By
-            <span class="r-slant">Fiona Vernal</span> and
-            <span class="l-slant-teal">James Kolb</span> 
-          </v-card>
-        </v-col>
-        <v-col cols="1" md="3"></v-col>
-      </v-row>
-    </v-container>
+          <span class="r-slant">Race</span>,
+          <span class="l-slant-teal">Migration</span> and
+          <span class="highlight-green">Mobility</span> in Hartford
+        </v-card>
+        <v-card
+          tile
+          color="white"
+          id="subtitle"
+          class="d-inline-block d-md-none font-weight-bold pa-2"
+        >
+          The story of
+          <span class="r-slant">Race</span>,
+          <span class="l-slant-teal">Migration</span> and
+          <span class="highlight-green">Mobility</span> in Hartford
+        </v-card>
+        <v-card
+          tile
+          color="white"
+          id="subtitle"
+          class="d-none d-md-inline-block font-weight-bold pa-3 display-2 mt-3"
+        >
+          By
+          <span class="r-slant">Fiona Vernal</span> and
+          <span class="l-slant-teal">James Kolb</span>
+        </v-card>
+        <v-card
+          tile
+          color="white"
+          id="subtitle"
+          class="d-inline-block d-md-none font-weight-bold pa-3 mt-3"
+        >
+          By
+          <span class="r-slant">Fiona Vernal</span> and
+          <span class="l-slant-teal">James Kolb</span>
+        </v-card>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -76,75 +79,44 @@ export default {
     return {
       subtitle:
         "How African Americans, Puerto Ricans and West Indians Made Hartford Home",
-      slides: [
-        {
-          image: require("../assets/pubhousingmap.jpg"),
-          offsetH: "0",
-          offsetV: "100",
-          rotation: "-90",
-          cardWidth: "400",
-          cardHeight: "500",
-        },
-      ],
     };
+  },
+  computed: {
+    bgImage() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return `url(${require('@/assets/LongHomeBG.png')})`;
+        case "sm":
+          return `url(${require('@/assets/LongHomeBG.png')})`;
+        default:
+          return `url(${require('@/assets/HHPHomeBackground.jpg')})`;
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
-.align-right {
-  position: relative;
-  float: right;
-  margin: 20px;
-  margin-right: 40px;
-}
-.align-center {
-  margin: auto;
-}
-.align-left {
-  position: relative;
-  float: left;
-  margin: 20px;
-}
-.bod {
-  max-width: 500px;
-}
-#subtitle {
-  text-align: center;
-}
 #home-section {
-  background-image: url("~@/assets/HHPHomeBackground.jpg");
   background-position: center center;
-  background-size: cover;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   margin: 0 auto;
-  height: 100vh;
-  width: 100vw;
 }
-/* h1 {
-  position: relative;
-  display: inline-block;
-  background: linear-gradient(
-    180deg,
-    rgba(81, 159, 200, 0) 30%,
-    rgb(81, 159, 200) 30%
-  );
-} */
-/* h1::after {
-  content: "";
-  background-color: rgb(81, 159, 200);
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-} */
-/* .right-align{
-  position: relative;
-  right: 0;
-} */
+.subtitle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 90vh;
+}
 </style>
