@@ -20,7 +20,7 @@
       </v-card>
 
       <div class="section map-chapter map" id="hartford-through-time" style="background: #D9F2FF">
-        <v-card class="d-flex flex-column align-center" style="background: #D9F2FF">
+        <v-card class="d-flex flex-column align-center elevation-0" style="background: #D9F2FF">
           <v-img
             contain
             max-height="90vh"
@@ -159,7 +159,7 @@
         </h1>
       </v-row>
       <div class="section map-chapter map"  id="mobilities" style="background: #FFFFDB">
-        <MobileSlidesSection :imgSet="racialEthnicImages" ></MobileSlidesSection>
+        <MobileSlidesSection :imgSet="racialEthnicImages" bgColor="#FFFFDB"></MobileSlidesSection>
       </div>
 
       <v-row class="pa-10" style="background: #FFFFDB">
@@ -747,6 +747,9 @@ a {
   background-size: 100% 100%;
   animation: fader 15s linear infinite;
   animation-play-state: paused;
+}
+.map{
+  padding: 50px 0;
 }
 .map-section-header {
   background-color: #519ec8;
