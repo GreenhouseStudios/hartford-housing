@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column justify-center">
+  <div class="d-flex flex-column justify-center" style="background: ${bgColor}">
     <v-row v-if="showSlides || slidesOnly" class="d-flex">
       <div class="slide" v-for="(obj, index) in imgSet" :key="index">
         <div class="d-flex flex-column align-center">
@@ -47,6 +47,9 @@ export default {
       type: Boolean,
       default: false,
     },
+    bgColor: {
+      type: String,
+    }
   },
   computed: {
     showSlides() {

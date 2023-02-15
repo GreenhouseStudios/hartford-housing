@@ -6,7 +6,7 @@
           d-none d-md-block
           map-section-header
           section-header
-          display-2
+          display-3
           font-weight-bold
           text-outline-offset
         "

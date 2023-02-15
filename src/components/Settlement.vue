@@ -1,11 +1,11 @@
 <template>
-  <div class="section nav-section tall">
+  <div class="section nav-section tall" >
     <v-container fluid>
       <v-row justify="center">
-        <h1 class="d-none d-md-block section-header display-2 font-weight-bold">
+        <h1 class="d-none d-md-block section-header display-2 font-weight-bold" id="settlement-section">
           Settlement
         </h1>
-        <h1 class="d-md-none section-header display-1 font-weight-bold">
+        <h1 class="d-md-none section-header display-1 font-weight-bold" id="settlement-section">
           Settlement
         </h1>
       </v-row>
@@ -27,40 +27,16 @@
           </div>
         </v-col>
       </v-row>
-<!-- 
-      <v-row>
-        <div v-for="item in slides" v-bind:key="item.heading" class="slide">
-          <JourneyCard
-            class="align-center"
-            v-bind:heading="item.heading"
-            v-bind:body1="item.body1"
-            v-bind:body2="item.body2"
-            v-bind:body3="item.body3"
-            v-bind:image="item.image"
-          ></JourneyCard>
-        </div>
-        <div class="slide">
-          <iframe
-            frameborder="0"
-            class="juxtapose"
-            width="100%"
-            height="360"
-            src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=2eb5e768-acec-11ea-a30b-0edaf8f81e27"
-          ></iframe>
-        </div>
-      </v-row> -->
     </v-container>
   </div>
 </template>
 
 <script>
 import Card from "@/components/Card";
-import JourneyCard from "@/components/JourneyCard";
 export default {
   name: "Settlement",
   components: {
     Card,
-    JourneyCard,
   },
   data() {
     return {

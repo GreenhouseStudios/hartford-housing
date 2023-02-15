@@ -16,13 +16,11 @@
         tile
         class="elevation-0 banner"
       >
-        <h1 class="text-center py-6 font-weight-bold h1 display-2">
-          Hartford Through Time
-        </h1>
+        <h1 class="text-center font-weight-bold h1">Hartford Through Time</h1>
       </v-card>
 
-      <div class="section map-chapter map" id="hartford-through-time">
-        <v-card class="d-flex flex-column align-center">
+      <div class="section map-chapter map" id="hartford-through-time" style="background: #D9F2FF">
+        <v-card class="d-flex flex-column align-center" style="background: #D9F2FF">
           <v-img
             contain
             max-height="90vh"
@@ -30,24 +28,23 @@
               require('../assets/Maps/Final/BoundariesThroughTime/BoundariesThroughTime3.jpg')
             "
           ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold">
-            <v-btn> Map Details</v-btn></router-link
-          >
+          <map-details-button></map-details-button>
         </v-card>
       </div>
 
-      <div class="section map" id="city-town">
+      <div class="section map" id="city-town" style="background: #D9F2FF">
         <MobileSlidesSection
           :imgSet="cityTownImages"
           slidesOnly
         ></MobileSlidesSection>
       </div>
 
-      <div class="section map" id="hartford-in-context">
+      <div class="section map" id="hartford-in-context" style="background: #D9F2FF">
         <v-img
-        max-height="90vh" 
+          max-height="90vh"
           :src="require('../assets/Maps/Final/HartfordInContext2.jpg')"
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
       <!-- 1:Routes and Roots -->
@@ -59,28 +56,36 @@
         tile
         class="elevation-0 banner"
       >
-        <h1 class="text-center py-6 font-weight-bold h1 display-2">
-          Roots and Routes
-        </h1>
+        <h1 class="text-center font-weight-bold h1">Roots and Routes</h1>
       </v-card>
 
-      <div class="section map-chapter map" style="background: #4A4E50" id="routes-roots">
+      <div
+        class="section map-chapter map"
+        style="background: #E7FFE7"
+        id="routes-roots"
+      >
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/BlackRoots1805.jpg')"
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map" style="background: #4A4E50" id="origins">
+      <div class="section map" style="background: #E7FFE7" id="origins">
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/Origins/PrimaryOrigins.jpg')"
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map" style="background: #4A4E50" id="college-recruitment">
+      <div
+        class="section map"
+        style="background: #E7FFE7"
+        id="college-recruitment"
+      >
         <v-img
           contain
           max-height="90vh"
@@ -88,30 +93,38 @@
             require('../assets/Maps/Final/ShadeTobaccoRecruitment_update.jpg')
           "
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map" style="background: #4A4E50" id="jamaica-parish">
+      <div class="section map" style="background: #E7FFE7" id="jamaica-parish">
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/Jamaica/Jamaica_Parish.jpg')"
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map" style="background: #4A4E50" id="jamaica-locality">
+      <div
+        class="section map"
+        style="background: #E7FFE7"
+        id="jamaica-locality"
+      >
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/Jamaica/Jamaica_Locality.jpg')"
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map" style="background: #4A4E50" id="tobacco-valley">
+      <div class="section map" style="background: #E7FFE7" id="tobacco-valley">
         <v-img
           contain
           max-height="90vh"
           :src="require('../assets/Maps/Final/CTTobaccoValley.jpg')"
         ></v-img>
+        <map-details-button></map-details-button>
       </div>
 
       <!-- 2: Mobilities -->
@@ -123,12 +136,10 @@
         tile
         class="elevation-0 banner"
       >
-        <h1 class="text-center py-6 font-weight-bold h1 display-2">
-          Mobilities
-        </h1>
+        <h1 class="text-center font-weight-bold h1">Mobilities</h1>
       </v-card>
 
-      <v-row class="ma-10">
+      <v-row class="pa-10" style="background: #FFFFDB">
         <h1
           class="
             d-none d-md-block
@@ -147,11 +158,11 @@
           Ethnic and Racial Distribution
         </h1>
       </v-row>
-      <div class="section map-chapter map" id="mobilities">
-        <MobileSlidesSection :imgSet="racialEthnicImages"></MobileSlidesSection>
+      <div class="section map-chapter map"  id="mobilities" style="background: #FFFFDB">
+        <MobileSlidesSection :imgSet="racialEthnicImages" ></MobileSlidesSection>
       </div>
 
-      <v-row class="ma-10">
+      <v-row class="pa-10" style="background: #FFFFDB">
         <h1
           class="
             d-none d-md-block
@@ -173,7 +184,7 @@
 
       <div
         class="section"
-        style="position: relative"
+        style="position: relative; background: #FFFFDB"
         v-for="(map, index) in driftMaps"
         :class="index === 0 ? 'map' : ''"
         :key="map.label"
@@ -211,12 +222,10 @@
         tile
         class="elevation-0 banner"
       >
-        <h1 class="text-center py-6 font-weight-bold h1 display-2">
-          Neighborhood Clusters
-        </h1>
+        <h1 class="text-center font-weight-bold h1">Neighborhood Clusters</h1>
       </v-card>
 
-      <div class="section map-chapter map" id="neighborhood-clusters">
+      <div class="section map-chapter map" id="neighborhood-clusters" style="background: #D9F2FF">
         <!-- <v-img :src="require('../assets/Maps/Final/Clusters/CemeteryLaneCluster.jpg')"></v-img> -->
         <MobileSlidesSection
           :imgSet="clusters"
@@ -224,23 +233,26 @@
         ></MobileSlidesSection>
       </div>
 
-      <div class="section map">
+      <div class="section map" style="background: #D9F2FF">
         <MobileSlidesSection :imgSet="northEndImages"></MobileSlidesSection>
       </div>
 
-      <div class="section map">
-        <v-img  max-height="90vh" :src="require('../assets/Maps/Final/PuertoRicans2.png')"></v-img>
+      <div class="section map" style="background: #D9F2FF">
+        <v-img :src="require('../assets/Maps/Final/PuertoRicans2.png')"></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map">
-        <v-img max-height="90vh"  :src="require('../assets/Maps/Final/WestIndians2.png')"></v-img>
+      <div class="section map" style="background: #D9F2FF">
+        <v-img :src="require('../assets/Maps/Final/WestIndians2.png')"></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map">
-        <v-img max-height="90vh" :src="require('../assets/Maps/Final/MemberLists2.jpg')"></v-img>
+      <div class="section map" style="background: #D9F2FF">
+        <v-img :src="require('../assets/Maps/Final/MemberLists2.jpg')"></v-img>
+        <map-details-button></map-details-button>
       </div>
 
-      <div class="section map d-flex flex-column">
+      <div class="section map d-flex flex-column" style="background: #D9F2FF">
         <div class="d-flex flex-column justify-center align-center">
           <v-img
             max-height="90vh"
@@ -253,42 +265,36 @@
         </div>
       </div>
 
-      <div class="section map d-flex flex-column">
+      <div class="section map d-flex flex-column" style="background: #D9F2FF">
         <div class="d-flex flex-column justify-center align-center">
           <v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/1940.jpg')"
           ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"
-            ><v-btn>Map Details</v-btn></router-link
-          >
+          <map-details-button></map-details-button>
         </div>
       </div>
 
-      <div class="section map d-flex flex-column">
+      <div class="section map d-flex flex-column" style="background: #D9F2FF">
         <div class="d-flex flex-column justify-center align-center">
           <v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/1980_FB.jpg')"
           ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold"
-            ><v-btn>Map Details</v-btn></router-link
-          >
+          <map-details-button></map-details-button>
         </div>
       </div>
 
-      <div class="section map">
+      <div class="section map" style="background: #D9F2FF">
         <div class="d-flex flex-column justify-center align-center">
           <v-img
             max-height="90vh"
             contain
             :src="require('../assets/Maps/Final/ForeignBornPop/2018_FB.jpg')"
           ></v-img>
-          <router-link to="/Map/1" class="display-1 font-weight-bold">
-            <v-btn class="mapbutton">Map Details</v-btn>
-          </router-link>
+          <map-details-button></map-details-button>
         </div>
       </div>
 
@@ -310,6 +316,7 @@ import { loremIpsum } from "lorem-ipsum";
 import MobileSlidesSection from "@/components/MobileSlidesSection";
 import LandAcknowledgement from "./LandAcknowledgement.vue";
 import TableContents from "./TableContents.vue";
+import MapDetailsButton from "./MapDetailsButton.vue";
 export default {
   name: "Main",
   components: {
@@ -322,6 +329,7 @@ export default {
     MobileSlidesSection,
     LandAcknowledgement,
     TableContents,
+    MapDetailsButton,
   },
   methods: {
     MobileSlidesSectionMapClick(index) {
@@ -592,6 +600,46 @@ export default {
       }
     },
   },
+  mounted() {
+    // get the sticky element
+    const stickyElm = [...document.querySelectorAll(".banner")];
+    // console.log(stickyElm);
+    // let intersecting = false;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting && e.boundingClientRect.top == -1) {
+            e.target.classList.add("isSticky");
+            // console.log(e.boundingClientRect)
+            // console.log(e.intersectionRect)
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+    stickyElm.map((el) => observer.observe(el));
+
+    const settlement = document.querySelector("#settlement-section");
+    const obs = new IntersectionObserver(
+      (entries) => {
+        console.log(entries[0].boundingClientRect);
+        if (
+          entries[0].boundingClientRect.top < 200 &&
+          entries[0].isIntersecting
+        ) {
+          stickyElm.map((e) => e.classList.add("hidden"));
+        } else if (entries[0].boundingClientRect.top > 400) {
+          stickyElm.map((e) =>
+            e.classList.contains("hidden")
+              ? e.classList.remove("hidden")
+              : e.classList.entries
+          );
+        }
+      },
+      { threshold: [0.1, 0.5, 1] }
+    );
+    obs.observe(settlement);
+  },
 };
 </script>
 <style>
@@ -624,7 +672,20 @@ a {
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  z-index: 2;
+  top: -1px;
+  padding: 20px 0;
+  font-weight: 800;
+}
+.banner h1 {
+  font-weight: 800;
+}
+.banner.isSticky {
+  padding: 10px 0;
+  font-size: 8pt;
+}
+.hidden {
+  display: none;
 }
 .mapsection {
   width: 100%;
