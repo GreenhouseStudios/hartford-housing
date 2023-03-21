@@ -1,29 +1,17 @@
 <template>
   <div class="section nav-section" id="about-section">
     <v-sheet height="100vh" width="100vw" color="teal" class="background">
-      <v-container fluid fill-height>
+      <v-container  class="px-5">
         <v-row>
           <div id="trigger2"></div>
-          <v-col class="d-block d-sm-none" cols="1"></v-col>
-          <v-col class="d-none d-sm-block" cols="2"></v-col>
-          <v-col class="d-none d-md-block">
+          <v-col>
             <div id="about-heading" class="font-weight-bold">
-              <span class="highlight-green">
+              <span class="highlight-green my-5">
               {{ heading }}
               </span>
             </div>
             <div id="about-body">{{ body }}</div>
           </v-col>
-          <v-col class="d-md-none">
-            <div id="m-heading">
-              <span class="highlight-green">
-                {{ heading }}
-              </span>
-            </div>
-            <div>{{ body }}</div>
-          </v-col>
-          <v-col class="d-block d-sm-none" cols="1"></v-col>
-          <v-col class="d-none d-sm-block" cols="2"></v-col>
         </v-row>
       </v-container>
     </v-sheet>
@@ -77,10 +65,10 @@ export default {
 
 <style scoped>
 #about-heading{
-  font-size: 4rem;
+  font-size: 3rem;
 }
 #about-body{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 #m-heading{
   font-weight: 800 !important;
@@ -97,5 +85,11 @@ export default {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: 100%;
+}
+@media  screen and (min-width: 1366px) {
+  .container{
+    width: 50%;
+    padding: 200px;
+  }
 }
 </style>

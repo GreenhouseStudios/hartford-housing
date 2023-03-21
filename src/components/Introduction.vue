@@ -1,23 +1,11 @@
 <template>
   <div class="section nav-section" id="intro-section">
     <v-sheet height="100vh" width="100vw" color="green">
-      <v-container fluid fill-height>
+      <v-container>
         <v-row justify="center">
           <h1
             class="
-              d-none d-md-block
-              display-4
-              font-weight-bold
-              highlight-teal
-              text-center
-            "
-            id="intro-title"
-          >
-            Introduction
-          </h1>
-          <h1
-            class="
-              d-block d-md-none
+              d-block 
               display-3
               font-weight-bold
               highlight-teal
@@ -28,13 +16,46 @@
             Introduction
           </h1>
         </v-row>
-        <v-row class="d-none d-md-flex justify-center">
-          <v-card class="pa-5 ma-5" max-width="75%">
-            <v-card-title class="display-1 font-weight-bold"
-              >Introduction</v-card-title
+        <v-row class="d-flex justify-center">
+          <v-card class="pa-2 ma-3">
+            <v-card-text
+              class="card-text" id="intro-text" v-text="introText"></v-card-text
             >
-            <v-card-text style="font-size: large; line-height: 1.5em"
-              >Hartford Bound recounts the history of three waves of
+            <v-card-actions>
+              <a
+                href="../assets/PDFs/sample.pdf"
+                download
+                class="font-weight-bold"
+                style="text-decoration: none"
+                >Read the Full Essay</a
+              >
+            </v-card-actions>
+          </v-card>
+        </v-row>
+      </v-container>
+    </v-sheet>
+  </div>
+</template>
+
+<script>
+import Card from "@/components/Card";
+import CardImage from "@/components/CardImage";
+import { LoremIpsum } from "lorem-ipsum";
+export default {
+  name: "Introduction",
+  data() {
+    return {
+      lorem: new LoremIpsum({
+        sentencesPerParagraph: {
+          max: 8,
+          min: 4,
+        },
+        wordsPerSentence: {
+          max: 16,
+          min: 4,
+        },
+      }),
+      introText: `Hartford Bound recounts the history of three waves of
               transnational and internal migrations of African Americans, West
               Indians, and Puerto Ricans between the 1940s and 2020s. These
               three migration traditions coalesced in Hartford and molded the
@@ -75,64 +96,7 @@
               produce alternative ways of seeing Hartford and countering
               histories of urban decline and malaise, including narrative about
               claim-making, heritage, place-making and
-              identity-formation.</v-card-text
-            >
-            <v-card-actions>
-              <a
-                href="../assets/PDFs/sample.pdf"
-                download
-                class="font-weight-bold"
-                style="text-decoration: none"
-                >Read the Full Essay</a
-              >
-            </v-card-actions>
-          </v-card>
-        </v-row>
-        <v-row class="d-flex d-md-none justify-center">
-          <v-card max-width="90%">
-            <v-card-title class="display-1 font-weight-bold"
-              >Sample Title</v-card-title
-            >
-            <v-card-text
-              class="card-text"
-              style="font-size: small; line-height: 1.5em"
-              >{{ lorem.generateParagraphs(2) }}</v-card-text
-            >
-            <v-card-actions>
-              <a
-                href="../assets/PDFs/sample.pdf"
-                download
-                class="font-weight-bold"
-                style="text-decoration: none"
-                >Read the Full Essay</a
-              >
-            </v-card-actions>
-          </v-card>
-          <v-col cols="" md="3"></v-col>
-        </v-row>
-      </v-container>
-    </v-sheet>
-  </div>
-</template>
-
-<script>
-import Card from "@/components/Card";
-import CardImage from "@/components/CardImage";
-import { LoremIpsum } from "lorem-ipsum";
-export default {
-  name: "Introduction",
-  data() {
-    return {
-      lorem: new LoremIpsum({
-        sentencesPerParagraph: {
-          max: 8,
-          min: 4,
-        },
-        wordsPerSentence: {
-          max: 16,
-          min: 4,
-        },
-      }),
+              identity-formation.`
     };
   },
   components: {
@@ -141,7 +105,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
 #about-heading {
   font-size: 4rem;
 }
@@ -172,5 +136,25 @@ export default {
 }
 .v-sheet {
   border-radius: 0;
+}
+.v-card{
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+@media screen and (min-width: 1366px) {
+  .v-card__text .card-text{
+    font-size: 3rem;
+    line-height: 2rem;
+  }
+  .v-sheet{
+  }
+  #intro-text{
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+  }
+  #intro-title{
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
 }
 </style>
